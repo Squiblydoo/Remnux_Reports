@@ -169,8 +169,12 @@ def extract_stuffed_attrs(exe_path, output_dir):
                 f.write(val_content)
             print(f"      Saved to: {out_fname}")
 
-            # If this looks like SimpleHelp stuffed data, decode config
-            if b'sg_install' in val_content or b'simplehelp' in val_content.lower():
+            # If this looks like SimpleHelp stuffed data, decode config.
+            # Check for any known SimpleHelp key — different versions lead with different keys.
+            _sh_markers = [b'sg_install', b'sg_servers', b'sg_silent', b'sg_name',
+                           b'update_url', b'jre_name', b'shpkhash', b'sh_app_profile',
+                           b'skip_system_jre', b'sg_monitor', b'sg_confirm']
+            if any(m in val_content for m in _sh_markers) and oid_hex == '000000000000':
                 print("      [!] SimpleHelp configuration found in this attribute!")
                 import re
                 # Extract all printable strings, filter noise
@@ -194,7 +198,13 @@ def extract_stuffed_attrs(exe_path, output_dir):
                         'sg_script', 'splash_buffer', 'splash_image',
                     }
                     if s in known_keys and i + 1 < len(strings):
-                        val = strings[i + 1].decode('ascii', errors='replace')
+                        next_s = strings[i + 1].decode('ascii', errors='replace')
+                        # If the next string is itself a known key, this key has no
+                        # value in the binary — skip it rather than mispairing.
+                        if next_s in known_keys:
+                            i += 1
+                            continue
+                        val = next_s
                         if s in ('splash_image', 'splash_buffer') and len(val) > 60:
                             val = val[:60] + f'... ({len(val)} chars total)'
                         # Decode hex-encoded values
