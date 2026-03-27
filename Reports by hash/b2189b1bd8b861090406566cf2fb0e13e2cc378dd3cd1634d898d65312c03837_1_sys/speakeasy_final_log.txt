@@ -1,0 +1,20 @@
+/opt/speakeasy/lib/python3.12/site-packages/unicorn/unicorn.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Traceback (most recent call last):
+  File "/home/remnux/mal/output/speakeasy_dump_final.py", line 17, in <module>
+    mod = se.load_module('/home/remnux/mal/Login.exe')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/speakeasy/lib/python3.12/site-packages/speakeasy/speakeasy.py", line 217, in load_module
+    self._init_emulator(path=path, data=data)
+  File "/opt/speakeasy/lib/python3.12/site-packages/speakeasy/speakeasy.py", line 113, in _init_emulator
+    self.emu = Win32Emulator(config=self.config, logger=self.logger, argv=self.argv,
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/speakeasy/lib/python3.12/site-packages/speakeasy/windows/win32.py", line 35, in __init__
+    super(Win32Emulator, self).__init__(config, debug=debug, logger=logger,
+  File "/opt/speakeasy/lib/python3.12/site-packages/speakeasy/windows/winemu.py", line 107, in __init__
+    self.fileman = FileManager(config, self)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/speakeasy/lib/python3.12/site-packages/speakeasy/windows/fileman.py", line 225, in __init__
+    self.emulated_binname = shlex.split(cmdline)[0]
+                            ~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range

@@ -1,0 +1,851 @@
+/opt/speakeasy/lib/python3.12/site-packages/unicorn/unicorn.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Traceback (most recent call last):
+  File "/opt/speakeasy/lib/python3.12/site-packages/speakeasy/speakeasy.py", line 83, in _init_config
+    validate_config(self.config)
+  File "/opt/speakeasy/lib/python3.12/site-packages/speakeasy/speakeasy.py", line 970, in validate_config
+    validator.validate(config)
+  File "/opt/speakeasy/lib/python3.12/site-packages/jsonschema/validators.py", line 450, in validate
+    raise error
+jsonschema.exceptions.ValidationError: Additional properties are not allowed ('emu_timeout' was unexpected)
+
+Failed validating 'additionalProperties' in schema:
+    {'$schema': 'http://json-schema.org/draft-07/schema#',
+     '$id': 'TODO',
+     'title': 'SpeakEasy configuration JSON schema',
+     'description': 'SpeakEasy configuration',
+     'type': 'object',
+     'definitions': {'file': {'type': 'object',
+                              'properties': {'mode': {'type': 'string',
+                                                      'enum': ['full_path',
+                                                               'by_ext',
+                                                               'default']},
+                                             'emu_path': {'type': 'string',
+                                                          'description': 'The '
+                                                                         'path '
+                                                                         'of '
+                                                                         'the '
+                                                                         'target '
+                                                                         'file '
+                                                                         'in '
+                                                                         'the '
+                                                                         'emulation '
+                                                                         'space '
+                                                                         '(e.g. '
+                                                                         '"C:\\boot.ini"'},
+                                             'byte_fill': {'type': 'object',
+                                                           'properties': {'byte': {'type': 'string'},
+                                                                          'size': {'type': 'number'}},
+                                                           'additionalProperties': False,
+                                                           'required': ['byte',
+                                                                        'size']},
+                                             'path': {'type': 'string',
+                                                      'description': 'Path '
+                                                                     'to '
+                                                                     'the '
+                                                                     'physical '
+                                                                     'file '
+                                                                     'that '
+                                                                     'will '
+                                                                     'be '
+                                                                     'used '
+                                                                     'to '
+                                                                     'provide '
+                                                                     'data '
+                                                                     'to '
+                                                                     'the '
+                                                                     'emulated '
+                                                                     'file'},
+                                             'ext': {'type': 'string',
+                                                     'description': 'Catch-all '
+                                                                    'for '
+                                                                    'specific '
+                                                                    'file '
+                                                                    'extensions'}},
+                              'additionalProperties': False,
+                              'anyOf': [{'properties': {'mode': {'const': 'default'}},
+                                         'required': ['mode']},
+                                        {'properties': {'mode': {'const': 'full_path'}},
+                                         'required': ['mode', 'emu_path']},
+                                        {'properties': {'mode': {'const': 'by_ext'}},
+                                         'required': ['mode', 'ext']}]}},
+     'properties': {'config_version': {'type': 'number',
+                                       'enum': [0.2],
+                                       'description': 'config format '
+                                                      'version'},
+                    'description': {'type': 'string',
+                                    'description': 'config description'},
+                    'emu_engine': {'type': 'string',
+                                   'enum': ['unicorn'],
+                                   'description': 'emulation engine to '
+                                                  'use'},
+                    'max_instructions': {'type': 'number',
+                                         'description': 'max instructions '
+                                                        'to emulate'},
+                    'timeout': {'type': 'number',
+                                'description': 'emulation timeout'},
+                    'max_api_count': {'type': 'number',
+                                      'description': 'Maximum number of '
+                                                     'API calls allowed'},
+                    'system': {'type': 'string',
+                               'enum': ['windows'],
+                               'description': 'System type to emulate'},
+                    'analysis': {'type': 'object',
+                                 'properties': {'memory_tracing': {'type': 'boolean',
+                                                                   'description': 'Enable '
+                                                                                  'memory '
+                                                                                  'tracing'},
+                                                'strings': {'type': 'boolean',
+                                                            'description': 'Return '
+                                                                           'static '
+                                                                           'and '
+                                                                           'in-memory '
+                                                                           'strings'}},
+                                 'additionalProperties': False,
+                                 'required': ['memory_tracing', 'strings']},
+                    'keep_memory_on_free': {'type': 'boolean',
+                                            'description': 'Enables '
+                                                           'retaining all '
+                                                           'allocated '
+                                                           'memory to '
+                                                           'include in the '
+                                                           'output memory '
+                                                           'snapshot'},
+                    'exceptions': {'type': 'object',
+                                   'properties': {'dispatch_handlers': {'type': 'boolean',
+                                                                        'description': 'When '
+                                                                                       'set '
+                                                                                       'to '
+                                                                                       '"true", '
+                                                                                       'SEH '
+                                                                                       'exception '
+                                                                                       'handlers '
+                                                                                       'will '
+                                                                                       'be '
+                                                                                       'dispatched '
+                                                                                       'to '
+                                                                                       'the '
+                                                                                       'emulated '
+                                                                                       'program'}},
+                                   'additionalProperties': False,
+                                   'required': ['dispatch_handlers']},
+                    'os_ver': {'type': 'object',
+                               'description': 'OS version information',
+                               'properties': {'name': {'type': 'string',
+                                                       'enum': ['windows']},
+                                              'major': {'type': 'number'},
+                                              'minor': {'type': 'number'},
+                                              'release': {'type': 'number'},
+                                              'build': {'type': 'number'}},
+                               'additionalProperties': False,
+                               'required': ['name']},
+                    'current_dir': {'type': 'string',
+                                    'description': 'Directory to set as '
+                                                   'CWD for the emulation'},
+                    'command_line': {'type': 'string',
+                                     'description': 'Command line string '
+                                                    'to pass to the '
+                                                    'process'},
+                    'env': {'type': 'object',
+                            'description': 'Key-value environment '
+                                           'variables to use',
+                            'additionalProperties': {'type': 'string'}},
+                    'domain': {'type': 'string',
+                               'description': 'Domain returned during '
+                                              'emulation'},
+                    'hostname': {'type': 'string',
+                                 'description': 'Hostname returned during '
+                                                'emulation'},
+                    'user': {'type': 'object',
+                             'properties': {'name': {'type': 'string',
+                                                     'description': 'Username '
+                                                                    'returned '
+                                                                    'during '
+                                                                    'emulation'},
+                                            'is_admin': {'type': 'boolean',
+                                                         'description': 'Determines '
+                                                                        'if '
+                                                                        'this '
+                                                                        'user '
+                                                                        'is '
+                                                                        'an '
+                                                                        'administrator'},
+                                            'sid': {'type': 'string',
+                                                    'description': 'SID '
+                                                                   'associated '
+                                                                   'with '
+                                                                   'the '
+                                                                   'user '
+                                                                   'account'}},
+                             'additionalProperties': False,
+                             'required': ['name']},
+                    'api_hammering': {'type': 'object',
+                                      'properties': {'enabled': {'type': 'boolean',
+                                                                 'description': 'Controls '
+                                                                                'whether '
+                                                                                'API '
+                                                                                'hammering '
+                                                                                'mitigation '
+                                                                                'is '
+                                                                                'used '
+                                                                                'or '
+                                                                                'not'},
+                                                     'threshold': {'type': 'number',
+                                                                   'description': 'Threshold '
+                                                                                  'for '
+                                                                                  'an '
+                                                                                  'individual '
+                                                                                  'API '
+                                                                                  'call '
+                                                                                  'to '
+                                                                                  'trigger '
+                                                                                  'API '
+                                                                                  'hammer '
+                                                                                  'mitigation'},
+                                                     'allow_list': {'type': 'array',
+                                                                    'items': {'type': 'string'},
+                                                                    'description': 'List '
+                                                                                   'of '
+                                                                                   'allowed '
+                                                                                   'APIs '
+                                                                                   '(of '
+                                                                                   'the '
+                                                                                   'form '
+                                                                                   "'<dll_name>.<function_name>') "
+                                                                                   'to '
+                                                                                   'always '
+                                                                                   'allow '
+                                                                                   'despite '
+                                                                                   'API '
+                                                                                   'hammering '
+                                                                                   'mitigation '
+                                                                                   'being '
+                                                                                   'used'}},
+                                      'additionalProperties': False,
+                                      'required': ['enabled', 'threshold']},
+                    'symlinks': {'type': 'array',
+                                 'description': 'Lists symbolic links to '
+                                                'present to the emulated '
+                                                'sample',
+                                 'items': {'type': 'object',
+                                           'properties': {'name': {'type': 'string',
+                                                                   'description': 'The '
+                                                                                  'symbolic '
+                                                                                  'link '
+                                                                                  'name '
+                                                                                  '(e.g. '
+                                                                                  '"\\??\\C:"'},
+                                                          'target': {'type': 'string',
+                                                                     'description': 'Name '
+                                                                                    'of '
+                                                                                    'the '
+                                                                                    'object '
+                                                                                    'the '
+                                                                                    'symbolic '
+                                                                                    'link '
+                                                                                    'resolves '
+                                                                                    'to'}},
+                                           'additionalProperties': False,
+                                           'required': ['name', 'target']}},
+                    'drives': {'type': 'array',
+                               'description': 'Lists attached drives and '
+                                              'their type',
+                               'items': {'type': 'object',
+                                         'properties': {'root_path': {'type': 'string',
+                                                                      'description': 'The '
+                                                                                     'root '
+                                                                                     'path '
+                                                                                     'of '
+                                                                                     'the '
+                                                                                     'drive'},
+                                                        'drive_type': {'type': 'string',
+                                                                       'description': 'The '
+                                                                                      'drive '
+                                                                                      'type '
+                                                                                      '(e.g., '
+                                                                                      'DRIVE_FIXED)'},
+                                                        'volume_guid_path': {'type': 'string',
+                                                                             'description': 'Assuming '
+                                                                                            'each '
+                                                                                            'drive '
+                                                                                            'only '
+                                                                                            'has '
+                                                                                            'a '
+                                                                                            'single '
+                                                                                            'volume, '
+                                                                                            'this '
+                                                                                            'is '
+                                                                                            'the '
+                                                                                            'volume '
+                                                                                            'GUID'}}}},
+                    'filesystem': {'type': 'object',
+                                   'properties': {'files': {'type': 'array',
+                                                            'items': {'$ref': '#/definitions/file'}}},
+                                   'additionalProperties': False,
+                                   'required': ['files']},
+                    'registry': {'type': 'object',
+                                 'properties': {'keys': {'type': 'array',
+                                                         'items': {'type': 'object',
+                                                                   'properties': {'path': {'type': 'string'},
+                                                                                  'values': {'type': 'array',
+                                                                                             'items': {'type': 'object',
+                                                                                                       'properties': {'name': {'type': 'string',
+                                                                                                                               'description': 'Name '
+                                                                                                                                              'of '
+                                                                                                                                              'the '
+                                                                                                                                              'registry '
+                                                                                                                                              'value'},
+                                                                                                                      'type': {'type': 'string',
+                                                                                                                               'description': 'Type '
+                                                                                                                                              'of '
+                                                                                                                                              'data '
+                                                                                                                                              'e.g. '
+                                                                                                                                              'string, '
+                                                                                                                                              'dword, '
+                                                                                                                                              'etx.'},
+                                                                                                                      'data': {'type': 'string',
+                                                                                                                               'description': 'The '
+                                                                                                                                              'data '
+                                                                                                                                              'to '
+                                                                                                                                              'present '
+                                                                                                                                              'when '
+                                                                                                                                              'the '
+                                                                                                                                              'registry '
+                                                                                                                                              'value '
+                                                                                                                                              'is '
+                                                                                                                                              'accessed'}},
+                                                                                                       'required': ['name',
+                                                                                                                    'type',
+                                                                                                                    'data'],
+                                                                                                       'additionalProperties': False}}},
+                                                                   'required': ['path',
+                                                                                'values'],
+                                                                   'additionalProperties': False}}},
+                                 'required': ['keys'],
+                                 'additionalProperties': False},
+                    'network': {'type': 'object',
+                                'properties': {'dns': {'type': 'object',
+                                                       'properties': {'names': {'type': 'object',
+                                                                                'description': 'Key-value '
+                                                                                               'dictionary '
+                                                                                               'of '
+                                                                                               'hostnames '
+                                                                                               '(key) '
+                                                                                               'to '
+                                                                                               'IP '
+                                                                                               'address '
+                                                                                               '(value)',
+                                                                                'additionalProperties': {'type': 'string'}},
+                                                                      'txt': {'type': 'array',
+                                                                              'items': {'type': 'object',
+                                                                                        'properties': {'name': {'type': 'string',
+                                                                                                                'description': 'Name '
+                                                                                                                               'of '
+                                                                                                                               'the '
+                                                                                                                               'DNS '
+                                                                                                                               'TXT '
+                                                                                                                               'record'},
+                                                                                                       'path': {'type': 'string',
+                                                                                                                'description': 'Path '
+                                                                                                                               'to '
+                                                                                                                               'physical '
+                                                                                                                               'file '
+                                                                                                                               'that '
+                                                                                                                               'will '
+                                                                                                                               'be '
+                                                                                                                               'presented '
+                                                                                                                               'when '
+                                                                                                                               'a '
+                                                                                                                               'DNS '
+                                                                                                                               'TXT '
+                                                                                                                               'record '
+                                                                                                                               'is '
+                                                                                                                               'accessed'}},
+                                                                                        'additionalProperties': False}}},
+                                                       'additionalProperties': False},
+                                               'http': {'type': 'object',
+                                                        'properties': {'responses': {'type': 'array',
+                                                                                     'items': {'type': 'object',
+                                                                                               'properties': {'verb': {'type': 'string',
+                                                                                                                       'enum': ['GET',
+                                                                                                                                'POST',
+                                                                                                                                'HEAD']},
+                                                                                                              'files': {'type': 'array',
+                                                                                                                        'items': {'$ref': '#/definitions/file'}}},
+                                                                                               'additionalProperties': False}}},
+                                                        'additionalProperties': False},
+                                               'winsock': {'type': 'object',
+                                                           'properties': {'responses': {'type': 'array',
+                                                                                        'items': {'$ref': '#/definitions/file'}}}},
+                                               'adapters': {'type': 'array',
+                                                            'items': {'type': 'object',
+                                                                      'properties': {'name': {'type': 'string',
+                                                                                              'description': 'Name '
+                                                                                                             'of '
+                                                                                                             'the '
+                                                                                                             'adapter'},
+                                                                                     'description': {'type': 'string',
+                                                                                                     'description': 'Description '
+                                                                                                                    'of '
+                                                                                                                    'the '
+                                                                                                                    'adapter'},
+                                                                                     'mac_address': {'type': 'string',
+                                                                                                     'description': 'Hardware '
+                                                                                                                    'address '
+                                                                                                                    'of '
+                                                                                                                    'the '
+                                                                                                                    'adapter'},
+                                                                                     'type': {'type': 'string',
+                                                                                              'description': 'Adapter '
+                                                                                                             'type '
+                                                                                                             '(e.g., '
+                                                                                                             "'ethernet')"},
+                                                                                     'ip_address': {'type': 'string',
+                                                                                                    'description': 'IPv4 '
+                                                                                                                   'address '
+                                                                                                                   'associated '
+                                                                                                                   'with '
+                                                                                                                   'the '
+                                                                                                                   'adapter. '
+                                                                                                                   'Currently '
+                                                                                                                   'only '
+                                                                                                                   'supports '
+                                                                                                                   'one '
+                                                                                                                   'address '
+                                                                                                                   'instead '
+                                                                                                                   'of '
+                                                                                                                   'a '
+                                                                                                                   'list.'},
+                                                                                     'subnet_mask': {'type': 'string',
+                                                                                                     'description': 'IPv4 '
+                                                                                                                    'subnet '
+                                                                                                                    'mask'},
+                                                                                     'dhcp_enabled': {'type': 'boolean',
+                                                                                                      'description': 'DHCP '
+                                                                                                                     'enabled'}},
+                                                                      'additionalProperties': False}}},
+                                'additionalProperties': False},
+                    'processes': {'type': 'array',
+                                  'items': {'type': 'object',
+                                            'properties': {'name': {'type': 'string',
+                                                                    'description': 'Name '
+                                                                                   'of '
+                                                                                   'the '
+                                                                                   'process'},
+                                                           'base_addr': {'type': 'string',
+                                                                         'description': 'Base '
+                                                                                        'address '
+                                                                                        'of '
+                                                                                        'the '
+                                                                                        'main '
+                                                                                        'executable '
+                                                                                        'image'},
+                                                           'pid': {'type': 'number',
+                                                                   'description': 'Hardcoded '
+                                                                                  'pid '
+                                                                                  'to '
+                                                                                  'assign '
+                                                                                  'to '
+                                                                                  'the '
+                                                                                  'process'},
+                                                           'path': {'type': 'string',
+                                                                    'description': 'Emulated '
+                                                                                   'path '
+                                                                                   'of '
+                                                                                   'the '
+                                                                                   'main '
+                                                                                   'executable '
+                                                                                   'image'},
+                                                           'command_line': {'type': 'string',
+                                                                            'description': 'Command '
+                                                                                           'line '
+                                                                                           'to '
+                                                                                           'assign '
+                                                                                           'to '
+                                                                                           'a '
+                                                                                           'process '
+                                                                                           'when '
+                                                                                           'a '
+                                                                                           'sample '
+                                                                                           'accesses '
+                                                                                           'it'},
+                                                           'is_main_exe': {'type': 'boolean',
+                                                                           'description': 'When '
+                                                                                          'set, '
+                                                                                          'this '
+                                                                                          'process '
+                                                                                          'will '
+                                                                                          'be '
+                                                                                          'a '
+                                                                                          'container '
+                                                                                          'to '
+                                                                                          'use '
+                                                                                          'when '
+                                                                                          'emulating '
+                                                                                          'shellcode '
+                                                                                          'or '
+                                                                                          'libraries'},
+                                                           'session': {'type': 'number',
+                                                                       'description': 'Windows '
+                                                                                      'session '
+                                                                                      'number '
+                                                                                      'to '
+                                                                                      'assign '
+                                                                                      'to '
+                                                                                      'process'}},
+                                            'additionalProperties': False,
+                                            'required': ['name',
+                                                         'base_addr',
+                                                         'path']}},
+                    'modules': {'type': 'object',
+                                'properties': {'modules_always_exist': {'type': 'boolean',
+                                                                        'description': 'When '
+                                                                                       'a '
+                                                                                       'sample '
+                                                                                       'attempts '
+                                                                                       'to '
+                                                                                       'load '
+                                                                                       'a '
+                                                                                       'module, '
+                                                                                       'always '
+                                                                                       'present '
+                                                                                       'a '
+                                                                                       'decoy '
+                                                                                       'module'},
+                                               'functions_always_exist': {'type': 'boolean',
+                                                                          'description': 'When '
+                                                                                         'a '
+                                                                                         'sample '
+                                                                                         'attempts '
+                                                                                         'to '
+                                                                                         'call '
+                                                                                         'a '
+                                                                                         'non-implemented '
+                                                                                         'API, '
+                                                                                         'always '
+                                                                                         'present '
+                                                                                         'a '
+                                                                                         'fake '
+                                                                                         'return '
+                                                                                         'value'},
+                                               'user_modules': {'type': 'array',
+                                                                'items': {'type': 'object',
+                                                                          'properties': {'name': {'type': 'string',
+                                                                                                  'description': 'Name '
+                                                                                                                 'of '
+                                                                                                                 'the '
+                                                                                                                 'system '
+                                                                                                                 'module'},
+                                                                                         'base_addr': {'type': 'string',
+                                                                                                       'description': 'Requested '
+                                                                                                                      'base '
+                                                                                                                      'address '
+                                                                                                                      '(in '
+                                                                                                                      'hex) '
+                                                                                                                      'that '
+                                                                                                                      'the '
+                                                                                                                      'module '
+                                                                                                                      'will '
+                                                                                                                      'be '
+                                                                                                                      'loaded '
+                                                                                                                      'at'},
+                                                                                         'path': {'type': 'string',
+                                                                                                  'description': 'Emulated '
+                                                                                                                 'full '
+                                                                                                                 'path '
+                                                                                                                 'that '
+                                                                                                                 'will '
+                                                                                                                 'be '
+                                                                                                                 'presented '
+                                                                                                                 'to '
+                                                                                                                 'samples'},
+                                                                                         'images': {'type': 'array',
+                                                                                                    'items': {'type': 'object',
+                                                                                                              'properties': {'arch': {'type': 'string',
+                                                                                                                                      'description': 'Image '
+                                                                                                                                                     'architecture '
+                                                                                                                                                     '(x86 '
+                                                                                                                                                     'or '
+                                                                                                                                                     'x64)'},
+                                                                                                                             'name': {'type': 'string',
+                                                                                                                                      'description': 'Image '
+                                                                                                                                                     'file '
+                                                                                                                                                     'name '
+                                                                                                                                                     '(no '
+                                                                                                                                                     'extension)'}},
+                                                                                                              'additionalProperties': False,
+                                                                                                              'required': ['arch',
+                                                                                                                           'name']}}},
+                                                                          'additionalProperties': False,
+                                                                          'required': ['name',
+                                                                                       'base_addr',
+                                                                                       'path']}},
+                                               'system_modules': {'type': 'array',
+                                                                  'items': {'type': 'object',
+                                                                            'properties': {'name': {'type': 'string',
+                                                                                                    'description': 'Name '
+                                                                                                                   'of '
+                                                                                                                   'the '
+                                                                                                                   'system '
+                                                                                                                   'module'},
+                                                                                           'base_addr': {'type': 'string',
+                                                                                                         'description': 'Requested '
+                                                                                                                        'base '
+                                                                                                                        'address '
+                                                                                                                        '(in '
+                                                                                                                        'hex) '
+                                                                                                                        'that '
+                                                                                                                        'the '
+                                                                                                                        'module '
+                                                                                                                        'will '
+                                                                                                                        'be '
+                                                                                                                        'loaded '
+                                                                                                                        'at'},
+                                                                                           'path': {'type': 'string',
+                                                                                                    'description': 'Emulated '
+                                                                                                                   'full '
+                                                                                                                   'path '
+                                                                                                                   'that '
+                                                                                                                   'will '
+                                                                                                                   'be '
+                                                                                                                   'presented '
+                                                                                                                   'to '
+                                                                                                                   'samples'},
+                                                                                           'driver': {'type': 'object',
+                                                                                                      'description': '',
+                                                                                                      'properties': {'name': {'type': 'string',
+                                                                                                                              'description': 'Kernel '
+                                                                                                                                             'DRIVER_OBJECT '
+                                                                                                                                             'to '
+                                                                                                                                             'present '
+                                                                                                                                             'to '
+                                                                                                                                             'the '
+                                                                                                                                             'kernel '
+                                                                                                                                             'emulator'},
+                                                                                                                     'devices': {'type': 'array',
+                                                                                                                                 'items': {'type': 'object',
+                                                                                                                                           'properties': {'name': {'type': 'string',
+                                                                                                                                                                   'description': 'Device '
+                                                                                                                                                                                  'objects '
+                                                                                                                                                                                  'associated '
+                                                                                                                                                                                  'with '
+                                                                                                                                                                                  'the '
+                                                                                                                                                                                  'driver '
+                                                                                                                                                                                  'object'}},
+                                                                                                                                           'required': ['name'],
+                                                                                                                                           'additionalProperties': False}}},
+                                                                                                      'additionalProperties': False,
+                                                                                                      'required': ['name']}},
+                                                                            'additionalProperties': False,
+                                                                            'required': ['name',
+                                                                                         'base_addr',
+                                                                                         'path']}}}}},
+     'additionalProperties': False,
+     'required': ['config_version',
+                  'emu_engine',
+                  'timeout',
+                  'system',
+                  'analysis',
+                  'exceptions',
+                  'os_ver',
+                  'current_dir',
+                  'env',
+                  'hostname',
+                  'user',
+                  'symlinks',
+                  'filesystem',
+                  'network',
+                  'processes',
+                  'modules']}
+
+On instance:
+    {'config_version': 0.2,
+     'description': 'Emulate Windows 10 with full memory tracing and '
+                    'in-memory string analysis',
+     'emu_engine': 'unicorn',
+     'timeout': 60,
+     'system': 'windows',
+     'analysis': {'memory_tracing': True, 'strings': True},
+     'exceptions': {'dispatch_handlers': True},
+     'os_ver': {'name': 'windows',
+                'major': 10,
+                'minor': 0,
+                'release': 1703,
+                'build': 15063},
+     'current_dir': 'C:\\Windows\\system32',
+     'env': {'comspec': 'C:\\Windows\\system32\\cmd.exe',
+             'systemroot': 'C:\\Windows\\system32',
+             'windir': 'C:\\Windows',
+             'temp': 'C:\\Windows\\temp\\'},
+     'hostname': 'mybox',
+     'user': {'name': 'user'},
+     'api_hammering': {'enabled': False, 'threshold': 2000},
+     'symlinks': [{'name': '\\??\\C:',
+                   'target': '\\Device\\HarddiskVolume1'},
+                  {'name': '\\??\\PhysicalDrive0',
+                   'target': '\\Device\\Harddisk0\\DR0'}],
+     'filesystem': {'files': [{'mode': 'full_path',
+                               'emu_path': 'c:\\Windows\\system32\\cmd.exe',
+                               'path': '$ROOT$/resources/files/default.bin'},
+                              {'mode': 'full_path',
+                               'emu_path': 'c:\\Windows\\system32\\svchost.exe',
+                               'path': '$ROOT$/resources/files/default.bin'},
+                              {'mode': 'default',
+                               'path': '$ROOT$/resources/files/default.bin'}]},
+     'registry': {'keys': [{'path': 'HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Services\\usbsamp',
+                            'values': [{'name': 'DisplayName',
+                                        'type': 'REG_SZ',
+                                        'data': 'An example service'},
+                                       {'name': 'Start',
+                                        'type': 'REG_DWORD',
+                                        'data': '0x00000003'}]}]},
+     'network': {'dns': {'names': {'default': '10.1.2.3',
+                                   'google.com': '8.8.8.8',
+                                   'localhost': '127.0.0.1'},
+                         'txt': [{'name': 'default',
+                                  'path': '$ROOT$/resources/web/default.bin'}]},
+                 'http': {'responses': [{'verb': 'GET',
+                                         'files': [{'mode': 'by_ext',
+                                                    'ext': 'gif',
+                                                    'path': '$ROOT$/resources/web/decoy.gif'},
+                                                   {'mode': 'by_ext',
+                                                    'ext': 'jpg',
+                                                    'path': '$ROOT$/resources/web/decoy.jpg'},
+                                                   {'mode': 'default',
+                                                    'path': '$ROOT$/resources/web/default.bin'}]}]},
+                 'winsock': {'responses': [{'mode': 'default',
+                                            'path': '$ROOT$/resources/web/stager.bin'}]}},
+     'processes': [{'name': 'System',
+                    'base_addr': '0x80000000',
+                    'pid': 4,
+                    'path': ''},
+                   {'name': 'smss',
+                    'base_addr': '0x05000000',
+                    'path': 'C:\\Windows\\system32\\smss.exe'},
+                   {'name': 'csrss',
+                    'base_addr': '0x05510000',
+                    'path': 'C:\\Windows\\system32\\csrss.exe'},
+                   {'name': 'wininit',
+                    'base_addr': '0x05520000',
+                    'path': 'C:\\Windows\\system32\\wininit.exe'},
+                   {'name': 'services',
+                    'base_addr': '0x05530000',
+                    'path': 'C:\\Windows\\system32\\services.exe'},
+                   {'name': 'lsass',
+                    'base_addr': '0x05540000',
+                    'path': 'C:\\Windows\\system32\\lsass.exe'},
+                   {'name': 'winlogon',
+                    'base_addr': '0x05550000',
+                    'path': 'C:\\Windows\\system32\\winlogon.exe'},
+                   {'name': 'svchost',
+                    'base_addr': '0x05560000',
+                    'path': 'C:\\Windows\\system32\\svchost.exe'},
+                   {'name': 'explorer',
+                    'base_addr': '0x05570000',
+                    'path': 'C:\\Windows\\explorer.exe'},
+                   {'name': 'main',
+                    'base_addr': '0x00400000',
+                    'path': 'C:\\Windows\\system32\\main.exe',
+                    'command_line': 'svchost.exe',
+                    'is_main_exe': True,
+                    'session': 1}],
+     'modules': {'modules_always_exist': False,
+                 'functions_always_exist': False,
+                 'module_directory_x86': '$ROOT$/winenv/decoys/x86',
+                 'module_directory_x64': '$ROOT$/winenv/decoys/amd64',
+                 'system_modules': [{'name': 'ntoskrnl',
+                                     'base_addr': '0x803d0000',
+                                     'path': 'C:\\Windows\\system32\\ntoskrnl.exe'},
+                                    {'name': 'hal',
+                                     'base_addr': '0xC1000000',
+                                     'path': 'C:\\Windows\\system32\\hal.dll'},
+                                    {'name': 'ntfs',
+                                     'base_addr': '0xC2000000',
+                                     'path': 'C:\\Windows\\system32\\drivers\\ntfs.sys'},
+                                    {'name': 'netio',
+                                     'base_addr': '0xD4000000',
+                                     'path': 'C:\\Windows\\system32\\drivers\\netio.sys'},
+                                    {'name': 'volmgr',
+                                     'base_addr': '0xC6000000',
+                                     'path': 'C:\\Windows\\system32\\drivers\\volmgr.sys',
+                                     'driver': {'name': '\\Driver\\volmgr',
+                                                'devices': [{'name': '\\Device\\HarddiskVolume1'}]}},
+                                    {'name': 'disk',
+                                     'base_addr': '0xC3000000',
+                                     'path': 'C:\\Windows\\system32\\drivers\\disk.sys',
+                                     'driver': {'name': '\\Driver\\Disk',
+                                                'devices': [{'name': '\\Device\\Harddisk0\\DR0'}]}},
+                                    {'name': 'tcpip',
+                                     'base_addr': '0xC4000000',
+                                     'path': 'C:\\Windows\\system32\\drivers\\tcpip.sys',
+                                     'driver': {'name': '\\Driver\\Tcpip',
+                                                'devices': [{'name': '\\Device\\Tcp'}]}},
+                                    {'name': 'ndis',
+                                     'base_addr': '0xC7000000',
+                                     'path': 'C:\\Windows\\system32\\drivers\\ndis.sys',
+                                     'driver': {'name': '\\Driver\\Ndis',
+                                                'devices': [{'name': '\\Device\\Ndis'}]}}],
+                 'user_modules': [{'name': 'kernel32',
+                                   'base_addr': '0x77000000',
+                                   'path': 'C:\\Windows\\system32\\kernel32.dll'},
+                                  {'name': 'ntdll',
+                                   'base_addr': '0x7C000000',
+                                   'path': 'C:\\Windows\\system32\\ntdll.dll'},
+                                  {'name': 'ws2_32',
+                                   'base_addr': '0x78C00000',
+                                   'path': 'C:\\Windows\\system32\\ws2_32.dll'},
+                                  {'name': 'wininet',
+                                   'base_addr': '0x7BC00000',
+                                   'path': 'C:\\Windows\\system32\\wininet.dll'},
+                                  {'name': 'winhttp',
+                                   'base_addr': '0x7BA00000',
+                                   'path': 'C:\\Windows\\system32\\winhttp.dll'},
+                                  {'name': 'advapi32',
+                                   'base_addr': '0x78000000',
+                                   'path': 'C:\\Windows\\system32\\advapi32.dll'},
+                                  {'name': 'user32',
+                                   'base_addr': '0x77D10000',
+                                   'path': 'C:\\Windows\\system32\\user32.dll'},
+                                  {'name': 'gdi32',
+                                   'base_addr': '0x77E10000',
+                                   'path': 'C:\\Windows\\system32\\gdi32.dll'},
+                                  {'name': 'msvcrt',
+                                   'base_addr': '0x77F10000',
+                                   'path': 'C:\\Windows\\system32\\msvcrt.dll'},
+                                  {'name': 'dnsapi',
+                                   'base_addr': '0x78F10000',
+                                   'path': 'C:\\Windows\\system32\\dnsapi.dll'},
+                                  {'name': 'shlwapi',
+                                   'base_addr': '0x67000000',
+                                   'path': 'C:\\Windows\\system32\\shlwapi.dll'},
+                                  {'name': 'advpack',
+                                   'base_addr': '0x68F00000',
+                                   'path': 'C:\\Windows\\system32\\advpack.dll'},
+                                  {'name': 'dbghelp',
+                                   'base_addr': '0x62000000',
+                                   'path': 'C:\\Windows\\system32\\dbghelp.dll'},
+                                  {'name': 'shell32',
+                                   'base_addr': '0x69000000',
+                                   'path': 'C:\\Windows\\system32\\shell32.dll'},
+                                  {'name': 'WTSAPI32',
+                                   'base_addr': '0x63000000',
+                                   'path': 'C:\\Windows\\system32\\WTSAPI32.dll'},
+                                  {'name': 'CRYPT32',
+                                   'base_addr': '0x58000000',
+                                   'path': 'C:\\Windows\\system32\\CRYPT32.dll'},
+                                  {'name': 'mscoree',
+                                   'base_addr': '0x53000000',
+                                   'path': 'C:\\Windows\\system32\\mscoree.dll'}]},
+     'emu_timeout': 300}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/remnux/mal/output/speakeasy_hook4.py", line 17, in <module>
+    se = speakeasy.Speakeasy(config=config)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/speakeasy/lib/python3.12/site-packages/speakeasy/speakeasy.py", line 43, in __init__
+    self._init_config(config)
+  File "/opt/speakeasy/lib/python3.12/site-packages/speakeasy/speakeasy.py", line 91, in _init_config
+    raise ConfigError('Invalid config')
+speakeasy.errors.ConfigError: Invalid config

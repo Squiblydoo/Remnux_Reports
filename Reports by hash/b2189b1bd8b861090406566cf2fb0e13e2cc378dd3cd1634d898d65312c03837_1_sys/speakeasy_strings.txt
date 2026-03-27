@@ -1,0 +1,13 @@
+=== DISCOVERED STRINGS ===
+[RtlInitUnicodeString] ZwQuerySystemInformation
+[MmGetSystemRoutineAddress] ZwQuerySystemInformation
+[RtlInitUnicodeString] ZwQuerySystemInformation
+[MmGetSystemRoutineAddress] ZwQuerySystemInformation
+
+=== LARGE MEMORY WRITES ===
+
+=== FLOSS DECODED ===
+ZwQu (x2) - likely ZwQuery* API names
+Chai (x1) - unknown partial decode
+IfKq (x2) - unknown partial decode
+LO6C (x5) - unknown partial decode

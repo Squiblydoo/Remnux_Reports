@@ -1,0 +1,6 @@
+/opt/speakeasy/lib/python3.12/site-packages/unicorn/unicorn.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Starting (win10_full, 300s, cmdline set)...
+[  1] 0x00589000 4KB -> RWX
+[  2] 0x00401000 1568KB -> RWX
+VP: 2, Dumps: 0

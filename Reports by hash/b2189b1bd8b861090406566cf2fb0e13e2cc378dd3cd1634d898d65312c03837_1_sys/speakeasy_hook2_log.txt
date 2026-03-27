@@ -1,0 +1,20 @@
+/opt/speakeasy/lib/python3.12/site-packages/unicorn/unicorn.py:6: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+Exception ignored on calling ctypes callback function: <bound method Hook._wrap_code_cb of <speakeasy.common.CodeHook object at 0x7f5bc55f5970>>
+Traceback (most recent call last):
+  File "/opt/speakeasy/lib/python3.12/site-packages/speakeasy/common.py", line 90, in _wrap_code_cb
+    return self.cb(self.se_obj, addr, size, self.ctx)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/speakeasy/lib/python3.12/site-packages/speakeasy/windows/winemu.py", line 175, in _module_access_hook
+    self.handle_import_func(mod_name, fn)
+  File "/opt/speakeasy/lib/python3.12/site-packages/speakeasy/windows/winemu.py", line 1166, in handle_import_func
+    rv = hook.cb(self, imp_api, orig, argv)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/remnux/mal/output/speakeasy_dump_hook2.py", line 26, in on_api
+    if 'VirtualProtect' in name:
+       ^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: argument of type 'function' is not iterable
+Starting emulation (this will take several minutes)...
+
+Total VirtualProtect calls: 0
+Dumped 0 regions
