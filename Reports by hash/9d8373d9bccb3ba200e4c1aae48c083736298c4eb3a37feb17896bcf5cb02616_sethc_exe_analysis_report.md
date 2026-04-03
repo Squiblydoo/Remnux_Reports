@@ -130,7 +130,9 @@ The following capa detections are **legitimate accessibility features** — not 
 |---|---|---|
 | User-Agent | `Windows 7 10.0; Win64; x64` | HTTP C2 beacon User-Agent (EA 0xE4CB in binary) |
 | Protocol | HTTP via `wininet.dll` | Loaded covertly via PEB walk |
-| C2 target | **Encrypted** — requires dynamic analysis | 102-byte XOR-encrypted buffer at image+0x194E0 area |
+| C2 URL | `https://jeremeycountry-school.com/student/CD9o3jmA` | Decrypted from 102-byte counter-XOR buffer (UTF-16LE) |
+| C2 domain | `jeremeycountry-school.com` | Fake "school" domain — typosquat/actor-controlled |
+| C2 path | `/student/CD9o3jmA` | Campaign/implant token (8-char alphanumeric) |
 
 ### File System
 | Type | Value |
@@ -168,7 +170,7 @@ The following capa detections are **legitimate accessibility features** — not 
 ## 6. Analyst Notes
 
 ### Gaps / Requiring Dynamic Analysis
-1. **C2 URL**: The 102-byte payload at `sethc.exe_base + 0x194E0` is XOR-encrypted with a counter key (starting 0xFF, decrementing per byte). Dumping the in-memory decrypted string requires runtime extraction (debugger breakpoint at `sub_14000eff0` after the XOR loop).
+1. **C2 URL recovered**: `https://jeremeycountry-school.com/student/CD9o3jmA` — decrypted from the 102-byte counter-XOR buffer at `.data` RVA `0x194E0` (file offset `0x180E0`). Buffer is UTF-16LE, XOR key starts at `0xFF` decrementing per byte.
 2. **Wininet function used**: `sub_14000f17d` called with decrypted buffer + wininet handle — likely `InternetOpenA/InternetConnectA/HttpOpenRequestA` or similar. Need runtime analysis to identify which wininet functions are resolved via the vtable calls (offsets 0x11A20, 0x11A88, 0x11D78 from image base).
 3. **Full C2 capability**: Whether this is a simple beacon vs. full backdoor (download/execute) not determinable statically. The stub appears to make a single outbound request; may receive commands.
 4. **Dropper/installer**: How sethc.exe was initially replaced is unknown. Requires incident response investigation of the affected system.
