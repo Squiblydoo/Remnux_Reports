@@ -79,9 +79,12 @@ The following capa detections are **legitimate accessibility features** — not 
 ## 3. Capabilities
 
 ### Malicious (injected stub)
+- **Filename-based environmental keying** (`sub_14000eff0` → `sub_14000f11c`): Before any network activity, the stub reads the process `BaseDllName` via PEB walk (`GS→TEB→PEB→Ldr→InLoadOrderModuleList`) and performs sequential UTF-16LE substring searches — first for `"MyPr"` (packed QWORD `0x007200500079004d`), then for `"2026"` (packed QWORD `0x0036003200300032`) starting from the position after the first match. Both must be present in the filename (e.g. `MyProject2026.exe`, `MyProgram2026Setup.exe`) or the C2 block is silently skipped. This is a sandbox/AV evasion mechanism consistent with the **TransferLoader** family — dynamic analysis confirms the beacon executes correctly when the binary is appropriately renamed.
+- **Trampoline injector** (`sub_14000efe0`): Uses `sub rsp, 0x10` / `lea rax, [stub]` / `xchg [rsp], rax` / `ret` to redirect execution into the malicious stub without a direct CALL — evades simple call-graph analysis.
+- **Decoy PDF launch**: Dynamic analysis confirms the malware opens a PDF as a decoy to distract the victim while the C2 beacon fires in the background. Source (embedded resource vs. dropped/downloaded) requires further investigation.
 - **Covert DLL loading**: Loads `wininet.dll` via PEB module list traversal (LDR_DATA_TABLE_ENTRY walk at `sub_14000eff0`) — avoids import table detection
 - **Inline string decryption**: Counter-based XOR decryption (key bytes: 0xFF, 0xFE, 0xFD, ...) applied to 102-byte inline-encrypted buffer containing C2 target
-- **HTTP C2 communication**: Uses decrypted wininet.dll functions to make outbound HTTP request with User-Agent `"Windows 7 10.0; Win64; x64"` before legitimate sethc execution
+- **HTTP C2 communication**: Uses decrypted wininet.dll functions (`InternetOpenW`, `InternetOpenUrlW`, `InternetReadFile` — resolved at runtime from wininet.dll base via `sub_14000f17d`) to make outbound HTTP request with User-Agent `"Windows 7 10.0; Win64; x64"` before legitimate sethc execution; reads up to 40KB (0xA000) of response
 - **System fingerprinting**: `GetUserNameExW()` → `CompareStringOrdinal()` against `DefaultAccountSAMName` from `SOFTWARE\Microsoft\Windows\CurrentVersion\OOBE` (`sub_14000e6c0`); `GetVersionExW()`, `GetSystemInfo()`
 - **Identity deception**: Falsified VersionInfo claiming Microsoft Corporation to avoid manual inspection
 
@@ -97,26 +100,37 @@ The following capa detections are **legitimate accessibility features** — not 
 ## 4. Attack Chain
 
 ```
-[Victim System]
+[Initial Delivery]
     │
-    ├─ Attacker replaces C:\Windows\System32\sethc.exe
-    │  (requires SYSTEM/TrustedInstaller; likely via prior compromise)
+    ├─ Victim receives binary named "MyPr*2026*.exe" (e.g. MyProject2026.exe)
+    │  with legitimate-looking Sectigo EV cert (Xiamen Zhiqing) + falsified Microsoft VersionInfo
     │
-    ├─ User locks screen / reaches login screen
-    │
-    └─ Shift × 5 → Windows triggers sethc.exe (SYSTEM context)
+    └─ Victim executes binary
            │
-           ├─ EntryPoint → SecurityCookieInit → jmp sub_14000efe0 (CRT startup)
+           ├─ EntryPoint → sub_14000f8e4 (SecurityCookieInit)
            │
-           ├─ sub_14000efe0 calls sub_14000eff0 [MALICIOUS STUB]
+           ├─ sub_14000efe0 [TRAMPOLINE] → sub_14000eff0 [MALICIOUS STUB]
            │       │
-           │       ├─ PEB walk → locate loaded modules list
-           │       ├─ Vtable call → LoadLibrary("wininet.dll") [via image base offset]
-           │       ├─ XOR-decrypt 102-byte inline buffer → C2 URL/params
-           │       └─ wininet HTTP request to C2 (User-Agent: "Windows 7 10.0; Win64; x64")
+           │       ├─ PEB walk → BaseDllName of current process
+           │       ├─ sub_14000f11c: search for "MyPr" in filename [FILENAME GATE]
+           │       ├─ sub_14000f11c: search for "2026" after match position
+           │       │       └─ if either fails → skip all C2 code (sandbox/AV evasion)
+           │       │
+           │       ├─ [gate passed] PEB walk → locate wininet.dll base
+           │       ├─ XOR-decrypt 102-byte inline buffer → C2 URL (UTF-16LE)
+           │       └─ sub_14000f17d: InternetOpenW / InternetOpenUrlW / InternetReadFile
+           │               → HTTP GET https://jeremeycountry-school.com/student/CD9o3jmA
+           │               → User-Agent: "Windows 7 10.0; Win64; x64"
+           │               → reads up to 40KB response
            │
-           └─ CRT startup continues → WinMain (sub_140001ccc) → legitimate sethc.exe
-                   (accessibility UI appears normally — victim unaware)
+           ├─ CRT startup continues → WinMain → legitimate sethc.exe UI
+           │
+           └─ Decoy PDF opened (details TBD — victim sees document, unaware of C2 beacon)
+
+[Persistence — separate attacker action]
+    └─ Attacker copies binary to C:\Windows\System32\sethc.exe
+       → fires on every Sticky Keys trigger at login screen (SYSTEM context)
+       → NOTE: filename check will FAIL as sethc.exe — C2 beacon dormant in persistence role
 ```
 
 **Why this is dangerous**: sethc.exe runs at the Windows logon screen (before any user logs in) under the WINLOGON process context with elevated privileges. The malicious stub phones home on every Sticky Keys trigger — including from a locked workstation — providing persistent SYSTEM-level C2 access.
@@ -164,21 +178,27 @@ The following capa detections are **legitimate accessibility features** — not 
 | System Owner/User Discovery | T1033 | GetUserNameExW, DefaultAccountSAMName |
 | System Information Discovery | T1082 | GetVersionExW, GetSystemInfo |
 | Masquerading | T1036 | Falsified VersionInfo claiming Microsoft |
+| Virtualization/Sandbox Evasion: Environment Keying | T1480.001 | Filename gate: requires "MyPr" + "2026" in process BaseDllName; C2 silently skipped otherwise |
 
 ---
 
 ## 6. Analyst Notes
 
-### Gaps / Requiring Dynamic Analysis
+### Gaps / Requiring Further Analysis
 1. **C2 URL recovered**: `https://jeremeycountry-school.com/student/CD9o3jmA` — decrypted from the 102-byte counter-XOR buffer at `.data` RVA `0x194E0` (file offset `0x180E0`). Buffer is UTF-16LE, XOR key starts at `0xFF` decrementing per byte.
-2. **Wininet function used**: `sub_14000f17d` called with decrypted buffer + wininet handle — likely `InternetOpenA/InternetConnectA/HttpOpenRequestA` or similar. Need runtime analysis to identify which wininet functions are resolved via the vtable calls (offsets 0x11A20, 0x11A88, 0x11D78 from image base).
-3. **Full C2 capability**: Whether this is a simple beacon vs. full backdoor (download/execute) not determinable statically. The stub appears to make a single outbound request; may receive commands.
-4. **Dropper/installer**: How sethc.exe was initially replaced is unknown. Requires incident response investigation of the affected system.
+2. **Wininet functions identified (static)**: `sub_14000f17d` resolves and calls `InternetOpenW` (UA: `"Windows 7 10.0; Win64; x64"`), `InternetOpenUrlW`, `InternetReadFile` from wininet.dll at runtime. Reads up to 40KB response.
+3. **Dynamic analysis confirmed**: Beacon executes successfully when binary is renamed to a filename matching `MyPr*2026*`. C2 response content and any follow-on payload not yet captured.
+4. **Decoy PDF**: Dynamic analysis confirms a PDF is opened as a decoy. Origin (embedded resource, dropped to disk, or downloaded from C2), filename, and content are not yet determined — static analysis did not surface an embedded PDF in carved files or virtual files.
+5. **Dropper/installer**: How sethc.exe was initially replaced is unknown. Requires incident response investigation of the affected system.
+
+### Family Attribution
+- **TransferLoader**: The filename environmental key (`MyPr*2026*` substring check via PEB `BaseDllName` walk) is a known TransferLoader TTP. Dynamic analysis confirms the check is functional and gates C2 execution. **Moderate confidence** in TransferLoader attribution.
+- **Shuyal**: Malcat kesakode confidence = 0. Treat as weak signal only; do not co-attribute with TransferLoader without additional corroboration.
 
 ### Alternative Hypotheses Considered
 - **"Legitimate Chinese port of sethc.exe"**: Rejected. No plausible reason a Chinese company's EV cert would sign a Windows system binary with falsified Microsoft VersionInfo and a covert wininet HTTP call.
 - **"capa detections are false positives"**: Most capa findings (keylog, persistence, PID spoof) are indeed legitimate sethc.exe behaviors. Only the PEB-walk + wininet network stub is confirmed malicious.
-- **"Shuyal family attribution"**: Malcat kesakode confidence = 0. Treat as weak signal only. Attribution to Shuyal or any specific threat actor requires additional cross-referencing.
+- **"Filename check = dead code in sethc deployment"**: Rejected by dynamic analysis. The check is functional and the C2 fires when the binary is renamed to match `MyPr*2026*`. The sethc.exe persistence role and the C2 beacon role are two separate use cases — the filename check is intentional OPSEC, not an oversight.
 
 ### Detection Opportunities
 - Monitor for writes to `C:\Windows\System32\sethc.exe` (high fidelity IOC)
