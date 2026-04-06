@@ -83,9 +83,10 @@ All five payloads are stored in `.rsrc` as RCDATA resources, ZLIB-compressed wit
 - TRUST_IMITATE_DLL.dll is nearly identical in code to 6.exe (same Delphi codebase, same PDB path `F:\MainWork\Odes\`)
 
 ### RAT/Stealer Payload (TRUST_IMITATE_DLL.dll)
-- **Keylogger**: Windows hook-based keylogging (`SetWindowsHookEx`, `GetKeyState`)
-- **Screen capture**: Screenshot functionality
-- **C2 communication**: WinHTTP (16 imported functions) — HTTP POST with form data (`multipart/form-data`)
+- **Message hook (WH_GETMESSAGE, type 3)**: Installed via `SetWindowsHookExW`; hook procedure `HintGetMsgHook` fires on every Windows message and triggers the C2 dispatch path (`sub_6044c0`). This is not a WH_KEYBOARD hook — it intercepts all window messages, enabling broad input capture and C2 triggering.
+- **Activation guard**: The hook and thread setup only execute when `*([0xBF8784]+0xC5) == 0`. The pointer at `[0xBF8784]` is only initialized by the IRScriptEditor.exe host process. The DLL does nothing if loaded outside its sideloading context — explaining why emulation fails.
+- **Screen/mouse monitoring**: A dedicated thread (`sub_60237c`) loops on `WaitForSingleObject` → `GetCursorPos` → `FindVCLWindow` to track cursor position over Delphi UI windows (T1113 screen capture).
+- **C2 communication**: WinHTTP (16 imported functions) — HTTP POST with form data (`multipart/form-data`); data is Base64-encoded (`sub_a689d4`) before transmission. All WinHTTP hostname resolution is vtable-dispatched at runtime; C2 URL cannot be recovered statically.
 - **TCP listen socket**: Possible reverse shell or inbound command channel
 - **Anti-debug**: `IsDebuggerPresent`, `FindWindowW`, `FindWindowExW`, `GetWindowThreadProcessId`, `UnhandledExceptionFilter`, `RaiseException`
 - **Registry access**: Read/write registry keys
@@ -186,8 +187,9 @@ All five payloads are stored in `.rsrc` as RCDATA resources, ZLIB-compressed wit
 - TCP listen socket suggests inbound command capability
 
 ### Behavioral IOCs
-- `SetWindowsHookEx` / `GetKeyState` — keylogger install
-- `WinHttpOpen` / `WinHttpConnect` / `WinHttpSendRequest` — HTTP C2
+- `SetWindowsHookExW(WH_GETMESSAGE=3)` — message hook install (fires on all window messages, not just keyboard)
+- `GetCursorPos` / `FindVCLWindow` loop — mouse/screen monitoring thread
+- `WinHttpOpen` / `WinHttpConnect` / `WinHttpSendRequest` — HTTP C2 (C2 URL runtime-decrypted; not recoverable statically)
 - `Wow64DisableWow64FsRedirection` — WoW64 bypass
 - Named mutexes `Global\[a-ex]_` — inter-component coordination
 - `[IF_SERVICE]` / `[IF_SERVICE_RUNING]` string checks — service gate
@@ -209,7 +211,7 @@ The KesaKode classifier returns 37% Astaroth similarity for both 6.exe and TRUST
 The techniques match, though the specific DLL hijacking target (Indigo Rose Script Editor / `cmcs21.dll`) and Delphi codebase differ from canonical Astaroth samples. This may be a derivative, inspired family, or coincidental similarity.
 
 ### What Requires Dynamic Analysis
-- **C2 URLs** — 83 XOR loops contain all network IOCs; sandbox execution required
+- **C2 URLs** — All WinHTTP hostnames are vtable-dispatched and runtime-decrypted; full emulation analysis of TRUST_IMITATE_DLL.dll (analysis_id=11) confirms no plaintext URL exists in the binary. The DLL activation guard (`*([0xBF8784]+0xC5)==0`) requires the IRScriptEditor.exe host process context — sandbox execution with WinHTTP API logging is the only viable extraction method.
 - **PDF lure content** — password-protected; password likely passed at runtime
 - **Drop path** — XOR-obfuscated target directory
 - **Persistence mechanism** — `*.lnk` manipulation details unknown; Run key also possible
