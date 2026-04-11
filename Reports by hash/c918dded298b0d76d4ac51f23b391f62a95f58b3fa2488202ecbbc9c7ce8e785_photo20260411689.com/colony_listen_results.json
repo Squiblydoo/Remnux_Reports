@@ -1,0 +1,38 @@
+{
+  "target": "uu.goldeyeuu.io:5188",
+  "started": "2026-04-11T21:04:08.523584",
+  "duration_s": 300,
+  "events": [
+    {
+      "frame": 1,
+      "elapsed_s": 258.815,
+      "opcode": 2,
+      "opcode_name": "binary",
+      "length": 12,
+      "hex": "0c0000000000000065150000",
+      "colony_header": {
+        "len": 12,
+        "type": "0x00000000",
+        "session": "0x00001565",
+        "extra_bytes": 0
+      }
+    },
+    {
+      "frame": 2,
+      "elapsed_s": 266.111,
+      "opcode": 2,
+      "opcode_name": "binary",
+      "length": 12,
+      "hex": "0c0000000000000037150000",
+      "colony_header": {
+        "len": 12,
+        "type": "0x00000000",
+        "session": "0x00001537",
+        "extra_bytes": 0
+      }
+    }
+  ],
+  "ack_session_id": "0x00001536",
+  "ended": "2026-04-11T21:09:09.031943",
+  "frames_received": 2
+}

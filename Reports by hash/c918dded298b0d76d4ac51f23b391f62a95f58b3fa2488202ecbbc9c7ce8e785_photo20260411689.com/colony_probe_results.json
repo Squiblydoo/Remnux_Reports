@@ -1,0 +1,33 @@
+{
+  "target": "uu.goldeyeuu.io:5188",
+  "timestamp": "2026-04-11T20:59:09.055794",
+  "sessions": [
+    {
+      "ip": "56.155.111.29",
+      "mode": "both",
+      "responses": {
+        "replay": [
+          {
+            "opcode": 2,
+            "length": 12,
+            "hex": "0c0000000000000036150000",
+            "colony_header": {
+              "length": 12,
+              "type": "0x00000000",
+              "session_id": "0x00001536",
+              "payload_bytes": 0,
+              "encrypted_payload_hex": ""
+            }
+          }
+        ],
+        "probe": {
+          "type_0_ack": [],
+          "type_0x204_zeroed": [],
+          "type_0x1": [],
+          "type_0x2": [],
+          "type_0x100": []
+        }
+      }
+    }
+  ]
+}

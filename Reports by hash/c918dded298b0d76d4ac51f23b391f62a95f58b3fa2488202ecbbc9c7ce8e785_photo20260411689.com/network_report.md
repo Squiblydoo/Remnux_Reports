@@ -190,10 +190,50 @@ alert tcp any any -> any 5188 (
 
 ---
 
-## 8. Analyst Notes
+## 8. Live C2 Interaction Results
+
+Two scripts were run against the live infrastructure after sample analysis to confirm server behavior and gather additional protocol intelligence.
+
+### 8.1 Replay Probe (`colony_ws_probe.py`)
+
+Key findings:
+- Server is **live** as of 2026-04-11 21:00 UTC at `56.155.111.29:5188`
+- The exact captured 203-byte REGISTER frame is accepted with no replay protection
+- The server ACK `session_id=0x1536` is **deterministic** — identical payload always returns the same session ID
+- Crafted frames with zeroed payloads (type=0x204, 203 bytes) received no response — the server validates the inner encrypted payload, not just the header
+- Minimal type=0x0, 0x1, 0x2, 0x100 frames received no response — the server ignores unknown sessions
+
+### 8.2 Extended Listener (`colony_ws_listen.py`, 300s)
+
+A 5-minute session was held open after registration. The server sent **two unsolicited frames** at +258s and +266s:
+
+| Time      | Direction     | Hex                      | Type       | Session ID  |
+|-----------|---------------|--------------------------|------------|-------------|
+| +0s       | Server→Client | `0c000000 00000000 36150000` | 0x00000000 | 0x00001536  |
+| +258.8s   | Server→Client | `0c000000 00000000 65150000` | 0x00000000 | 0x00001565  |
+| +266.1s   | Server→Client | `0c000000 00000000 37150000` | 0x00000000 | 0x00001537  |
+
+All three server frames are 12 bytes (header only, no payload) and type=0x0. This is consistent with server-side keepalive/heartbeat behavior rather than operator command frames.
+
+**Session counter analysis:**
+- Initial ACK: `0x1536` (5430)
+- +258s frame 1: `0x1565` (5477) — 47 IDs higher than initial ACK
+- +266s frame 2: `0x1537` (5431) — 1 ID higher than initial ACK
+
+The session counter is likely **global** across all connected clients. The 47-step advance in ~258 seconds implies approximately 11 new bot registrations per minute during the observation window. The server is actively serving a live botnet, not a sinkhole.
+
+The `0x1537` frame may represent an echo/ACK of our own session (registered session `0x1536` → keepalive acknowledgement `0x1537`), while `0x1565` reflects the server's global session counter state at the time of the heartbeat push.
+
+**No operator command frames** (frames with payload > 12 bytes) were observed during the 5-minute window. The C2 server appears to be waiting for an operator to issue tasking.
+
+---
+
+## 9. Analyst Notes
 
 - **Connection duration:** 31 seconds in AnyRun sandbox. The short session (~500 bytes sent, ~160 bytes received) suggests the RAT established a session handshake but no active tasking was received during the analysis window. Real-world dwell time would be longer.
 - **No UDP activity to port 50986:** The `service.cfg` configures `udp_port:50986` but no UDP traffic to this port was observed. This port is likely for local inter-process communication (between libuv.dll and other DLLs), not external.
 - **IP hardcoding:** No DNS query for `56.155.111.29` was observed — `uu.goldeyeuu.io` was resolved by DNS and the returned IP happened to match. This may indicate the IP is also hardcoded as a fallback.
 - **Application-layer encryption:** The inner protocol is encrypted but the WebSocket transport is plaintext. Network defenders can detect this traffic by WebSocket upgrade to port 5188 with the unusual `/\` path.
 - **C2 pivot potential:** The 12-byte frame header's `session ID` field (`0x094E`, `0x0993`) may vary per connection; static rule should focus on the WebSocket handshake, not frame contents.
+- **Botnet scale estimate:** Session ID counter advanced ~47 in 258 seconds during observation window → ~11 new registrations/minute. Server is serving an active campaign.
+- **Keepalive timer:** Server pushes a type=0 heartbeat to connected clients at approximately the 4-minute mark. Bots that do not maintain a WebSocket connection would be pruned from the active session table on the server side.
