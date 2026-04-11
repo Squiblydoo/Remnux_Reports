@@ -1,0 +1,324 @@
+{
+  "network": [],
+  "files": [],
+  "registry": [
+    {
+      "api": "RegOpenKeyExA",
+      "key": "HARDWARE\\DEVICEMAP\\Scsi\\Scsi Port 0\\Scsi Bus 0\\Target Id 0\\Logical Unit Id 0"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "HARDWARE\\DEVICEMAP\\Scsi\\Scsi Port 1\\Scsi Bus 0\\Target Id 0\\Logical Unit Id 0"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "HARDWARE\\DEVICEMAP\\Scsi\\Scsi Port 2\\Scsi Bus 0\\Target Id 0\\Logical Unit Id 0"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Control\\SystemInformation"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Control\\SystemInformation"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "HARDWARE\\DEVICEMAP\\Scsi\\Scsi Port 0\\Scsi Bus 0\\Target Id 0\\Logical Unit Id 0"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "HARDWARE\\Description\\System"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "HARDWARE\\Description\\System"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "HARDWARE\\Description\\System"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "HARDWARE\\DEVICEMAP\\Scsi\\Scsi Port 0\\Scsi Bus 0\\Target Id 0\\Logical Unit Id 0"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "HARDWARE\\Description\\System"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "HARDWARE\\ACPI\\DSDT\\VBOX__"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "HARDWARE\\ACPI\\DSDT\\VBOX__"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "HARDWARE\\ACPI\\FADT\\VBOX__"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "HARDWARE\\ACPI\\FADT\\VBOX__"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "HARDWARE\\ACPI\\RSDT\\VBOX__"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "HARDWARE\\ACPI\\RSDT\\VBOX__"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SOFTWARE\\Oracle\\VirtualBox Guest Additions"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SOFTWARE\\Oracle\\VirtualBox Guest Additions"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\VBoxGuest"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\VBoxGuest"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\VBoxMouse"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\VBoxMouse"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\VBoxService"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\VBoxService"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\VBoxSF"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\VBoxSF"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\VBoxVideo"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\VBoxVideo"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\vioscsi"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\vioscsi"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\viostor"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\viostor"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\VirtIO-FS Service"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\VirtIO-FS Service"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\VirtioSerial"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\VirtioSerial"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\BALLOON"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\BALLOON"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\BalloonService"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\BalloonService"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\netkvm"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SYSTEM\\ControlSet001\\Services\\netkvm"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SOFTWARE\\Microsoft\\Virtual Machine\\Guest\\Parameters"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SOFTWARE\\Microsoft\\Virtual Machine\\Guest\\Parameters"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SOFTWARE\\VMware, Inc.\\VMware Tools"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SOFTWARE\\VMware, Inc.\\VMware Tools"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SOFTWARE\\Wine"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "SOFTWARE\\Wine"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "System\\CurrentControlSet\\Services\\Disk\\Enum"
+    },
+    {
+      "api": "RegOpenKeyExA",
+      "key": "System\\CurrentControlSet\\Enum\\IDE"
+    }
+  ],
+  "mutexes": [],
+  "processes": [],
+  "memory": [
+    {
+      "api": "VirtualProtect_dump",
+      "addr": "0x140001000",
+      "size": "0x31000",
+      "path": "/home/remnux/mal/output/se_dumps/region_0x140001000_00031000_RWX.bin"
+    },
+    {
+      "api": "VirtualAlloc",
+      "addr": "0x50000",
+      "size": "0x25dd0",
+      "prot": "PAGE_READWRITE"
+    },
+    {
+      "api": "VirtualProtect_dump",
+      "addr": "0x140032000",
+      "size": "0x14000",
+      "path": "/home/remnux/mal/output/se_dumps/region_0x140032000_00014000_RWX.bin"
+    },
+    {
+      "api": "VirtualAlloc",
+      "addr": "0x76000",
+      "size": "0x25dd0",
+      "prot": "PAGE_READWRITE"
+    },
+    {
+      "api": "VirtualProtect_dump",
+      "addr": "0x140046000",
+      "size": "0x4000",
+      "path": "/home/remnux/mal/output/se_dumps/region_0x140046000_00004000_RWX.bin"
+    },
+    {
+      "api": "VirtualAlloc",
+      "addr": "0x9c000",
+      "size": "0x25dd0",
+      "prot": "PAGE_READWRITE"
+    },
+    {
+      "api": "VirtualProtect_dump",
+      "addr": "0x14004a000",
+      "size": "0x3000",
+      "path": "/home/remnux/mal/output/se_dumps/region_0x14004a000_00003000_RWX.bin"
+    },
+    {
+      "api": "VirtualAlloc",
+      "addr": "0xc2000",
+      "size": "0x25dd0",
+      "prot": "PAGE_READWRITE"
+    },
+    {
+      "api": "VirtualProtect_dump",
+      "addr": "0x14004d000",
+      "size": "0x1000",
+      "path": "/home/remnux/mal/output/se_dumps/region_0x14004d000_00001000_RWX.bin"
+    },
+    {
+      "api": "VirtualAlloc",
+      "addr": "0xe8000",
+      "size": "0x25dd0",
+      "prot": "PAGE_READWRITE"
+    },
+    {
+      "api": "VirtualProtect_dump",
+      "addr": "0x14004f000",
+      "size": "0x9f000",
+      "path": "/home/remnux/mal/output/se_dumps/region_0x14004f000_0009f000_RWX.bin"
+    },
+    {
+      "api": "VirtualAlloc",
+      "addr": "0x10e000",
+      "size": "0x25dd0",
+      "prot": "PAGE_READWRITE"
+    },
+    {
+      "api": "VirtualProtect_dump",
+      "addr": "0x1400ee000",
+      "size": "0x9000",
+      "path": "/home/remnux/mal/output/se_dumps/region_0x1400ee000_00009000_RWX.bin"
+    },
+    {
+      "api": "VirtualAlloc",
+      "addr": "0x134000",
+      "size": "0x25dd0",
+      "prot": "PAGE_READWRITE"
+    },
+    {
+      "api": "VirtualProtect_dump",
+      "addr": "0x140032000",
+      "size": "0x1000",
+      "path": "/home/remnux/mal/output/se_dumps/region_0x140032000_00001000_RWX.bin"
+    },
+    {
+      "api": "VirtualProtect_dump",
+      "addr": "0x140032000",
+      "size": "0x8",
+      "path": "/home/remnux/mal/output/se_dumps/region_0x140032000_00000008_RWX.bin"
+    },
+    {
+      "api": "VirtualProtect_dump",
+      "addr": "0x1400321f8",
+      "size": "0x8",
+      "path": "/home/remnux/mal/output/se_dumps/region_0x1400321f8_00000008_RWX.bin"
+    },
+    {
+      "api": "VirtualProtect_dump",
+      "addr": "0x140192000",
+      "size": "0x1e0",
+      "path": "/home/remnux/mal/output/se_dumps/region_0x140192000_000001e0_RWX.bin"
+    }
+  ],
+  "strings": [],
+  "misc": []
+}
