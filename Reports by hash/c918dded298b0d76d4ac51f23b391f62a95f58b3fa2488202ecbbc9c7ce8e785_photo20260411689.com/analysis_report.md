@@ -37,9 +37,9 @@
 
 Two-stage operation:
 - **Stage 1** (`photo20260411689.com`): Heavily obfuscated PE loader with LZX self-decryption, 26-check anti-VM gauntlet, and WinHTTP C2 stack. Downloads a stage-2 manifest from Google Cloud Storage.
-- **Stage 2**: A trojanized TurboVPN installation package (11 files) delivered from `storage.googleapis.com/trubo/`. Contains a Colony RAT component, a WebView2 MITB payment interceptor, and a shellcode stager that connects to the attacker's C2 via UDP/named-pipe at `uu[.]goldeyeuu[.]io:50986`.
+- **Stage 2**: A trojanized TurboVPN installation package (11 files) delivered from `storage.googleapis.com/trubo/`. Contains a Zhong Stealer C2 component (RAT module), a WebView2 MITB payment interceptor, and a shellcode stager that connects to the attacker's C2 via UDP/named-pipe at `uu[.]goldeyeuu[.]io:50986`.
 
-No matching YARA family for the stage-1 loader. Stage-2 `windui.dll` matches **Colony RAT** (KesaKode confidence=1) with GoldenSpy and MiniBus also flagged — all Chinese-linked implant families.
+No matching YARA family for the stage-1 loader. Stage-2 `windui.dll` is the **Zhong Stealer** C2/RAT module (attributed to APT-Q-27 / Golden Eye Dog).
 
 ---
 
@@ -98,7 +98,7 @@ Two distinct build environments identified within the package:
 | `crashreport.dll` | `31c1e830...` | 97KB | **Shellcode loader**; exports `InitBugReport`; PEB-walk FNV-1a API resolution; opens `Trubo.log`; decrypts and executes payload |
 | `Trubo.log` | `fc3fdbfb...` | 163KB | **Encrypted shellcode payload**; decryption: `(byte + 0x77) & 0xFF ^ 0x62`; decrypts to x86 PEB-walk stager with WinINet+UDP C2 |
 | `payment.dll` | `273385ca...` | 154KB | **WebView2 MITB interceptor**; exports `WebReload()`; `ICoreWebView2NavigationCompletedEventHandler`; intercepts payment checkout pages |
-| `windui.dll` | `a8be52e0...` | 800KB | **Colony RAT** (KesaKode match); DuiLib ActiveX host; targets `Software\360\360se6\chrome`; GoldenSpy/MiniBus also flagged |
+| `windui.dll` | `a8be52e0...` | 800KB | **Zhong Stealer C2 module** (APT-Q-27); DuiLib ActiveX host; WebSocket C2 to `uu.goldeyeuu.io:5188`; targets `Software\360\360se6\chrome` |
 | `libuv.dll` | `8e8cb13f...` | 291KB | C2 networking layer; 360/Quantum build (`D:\360Work\7.Quantum\`); named pipe `\\?\pipe\uv\%p-%lu`; UDP transport |
 | `service.cfg` | `cebbfee6...` | 35B | Transport config: `{"pipe":1,"udp":1,"udp_port":50986}` |
 | `remote_config_data` | `e51bd548...` | 16KB | Firebase Remote Config cache; TurboVPN server list, VPN certs, V2Ray/Xray/Reality/SSR protocol config |
@@ -132,12 +132,12 @@ Two distinct build environments identified within the package:
 - Targets TurboVPN payment checkout pages: `inngoturbo[.]com`, `turbospn[.]com`, `payserviceinn[.]com` (URLs extracted from `remote_config_data`)
 - JavaScript injection reference: `window.refreshWi...yearsplan.pm65` visible in strings
 
-#### `windui.dll` — Colony RAT / ActiveX Host
+#### `windui.dll` — Zhong Stealer C2 Module / ActiveX Host
 
 - DuiLib (`DuiLib::CActiveXCtrl`) COM interface implementation: `IUnknown`, `IOleClientSite`, `IOleInPlaceSiteWindowless`, `IOleInPlaceSite`, `IOleWindow`, `IOleControlSite`, `IOleContainer`, `IObjectWithSite`
 - Registry target: `Software\360\360se6\chrome` (360 Secure Browser credential store)
 - Build path: `D:\360\work\quantum\Release\windui.pdb` (same 360/Quantum environment as payment.dll and libuv.dll)
-- KesaKode verdict: **Colony** confidence=1; GoldenSpy confidence=0; MiniBus confidence=0
+- WebSocket C2: `uu.goldeyeuu.io:5188` — binary protocol, 12-byte header `[len][type][session_id]`, operator-directed RAT capability
 
 #### `remote_config_data` — Firebase Config (cleartext)
 
@@ -185,9 +185,9 @@ photo20260411689.com  (delivered via phishing/drive-by; .com extension bypasses 
                 │                       Connects UDP:50986 / named pipe
                 │                       WinINet HTTP backup channel
                 │
-                ├── windui.dll (Colony RAT)
+                ├── windui.dll (Zhong Stealer C2 / RAT module)
                 │       DuiLib ActiveX persistent backdoor
-                │       Targets 360 Browser credential store
+                │       WebSocket C2: uu.goldeyeuu.io:5188
                 │
                 ├── payment.dll (WebView2 MITB)
                 │       Intercepts TurboVPN payment page navigation
@@ -380,7 +380,7 @@ See `Trubo_decrypt.py` for standalone implementation.
 
 **Recommended follow-up**: Submit `Turbo.exe` + all stage-2 components directly to ANY.RUN, Joe Sandbox, or CAPE on a bare-metal profile (spoof CPUID, MAC address, disk serials) to capture:
 - Full C2 beaconing protocol to `uu[.]goldeyeuu[.]io:50986`
-- Colony RAT (`windui.dll`) persistence mechanisms
+- Zhong Stealer (`windui.dll`) C2 and persistence mechanisms
 - WebView2 MITB (`payment.dll`) interception traffic
 
 ---
@@ -414,7 +414,7 @@ See `Trubo_decrypt.py` for standalone implementation.
 | Application Layer Protocol: Web | T1071.001 | WinINet HTTP + V2Ray/Xray/Reality VPN tunnel as cover |
 | Protocol Tunneling | T1572 | C2 tunnelled as VPN traffic (V2Ray/Xray/Reality/tun2socks) |
 | Browser in the Middle | T1185 | `payment.dll` WebView2 MITB on payment checkout pages |
-| Steal Web Session Cookie | T1539 | `windui.dll` Colony RAT; 360 Browser credential target |
+| Steal Web Session Cookie | T1539 | `windui.dll` Zhong Stealer; 360 Browser credential target |
 | Credentials from Web Browsers | T1555.003 | `Software\360\360se6\chrome` registry access |
 | Fallback Channels | T1008 | Named pipe + UDP dual-channel (service.cfg) |
 | Deobfuscate/Decode Files | T1140 | `InitBugReport` decrypts Trubo.log at runtime |
@@ -430,7 +430,7 @@ See `Trubo_decrypt.py` for standalone implementation.
 
 3. **Stage-2 cert legitimacy**: The "INNOVATIVE CONNECTING PTE. LIMITED" cert (serial `06500ee65ffbfb6ea4f4b16ab6f910c6`) appears to be the legitimate TurboVPN signing certificate. The threat actor either (a) has insider access to TurboVPN's build/signing infrastructure, (b) compromised their signing key, or (c) operates under the same corporate entity. The `remote_config_data` Firebase config is authentic TurboVPN configuration data.
 
-4. **360/Quantum build environment**: Three of the malicious components (`payment.dll`, `windui.dll`, `libuv.dll`) share a `D:\360\work\quantum\` or `D:\360Work\7.Quantum\` build path. This links them to a common threat actor environment referencing Qihoo 360 tooling. The Colony RAT match on `windui.dll` and the DuiLib (Chinese DirectUI library) usage are consistent with a Chinese-nexus actor.
+4. **360/Quantum build environment**: Three of the malicious components (`payment.dll`, `windui.dll`, `libuv.dll`) share a `D:\360\work\quantum\` or `D:\360Work\7.Quantum\` build path. This links them to a common threat actor environment referencing Qihoo 360 tooling, consistent with the APT-Q-27 / Golden Eye Dog attribution. The DuiLib (Chinese DirectUI library) usage and `goldeyeuu.io` C2 domain are consistent with this actor.
 
 5. **Attack model — Rogue VPN + MITB**: The overall attack chains a rogue VPN installation with payment credential theft. The victim sees a "dead photo link" (503 decoy), while TurboVPN installs silently and tunnels all traffic through `uu[.]goldeyeuu[.]io`. The `payment.dll` WebView2 component intercepts TurboVPN's own payment pages to steal financial credentials at the point of subscription purchase — a high-value target moment.
 
@@ -442,5 +442,5 @@ See `Trubo_decrypt.py` for standalone implementation.
    - Submit DigiCert revocation request for cert serial `049209454db22190c7697285c3d5ad9b`
    - Report GCS bucket `storage[.]googleapis[.]com/trubo/` to Google for takedown
    - Submit `uu[.]goldeyeuu[.]io` to threat intel platforms for infrastructure tracking
-   - Run stage-2 components on bare-metal sandbox to capture full Colony RAT C2 protocol
+   - Run stage-2 components on bare-metal sandbox to capture full Zhong Stealer C2 protocol
    - Investigate INNOVATIVE CONNECTING PTE. LIMITED for potential supply-chain compromise

@@ -39,7 +39,7 @@ All 12 stage-2 components are fetched over TLS from a single Google Cloud Storag
 | `Turbo.exe` | Main VPN application launcher |
 | `crashreport.dll` | Stage-1 shellcode loader (InitBugReport) |
 | `Trubo.log` | Encrypted shellcode payload |
-| `windui.dll` | Colony RAT (KesaKode) — C2 agent |
+| `windui.dll` | Zhong Stealer — C2 agent (RAT module) |
 | `payment.dll` | WebView2 MITB payment interceptor |
 | `libuv.dll` | Custom libuv — named pipe + UDP transport |
 | `service.cfg` | Transport config: `{"pipe":1,"udp":1,"udp_port":50986}` |
@@ -138,14 +138,14 @@ StrongSwan certificates present in `remote_config_data` use `CN=ThisIsSpar ta.we
 
 ## 6. Answer: Is C2 Traffic Hidden in a VPN Tunnel?
 
-**No.** The Colony RAT C2 channel operates independently of the VPN components:
+**No.** The Zhong Stealer C2 channel operates independently of the VPN components:
 
 - C2 = direct WebSocket connection to `uu[.]goldeyeuu[.]io:5188` (plain HTTP, no VPN)
 - VPN components = route victim's internet traffic through TurboVPN proxy servers (separate purpose)
 - The two channels are architecturally separate; the RAT does not use the VPN tunnel for its own communications
 
 The malware uses two distinct infrastructure tracks:
-1. **Attacker C2:** `uu[.]goldeyeuu[.]io:5188` → binary WebSocket protocol → Colony RAT commands
+1. **Attacker C2:** `uu[.]goldeyeuu[.]io:5188` → binary WebSocket protocol → Zhong Stealer operator commands
 2. **Victim traffic routing:** V2Ray/Xray/SSR endpoints → VPN monetization / potential MITM
 
 ---
@@ -156,7 +156,7 @@ All IOCs defanged:
 
 | Indicator | Type | Role |
 |-----------|------|------|
-| `uu[.]goldeyeuu[.]io` | Domain | Colony RAT C2 |
+| `uu[.]goldeyeuu[.]io` | Domain | Zhong Stealer C2 (APT-Q-27 / Golden Eye Dog) |
 | `56[.]155[.]111[.]29` | IP (AWS US) | C2 server (resolved uu.goldeyeuu.io) |
 | `5188/tcp` | Port | C2 WebSocket port |
 | `storage[.]googleapis[.]com/trubo/` | URL | Stage-2 payload GCS bucket |
@@ -180,7 +180,7 @@ WebSocket upgrade to port 5188 with path "/\" and Host matching *.goldeyeuu.io
 
 ```
 alert tcp any any -> any 5188 (
-    msg:"TurboVPN Colony RAT WebSocket C2 - uu.goldeyeuu.io";
+    msg:"Zhong Stealer WebSocket C2 (APT-Q-27) - uu.goldeyeuu.io";
     content:"Host: uu.goldeyeuu.io:5188"; nocase;
     content:"Upgrade: websocket"; nocase;
     content:"GET /\\"; offset:0; depth:7;
