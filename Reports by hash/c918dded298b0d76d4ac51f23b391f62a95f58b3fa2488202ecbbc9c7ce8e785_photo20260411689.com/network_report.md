@@ -92,10 +92,12 @@ After the 101 handshake, all communication uses binary WebSocket frames (opcode 
 
 | Offset | Size | Type     | Value (frame 0)    | Description          |
 |--------|------|----------|--------------------|----------------------|
-| 0      | 4    | uint32 LE | `0x000000CB` (203) | Total message length |
-| 4      | 4    | uint32 LE | `0x00000204`       | Message type / flags |
-| 8      | 4    | uint32 LE | `0x0000094E`       | Correlation/session ID |
-| 12     | n    | bytes     | (encrypted)        | Application payload  |
+| 0      | 4    | uint32 LE | `0x000000CB` (203) | Total message length (including 12-byte header) |
+| 4      | 4    | uint32 LE | `0x00000204` (516) | **Original plaintext size** (NOT message type) |
+| 8      | 4    | uint32 LE | `0x0000094E` (2382) | Session ID / correlation handle |
+| 12     | n    | bytes     | (encrypted)        | zlib-compressed+encrypted system fingerprint |
+
+**Correction from initial analysis:** Field at offset 4 (`0x204 = 516`) is the **original decompressed data size**, not a "message type" field. The actual compression+encryption pipeline is: `compress(fingerprint_516_bytes) → encrypt_191_bytes → prepend_12_byte_header → websocket_frame`.
 
 Observed frames:
 
@@ -106,7 +108,38 @@ Observed frames:
 | Server→Client  | 12     | 12        | 0x00000000 | 0x00001536  |
 | Server→Client  | 12     | 12        | 0x00000000 | 0x00009898  |
 
-The payload beyond the header is application-layer encrypted (non-ASCII, appears random). The encryption key and algorithm are not recoverable from static analysis alone (keys likely exchanged in the first 203-byte frame or derived from the WebSocket handshake).
+**UPDATED (2026-04-12): Encryption algorithm and key fully recovered via static analysis of stage-2 DLL (windui.dll).** The encryption is NOT a handshake-negotiated key — it is a **hardcoded static 32-byte key** embedded at VA 0x10041060 in stage-2, identical for every bot.
+
+**Encryption algorithm (`sub_10001ade`, EA 3806):**
+```
+For each byte i of the compressed payload:
+  op = i % 8
+  k  = key[i % 32]
+  op0: byte ^= k
+  op1: byte = (byte + (k >> 1)) & 0xFF
+  op2: byte = (byte - (k * 4)) & 0xFF
+  op3: byte = (byte + (k << 2)) & 0xFF
+  op4-op7: no change
+```
+
+**32-byte static key (same for every infected host):**
+```
+8A 91 36 10 E9 05 C3 DD 1F 65 78 11 EA 3B 19 33
+47 1B 23 0F 88 E1 C1 55 61 60 99 A0 3A B0 AB C0
+```
+
+**Pipeline:** `OSVERSIONINFOEX+fingerprint (516 bytes)` → `zlib compress` → `custom encrypt` → `12-byte header` → `WebSocket send`
+
+**Decrypted REGISTER fingerprint (from AnyRun PCAP, 2026-04-11):**
+| Field | Value |
+|-------|-------|
+| OS | Windows 10.0 Build 19045 (Win10 21H2) |
+| Hostname | `DESKTOP-JGLLJLD` (AnyRun sandbox) |
+| IP Address | `192.168.100.10` |
+| MAC (candidate) | `2c:f1:1e:03:b2:71` |
+| Timestamp | `2026-04-11 13:56:41` |
+
+Decryption script: `/home/remnux/mal/output/zs_register_decrypt.py`
 
 The server acknowledged the connection with two 12-byte ACK frames (header only, no payload), consistent with a connection establishment handshake.
 
