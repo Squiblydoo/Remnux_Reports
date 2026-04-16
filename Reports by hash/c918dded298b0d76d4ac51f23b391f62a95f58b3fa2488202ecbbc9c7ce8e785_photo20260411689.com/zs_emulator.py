@@ -42,9 +42,11 @@ Protocol reference (windui.dll SHA256: 81e276aa...):
 
   Server→Client frames:
     - 12-byte keepalive (orig_size=0): server heartbeat, ~every 4 minutes
-    - Command frames (orig_size>0): payload likely Blowfish-encrypted
-      Blowfish: P-array at VA 0x10041090 / S-boxes at VA 0x100410B8 in DLL
-      Key: unknown; first attempt uses same 32-byte REGISTER key
+    - Command frames (orig_size>0): payload encrypted (cipher unknown for S→C path)
+      Two confirmed static keys: REGISTER_KEY (sub_10001ade, op=i%8) for outgoing
+      and MODULE_KEY (sub_10001ba6, op=i%6) for on-disk module decryption.
+      No Blowfish used — P-array constants in .rdata are dead/unreferenced code.
+      Emulator tries all candidates automatically on every received payload.
 """
 
 import argparse
@@ -67,19 +69,33 @@ import traceback
 import zlib
 
 # ── Crypto ─────────────────────────────────────────────────────────────────────
+#
+# Static analysis of windui.dll (stage2_upx_unpacked_manually.bin) recovered
+# two custom byte-by-byte ciphers.  No Blowfish is used anywhere — the standard
+# Blowfish P-array constants visible in .rdata are dead/linked-but-unused data.
+#
+# Cipher 1  sub_10001ade  VA 0x10041060  op=i%8  → used for outgoing REGISTER
+# Cipher 2  sub_10001ba6  VA 0x10041080  op=i%6  → used for on-disk module load
+#
+# Server→client command frame decryption path not yet confirmed; we try both
+# ciphers (and plain decompress) on every incoming payload.
 
 REGISTER_KEY = bytes.fromhex(
     "8A913610E905C3DD1F657811EA3B1933"
     "471B230F88E1C155616099A03AB0ABC0"
 )
 
+# Second hardcoded key — immediately follows REGISTER_KEY in .rdata
+# Used by sub_10001ba6 for on-disk module decryption; also candidate for
+# server→client command decryption.
+MODULE_KEY = bytes.fromhex(
+    "2031A71C399563ADAF1572E10ABB3953"
+    "87EB132208A001C5E140496D7A3E0B26"
+)
 
-def _apply_cipher(data: bytes, key: bytes, encrypt: bool) -> bytes:
-    """
-    sub_10001ade custom cipher.
-    encrypt=True  → forward transform (used when sending)
-    encrypt=False → reverse transform (used when decrypting)
-    """
+
+def _cipher1(data: bytes, key: bytes, encrypt: bool) -> bytes:
+    """sub_10001ade: op = i % 8, key cycle = i % 32"""
     result = bytearray(data)
     for i in range(len(result)):
         op = i % 8
@@ -87,29 +103,43 @@ def _apply_cipher(data: bytes, key: bytes, encrypt: bool) -> bytes:
         if op == 0:
             result[i] ^= k
         elif op == 1:
-            if encrypt:
-                result[i] = (result[i] + (k >> 1)) & 0xFF
-            else:
-                result[i] = (result[i] - (k >> 1)) & 0xFF
+            result[i] = (result[i] + (k >> 1) * (1 if encrypt else -1)) & 0xFF
         elif op == 2:
-            if encrypt:
-                result[i] = (result[i] - k * 4) & 0xFF
-            else:
-                result[i] = (result[i] + k * 4) & 0xFF
+            result[i] = (result[i] + k * 4 * (-1 if encrypt else 1)) & 0xFF
         elif op == 3:
-            if encrypt:
-                result[i] = (result[i] + (k << 2)) & 0xFF
-            else:
-                result[i] = (result[i] - (k << 2)) & 0xFF
+            result[i] = (result[i] + (k << 2) * (1 if encrypt else -1)) & 0xFF
+    return bytes(result)
+
+
+def _cipher2(data: bytes, key: bytes, encrypt: bool) -> bytes:
+    """sub_10001ba6: op = i % 6, key cycle = i % 32"""
+    result = bytearray(data)
+    for i in range(len(result)):
+        op = i % 6
+        k = key[i % 32]
+        if op == 0:
+            # byte -= k>>2  (encrypt) / += k>>2 (decrypt)
+            result[i] = (result[i] + (k >> 2) * (-1 if encrypt else 1)) & 0xFF
+        elif op == 1:
+            # byte -= k*2  (encrypt) / += k*2 (decrypt)
+            result[i] = (result[i] + (k * 2) * (-1 if encrypt else 1)) & 0xFF
+        elif op == 2:
+            # complex: byte ^= (k % i + k*4 + i)  — apply same forward for both
+            if i > 0:
+                result[i] ^= (k % i + k * 4 + i) & 0xFF
+        elif op == 3:
+            # byte += k*2  (encrypt) / -= k*2 (decrypt)
+            result[i] = (result[i] + (k * 2) * (1 if encrypt else -1)) & 0xFF
+        # ops 4-5: identity
     return bytes(result)
 
 
 def encrypt_payload(data: bytes, key: bytes = REGISTER_KEY) -> bytes:
-    return _apply_cipher(data, key, encrypt=True)
+    return _cipher1(data, key, encrypt=True)
 
 
 def decrypt_payload(data: bytes, key: bytes = REGISTER_KEY) -> bytes:
-    return _apply_cipher(data, key, encrypt=False)
+    return _cipher1(data, key, encrypt=False)
 
 
 def try_decompress(data: bytes) -> bytes | None:
@@ -121,50 +151,35 @@ def try_decompress(data: bytes) -> bytes | None:
     return None
 
 
-def try_decrypt_incoming(payload: bytes, key: bytes = REGISTER_KEY) -> bytes | None:
+def try_decrypt_incoming(payload: bytes) -> tuple[bytes | None, str]:
     """
-    Attempt to decrypt a server-to-client payload.
-    Tries the known REGISTER key first; logs raw on failure.
-    Blowfish path (unknown key) is stubbed for future work.
+    Try all known decryption candidates on a server→client payload.
+    Returns (plaintext_or_None, description_string).
+    Tries in order:
+      1. cipher1 + REGISTER_KEY (reverse of outgoing REGISTER encryption)
+      2. cipher2 + MODULE_KEY   (on-disk module cipher with second key)
+      3. cipher1 + MODULE_KEY   (cross-key attempt)
+      4. raw zlib only          (unencrypted compressed)
+      5. raw plaintext          (no transform at all)
     """
     if not payload:
-        return None
-    try:
-        dec = decrypt_payload(payload, key)
-        pt = try_decompress(dec)
-        if pt:
-            return pt
-    except Exception:
-        pass
-    return None
+        return None, "empty payload"
 
-
-# ── Blowfish (stub — key unknown, structure preserved for future recovery) ──────
-
-# The DLL embeds standard Blowfish P-array init values at VA 0x10041090.
-# At runtime, the init code XORs the P-array with the session key to produce
-# the working key schedule. Until the session key is recovered via dynamic
-# analysis, this stub records raw payloads for offline work.
-
-class BlowfishStub:
-    """Placeholder Blowfish decryptor — logs the attempt for future keying."""
-    def __init__(self):
-        self.key = None  # will be set when key recovery happens
-
-    def decrypt(self, data: bytes) -> bytes | None:
-        if self.key is None:
-            return None
-        # TODO: implement once key is recovered
-        return None
-
-    def set_key(self, key: bytes):
-        self.key = key
-        logging.getLogger("zs.crypto").info(
-            f"[Blowfish] Key set ({len(key)} bytes): {key.hex()}"
-        )
-
-
-BLOWFISH = BlowfishStub()
+    candidates = [
+        (lambda d: try_decompress(_cipher1(d, REGISTER_KEY, False)), "cipher1/REGISTER_KEY"),
+        (lambda d: try_decompress(_cipher2(d, MODULE_KEY, False)),   "cipher2/MODULE_KEY"),
+        (lambda d: try_decompress(_cipher1(d, MODULE_KEY, False)),   "cipher1/MODULE_KEY"),
+        (lambda d: try_decompress(d),                                "zlib_only"),
+        (lambda d: d,                                                 "plaintext"),
+    ]
+    for fn, desc in candidates:
+        try:
+            result = fn(payload)
+            if result and len(result) > 4:
+                return result, desc
+        except Exception:
+            pass
+    return None, "all_failed"
 
 
 # ── Victim Fingerprint ─────────────────────────────────────────────────────────
@@ -796,13 +811,11 @@ class ZhongEmulator:
                 self.stats["frames_recv"] += 1
                 parsed = parse_frame(raw_frame)
 
-                # Attempt decryption
+                # Attempt decryption — try all known cipher candidates
                 decrypted = None
+                decrypt_method = None
                 if parsed["payload_len"] > 0:
-                    decrypted = try_decrypt_incoming(parsed["payload"])
-                    if decrypted is None:
-                        # Try Blowfish stub
-                        decrypted = BLOWFISH.decrypt(parsed["payload"])
+                    decrypted, decrypt_method = try_decrypt_incoming(parsed["payload"])
 
                 # Log to database
                 frame_db_id = self.logger.log_frame(
@@ -837,12 +850,12 @@ class ZhongEmulator:
                     )
                     if decrypted:
                         self._log.warning(
-                            f"         Decrypted: {decrypted[:64].hex()}"
+                            f"         Decrypted [{decrypt_method}]: {decrypted[:64].hex()}"
                             + (" ..." if len(decrypted) > 64 else "")
                         )
                     else:
                         self._log.warning(
-                            f"         Raw (encrypted): {parsed['payload'][:64].hex()}"
+                            f"         Raw (all decrypt failed): {parsed['payload'][:64].hex()}"
                         )
 
                     # Dispatch to handler
