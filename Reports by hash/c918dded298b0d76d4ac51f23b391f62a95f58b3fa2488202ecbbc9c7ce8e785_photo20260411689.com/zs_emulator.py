@@ -151,31 +151,38 @@ def try_decompress(data: bytes) -> bytes | None:
     return None
 
 
-def try_decrypt_incoming(payload: bytes) -> tuple[bytes | None, str]:
+def try_decrypt_incoming(payload: bytes, orig_size: int = 0) -> tuple[bytes | None, str]:
     """
     Try all known decryption candidates on a server→client payload.
     Returns (plaintext_or_None, description_string).
-    Tries in order:
+
+    If orig_size == 0 the frame is a raw command (no compression/encryption
+    applied by the server — the bytes are the literal command).  Return them
+    directly as 'raw_command' so the caller can interpret the opcode.
+
+    Otherwise tries in order:
       1. cipher1 + REGISTER_KEY (reverse of outgoing REGISTER encryption)
       2. cipher2 + MODULE_KEY   (on-disk module cipher with second key)
       3. cipher1 + MODULE_KEY   (cross-key attempt)
       4. raw zlib only          (unencrypted compressed)
-      5. raw plaintext          (no transform at all)
     """
     if not payload:
         return None, "empty payload"
+
+    # Short frames with orig_size=0 are raw opcodes — no crypto/zlib
+    if orig_size == 0:
+        return payload, "raw_command"
 
     candidates = [
         (lambda d: try_decompress(_cipher1(d, REGISTER_KEY, False)), "cipher1/REGISTER_KEY"),
         (lambda d: try_decompress(_cipher2(d, MODULE_KEY, False)),   "cipher2/MODULE_KEY"),
         (lambda d: try_decompress(_cipher1(d, MODULE_KEY, False)),   "cipher1/MODULE_KEY"),
         (lambda d: try_decompress(d),                                "zlib_only"),
-        (lambda d: d,                                                 "plaintext"),
     ]
     for fn, desc in candidates:
         try:
             result = fn(payload)
-            if result and len(result) > 4:
+            if result and len(result) >= 4:
                 return result, desc
         except Exception:
             pass
@@ -815,7 +822,7 @@ class ZhongEmulator:
                 decrypted = None
                 decrypt_method = None
                 if parsed["payload_len"] > 0:
-                    decrypted, decrypt_method = try_decrypt_incoming(parsed["payload"])
+                    decrypted, decrypt_method = try_decrypt_incoming(parsed["payload"], parsed.get("orig_size", 0))
 
                 # Log to database
                 frame_db_id = self.logger.log_frame(
@@ -889,8 +896,7 @@ class ZhongEmulator:
             self._log.warning(f"Connection lost: {e}")
         finally:
             ws.close()
-            if assigned_c2_session:
-                self.logger.end_session(db_session_id, assigned_c2_session)
+            self.logger.end_session(db_session_id, assigned_c2_session)
             self._log.info("Session closed.")
 
     def _print_stats(self):
