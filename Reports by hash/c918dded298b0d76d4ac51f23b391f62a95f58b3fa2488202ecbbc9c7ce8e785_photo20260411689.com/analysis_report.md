@@ -37,7 +37,7 @@
 
 Two-stage operation:
 - **Stage 1** (`photo20260411689.com`): Heavily obfuscated PE loader with LZX self-decryption, 26-check anti-VM gauntlet, and WinHTTP C2 stack. Downloads a stage-2 manifest from Google Cloud Storage.
-- **Stage 2**: A trojanized TurboVPN installation package (11 files) delivered from `storage.googleapis.com/trubo/`. Contains a Zhong Stealer C2 component (RAT module), a WebView2 MITB payment interceptor, and a shellcode stager that connects to the attacker's C2 via UDP/named-pipe at `uu[.]goldeyeuu[.]io:50986`.
+- **Stage 2**: A trojanized TurboVPN installation package (11 files) delivered from `storage.googleapis.com/trubo/`. Contains a Zhong Stealer C2 component (RAT module), a WebView2 MITB payment interceptor, and a shellcode stager that establishes a plain-HTTP WebSocket connection to `uu[.]goldeyeuu[.]io:5188`. (Note: `service.cfg` port 50986 is local inter-process IPC between DLLs only — confirmed by network analysis showing no external UDP traffic to that port.)
 
 No matching YARA family for the stage-1 loader. Stage-2 `windui.dll` is the **Zhong Stealer** C2/RAT module (attributed to APT-Q-27 / Golden Eye Dog).
 
@@ -182,7 +182,7 @@ photo20260411689.com  (delivered via phishing/drive-by; .com extension bypasses 
                 │               Execute shellcode
                 │                       PEB-walk stager
                 │                       Assembles uu.goldeyeuu.io at runtime
-                │                       Connects UDP:50986 / named pipe
+                │                       (UDP:50986 = local IPC only, not external C2)
                 │                       WinINet HTTP backup channel
                 │
                 ├── windui.dll (Zhong Stealer C2 / RAT module)
@@ -235,8 +235,10 @@ photo20260411689.com  (delivered via phishing/drive-by; .com extension bypasses 
 
 | IOC | Type | Notes |
 |-----|------|-------|
-| `uu[.]goldeyeuu[.]io` | C2 domain | Primary C2 endpoint; UDP:50986 + named pipe; domain assembled at runtime in shellcode |
-| `50986/UDP` | Port | C2 transport (service.cfg) |
+| `uu[.]goldeyeuu[.]io` | C2 domain | Primary C2 endpoint; WebSocket port 5188; plain HTTP; domain assembled at runtime in shellcode |
+| `56[.]155[.]111[.]29` | IP (AWS US) | Resolved C2 IP (confirmed via AnyRun PCAP) |
+| `5188/tcp` | Port | WebSocket C2 port (windui.dll) |
+| `50986/UDP` | Port | Local IPC only (libuv.dll ↔ other DLLs via service.cfg; no external traffic observed) |
 
 ### Network IOCs — Payload Delivery (GCS)
 
@@ -379,7 +381,7 @@ See `Trubo_decrypt.py` for standalone implementation.
 - Direct API access to report data blocked from analysis host (Cloudflare error 1010 on REMnux outbound IP)
 
 **Recommended follow-up**: Submit `Turbo.exe` + all stage-2 components directly to ANY.RUN, Joe Sandbox, or CAPE on a bare-metal profile (spoof CPUID, MAC address, disk serials) to capture:
-- Full C2 beaconing protocol to `uu[.]goldeyeuu[.]io:50986`
+- Full C2 beaconing protocol to `uu[.]goldeyeuu[.]io:5188` (WebSocket, plain HTTP)
 - Zhong Stealer (`windui.dll`) C2 and persistence mechanisms
 - WebView2 MITB (`payment.dll`) interception traffic
 
@@ -410,7 +412,7 @@ See `Trubo_decrypt.py` for standalone implementation.
 | Subvert Trust Controls: Code Signing | T1553.002 | All stage-2 PEs signed with legitimate TurboVPN cert |
 | Obfuscated Files: Encrypted/Encoded File | T1027.013 | `Trubo.log` shellcode encrypted with `(b+0x77)^0x62` |
 | Process Injection | T1055 | Shellcode execution via VirtualAlloc + thread |
-| Non-Application Layer Protocol | T1095 | UDP port 50986 C2 channel (service.cfg) |
+| Non-Application Layer Protocol | T1095 | UDP port 50986 local IPC (service.cfg; inter-DLL transport, not external C2) |
 | Application Layer Protocol: Web | T1071.001 | WinINet HTTP + V2Ray/Xray/Reality VPN tunnel as cover |
 | Protocol Tunneling | T1572 | C2 tunnelled as VPN traffic (V2Ray/Xray/Reality/tun2socks) |
 | Browser in the Middle | T1185 | `payment.dll` WebView2 MITB on payment checkout pages |
