@@ -1,0 +1,17 @@
+{
+  "network": [],
+  "files": [],
+  "registry": [],
+  "mutexes": [],
+  "processes": [],
+  "memory": [
+    {
+      "api": "VirtualAlloc",
+      "addr": "0x50000",
+      "size": "0x13fff0",
+      "prot": "PAGE_READWRITE"
+    }
+  ],
+  "strings": [],
+  "misc": []
+}
