@@ -169,6 +169,23 @@ User launches 14bvp.exe
 
 ---
 
+## Cross-Reference: yox646.exe (same family)
+
+This sample shares the following **exact** build artifacts with `yox646.exe` (analyzed 2026-04-28, SHA256: `b55744aa...`), confirming they originate from the **same malware toolkit**:
+
+| Matching Indicator | Value |
+|--------------------|-------|
+| Font hash magic constant | `0x7152747BF86AA000` (identical) |
+| Shellcode source VA | `0x1400298C8` in both samples (same .data layout) |
+| Window classes | `W3.Main` / `W3.Aux` (identical lure) |
+| Code structure | `sub_1400013c0` (font metric computation) + `sub_1400010b0` (decode/execute) |
+| Decode algorithm | Arithmetic counter loop, backward read, same step sizes |
+| Stack array obfuscation | StackArrayInitialisationX64 ×16, same pattern |
+
+**Difference:** `yox646.exe` used a Sectigo EV cert (Xiamen Chike, Fujian CN); this sample uses GlobalSign EV (PHOTON architect design lab, Bishkek KG). C2 for `yox646.exe` was not recovered; `14bvp.exe` reveals `mservicedge[.]com:443` — the samples may have per-campaign C2 assignments.
+
+---
+
 ## 9. MITRE ATT&CK
 
 | ID | Technique |
