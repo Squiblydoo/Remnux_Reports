@@ -137,83 +137,86 @@ If passes 1–3 all fail (heavy VM-detect, .NET runtime dependency, kernel drive
 
 If all emulation fails (kernel driver, .NET dependency):
 - Try Qiling: `qltool run -f <filepath> --rootfs /usr/share/qiling/rootfs/x8664_windows`
-- Note emulation limits in the report; Tria.ge sandbox (Step 3.7) provides dynamic coverage
+- Note emulation limits in the report; ANY.RUN sandbox (Step 3.7) provides dynamic coverage
 
 ### Manual decrypt follow-up
 If any emulation pass reveals a decryption routine or key:
 - Use `mcp__malcat__decrypt_string` / `mcp__malcat__chain_decrypt_analysis` with the recovered key to batch-decrypt remaining strings
 - Write a standalone decrypt script to `/home/remnux/mal/output/<filename>_decrypt.py` if rerunnable
 
-## Step 3.7 — Tria.ge Sandbox Submission
+## Step 3.7 — ANY.RUN Sandbox Submission
 
-> **API key required.** Check `$TRIAGE_API_KEY` environment variable. If unset, check `/home/remnux/.triage_api_key`. If neither exists, skip this step and note "Tria.ge: API key not configured" in the report.
+> **API key required.** Read from `$ANY_RUN_KEY` environment variable (set in `~/.bashrc`). If unset, skip this step and note "ANY.RUN: API key not configured" in the report.
+>
+> **Plan note (Ally tier):** submissions are **public**; custom `env`/`opt` parameters are not allowed. Do not pass them — the API will reject the request.
 
-All `curl` calls go through `mcp__remnux__run_tool` with tool=`bash` (or use the Bash tool directly).
+All `curl` calls go through the Bash tool directly.
 
 ### 3.7.1 — Submit sample
 ```bash
-TRIAGE_KEY="${TRIAGE_API_KEY:-$(cat /home/remnux/.triage_api_key 2>/dev/null)}"
-curl -s -X POST "https://api.tria.ge/v0/samples" \
-  -H "Authorization: Bearer ${TRIAGE_KEY}" \
+curl -s \
+  -H "Authorization: API-Key ${ANY_RUN_KEY}" \
   -F "file=@<filepath>" \
-  -F "_json={\"kind\":\"file\",\"interactive\":false}" \
-  | tee /home/remnux/mal/output/<filename>_triage_submit.json
+  "https://api.any.run/v1/analysis" \
+  | tee /home/remnux/mal/output/<filename>_anyrun_submit.json
 ```
-Extract `id` from the JSON response (e.g. `240601-abcd1234ef`). If the response contains `error`, report it and skip the rest of this step.
+Extract `data.taskid` (UUID) from the response. If `error` is `true`, report the `message` and skip the rest of this step.
 
 ### 3.7.2 — Poll for completion
-Poll every 30 seconds (max 15 attempts = ~7.5 minutes):
-```bash
-curl -s "https://api.tria.ge/v0/samples/${SAMPLE_ID}" \
-  -H "Authorization: Bearer ${TRIAGE_KEY}"
-```
-Continue polling until `status` is `reported` or `failed`. If `failed`, note it and skip to 3.7.4.
+Poll every 15 seconds (max 40 attempts = ~10 minutes). Status field is `data.status`:
+- `"in progress"` → keep polling
+- `"done"` → proceed
+- any other value → treat as failure, note it, and skip to 3.7.3
 
-### 3.7.3 — Fetch overview report
 ```bash
-curl -s "https://api.tria.ge/v0/samples/${SAMPLE_ID}/overview.json" \
-  -H "Authorization: Bearer ${TRIAGE_KEY}" \
-  | tee /home/remnux/mal/output/<filename>_triage_overview.json
-```
-Extract from overview:
-- `targets[].iocs` → domains, IPs, URLs, emails
-- `targets[].signatures` → matched behavioral signatures + scores
-- `targets[].tags` → family tags (ransomware, trojan, etc.)
-- `analysis.score` → overall threat score (1–10)
-- `extracted[]` → extracted configs (C2s, encryption keys, campaign IDs)
-
-### 3.7.4 — Fetch per-task triage reports
-List tasks from the overview `tasks[]` array. For each task with `kind: "behavioral"`:
-```bash
-curl -s "https://api.tria.ge/v0/samples/${SAMPLE_ID}/reports/${TASK_ID}/triage_report.json" \
-  -H "Authorization: Bearer ${TRIAGE_KEY}" \
-  | tee /home/remnux/mal/output/<filename>_triage_${TASK_ID}.json
-```
-Extract from each triage report:
-- `network.requests[]` → full HTTP requests/responses (URLs, user-agents, POST bodies, response codes)
-- `network.flows[]` → raw TCP/UDP connections (IP:port)
-- `network.dns[]` → DNS queries and responses
-- `processes[]` → spawned process tree, command lines, injections
-- `dumped[]` → memory dumps and carved files (download if relevant)
-- `signatures[]` → MITRE ATT&CK mappings, behavioral indicators
-
-### 3.7.5 — Download extracted configs (if present)
-If the overview `extracted[]` array contains items with `config` type:
-```bash
-curl -s "https://api.tria.ge/v0/samples/${SAMPLE_ID}/files/${DUMP_NAME}" \
-  -H "Authorization: Bearer ${TRIAGE_KEY}" \
-  -o /home/remnux/mal/output/<filename>_triage_config_${DUMP_NAME}
+curl -s \
+  -H "Authorization: API-Key ${ANY_RUN_KEY}" \
+  "https://api.any.run/v1/analysis/${TASK_ID}"
 ```
 
-### Tria.ge public report URL
-`https://tria.ge/<SAMPLE_ID>` — include this in the final report.
+Use a Monitor loop rather than sleep-polling:
+```bash
+until curl -s -H "Authorization: API-Key ${ANY_RUN_KEY}" \
+  "https://api.any.run/v1/analysis/${TASK_ID}" \
+  | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['data']['status']); sys.exit(0 if d['data']['status']!='in progress' else 1)" \
+  2>/dev/null; do sleep 15; done
+```
+
+### 3.7.3 — Fetch full analysis result
+```bash
+curl -s \
+  -H "Authorization: API-Key ${ANY_RUN_KEY}" \
+  "https://api.any.run/v1/analysis/${TASK_ID}" \
+  | tee /home/remnux/mal/output/<filename>_anyrun_analysis.json
+```
+
+Extract from `data.analysis`:
+- `scores.verdict` → `score` (0–100), `threatLevelText` ("Malicious activity" / "Suspicious activity" / "No threats detected")
+- `tags[].tag` → family/behavior tags (e.g. `apt-q-27`, `backdoor`, `loader`, `ransomware`)
+- `permanentUrl` → public report URL
+
+### 3.7.4 — Fetch IOC report
+```bash
+curl -s \
+  -H "Authorization: API-Key ${ANY_RUN_KEY}" \
+  "https://api.any.run/report/${TASK_ID}/ioc/json" \
+  | tee /home/remnux/mal/output/<filename>_anyrun_iocs.json
+```
+
+The response is a JSON array. Each entry has `category`, `type`, `ioc`, and `reputation` (0=clean, 1=suspicious, 2=malicious). Extract:
+- `"DNS requests"` entries → C2 domains
+- `"Connections"` entries → C2 IPs
+- `"HTTP/HTTPS requests"` entries → full URLs (filter out Windows telemetry/OCSP noise; focus on non-Microsoft, non-CDN destinations)
+
+### ANY.RUN public report URL
+`https://app.any.run/tasks/<TASK_ID>` — include this in the final report.
 
 ## Step 4 — IOC Extraction (remnux)
 Pass combined output from Steps 2–3.7 to `mcp__remnux__extract_iocs`.
 Supplement with IOCs manually recovered from:
 - speakeasy `network_events`
 - floss deobfuscated strings
-- Tria.ge `network.requests`, `network.dns`, `extracted` config blocks
+- ANY.RUN IOC report `"DNS requests"`, `"Connections"`, `"HTTP/HTTPS requests"` entries
 
 De-duplicate and defang all network IOCs in the final report (replace `.` → `[.]`, `://` → `[://]`).
 
@@ -226,7 +229,7 @@ Write a structured report to `/home/remnux/mal/output/<filename>_analysis_report
 4. **Attack Chain** — stages if determinable
 5. **IOCs** — grouped: network (IPs, domains, URLs defanged), filesystem, registry, mutexes
 6. **Emulation Results** — speakeasy/qiling findings; note if emulation was partial or blocked
-7. **Sandbox Results** — Tria.ge score, signatures, behavioral summary, public URL; or "API key not configured" / "Submission failed: <reason>"
+7. **Sandbox Results** — ANY.RUN verdict score, threat level, family tags, behavioral IOCs, public URL; or "API key not configured" / "Submission failed: <reason>"
 8. **Analyst Notes** — residual gaps, alternative hypotheses, recommended follow-up
 
 ### Cross-referencing previous analyses — strict policy
