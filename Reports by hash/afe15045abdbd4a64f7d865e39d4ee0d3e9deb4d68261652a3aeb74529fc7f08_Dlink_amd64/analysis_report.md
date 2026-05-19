@@ -52,24 +52,27 @@ gopher/bof/coffer/coffer.go             ← BOF loader
 
 | | |
 |---|---|
-| **Family** | **Ktlvdoor** (macOS variant) |
-| **Confidence** | **High** |
-| **Attribution** | Earth Lusca (Chinese APT, also known as APT41 affiliate) |
-| **KesaKode Score** | Ktlvdoor: 2, Tsunami: 2 |
+| **Family** | **Unattributed macOS Go Backdoor** (possible Earth Lusca nexus; see notes) |
+| **Confidence** | **Low** — KTLVdoor attribution is NOT supported; see discrepancy analysis below |
+| **Attribution** | Unknown; Chinese APT tradecraft indicators present |
+| **KesaKode Score** | Ktlvdoor: 2, Tsunami: 2 (low scores reflect poor match) |
 
-### Reasoning
+> **⚠ Attribution revised (post-analysis)**: An earlier draft of this report classified this sample as "Ktlvdoor (macOS variant) — High confidence." That classification was incorrect. After comparing against the [Trend Micro KTLVdoor technical report (September 2024)](https://www.trendmicro.com/en_us/research/24/i/earth-lusca-ktlvdoor.html), this sample fails to match every defining technical criterion of the KTLVdoor family. See the full discrepancy table in Section 8.
 
-- **Go module `gopher`**: Matches the internal module naming used in the Ktlvdoor framework described by Trend Micro (September 2024). The sub-packages `gopher.utils`, `gopher.functions`, and `gopher.bof` are consistent with the Ktlvdoor source tree structure.
-- **MessagePack protocol**: Uses `github.com/vmihailenco/msgpack/v5` for C2 serialization — identical to Ktlvdoor.
-- **Encrypted C2 config**: `gopher.utils.DecryptData`/`EncryptData` with encrypted config at runtime; matches Ktlvdoor's encrypted configuration pattern.
-- **Command dispatcher structure**: The `main.DataProc()` switch dispatcher with 20+ opcodes (opCwd, opExec, runShell, runSock, etc.) mirrors the Ktlvdoor command set precisely.
-- **TOR support**: `.onion` address support embedded; noted in Ktlvdoor variants.
-- **macOS-specific function file**: `functions_mac.go` confirms macOS targeting (Ktlvdoor was documented in macOS, Linux, and Windows variants).
-- **BOF loader (`gopher/bof/coffer`)**: Not in the original Trend Micro report — indicates this is a significantly upgraded variant with post-exploitation framework capabilities.
-- **`howett.net/plist` dependency**: macOS-specific plist parsing library, confirms macOS targeting.
-- **`kbinani/screenshot` (June 2025 timestamp)**: Confirms the binary was built post-June 2025, making this a current/active variant.
+### What is consistent with Chinese APT Go tooling
 
-The `.so` extension masquerades as a Linux shared library on what is actually a macOS Mach-O executable. The filename `Dlink_amd64.so` suggests an attempt to impersonate a D-Link device driver or firmware component.
+- **Go-compiled multiplatform backdoor**: Consistent with Earth Lusca / Chinese APT development patterns.
+- **Encrypted C2 config**: `gopher.utils.DecryptData`/`EncryptData` with runtime-decrypted config is a common pattern across multiple Chinese APT Go implants.
+- **TOR support**: `.onion` address capability is seen in several Chinese APT toolsets.
+- **BOF loader (`gopher/bof/coffer`)**: Cobalt Strike BOF compatibility indicates a mature, operator-controlled post-exploitation workflow.
+- **macOS targeting with plist parsing** (`howett.net/plist`): Consistent with targeted macOS campaigns attributed to Chinese APT actors.
+- **`kbinani/screenshot` (June 2025 timestamp)**: Active development as of 2025-2026.
+
+### Why KTLVdoor attribution does NOT hold
+
+See Section 8 for the full discrepancy table. In summary: this sample lacks the KTLV config marker (the family's namesake), has no symbol obfuscation (the opposite of KTLVdoor), uses MessagePack rather than TLV+AES-GCM+GZIP, and has no port scanning capabilities — all of which are defining KTLVdoor characteristics.
+
+The `.so` extension masquerades as a Linux shared library on what is actually a macOS Mach-O executable. The filename `Dlink_amd64.so` suggests it may be dropped alongside a legitimate D-Link application as a sideloaded component.
 
 ---
 
@@ -257,17 +260,33 @@ Manual decryption was not attempted because the 16-byte AES/ChaCha key is derive
 
 ## 8. Analyst Notes
 
-### Confirmed Attribution Indicators
-This sample matches Ktlvdoor characteristics described in Trend Micro's September 2024 report ("Earth Lusca Uses Ktlvdoor Backdoor for Attacks on Asian Countries"):
-- Go-compiled, module named `gopher`
-- MessagePack C2 serialization
-- Encrypted C2 configuration
-- Identical command set (opCwd, opExec, runShell, runSock, etc.)
-- TOR C2 support
-- macOS variant with macOS-specific source file (`functions_mac.go`)
+### KTLVdoor Attribution Review
 
-### Novel Capability vs. Prior Reports
-**BOF loader** (`gopher/bof/coffer`) was **not described** in the original Trend Micro Ktlvdoor report. This is a significant capability upgrade — the operator can now deploy Cobalt Strike-compatible BOF files through this implant, effectively turning it into a lightweight C2 framework.
+After comparing against the Trend Micro report [Earth Lusca Uses KTLVdoor Backdoor for Multiplatform Intrusion (September 2024)](https://www.trendmicro.com/en_us/research/24/i/earth-lusca-ktlvdoor.html), this sample **does not match** the KTLVdoor family definition. The table below summarizes the comparison:
+
+| Characteristic | KTLVdoor (Trend Micro, Sep 2024) | This sample |
+|---|---|---|
+| **KTLV config marker** | YES — TLV-like config with literal "KTLV" magic bytes; family named for this | **ABSENT** |
+| **Symbol obfuscation** | Functions/packages renamed to random Base64-like strings; symbols stripped | **NONE** — fully readable: `gopher`, `DataProc`, `opCwd`, `runShell`, etc. |
+| **String encoding** | XOR-encrypted + Base64-encoded in binary | No matching obfuscation layer |
+| **C2 serialization** | AES-GCM encrypted + GZIP compressed; TLV framing | **MessagePack** (`vmihailenco/msgpack/v5`) — completely different |
+| **Port scanning** | ScanTCP, ScanRDP, DialTLS, ScanPing, ScanWeb — canonical feature | **ABSENT** — not in the 28-opcode dispatcher |
+| **Supported platforms** | Windows (.dll) + Linux (.so) | **macOS Mach-O only** |
+| **Masquerade target** | sshd, java, sqlite, bash, edr-agent | D-Link component (`.so` extension) |
+| **C2 infrastructure** | 50+ servers on Alibaba (China) | Config encrypted; cannot verify |
+
+**The most significant discrepancies:**
+1. The "KTLV" marker is the defining criterion of the family — it is absent here.
+2. KTLVdoor's hallmark is heavy obfuscation (random Base64 package/function names, stripped symbols). This sample is completely unobfuscated — the opposite.
+3. MessagePack serialization is not associated with KTLVdoor; the canonical protocol is TLV+AES-GCM+GZIP.
+4. Port scanning (ScanTCP/RDP/Ping/Web) is a distinguishing KTLVdoor capability that is not present.
+
+**Why the earlier attribution was made (and why it was wrong):** The `gopher` Go module name was cited as a KTLVdoor indicator, but the TM report explicitly states that all function and package names in KTLVdoor are obfuscated to random Base64-like strings. The name `gopher` cannot be confirmed as a KTLVdoor identifier from any available source. The remaining shared attributes (Go backdoor, encrypted config, file ops, shell) are too generic to constitute family attribution.
+
+**Current assessment:** This is an **unattributed macOS Go backdoor** with Chinese APT tradecraft indicators. It may share a development lineage with Earth Lusca tooling, but it does not match the KTLVdoor family definition. It may represent a distinct, newer, unclassified tool or an unrelated Chinese APT actor's macOS implant.
+
+### BOF Loader Capability
+`gopher/bof/coffer` provides Cobalt Strike-compatible BOF execution (`coffer.Load` / `coffer.LoadAsync`), allowing the operator to deploy BOF files dynamically. This is a significant post-exploitation capability regardless of family attribution.
 
 ### Build Timing
 The `github.com/kbinani/screenshot` dependency pseudo-version `v0.0.0-20250624051815-089614a94018` places the binary build date at **no earlier than June 24, 2025**, suggesting this is an active 2025-2026 variant under continued development.
