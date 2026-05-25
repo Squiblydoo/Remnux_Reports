@@ -42,7 +42,7 @@
 
 **Malware Family:** WallStealer v2.2.1  
 **Type:** Infostealer / Credential Thief  
-**Confidence:** High  
+**Confidence:** Confirmed  
 **Reasoning:**
 
 - Internal string `=== SYSTEM DATA LOG ===` with structured victim profile fields (HWID, Wallpaper Hash, TAG, LocalIPv4, MachineID) is a classic stealer C2 beacon format
@@ -53,7 +53,9 @@
 - Drop path `C:\Users\Admin\AppData\Local\Temp\blue.exe` suggests staged delivery
 - JSON beacon structure `{"build_id":"","token":"","session_id":"","correlationID":"...}` is a stealer operator panel registration format
 - C2 domain `login.cloudgovapi.` is designed to impersonate government/cloud authentication infrastructure
-- KesaKode verdict: NitrogenLoader(21) / DustyStealer(16) — both stealer families; DustyStealer is the higher-confidence match given behavioral overlap
+- **Online KesaKode (cloud.malcat.fr): WallStealer 96.75%** — 921 functions and 462 strings matched at 100% confidence to the named WallStealer family; this is a confirmed, catalogued malware family, not a variant classification
+- Offline KesaKode (prior run): NitrogenLoader(21) / DustyStealer(16) — offline approximation; online lookup supersedes this
+- **Boryptgrab (1.30%)** secondary overlap — `Wallpaper Hash:` and `Admin Group:` strings shared, suggesting toolkit lineage relationship
 
 ---
 
@@ -73,9 +75,12 @@
 
 ### Browser Credential Theft
 - **Chrome/Edge**: Reads `\Local State` (AES-256-GCM master key) and `\Login Data` (SQLite encrypted passwords)
+- **Chrome App-Bound Encryption (ABE) bypass**: `OSCrypt.AppBoundProvider.Decrypt.ResultCode` — WallStealer explicitly handles Chrome 127+ App-Bound Encryption, which was introduced specifically to block credential theft by out-of-process malware; this confirms the family is maintained and updated against modern Chrome defenses
 - **Named Pipe**: `\\.\pipe\browser_key_pipe` — creates pipe to extract live browser master key from running browser process; also used with `sedge.dll` (Edge) and `chrome.dll`
+- **Opera**: `\opera software\` and `\Opera Software\` path strings — Opera browser credential theft
 - **Firefox**: Targets `firefox.exe` process directly
 - `Pull cookies invoke` wide string confirms cookie theft operation
+- **File size filter**: Skips credential files larger than 20 MB during collection (`Skipping file larger than 20MB:` string)
 
 ### Windows Token Broker / OAuth Theft
 - Intercepts Windows Account Manager (WAM) OAuth token flows
@@ -185,6 +190,7 @@
 | URL | `login[.]live[.]com/ppsecure/deviceaddcredential[.]srf` | Microsoft account credential target (sandbox-observed) |
 | URL | `http[://]schemas[.]xml[.]` | XML schema reference (partial) |
 | URL | `http[://]docs[.]oasis-...` | OAuth SAML XML schema reference (partial) |
+| User-Agent | `TaskLoader/1.0` | C2 HTTP User-Agent string (confirmed by KesaKode string match) |
 
 ### Filesystem
 
@@ -211,13 +217,14 @@
 |---|---|
 | `Global\composerctx` | Single-instance lock |
 
-### Build Artifacts
+### Campaign Artifacts
 
-| Field | Value |
-|---|---|
-| Version | 2.2.1 |
-| Build Date | 2026-04-01 08:27:47 |
-| Section Name | `.fptable` (non-standard) |
+| Field | Value | Notes |
+|---|---|---|
+| Campaign TAG | `ldvg113421` | Hardcoded operator/campaign identifier in `.data` section (100% WallStealer KesaKode match) |
+| Version | 2.2.1 | From `BUILD_VERSION.txt` string |
+| Build Date | 2026-04-01 08:27:47 | Pogo debug info timestamp |
+| Section Name | `.fptable` | Non-standard PE section name |
 
 ---
 
@@ -231,7 +238,54 @@ No IOCs were dynamically recovered from emulation.
 
 ---
 
-## 7. Sandbox Results (ANY.RUN)
+## 7. Online KesaKode Results (cloud.malcat.fr)
+
+| Field | Value |
+|---|---|
+| License | C6CE-1D0B-34A5-94B5 (Malcat Pro) |
+| Tool | `malcat.kesakode.py -v` via stdin |
+
+**Verdict:**
+
+| Family | Score |
+|---|---|
+| **WallStealer** | **96.75%** |
+| NitrogenLoader | 1.97% |
+| Boryptgrab | 1.30% |
+| DustyStealer | 0.61% |
+| Vidar | 0.07% |
+| Others | <0.01% |
+
+**Hit Statistics:**
+- Total MALWARE hits: 955 (functions + strings)
+- WallStealer-attributed function hits: 921 (all at 100% confidence)
+- String hits: 462
+- CLEAN hits: 1,786 (standard library code)
+
+**Notable Matched Strings (WallStealer 100%):**
+
+| String | Significance |
+|---|---|
+| `\\.\pipe\browser_key_pipe` | Named pipe for browser master key extraction |
+| `OSCrypt.AppBoundProvider.Decrypt.ResultCode` | Chrome 127+ App-Bound Encryption bypass |
+| `{"build_id":"` | C2 beacon header |
+| `Global\composerctx` | Single-instance mutex |
+| `TaskLoader/1.0` | C2 HTTP User-Agent |
+| `ldvg113421` | Campaign TAG / operator identifier |
+| `software.txt` | Victim data output file |
+| `Wallpaper Hash: ` | Victim fingerprinting field |
+| `Skipping file larger than 20MB: ` | File collection filter |
+| `WStrust token requ[est]` | WS-Trust token theft |
+| `resend_wait` | C2 retry state |
+| `no_decrypt` | Credential processing mode flag |
+| `\opera software\` | Opera browser targeting |
+| `\user data\` | Browser profile path component |
+
+**Conclusion:** This sample is a known WallStealer build with near-certainty (96.75%). The online lookup definitively identifies the family and campaign TAG, superseding the offline DustyStealer approximation.
+
+---
+
+## 8. Sandbox Results (ANY.RUN)
 
 | Field | Value |
 |---|---|
@@ -245,7 +299,7 @@ No IOCs were dynamically recovered from emulation.
 
 ---
 
-## 8. Analyst Notes
+## 9. Analyst Notes
 
 ### Confidence Gaps
 - **C2 domain is truncated**: `login.cloudgovapi.` ends with a trailing period and null bytes in the binary at file offset `0x204dce`. The full TLD (likely `.com`) may be appended at runtime via one of the 256 dynamically-constructed strings. Active C2 was not observed.
@@ -254,13 +308,12 @@ No IOCs were dynamically recovered from emulation.
 - **Exfiltration path not confirmed**: The WinHTTP beacon format was recovered from static analysis but the complete exfiltration flow (HTTP POST vs. GET, TLS vs. plain) was not confirmed dynamically.
 
 ### Attribution
-- KesaKode verdict **DustyStealer(16)** is the stronger match given:
-  - Wallpaper hash as victim fingerprinting (DustyStealer hallmark)
-  - Structured system log with TAG field
-  - Named-pipe browser key extraction pattern
-- **NitrogenLoader(21)** similarity may reflect shared code library (C++ stealer toolkit), not the same actor
-- No certificate → no signer pivot possible
-- No prior sample in local corpus shares this certificate, C2, or build artifact
+- **Online KesaKode (cloud.malcat.fr): WallStealer 96.75%** — definitively identified as a named, catalogued malware family. The offline result (DustyStealer 16%) was an approximation using a smaller local hash database; the online lookup with 921 matched functions supersedes it.
+- **NitrogenLoader (1.97%)** overlap reflects shared C++ code infrastructure (Windows Token Broker / WAM handling code is common between families); not the same actor.
+- **Boryptgrab (1.30%)** overlap on `Wallpaper Hash:` and `Admin Group:` victim profiling strings suggests toolkit lineage — WallStealer likely evolved from or shares a C++ stealer SDK with Boryptgrab.
+- **Campaign TAG `ldvg113421`** — this hardcoded string is the operator/campaign identifier that appears in the `=== SYSTEM DATA LOG ===` beacon. Searching threat intel for this string may pivot to other WallStealer builds from the same operator.
+- No certificate → no signer pivot possible.
+- No prior sample in local corpus shares this certificate, C2, or build artifact.
 
 ### Recommended Follow-Up
 1. Execute in an isolated Windows 10/11 VM (VMware snapshots) to capture full network traffic to `login.cloudgovapi.` C2
