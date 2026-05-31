@@ -1,0 +1,15 @@
+{
+  "network": [],
+  "files": [],
+  "registry": [],
+  "mutexes": [
+    {
+      "api": "KERNEL32.CreateMutexW",
+      "name": "V\u0089\u0011\u00b05\u0012"
+    }
+  ],
+  "processes": [],
+  "memory": [],
+  "strings": [],
+  "misc": []
+}
