@@ -1,0 +1,6 @@
+https://storage.googleapis.com/kiki001/crashreport.dll
+https://storage.googleapis.com/kiki001/updat.log
+https://storage.googleapis.com/kiki001/vcruntime140.dll
+https://storage.googleapis.com/kiki001/updat.exe
+https://storage.googleapis.com/kiki001/image.jpg
+https://storage.googleapis.com/kiki001/msvcp140.dll
