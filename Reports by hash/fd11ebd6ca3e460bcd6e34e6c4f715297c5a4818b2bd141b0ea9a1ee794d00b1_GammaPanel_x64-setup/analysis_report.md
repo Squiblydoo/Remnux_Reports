@@ -46,7 +46,7 @@ The installer drops two components behind a "GammaPanel" screen brightness/gamma
 
 1. **GammaPanelApp.exe** — A heavily obfuscated Tauri v1 (Rust/WebView2) frontend with confirmed malicious indicators: 452 XOR-in-loop instances, ChaCha cipher runtime string decryption, embedded keylogger API, hardware fingerprinting, and a custom Tauri command `stat4x(surl, userAgent, name)` used to beacon collected data to a runtime-decrypted C2 URL.
 
-2. **setup.exe** — A Python 3.14 PyInstaller one-file bundle whose observable module names (`gammapanel.gamma`, `gammapanel.scheduler`, `gammapanel.location`, `gammapanel.tray`, etc.) are consistent with a legitimate f.lux-style gamma adjustment application. The actual code cannot be inspected: modules are compiled with `mypyc` and stored in a PYZ archive using Python 3.14 zstd compression, making offline extraction impossible with Python <3.14. It cannot be confirmed or ruled out that setup.exe contains malicious logic beyond what its module names suggest.
+2. **setup.exe** — A Python 3.14 PyInstaller one-file bundle containing a fully functional f.lux-style gamma adjustment application. After extraction using Python 3.14 and bytecode disassembly via the `dis` module, all 11 `gammapanel.*` modules have been analyzed. No malicious code, C2 URLs, or suspicious network calls were found. The only external network contact is `http://ip-api.com/json/` for IP-based geolocation — standard practice for this class of app. setup.exe is assessed as **legitimate cover story functionality**; the malice in this sample originates entirely from GammaPanelApp.exe.
 
 The use of an **Indian real estate company's EV certificate** (GANPATI ESTATES LLP, Rajasthan) to sign a screen dimming utility is a strong indicator of a stolen or fraudulently obtained signing credential.
 
@@ -64,19 +64,18 @@ The use of an **Indian real estate company's EV certificate** (GANPATI ESTATES L
 - Contacts `https://login.live.com/RST2.srf` (WAM/WS-Trust endpoint — possible Windows token theft via WebView2 SSO)
 - **Sidecar process launch**: spawns `setup.exe` as a Tauri sidecar over `127.0.0.1:34254`
 
-### Cover Story Functionality — setup.exe (Python 3.14 Backend)
-The following behaviors are observable from module names only; actual code is inaccessible due to mypyc compilation and Python 3.14 zstd PYZ encryption. All are consistent with a legitimate f.lux-style application and cannot be confirmed malicious without code extraction.
+### Cover Story Functionality — setup.exe (Python 3.14 Backend) — CONFIRMED CLEAN
+Fully analyzed via Python 3.14 `dis` bytecode disassembly after extraction with `pyinstxtractor`. All 11 modules inspected; no malicious code found.
 
-- **Gamma control** (`gammapanel.gamma`): Windows gamma/color temperature adjustment — the stated purpose of the app
-- **IP geolocation** (`gammapanel.location`): standard practice for solar-position apps to determine local sunrise/sunset times
-- **Solar-position scheduling** (`gammapanel.scheduler` + `astral`): `astral` is a well-known Python library used by display temperature apps (f.lux, Redshift) to schedule color shifts at dusk/dawn
-- **System tray** (`gammapanel.tray`): expected for a background display utility
-- **Hotkey registration** (`gammapanel.hotkeys`): expected for a display utility
-- **Autostart persistence** (`gammapanel.autostart`): normal for apps that should run at login
-- **Configuration management** (`gammapanel.config`): reads/writes user settings
-- **Tkinter UI** (`gammapanel.ui`): basic settings GUI
-- **Mutex**: `GammaPanelMutex` — single-instance enforcement, normal behavior
-- IPC server on `127.0.0.1:34254` — serves data to the Tauri frontend (architecture is unusual for a standalone utility but consistent with the Tauri sidecar pattern)
+- **Gamma control** (`gammapanel.gamma`): `SetDeviceGammaRamp`/`GetDeviceGammaRamp` on all monitors; builds 3×256 WORD ramp from color temperature in Kelvin
+- **IP geolocation** (`gammapanel.location`): single GET to `http://ip-api.com/json/?fields=lat,lon,city,status` — free service, no API key; used to derive lat/lon for sunrise/sunset calculation
+- **Solar-position scheduling** (`gammapanel.scheduler` + `astral`): drives smooth temperature transitions between day/evening/night periods based on sunrise and sunset times; no time-gating or geo-gating of any other functionality
+- **Config** (`gammapanel.config`): reads/writes `%APPDATA%\GammaPanel\settings.json`; keys are day/evening/night temp, transition duration, hotkeys, location mode
+- **Autostart** (`gammapanel.autostart`): adds/removes `HKCU\Software\Microsoft\Windows\CurrentVersion\Run` key pointing to the PyInstaller executable — normal for this class of app
+- **Fullscreen detection** (`gammapanel.fullscreen`): polls foreground window vs monitor rect; pauses gamma adjustment during fullscreen games/video
+- **Hotkeys** (`gammapanel.hotkeys`): pynput-based; toggle, pause, temp up/down (configurable defaults: `ctrl+alt+g`, `ctrl+alt+p`, `ctrl+alt+up/down`)
+- **System tray** (`gammapanel.tray`): pystray icon with toggle, pause 1h, disable until sunrise, quit
+- **UI** (`gammapanel.ui`): tkinter window with temperature slider (1000–6500K), location display, next-change countdown; Catppuccin Mocha color scheme
 
 ### NSIS Installer
 - Checks for and silently installs WebView2 (required for Tauri)
@@ -128,9 +127,10 @@ GammaPanel_x64-setup.exe (NSIS installer, signed GANPATI ESTATES LLP)
 | URL | `https://login.live.com/RST2.srf` | WAM/WS-Trust endpoint — ANY.RUN confirmed contact |
 | URL | `https://login.live.com/ppsecure/deviceaddcredential.srf` | Microsoft account device credential endpoint |
 | Host | `127.0.0.1:34254` | Internal IPC between Tauri frontend and Python sidecar |
+| URL | `http://ip-api.com/json/?fields=lat,lon,city,status` | setup.exe geolocation (legitimate, free service) |
 | **C2** | **NOT RECOVERED** | ChaCha-encrypted at runtime inside GammaPanelApp.exe |
 
-*Note: The actual C2 URL (`surl` parameter of `stat4x` command) is decrypted via ChaCha cipher at runtime; static extraction is blocked. No external non-Microsoft C2 was observed in sandbox due to likely environment/geo gating.*
+*Note: The actual C2 URL (`surl` parameter of `stat4x` command) is decrypted via ChaCha cipher at runtime; static extraction is blocked. No external non-Microsoft C2 was observed in sandbox due to likely environment/geo gating. `ip-api.com` is legitimate and used by the cover story component only.*
 
 ### Filesystem
 | Path | Description |
@@ -173,6 +173,11 @@ GammaPanel_x64-setup.exe (NSIS installer, signed GANPATI ESTATES LLP)
 ### speakeasy (runner.py) — setup.exe (amd64, 60s timeout)
 - **Result**: No IOCs. PyInstaller bootstrap requires Python 3.14 runtime DLL; not available in speakeasy environment.
 
+### Python 3.14 bytecode extraction (pyinstxtractor + dis)
+- Extracted all 11 `gammapanel.*` modules using `pyinstxtractor` under Python 3.14 Docker container
+- Disassembled with Python 3.14 `dis` module (pycdc v1.1.2 does not support Python 3.14 bytecode)
+- **Result**: No malicious code, C2 URLs, or suspicious network calls found in any module. setup.exe is confirmed clean cover story functionality.
+
 ### Angr / manual decrypt
 - Not attempted: ChaCha key is embedded within GammaPanelApp.exe's 452 XOR-obfuscated string table; key extraction requires symbolic execution over a large code region that exceeds practical angr scope without substantial manual reversing.
 
@@ -201,25 +206,18 @@ GammaPanel_x64-setup.exe (NSIS installer, signed GANPATI ESTATES LLP)
 ### Certificate Anomaly
 GANPATI ESTATES LLP is an Indian real estate company (Jaipur, Rajasthan). The presence of a personal Gmail address (`kisanvyas126@gmail.com`) in an EV certificate subject field is irregular for a legitimate code-signing certificate, and a real estate firm is an atypical holder of software signing credentials. This cert is almost certainly obtained fraudulently, stolen from a legitimate business, or issued through a compromised CA verification process.
 
-### C2 Not Recovered — Recommended Follow-Up
-The actual C2 URL is protected by:
-1. **Python 3.14 zstd PYZ compression** in setup.exe — the `gammapanel.config` module likely holds the server URL and is inaccessible without Python 3.14
-2. **ChaCha runtime decryption** in GammaPanelApp.exe — the `stat4x` command's `surl` argument is decrypted from an embedded byte array using the ChaCha stream cipher; recovering the key requires setting a breakpoint at the ChaCha decryption call and observing the plaintext output under a Windows debugger (x64dbg/WinDbg)
+### C2 Not Recovered
+The actual C2 URL is protected by **ChaCha runtime decryption** in GammaPanelApp.exe — the `stat4x` command's `surl` argument is decrypted from an embedded byte array at runtime. setup.exe (now fully analyzed) contains no C2 and is not a source of network IOCs.
 
-**Recommended follow-up**:
-- Run the sample under a full Windows VM with Process Monitor to capture the `stat4x` HTTP request and log the outbound C2 URL
-- Use x64dbg with a conditional breakpoint at GammaPanelApp.exe's HTTP client to catch the decrypted `surl` at send time
-- Install Python 3.14.x on an isolated VM, run `pyinstxtractor.py` against setup.exe to extract `gammapanel.config.pyc`, then decompile with `pycdc` or equivalent
+**Recommended follow-up to recover the C2**:
+- Run the sample under a full Windows VM and capture HTTP traffic to identify the `stat4x` outbound request
+- Use x64dbg with a breakpoint at GammaPanelApp.exe's HTTP client to catch the decrypted `surl` at send time
 
 ### Architecture Assessment
-The Tauri + Python sidecar pattern is increasingly used for malware delivery because:
-- Tauri produces signed-looking, unfamiliar Rust binaries that evade Electron-specific YARA rules
-- Python sidecar hides behind the Tauri app with no standalone execution path
-- Python 3.14 zstd PYZ prevents offline analysis with standard tools
-- mypyc compilation compiles Python to C extensions, defeating bytecode decompilers
+The Tauri + Python sidecar pattern is effective for malware delivery because:
+- Tauri produces signed-looking Rust binaries that evade Electron-specific YARA rules
+- The Python sidecar is a fully functional application, providing legitimate behavior that blends with the cover story
+- The malicious component (GammaPanelApp.exe) is the only part that requires runtime decryption and C2 contact
 
 ### Lure Quality
-The "GammaPanel" branding (screen gamma adjustment utility) is plausible; the presence of the `astral` library and `gammapanel.location` is consistent with f.lux-style solar-position-based display color temperature adjustment. This gives the installer a believable cover story. The CJK characters in the installer dialog strings (`胤`, `肂`) suggest possible targeting of East Asian users or actor infrastructure reuse.
-
-### Gamma-as-a-Service Loader Pattern
-The combination of `gammapanel.scheduler` (time-gated) + `gammapanel.location` (geo-aware) + ChaCha-encrypted C2 suggests possible geo/time-gated payload delivery: the C2 might only serve active payloads within specific geographic regions or time windows, which would explain why ANY.RUN's sandbox (US-based) observed no external C2 despite a 100/100 malicious verdict.
+After full code extraction, the GammaPanel Python application is a well-implemented, properly documented f.lux clone with a clean Catppuccin Mocha UI, configurable hotkeys, smooth temperature transitions, fullscreen detection, and pystray tray icon. This is not a skeleton or stub — the actor invested in building a functional lure that passes casual inspection. The CJK characters in the installer dialog strings (`胤`, `肂`) suggest possible targeting of East Asian users or actor infrastructure reuse.
