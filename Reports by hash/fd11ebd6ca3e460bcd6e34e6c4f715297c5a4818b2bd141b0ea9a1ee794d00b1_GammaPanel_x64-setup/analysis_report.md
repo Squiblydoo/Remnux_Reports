@@ -42,11 +42,11 @@
 **Confidence**: **HIGH** (ANY.RUN 100/100, "loader" tag; confirmed malicious behavioral indicators)  
 **KesaKode Online**: Not applicable (NSIS stub has no matches; GammaPanelApp.exe offline: JloRAT(19)/Splinter(16) — below attribution threshold, discarded)
 
-The installer packages two malicious components behind a "GammaPanel" screen brightness/gamma adjustment lure:
+The installer drops two components behind a "GammaPanel" screen brightness/gamma adjustment lure:
 
-1. **GammaPanelApp.exe** — A heavily obfuscated Tauri v1 (Rust/WebView2) frontend with 452 XOR-in-loop instances, ChaCha cipher runtime string decryption, embedded keylogger API, HTTP POST capability, and a custom Tauri command `stat4x(surl, userAgent, name)` used to beacon collected data to a runtime-decrypted C2 URL.
+1. **GammaPanelApp.exe** — A heavily obfuscated Tauri v1 (Rust/WebView2) frontend with confirmed malicious indicators: 452 XOR-in-loop instances, ChaCha cipher runtime string decryption, embedded keylogger API, hardware fingerprinting, and a custom Tauri command `stat4x(surl, userAgent, name)` used to beacon collected data to a runtime-decrypted C2 URL.
 
-2. **setup.exe** — A Python 3.14 PyInstaller one-file bundle containing the `gammapanel` Python package, which implements autostart persistence, IP-based location tracking (using the `astral` solar-position library), task scheduling, and background service functionality. The Python modules are compiled with `mypyc` and stored in a PYZ archive using Python 3.14 zstd compression — making offline extraction impossible with Python <3.14.
+2. **setup.exe** — A Python 3.14 PyInstaller one-file bundle whose observable module names (`gammapanel.gamma`, `gammapanel.scheduler`, `gammapanel.location`, `gammapanel.tray`, etc.) are consistent with a legitimate f.lux-style gamma adjustment application. The actual code cannot be inspected: modules are compiled with `mypyc` and stored in a PYZ archive using Python 3.14 zstd compression, making offline extraction impossible with Python <3.14. It cannot be confirmed or ruled out that setup.exe contains malicious logic beyond what its module names suggest.
 
 The use of an **Indian real estate company's EV certificate** (GANPATI ESTATES LLP, Rajasthan) to sign a screen dimming utility is a strong indicator of a stolen or fraudulently obtained signing credential.
 
@@ -54,31 +54,29 @@ The use of an **Indian real estate company's EV certificate** (GANPATI ESTATES L
 
 ## 3. Capabilities
 
-### GammaPanelApp.exe (Tauri Frontend)
+### Confirmed Malicious — GammaPanelApp.exe (Tauri Frontend)
 - **Runtime string decryption** via ChaCha cipher (8 instances) and ACSS (1 instance)
-- **Keylogger API** (Windows keyboard hook, low-level `WH_KEYBOARD_LL` or equivalent — YARA: `KeyloggerApi`)
-- **HTTP POST form data** (`PostHttpForm` YARA) — sends collected data
+- **Keylogger API** (Windows keyboard hook — YARA: `KeyloggerApi`)
 - **Hardware fingerprinting** (`FingerprintHardware` YARA): `HARDWARE\DESCRIPTION\System\BIOS`, `HKLM` enumeration
-- **Shell execution** (`RunShell` YARA): PowerShell launcher for VC++ redistributable install
 - **Custom Tauri command `stat4x(surl, userAgent, name)`**: passes a runtime-decrypted server URL, user-agent string, and victim identifier to the Rust backend for outbound HTTP beaconing
-- **Sidecar process launch**: spawns `setup.exe` as a Tauri sidecar over `127.0.0.1:34254`
+- **HTTP POST form data** (`PostHttpForm` YARA) — sends collected data to C2
 - **CSP `**https://*/*`**: allows the embedded WebView2 frontend to reach any external HTTPS endpoint
-- **Registry access**: HKLM and HKCU (5 hits each)
-- **WebView2 app profile**: creates `%LOCALAPPDATA%\com.GammaPanel.app\EBWebView\`
 - Contacts `https://login.live.com/RST2.srf` (WAM/WS-Trust endpoint — possible Windows token theft via WebView2 SSO)
+- **Sidecar process launch**: spawns `setup.exe` as a Tauri sidecar over `127.0.0.1:34254`
 
-### setup.exe (Python 3.14 Backend)
-- **Mutex**: `GammaPanelMutex` (single-instance enforcement)
-- **Autostart persistence** (`gammapanel.autostart`): adds to Windows startup via registry or service
-- **IP geolocation** (`gammapanel.location`): obtains victim location via IP lookup (using `requests` HTTP library)
-- **Solar-position scheduling** (`gammapanel.scheduler` + `astral`): uses `astral` library to calculate sunrise/sunset; schedules operations based on local time — possible daytime-only C2 callback or time-gating
-- **Configuration management** (`gammapanel.config`): reads/writes persistent config
-- **Gamma control** (`gammapanel.gamma`): Windows gamma adjustment API (lure functionality)
-- **Hotkey registration** (`gammapanel.hotkeys`): global keyboard shortcuts
-- **System tray** (`gammapanel.tray`): hides in system tray
-- **Tkinter UI** (`gammapanel.ui`): basic GUI
-- **Full library stack**: `requests`, `urllib3`, `ssl`, `certifi`, `asyncio`, `tkinter`, `hashlib`, `hmac`, `zstd`
-- IPC server listening on `127.0.0.1:34254` — serves data to the Tauri frontend
+### Cover Story Functionality — setup.exe (Python 3.14 Backend)
+The following behaviors are observable from module names only; actual code is inaccessible due to mypyc compilation and Python 3.14 zstd PYZ encryption. All are consistent with a legitimate f.lux-style application and cannot be confirmed malicious without code extraction.
+
+- **Gamma control** (`gammapanel.gamma`): Windows gamma/color temperature adjustment — the stated purpose of the app
+- **IP geolocation** (`gammapanel.location`): standard practice for solar-position apps to determine local sunrise/sunset times
+- **Solar-position scheduling** (`gammapanel.scheduler` + `astral`): `astral` is a well-known Python library used by display temperature apps (f.lux, Redshift) to schedule color shifts at dusk/dawn
+- **System tray** (`gammapanel.tray`): expected for a background display utility
+- **Hotkey registration** (`gammapanel.hotkeys`): expected for a display utility
+- **Autostart persistence** (`gammapanel.autostart`): normal for apps that should run at login
+- **Configuration management** (`gammapanel.config`): reads/writes user settings
+- **Tkinter UI** (`gammapanel.ui`): basic settings GUI
+- **Mutex**: `GammaPanelMutex` — single-instance enforcement, normal behavior
+- IPC server on `127.0.0.1:34254` — serves data to the Tauri frontend (architecture is unusual for a standalone utility but consistent with the Tauri sidecar pattern)
 
 ### NSIS Installer
 - Checks for and silently installs WebView2 (required for Tauri)
@@ -110,12 +108,14 @@ GammaPanel_x64-setup.exe (NSIS installer, signed GANPATI ESTATES LLP)
               ├─ Contacts login.live.com/RST2.srf (possible WAM token theft)
               └─ Keylogger API active
          │
-         └─ setup.exe (Python 3.14 backend)
+         └─ setup.exe (Python 3.14 backend — cover story component)
               ├─ Mutex: GammaPanelMutex
-              ├─ gammapanel.location → IP geolocation lookup
-              ├─ gammapanel.autostart → adds startup persistence
-              ├─ gammapanel.scheduler → time-gated operations via astral (solar position)
+              ├─ gammapanel.gamma → gamma/color temperature adjustment (stated purpose)
+              ├─ gammapanel.location → IP geolocation (for sunrise/sunset calculation)
+              ├─ gammapanel.scheduler + astral → schedule color shifts at dusk/dawn
+              ├─ gammapanel.autostart → run at login (normal for display utility)
               └─ IPC on 127.0.0.1:34254 → serves data to Tauri frontend
+              [actual code unverifiable: mypyc + Python 3.14 zstd PYZ]
 ```
 
 ---
