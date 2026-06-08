@@ -206,12 +206,20 @@ GammaPanel_x64-setup.exe (NSIS installer, signed GANPATI ESTATES LLP)
 ### Certificate Anomaly
 GANPATI ESTATES LLP is an Indian real estate company (Jaipur, Rajasthan). The presence of a personal Gmail address (`kisanvyas126@gmail.com`) in an EV certificate subject field is irregular for a legitimate code-signing certificate, and a real estate firm is an atypical holder of software signing credentials. This cert is almost certainly obtained fraudulently, stolen from a legitimate business, or issued through a compromised CA verification process.
 
-### C2 Not Recovered
-The actual C2 URL is protected by **ChaCha runtime decryption** in GammaPanelApp.exe — the `stat4x` command's `surl` argument is decrypted from an embedded byte array at runtime. setup.exe (now fully analyzed) contains no C2 and is not a source of network IOCs.
+### C2 Not Recovered — Frontend Assets Are ChaCha-Encrypted
+
+Static extraction of the C2 URL was fully attempted and blocked at two layers:
+
+**Layer 1 — Encrypted frontend assets**: GammaPanelApp.exe contains three high-entropy blobs (25KB, 37KB, 147KB) with no recognisable compression or format headers. The string `"stat4x"` does not appear anywhere in the binary as a quoted JS literal — confirming the entire app frontend (HTML + JS) is encrypted before embedding. The 452 XorInLoop hits in the Rust binary are consistent with ChaCha key material being built on the stack at runtime. The Tauri API bundle (45KB) is the only plaintext JS present.
+
+**Layer 2 — Runtime-only decryption**: The Rust backend decrypts the frontend assets using ChaCha before serving them to the WebView2 instance. The JS code containing `invoke('stat4x', { surl: <C2_URL>, ... })` and the logic to construct the C2 URL only exists in memory after decryption — it is never on disk in readable form.
+
+setup.exe (fully analyzed via Python 3.14 bytecode extraction) contains no C2 URL and is confirmed clean.
 
 **Recommended follow-up to recover the C2**:
-- Run the sample under a full Windows VM and capture HTTP traffic to identify the `stat4x` outbound request
-- Use x64dbg with a breakpoint at GammaPanelApp.exe's HTTP client to catch the decrypted `surl` at send time
+- **Hook the Tauri asset protocol handler** in GammaPanelApp.exe with a debugger breakpoint after ChaCha decryption — the plaintext `index.html` + `index.js` will be in memory before being handed to WebView2
+- **Run under a Windows VM with process memory dumping** — after launch, dump GammaPanelApp.exe's memory and search for `stat4x` as a quoted string; it will be present in the WebView2 heap once the page loads
+- **Capture the outbound HTTP request** — the `stat4x` command fires an HTTP POST; a full PCAP in a Windows VM sandbox would capture the destination URL directly
 
 ### Architecture Assessment
 The Tauri + Python sidecar pattern is effective for malware delivery because:
