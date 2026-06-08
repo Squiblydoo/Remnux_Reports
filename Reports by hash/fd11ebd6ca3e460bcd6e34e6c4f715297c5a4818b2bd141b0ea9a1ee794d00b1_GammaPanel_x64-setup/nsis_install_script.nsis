@@ -1,0 +1,1467 @@
+; NSIS script (UTF-8) NSIS-3 Unicode log
+; Install
+
+Unicode true
+SetCompressor /SOLID lzma
+SetCompressorDictSize 1824
+
+; ------------------------------------------------------------------------
+; HEADER SIZE: 50916
+; START HEADER SIZE: 300
+; MAX STRING LENGTH: 1024
+; STRING CHARS: 6165
+
+OutFile [NSIS].exe
+!include WinMessages.nsh
+
+
+
+; ------------------------------------------------------------------------
+; LANG TABLES: 1
+; LANG STRINGS: 101
+
+Name "GammaPanelApp"
+BrandingText "Nullsoft Install System v3.08"
+
+; LANG: 1033
+LangString LSTR_0 1033 "Nullsoft Install System v3.08"
+LangString LSTR_1 1033 "肂 Setup"
+LangString LSTR_2 1033 "GammaPanelApp"
+LangString LSTR_3 1033 "Space available: "
+LangString LSTR_4 1033 "Space required: "
+LangString LSTR_5 1033 "Can't write: "
+LangString LSTR_8 1033 "Could not find symbol: "
+LangString LSTR_9 1033 "Could not load: "
+LangString LSTR_10 1033 "Create folder: "
+LangString LSTR_12 1033 "Created uninstaller: "
+LangString LSTR_13 1033 "Delete file: "
+LangString LSTR_14 1033 "Delete on reboot: "
+LangString LSTR_16 1033 "Error creating: "
+LangString LSTR_17 1033 "Error decompressing data! Corrupted installer?"
+LangString LSTR_19 1033 "ExecShell: "
+LangString LSTR_20 1033 "Execute: "
+LangString LSTR_21 1033 "Extract: "
+LangString LSTR_22 1033 "Extract: error writing to file "
+LangString LSTR_23 1033 "Installer corrupted: invalid opcode"
+LangString LSTR_24 1033 "No OLE for: "
+LangString LSTR_25 1033 "Output folder: "
+LangString LSTR_26 1033 "Remove folder: "
+LangString LSTR_29 1033 "Skipped: "
+LangString LSTR_30 1033 "Copy Details To Clipboard"
+LangString LSTR_32 1033 "B"
+LangString LSTR_33 1033 " K"
+LangString LSTR_34 1033 " M"
+LangString LSTR_35 1033 " G"
+LangString LSTR_36 1033 "Error opening file for writing: $\r$\n$\r$\n$V0$\r$\n$\r$\nClick Abort to stop the installation,$\r$\nRetry to try again, or$\r$\nIgnore to skip this file."
+LangString LSTR_37 1033 0
+LangString LSTR_38 1033 "Welcome to 胤 Setup"
+LangString LSTR_39 1033 "MS Shell Dlg"
+LangString LSTR_40 1033 "Setup will guide you through the installation of 胤.$\r$\n$\r$\nIt is recommended that you close all other applications before starting Setup. This will make it possible to update relevant system files without having to reboot your computer.$\r$\n$\r$\n$CLICK"
+LangString LSTR_41 1033 "older"
+LangString LSTR_42 1033 "unknown"
+LangString LSTR_43 1033 "GammaPanelApp 0.1.0 is already installed. Select the operation you want to perform and click Next to continue."
+LangString LSTR_44 1033 "Add/Reinstall components"
+LangString LSTR_45 1033 "Uninstall GammaPanelApp"
+LangString LSTR_46 1033 "Already Installed"
+LangString LSTR_47 1033 "Choose the maintenance option to perform."
+LangString LSTR_48 1033 "An $R4 version of GammaPanelApp is installed on your system. It's recommended that you uninstall the current version before installing. Select the operation you want to perform and click Next to continue."
+LangString LSTR_49 1033 "Uninstall before installing"
+LangString LSTR_50 1033 "Do not uninstall"
+LangString LSTR_51 1033 "Choose how you want to install GammaPanelApp."
+LangString LSTR_52 1033 "A newer version of GammaPanelApp is already installed! It is not recommended that you install an older version. If you really want to install this older version, it's better to uninstall the current version first. Select the operation you want to perform and click Next to continue."
+LangString LSTR_53 1033 "Unable to uninstall!"
+LangString LSTR_54 1033 "Choose Install Location"
+LangString LSTR_55 1033 "Choose the folder in which to install 胤."
+LangString LSTR_56 1033 "Choose Start Menu Folder"
+LangString LSTR_57 1033 "Choose a Start Menu folder for the 胤 shortcuts."
+LangString LSTR_58 1033 "Do not create shortcuts"
+LangString LSTR_59 1033 "Select the Start Menu folder in which you would like to create the program's shortcuts. You can also enter a name to create a new folder."
+LangString LSTR_60 1033 "Installing"
+LangString LSTR_61 1033 "Please wait while 胤 is being installed."
+LangString LSTR_62 1033 "Installation Complete"
+LangString LSTR_63 1033 "Setup was completed successfully."
+LangString LSTR_64 1033 "Installation Aborted"
+LangString LSTR_65 1033 "Setup was not completed successfully."
+LangString LSTR_66 1033 "&Finish"
+LangString LSTR_67 1033 "Completing 胤 Setup"
+LangString LSTR_68 1033 "Your computer must be restarted in order to complete the installation of 胤. Do you want to reboot now?"
+LangString LSTR_69 1033 "Reboot now"
+LangString LSTR_70 1033 "I want to manually reboot later"
+LangString LSTR_71 1033 "胤 has been installed on your computer.$\r$\n$\r$\nClick Finish to close Setup."
+LangString LSTR_72 1033 "&Run 胤"
+LangString LSTR_73 1033 "Create desktop shortcut"
+LangString LSTR_74 1033 8
+LangString LSTR_75 1033 "Downloading WebView2 bootstrapper..."
+LangString LSTR_76 1033 "WebView2 bootstrapper downloaded successfully"
+LangString LSTR_77 1033 "Error: Downloading WebView2 Failed - $V0"
+LangString LSTR_78 1033 "Failed to install WebView2! The app can't run without it. Try restarting the installer."
+LangString LSTR_79 1033 "Installing WebView2..."
+LangString LSTR_80 1033 "WebView2 installed successfully"
+LangString LSTR_81 1033 "Error: Installing WebView2 failed with exit code $V1"
+LangString LSTR_82 1033 "GammaPanelApp is running!$\nClick OK to kill it"
+LangString LSTR_83 1033 "GammaPanelApp is running! Please close it first then try again."
+LangString LSTR_84 1033 "Failed to kill GammaPanelApp. Please close it first then try again"
+LangString LSTR_85 1033 "Custom"
+LangString LSTR_86 1033 "Cancel"
+LangString LSTR_87 1033 "< &Back"
+LangString LSTR_88 1033 "&Next >"
+LangString LSTR_89 1033 "Click Next to continue."
+LangString LSTR_90 1033 "Setup will install 胤 in the following folder. To install in a different folder, click Browse and select another folder. $CLICK"
+LangString LSTR_91 1033 "Destination Folder"
+LangString LSTR_92 1033 "B&rowse..."
+LangString LSTR_93 1033 "Select the folder to install 胤 in:"
+LangString LSTR_94 1033 "&Install"
+LangString LSTR_95 1033 "Click Install to start the installation."
+LangString LSTR_96 1033 "Show &details"
+LangString LSTR_97 1033 "Completed"
+LangString LSTR_98 1033 " "
+LangString LSTR_99 1033 "&Close"
+LangString LSTR_100 1033 "GammaPanelApp"
+
+
+InstType ""
+; wininit = "$WINDIR\wininit.ini"
+
+
+; ------------------------------------------------------------------------
+; PAGES: 7
+
+; Page 0
+Page custom func_227 func_298 /ENABLECANCEL
+
+; Page 1
+Page custom func_299 func_459 /ENABLECANCEL
+
+; Page 2
+Page directory func_492 func_496 func_504 /ENABLECANCEL
+  DirText "" "" "" ""
+  DirVar $CMDLINE
+
+; Page 3
+Page custom func_505 func_548 /ENABLECANCEL
+
+; Page 4
+Page instfiles func_549 func_552 func_558
+  CompletedText ""
+  DetailsButtonText ""
+
+; ; Page 5
+; Page COMPLETED
+
+; Page 6
+Page custom func_572 func_790
+
+
+; ------------------------------------------------------------------------
+Function func_0
+  Push $V1
+  Exch
+  Pop $V1
+  Exch
+  Push $V0
+  Exch
+  Pop $V0
+  Exch
+  Push $V2
+  Push $V3
+  Push $V4
+  Push $V5
+  Push $V6
+  Push $V7
+  Push $V8
+  StrCpy $V2 ""
+  StrCpy $V3 ""
+  StrCpy $V4 ""
+  StrCpy $V5 ""
+  StrCpy $V6 ""
+  StrCpy $V7 ""
+  StrCpy $V8 ""
+  StrCmp $V1 "U" 0 label_30 ; If: $V1 == "U"
+    Call Initialize_____Plugins
+    SetOverwrite off
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "User32::CharUpper(t r0 r5)i"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Goto label_146
+  ; Else
+label_30:
+    StrCmp $V1 "L" 0 label_37
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "User32::CharLower(t r0 r5)i"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Goto label_146
+  ; EndIf
+label_37:
+  StrLen $V2 $V0
+  StrCpy $V3 0
+  Goto label_41
+label_40:
+  IntOp $V3 $V3 + 1
+label_41:
+  IntCmp $V3 $V2 0 0 label_146 ; While: $V3 <= $V2
+    IntOp $V4 $V3 + 1
+    IntCmp $V3 0 label_45
+    StrCpy $V6 $V0 "" $V3
+label_45:
+    IntCmp $V4 $V2 label_50
+    IntCmp $V3 0 0 label_49 label_49
+    StrCpy $V6 $V0 1
+    Goto label_50
+label_49:
+    StrCpy $V6 $V6 1
+label_50:
+    StrCmp $V1 "T" 0 label_84
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "*(&t1 r7) p .r8"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "*$V8(&i1 .r7)"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push $V8
+    CallInstDLL "$PLUGINSDIR\System.dll" "Free"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "user32::IsCharAlpha(i r7) i .r8"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    IntCmp $V8 0 0 label_78 label_78
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "User32::CharUpper(t r6 r6)i"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Goto label_83
+label_78:
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "User32::CharLower(t r6 r6)i"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+label_83:
+    Goto label_141
+label_84:
+    StrCmp $V1 "S" 0 label_108
+    StrCmp $V6 " " 0 label_87
+    Goto label_88
+label_87:
+    StrCmp $V6 "$\t" 0 label_89
+label_88:
+    Goto label_142
+label_89:
+    StrCmp $V7 "." 0 label_91
+    Goto label_92
+label_91:
+    StrCmp $V7 "!" 0 label_93
+label_92:
+    Goto label_94
+label_93:
+    StrCmp $V7 "?" 0 label_95
+label_94:
+    Goto label_96
+label_95:
+    StrCmp $V7 "" 0 label_102
+label_96:
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "User32::CharUpper(t r6 r6)i"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Goto label_107
+label_102:
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "User32::CharLower(t r6 r6)i"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+label_107:
+    Goto label_141
+label_108:
+    StrCmp $V1 "<>" 0 label_141
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "*(&t1 r6) p .r8"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "*$V8(&i1 .r7)"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push $V8
+    CallInstDLL "$PLUGINSDIR\System.dll" "Free"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "user32::IsCharUpper(i r7) i .r8"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    IntCmp $V8 0 0 label_136 label_136
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "User32::CharUpper(t r6 r6)i"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Goto label_141
+label_136:
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "User32::CharLower(t r6 r6)i"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+label_141:
+    StrCpy $V7 $V6
+label_142:
+    StrCpy $V5 "$V5$V6"
+  ; EndWhile
+  Goto label_40
+label_146:
+  StrCpy $V0 $V5
+  Pop $V8
+  Pop $V7
+  Pop $V6
+  Pop $V5
+  Pop $V4
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Push $V0
+  Exch
+  Pop $V0
+FunctionEnd
+
+Function func_159
+  Push $R0
+  Exch
+  Pop $R0
+  Exch
+  Push $R1
+  Exch
+  Pop $R1
+  Exch 2
+  Push $R2
+  Exch
+  Pop $R2
+  Push $R3
+  Push $R4
+  Push $R5
+  Push $R6
+  StrLen $R3 $R1
+  StrLen $R4 $R2
+  StrCpy $R5 0
+label_177:
+  StrCpy $R6 $R2 $R3 $R5
+  StrCmp $R6 $R1 0 label_185 ; If: $R6 == $R1
+    StrCmp $R0 "<" 0 label_183 ; If: $R0 == "<"
+      IntOp $R6 $R3 + $R5
+      IntOp $R0 $R4 - $R6
+    ; Else
+label_183:
+      StrCpy $R0 $R5
+    ; EndIf
+label_184:
+  ; Else
+label_185:
+    IntCmp $R5 $R4 0 label_188 ; If: $R5 < $R4
+      StrCpy $R0 ""
+      Goto label_192
+    ; EndIf
+label_188:
+    IntOp $R5 $R5 + 1
+label_189:
+    Goto label_177
+  ; EndIf
+label_192:
+  Pop $R6
+  Pop $R5
+  Pop $R4
+  Pop $R3
+  Pop $R2
+  Exch
+  Pop $R1
+  Push $R0
+  Exch
+  Pop $R0
+FunctionEnd
+
+Function func_203
+  Call Initialize_____Plugins
+  SetDetailsPrint lastused
+  SetOverwrite on
+  File "$PLUGINSDIR\modern-wizard.bmp"
+FunctionEnd
+
+Function func_207
+  LockWindow on
+  ShowWindow $var38 0
+  ShowWindow $var37 0
+  ShowWindow $var32 0
+  ShowWindow $var34 0
+  ShowWindow $var36 0
+  ShowWindow $var39 0
+  ShowWindow $var40 1
+  LockWindow off
+FunctionEnd
+
+Function func_217
+  LockWindow on
+  ShowWindow $var38 1
+  ShowWindow $var37 1
+  ShowWindow $var32 1
+  ShowWindow $var34 1
+  ShowWindow $var36 1
+  ShowWindow $var39 1
+  ShowWindow $var40 0
+  LockWindow off
+FunctionEnd
+
+Function func_227    ; Page 0, Pre
+  Call func_1093
+  Call Initialize_____Plugins
+  SetOverwrite off
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push 1044
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "Create"
+  Pop $var44
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push 4294967258
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "SetRTL"
+  SetCtlColors $var44 "" 0xFFFFFF
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push ""
+  Push "193u"
+  Push "109u"
+  Push "0u"
+  Push "0u"
+  Push 0
+  Push "0x40000000|0x10000000|0x04000000|0x0000000E|0x00000100"
+  Push "STATIC"
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+  Pop $var45
+  SetBrandingImage /IMGID=396 "es"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push 4294967257
+  Push "28u"
+  Push "195u"
+  Push "10u"
+  Push "120u"
+  Push 0x00000020
+  Push "0x40000000|0x10000000|0x04000000|0x00000100"
+  Push "STATIC"
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+  Pop $var47
+  SetCtlColors $var47 0x000000 0xFFFFFF
+  CreateFont $var48 4294967256 12 700
+  SendMessage $var47 0x0030 $var48 0
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push 4294967255
+  Push "130u"
+  Push "195u"
+  Push "45u"
+  Push "120u"
+  Push 0x00000020
+  Push "0x40000000|0x10000000|0x04000000|0x00000100"
+  Push "STATIC"
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+  Pop $var49
+  SetCtlColors $var49 0x000000 0xFFFFFF
+  Call func_207
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "Show"
+  Call func_217
+  IntCmp $var46 0 label_297
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push $var46
+  Push "gdi32::DeleteObject(ps)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+label_297:
+FunctionEnd
+
+Function func_298    ; Page 0, Leave
+  Return
+  ; Do
+label_300:
+    EnumRegKey $V1 HKLM "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall" $V0
+    StrCmp $V1 "" label_320
+    IntOp $V0 $V0 + 1
+    ReadRegStr $R0 HKLM "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$V1" "DisplayName"
+    ReadRegStr $R1 HKLM "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$V1" "Publisher"
+  StrCmp "$R0$R1" "GammaPanelAppGammaPanel" 0 label_300 ; LoopUntil: "$R0$R1" != "GammaPanelAppGammaPanel"
+  ReadRegStr $R0 HKLM "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$V1" "UninstallString"
+  Push $R0
+  Push "L"
+  Call func_0
+  Pop $R1
+  Push $R1
+  Push "msiexec"
+  Push ">"
+  Call func_159
+  Pop $R0
+  StrCmp $R0 0 0 label_320 ; If: $R0 == 0
+    StrCpy $R7 "wix"
+    StrCpy $R6 "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$V1"
+  ; Else
+label_320:
+    ReadRegStr $R0 SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\GammaPanelApp" ""
+    ReadRegStr $R1 SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\GammaPanelApp" "UninstallString"
+    StrCmp "$R0$R1" "" 0 label_324
+    Abort
+  ; EndIf
+label_324:
+  StrCpy $R4 4294967254
+  StrCmp $R7 "wix" 0 label_328 ; If: $R7 == "wix"
+    ReadRegStr $R0 HKLM $R6 "DisplayVersion"
+  ; Else
+label_328:
+    ReadRegStr $R0 SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\GammaPanelApp" "DisplayVersion"
+  ; EndIf
+label_329:
+  StrCmp $R0 "" 0 label_331 ; If: $R0 == ""
+    StrCpy $R4 4294967253
+  ; EndIf
+label_331:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsis_tauri_utils.dll"
+  SetDetailsPrint lastused
+  Push $R0
+  Push "0.1.0"
+  CallInstDLL "$PLUGINSDIR\nsis_tauri_utils.dll" "SemverCompare"
+  Pop $R0
+  StrCmp $R0 0 0 label_346 ; If: $R0 == 0
+    StrCpy $R1 4294967252
+    StrCpy $R2 4294967251
+    StrCpy $R3 4294967250
+    SendMessage $var32 0x000C 0 "STR:"
+    SendMessage $var34 0x000C 0 "STR:"
+    StrCpy $R5 2
+  ; Else
+label_346:
+    StrCmp $R0 1 0 label_354 ; If: $R0 == 1
+      StrCpy $R1 4294967247
+      StrCpy $R2 4294967246
+      StrCpy $R3 4294967245
+      SendMessage $var32 0x000C 0 "STR:"
+      SendMessage $var34 0x000C 0 "STR:"
+      StrCpy $R5 1
+      Goto label_363
+    ; EndIf
+label_354:
+    StrCmp $R0 -1 0 label_362 ; If: $R0 == -1
+      StrCpy $R1 4294967243
+      StrCpy $R2 4294967246
+      StrCpy $R3 4294967245
+      SendMessage $var32 0x000C 0 "STR:"
+      SendMessage $var34 0x000C 0 "STR:"
+      StrCpy $R5 1
+      Goto label_363
+    ; EndIf
+label_362:
+    Abort
+  ; EndIf
+label_363:
+  Call func_1093
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push 1018
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "Create"
+  Pop $R4
+  StrCmp 4294967258 1 0 label_376 ; If: 4294967258 == 1
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967258
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "SetRTL"
+  ; EndIf
+label_376:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push $R1
+  Push "24u"
+  Push "100%"
+  Push 0
+  Push 0
+  Push 0x00000020
+  Push "0x40000000|0x10000000|0x04000000|0x00000100"
+  Push "STATIC"
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+  Pop $R1
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push $R2
+  Push "8u"
+  Push "-30u"
+  Push "50u"
+  Push "30u"
+  Push 0
+  Push "0x40000000|0x10000000|0x04000000|0x00010000|0x00000000|0x00000C00|0x00000009|0x00002000"
+  Push "BUTTON"
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+  Pop $R2
+  Push $V0
+  Push $V1
+  StrCpy $V1 $R2
+  StrCpy $V0 454
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push $V0
+  Push $V1
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "OnClick"
+  Pop $V1
+  Pop $V0
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push $R3
+  Push "8u"
+  Push "-30u"
+  Push "70u"
+  Push "30u"
+  Push 0
+  Push "0x40000000|0x10000000|0x04000000|0x00010000|0x00000000|0x00000C00|0x00000009|0x00002000"
+  Push "BUTTON"
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+  Pop $R3
+  Push $V0
+  Push $V1
+  StrCpy $V1 $R3
+  StrCpy $V0 454
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push $V0
+  Push $V1
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "OnClick"
+  Pop $V1
+  Pop $V0
+  StrCmp $var50 2 label_442 ; If: $var50 != 2
+    SendMessage $R2 0x00F1 1 0
+  ; Else
+label_442:
+    SendMessage $R3 0x00F1 1 0
+  ; EndIf
+label_443:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "user32::SetFocus(p$R2)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "Show"
+  Return
+  StrCmp $R1 1 0 label_457 ; If: $R1 == 1
+    StrCpy $var50 1
+    Goto label_458
+  ; EndIf
+label_457:
+  StrCpy $var50 2
+label_458:
+FunctionEnd
+
+Function func_459    ; Page 1, Leave
+  SendMessage $R2 0x00F0 0 0 $R1
+  StrCmp $R5 1 0 label_462
+  StrCmp $R1 1 label_463 label_491
+label_462:
+  StrCmp $R1 1 label_491
+label_463:
+  ShowWindow $HWNDPARENT 0
+  ClearErrors
+  StrCmp $R7 "wix" 0 label_469 ; If: $R7 == "wix"
+    ReadRegStr $R1 HKLM $R6 "UninstallString"
+    ExecWait $R1 $V0
+  ; Else
+label_469:
+    ReadRegStr $V4 SHCTX "Software\GammaPanel\GammaPanelApp" ""
+    ReadRegStr $R1 SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\GammaPanelApp" "UninstallString"
+    ExecWait "$R1 /P _?=$V4" $V0
+  ; EndIf
+label_472:
+  ShowWindow $HWNDPARENT 5
+  BringToFront
+  IfErrors 0 label_476 ; If: Errors
+    StrCpy $V0 2
+  ; EndIf
+label_476:
+  IntCmp $V0 0 label_478 ; If: $V0 = 0
+  ; Else
+label_478:
+    IfFileExists "$INSTDIR\GammaPanelApp.exe" 0 label_486
+  ; EndIf
+label_479:
+  IntCmp $V0 1 0 label_483 label_483 ; If: $V0 != 1
+    StrCmp $R5 2 0 label_482 ; If: $R5 == 2
+      Quit
+    ; EndIf
+label_482:
+    Abort
+  ; EndIf
+label_483:
+  MessageBox MB_OK|MB_ICONEXCLAMATION 4294967242
+  Abort
+  Goto label_491
+label_486:
+  StrCpy $V0 $R1 1
+  StrCmp $V0 "$\"" 0 label_489 ; If: $V0 == "$\""
+    StrCpy $R1 $R1 -1 1
+  ; EndIf
+label_489:
+  Delete $R1
+  RMDir $INSTDIR
+label_491:
+FunctionEnd
+
+Function func_492    ; Page 2, Pre
+  Call func_1093
+  SendMessage $var32 0x000C 0 "STR:"
+  SendMessage $var34 0x000C 0 "STR:"
+FunctionEnd
+
+Function func_496    ; Page 2, Show
+  FindWindow $var51 "#32770" "" $HWNDPARENT
+  GetDlgItem $var52 $var51 1006
+  GetDlgItem $var53 $var51 1020
+  GetDlgItem $var54 $var51 1019
+  GetDlgItem $var55 $var51 1001
+  GetDlgItem $var56 $var51 1023
+  GetDlgItem $var57 $var51 1024
+FunctionEnd
+
+Function func_504    ; Page 2, Leave
+  Return
+  StrCmp 4294967258 0 0 label_523 ; If: 4294967258 == 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\StartMenu.dll"
+    SetDetailsPrint lastused
+    Push 4294967293
+    Push 4294967237
+    Push "/checknoshortcuts"
+    Push $var58
+    Push "/lastused"
+    Push 4294967236
+    Push "/text"
+    Push "/autoadd"
+    Push "/noicon"
+    CallInstDLL "$PLUGINSDIR\StartMenu.dll" "Init"
+  ; Else
+label_523:
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\StartMenu.dll"
+    SetDetailsPrint lastused
+    Push 4294967293
+    Push 4294967237
+    Push "/checknoshortcuts"
+    Push $var58
+    Push "/lastused"
+    Push 4294967236
+    Push "/text"
+    Push "/autoadd"
+    Push "/noicon"
+    Push "/rtl"
+    CallInstDLL "$PLUGINSDIR\StartMenu.dll" "Init"
+  ; EndIf
+label_537:
+  Pop $var59
+  GetDlgItem $var60 $var59 1002
+  GetDlgItem $var61 $var59 1004
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StartMenu.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StartMenu.dll" "Show"
+  Pop $var62
+  StrCmp $var62 "success" 0 label_547
+  Pop $var58
+label_547:
+FunctionEnd
+
+Function func_548    ; Page 3, Leave
+  Return
+FunctionEnd
+
+Function func_552    ; Page 4, Show
+  FindWindow $var63 "#32770" "" $HWNDPARENT
+  GetDlgItem $var64 $var63 1006
+  GetDlgItem $var65 $var63 1004
+  GetDlgItem $var66 $var63 1027
+  GetDlgItem $var67 $var63 1016
+FunctionEnd
+
+Function func_558    ; Page 4, Leave
+  IfAbort label_562 ; If: not Abort
+    SendMessage $var32 0x000C 0 "STR:"
+    SendMessage $var34 0x000C 0 "STR:"
+  ; Else
+label_562:
+    SendMessage $var32 0x000C 0 "STR:"
+    SendMessage $var34 0x000C 0 "STR:"
+  ; EndIf
+label_564:
+  IfAbort label_566
+  WriteRegStr HKCU "Software\GammaPanel\GammaPanelApp" "Installer Language" $LANGUAGE
+label_566:
+FunctionEnd
+
+Function func_567
+  Call Initialize_____Plugins
+  SetDetailsPrint lastused
+  SetOverwrite on
+  File "$PLUGINSDIR\modern-wizard.bmp"
+  Call func_203
+FunctionEnd
+
+Function func_572    ; Page 6, Pre
+  Call func_1093
+  SendMessage $var41 0x000C 0 "STR:"
+  Call Initialize_____Plugins
+  SetOverwrite off
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push 1044
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "Create"
+  Pop $var68
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push 4294967258
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "SetRTL"
+  SetCtlColors $var68 "" 0xFFFFFF
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push ""
+  Push "193u"
+  Push "109u"
+  Push "0u"
+  Push "0u"
+  Push 0
+  Push "0x40000000|0x10000000|0x04000000|0x0000000E|0x00000100"
+  Push "STATIC"
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+  Pop $var69
+  SetBrandingImage /IMGID=396 ""
+  IfRebootFlag 0 label_666 ; If: RebootFlag
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967228
+    Push "28u"
+    Push "195u"
+    Push "10u"
+    Push "120u"
+    Push 0x00000020
+    Push "0x40000000|0x10000000|0x04000000|0x00000100"
+    Push "STATIC"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var71
+    SetCtlColors $var71 0x000000 0xFFFFFF
+    CreateFont $var72 4294967256 12 700
+    SendMessage $var71 0x0030 $var72 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967227
+    Push "40u"
+    Push "195u"
+    Push "45u"
+    Push "120u"
+    Push 0x00000020
+    Push "0x40000000|0x10000000|0x04000000|0x00000100"
+    Push "STATIC"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var73
+    SetCtlColors $var73 0x000000 0xFFFFFF
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967226
+    Push "10u"
+    Push "195u"
+    Push "90u"
+    Push "120u"
+    Push 0
+    Push "0x40000000|0x10000000|0x04000000|0x00010000|0x00000000|0x00000C00|0x00000009|0x00002000"
+    Push "BUTTON"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var77
+    SetCtlColors $var77 0x000000 0xFFFFFF
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967225
+    Push "10u"
+    Push "195u"
+    Push "115u"
+    Push "120u"
+    Push 0
+    Push "0x40000000|0x10000000|0x04000000|0x00010000|0x00000000|0x00000C00|0x00000009|0x00002000"
+    Push "BUTTON"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var78
+    SetCtlColors $var78 0x000000 0xFFFFFF
+    SendMessage $var77 0x00F1 1 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "user32::SetFocus(p$var77)"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  ; Else
+label_666:
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967228
+    Push "28u"
+    Push "195u"
+    Push "10u"
+    Push "120u"
+    Push 0x00000020
+    Push "0x40000000|0x10000000|0x04000000|0x00000100"
+    Push "STATIC"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var71
+    SetCtlColors $var71 0x000000 0xFFFFFF
+    CreateFont $var72 4294967256 12 700
+    SendMessage $var71 0x0030 $var72 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967224
+    Push "40u"
+    Push "195u"
+    Push "45u"
+    Push "120u"
+    Push 0x00000020
+    Push "0x40000000|0x10000000|0x04000000|0x00000100"
+    Push "STATIC"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var73
+    SetCtlColors $var73 0x000000 0xFFFFFF
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967223
+    Push "10u"
+    Push "195u"
+    Push "90u"
+    Push "120u"
+    Push 0
+    Push "0x40000000|0x10000000|0x04000000|0x00010000|0x00000000|0x00000C00|0x00000003|0x00002000"
+    Push "BUTTON"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var75
+    SetCtlColors $var75 0x000000 0xFFFFFF
+    SendMessage $var75 0x00F1 1 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "user32::SetFocus(p$var75)"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967222
+    Push "10u"
+    Push "195u"
+    Push "110u"
+    Push "120u"
+    Push 0
+    Push "0x40000000|0x10000000|0x04000000|0x00010000|0x00000000|0x00000C00|0x00000003|0x00002000"
+    Push "BUTTON"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var76
+    SetCtlColors $var76 0x000000 0xFFFFFF
+    SendMessage $var76 0x00F1 1 0
+  ; EndIf
+label_731:
+  Push $V1
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "*(i12,i0,p)p.r1"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "USER32::SystemParametersInfo(i0x42,i12,pr1,i0)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "*$V1(i,i.s)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Pop $var79
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push $V1
+  CallInstDLL "$PLUGINSDIR\System.dll" "Free"
+  Pop $V1
+  IntOp $var79 $var79 & 0x01
+  IntCmp $var79 0 label_776 ; If: $var79 = 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "UXTHEME::SetWindowTheme(p$var77,w$\" $\",w$\" $\")"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "UXTHEME::SetWindowTheme(p$var78,w$\" $\",w$\" $\")"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "UXTHEME::SetWindowTheme(p$var75,w$\" $\",w$\" $\")"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "UXTHEME::SetWindowTheme(p$var76,w$\" $\",w$\" $\")"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  ; EndIf
+label_776:
+  Call func_207
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "Show"
+  Call func_217
+  IntCmp $var70 0 label_789
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push $var70
+  Push "gdi32::DeleteObject(ps)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+label_789:
+FunctionEnd
+
+Function func_790    ; Page 6, Leave
+  IfRebootFlag 0 label_797 ; If: RebootFlag
+    SendMessage $var77 0x00F0 0 0 $var74
+    IntCmp $var74 1 0 label_796 label_796 ; If: $var74 != 1
+      Reboot
+      Quit
+      Goto label_797
+    ; EndIf
+label_796:
+    Return
+  ; EndIf
+label_797:
+  SendMessage $var75 0x00F0 0 0 $var74
+  IntCmp $var74 1 0 label_800 label_800 ; If: $var74 != 1
+    Call func_804
+  ; EndIf
+label_800:
+  SendMessage $var76 0x00F0 0 0 $var74
+  IntCmp $var74 1 0 label_803 label_803
+  Call func_1096
+label_803:
+FunctionEnd
+
+Function func_804
+  ExecShell "runas" "$INSTDIR\GammaPanelApp.exe"    ; "runas $INSTDIR\GammaPanelApp.exe"
+FunctionEnd
+
+Function .onGUIInit
+  GetDlgItem $var32 $HWNDPARENT 1037
+  CreateFont $var33 4294967256 4294967221 700
+  SendMessage $var32 0x0030 $var33 0
+  GetDlgItem $var34 $HWNDPARENT 1038
+  SetCtlColors $var32 0x000000 0xFFFFFF
+  SetCtlColors $var34 0x000000 0xFFFFFF
+  GetDlgItem $var35 $HWNDPARENT 1034
+  SetCtlColors $var35 "" 0xFFFFFF
+  GetDlgItem $var36 $HWNDPARENT 1039
+  SetCtlColors $var36 "" 0xFFFFFF
+  GetDlgItem $var38 $HWNDPARENT 1028
+  SetCtlColors $var38 /BRANDING ""
+  GetDlgItem $var37 $HWNDPARENT 1256
+  SetCtlColors $var37 /BRANDING ""
+  SendMessage $var37 0x000C 0 "STR:肀 "
+  GetDlgItem $var39 $HWNDPARENT 1035
+  GetDlgItem $var40 $HWNDPARENT 1045
+  GetDlgItem $var41 $HWNDPARENT 1
+  GetDlgItem $var42 $HWNDPARENT 2
+  GetDlgItem $var43 $HWNDPARENT 3
+  Call func_567
+FunctionEnd
+
+Function .onUserAbort
+  Return
+label_834:
+  Push $V1
+  Exch
+  Pop $V1
+  Exch
+  Push $V0
+  Exch
+  Pop $V0
+  Exch
+  Push $V2
+  Push $V3
+  Push $V4
+  Push $V5
+  Push $V6
+  Push $V7
+  ClearErrors
+  StrCpy $V2 $V1 "" 1
+  StrCpy $V1 $V1 1
+  StrLen $V3 $V2
+  StrCpy $V7 0
+label_853:
+  StrCpy $V4 -1
+  StrCpy $V6 ""
+label_855:
+  IntOp $V4 $V4 + 1
+  StrCpy $V5 $V0 1 $V4
+  StrCmp "$V5$V7" 0 label_910 ; While: "$V5$V7" != 0
+    StrCmp $V5 "" label_897
+    StrCmp $V5 "$\"" 0 label_866
+    StrCmp $V6 "" 0 label_863
+    StrCpy $V6 "$\""
+    Goto label_855
+label_863:
+    StrCmp $V6 "$\"" 0 label_866
+    StrCpy $V6 ""
+    Goto label_855
+label_866:
+    StrCmp $V5 "'" 0 label_873
+    StrCmp $V6 "" 0 label_870
+    StrCpy $V6 "'"
+    Goto label_855
+label_870:
+    StrCmp $V6 "'" 0 label_873
+    StrCpy $V6 ""
+    Goto label_855
+label_873:
+    StrCmp $V5 "`" 0 label_880
+    StrCmp $V6 "" 0 label_877
+    StrCpy $V6 "`"
+    Goto label_855
+label_877:
+    StrCmp $V6 "`" 0 label_880
+    StrCpy $V6 ""
+    Goto label_855
+label_880:
+    StrCmp $V6 "$\"" label_855
+    StrCmp $V6 "'" label_855
+    StrCmp $V6 "`" label_855
+    StrCmp $V5 $V1 0 label_855
+    StrCmp $V7 0 label_885 label_897
+label_885:
+    IntOp $V4 $V4 + 1
+    StrCpy $V5 $V0 $V3 $V4
+    StrCmp $V5 "" label_910
+    StrCmp $V5 $V2 0 label_855
+    IntOp $V4 $V4 + $V3
+    StrCpy $V0 $V0 "" $V4
+label_891:
+    StrCpy $V4 $V0 1
+    StrCmp $V4 " " 0 label_895 ; While: $V4 == " "
+      StrCpy $V0 $V0 "" 1
+    ; EndWhile
+label_895:
+    StrCpy $V7 1
+  ; EndWhile
+label_897:
+  StrCpy $V0 $V0 $V4
+label_898:
+  StrCpy $V4 $V0 1 -1
+  StrCmp $V4 " " 0 label_902 ; While: $V4 == " "
+    StrCpy $V0 $V0 -1
+  ; EndWhile
+label_902:
+  StrCpy $V3 $V0 1
+  StrCpy $V4 $V0 1 -1
+  StrCmp $V3 $V4 0 label_912 ; If: $V3 == $V4
+    StrCmp $V3 "$\"" label_908
+    StrCmp $V3 "'" label_908
+    StrCmp $V3 "`" 0 label_912
+label_908:
+    StrCpy $V0 $V0 -1 1
+    Goto label_912
+label_910:
+    SetErrors
+    StrCpy $V0 ""
+  ; EndIf
+label_912:
+  Pop $V7
+  Pop $V6
+  Pop $V5
+  Pop $V4
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Push $V0
+  Exch
+  Pop $V0
+  Return
+label_923:
+  Pop $var86
+  IfErrors label_926 ; If: not Errors
+    StrCpy $var86 1
+  ; EndIf
+label_926:
+  SetShellVarContext current
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::GetCurrentProcess()p.s"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::IsWow64Process2(ps,*i0s,*i)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Push "|"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::IsWow64Process(p-1,*i0s)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\System.dll" "Int64Op"
+  Pop $var79
+  StrCmp $var79 0 label_950 ; If: $var79 != 0
+    SetRegView 64
+  ; EndIf
+label_950:
+  StrCmp $INSTDIR "" 0 label_953
+  StrCpy $INSTDIR "$LOCALAPPDATA\GammaPanelApp"
+  Call func_1089
+label_953:
+FunctionEnd
+
+Section "EarlyChecks" ; Section_0
+SectionEnd
+
+Section "WebView2" ; Section_1
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::GetCurrentProcess()p.s"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::IsWow64Process2(ps,*i0s,*i)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Push "|"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::IsWow64Process(p-1,*i0s)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\System.dll" "Int64Op"
+  Pop $var79
+  StrCmp $var79 0 label_979
+  ReadRegStr $V4 HKLM "SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}" "pv"
+  Goto label_980
+label_979:
+  ReadRegStr $V4 HKLM "SOFTWARE\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}" "pv"
+label_980:
+  ReadRegStr $V5 HKCU "SOFTWARE\Microsoft\EdgeUpdate\Clients\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}" "pv"
+  StrCmp $V4 "" 0 label_1007
+  StrCmp $V5 "" 0 label_1007
+  Delete "$TEMP\MicrosoftEdgeWebview2Setup.exe"
+  DetailPrint 4294967220
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\NSISdl.dll"
+  SetDetailsPrint lastused
+  Push "$TEMP\MicrosoftEdgeWebview2Setup.exe"
+  Push "https://go.microsoft.com/fwlink/p/?LinkId=2124703"
+  CallInstDLL "$PLUGINSDIR\NSISdl.dll" "download"
+  Pop $V0
+  StrCmp $V0 "success" 0 label_995
+  DetailPrint 4294967219
+  Goto label_997
+label_995:
+  DetailPrint 4294967218
+  Abort 4294967217
+label_997:
+  StrCpy $V6 "$TEMP\MicrosoftEdgeWebview2Setup.exe"
+  Goto label_1000
+  Goto label_1007
+label_1000:
+  DetailPrint 4294967216
+  ExecWait "$V6 /silent /install" $V1
+  StrCmp $V1 0 0 label_1005
+  DetailPrint 4294967215
+  Goto label_1007
+label_1005:
+  DetailPrint 4294967214
+  Abort 4294967217
+label_1007:
+SectionEnd
+
+Section "Install" ; Section_2
+  ; AddSize 49603
+  SetOutPath $INSTDIR
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsis_tauri_utils.dll"
+  SetDetailsPrint lastused
+  Push "GammaPanelApp.exe"
+  CallInstDLL "$PLUGINSDIR\nsis_tauri_utils.dll" "FindProcessCurrentUser"
+  Pop $R0
+  IntCmp $R0 0 0 label_1050 label_1050
+  IfSilent label_1019
+  StrCmp $var86 1 label_1019
+  MessageBox MB_OKCANCEL 4294967213 IDOK label_1019 IDCANCEL label_1049
+label_1019:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsis_tauri_utils.dll"
+  SetDetailsPrint lastused
+  Push "GammaPanelApp.exe"
+  CallInstDLL "$PLUGINSDIR\nsis_tauri_utils.dll" "KillProcessCurrentUser"
+  Pop $R0
+  Sleep 500
+  IntCmp $R0 0 0 label_1029 label_1029
+  Goto label_1050
+  Goto label_1049
+label_1029:
+  IfSilent label_1030 label_1048
+label_1030:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::AttachConsole(i -1)i.r0"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  StrCmp $V0 0 label_1047
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::GetStdHandle(i -11)i.r0"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::SetConsoleTextAttribute(i r0, i 0x0004)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  FileWrite $V0 "胓$\n"
+label_1047:
+  Abort
+label_1048:
+  Abort 4294967211
+label_1049:
+  Abort 4294967212
+label_1050:
+  SetOverwrite on
+  File "GammaPanelApp.exe"
+  CreateDirectory $INSTDIR
+  File "VC_redist.x64.exe"
+  SetFileAttributes "VC_redist.x64.exe" ARCHIVE
+  File "setup.exe"
+  SetFileAttributes "setup.exe" ARCHIVE
+  WriteUninstaller "$INSTDIR\uninstall.exe" ;  "$INSTDIR\$INSTDIR\uninstall.exe"
+  WriteRegStr SHCTX "Software\GammaPanel\GammaPanelApp" "" $INSTDIR
+  WriteRegStr SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\GammaPanelApp" "MainBinaryName" "GammaPanelApp.exe"
+  WriteRegStr SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\GammaPanelApp" "DisplayName" "GammaPanelApp"
+  WriteRegStr SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\GammaPanelApp" "DisplayIcon" "$\"$INSTDIR\GammaPanelApp.exe$\""
+  WriteRegStr SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\GammaPanelApp" "DisplayVersion" "0.1.0"
+  WriteRegStr SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\GammaPanelApp" "Publisher" "GammaPanel"
+  WriteRegStr SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\GammaPanelApp" "InstallLocation" "$\"$INSTDIR$\""
+  WriteRegStr SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\GammaPanelApp" "UninstallString" "$\"$INSTDIR\uninstall.exe$\""
+  WriteRegDWORD SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\GammaPanelApp" "NoModify" 1
+  WriteRegDWORD SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\GammaPanelApp" "NoRepair" 1
+  WriteRegDWORD SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\GammaPanelApp" "EstimatedSize" 0x00c668
+  StrCpy $var62 $var58 1
+  StrCmp $var62 ">" label_1073
+  StrCmp $var58 "" 0 label_1072
+  StrCpy $var58 4294967293
+label_1072:
+  Call func_1097
+label_1073:
+  IfSilent label_1077
+  StrCmp $var86 1 0 label_1076
+  Goto label_1077
+label_1076:
+  Goto label_1084
+label_1077:
+  Push $CMDLINE
+  Push "/NS"
+  Call :label_834
+  Pop $R0
+  IfErrors 0 label_1084
+  Call func_1096
+  Call func_1097
+label_1084:
+  StrCmp $var86 1 0 label_1086
+  SetAutoClose true
+label_1086:
+SectionEnd
+
+Function .onInstSuccess
+  ExecShell "runas" "$INSTDIR\GammaPanelApp.exe"    ; "runas $INSTDIR\GammaPanelApp.exe"
+FunctionEnd
+
+Function func_1089
+  ReadRegStr $V4 SHCTX "Software\GammaPanel\GammaPanelApp" ""
+  StrCmp $V4 "" label_1092
+  StrCpy $INSTDIR $V4
+label_1092:
+FunctionEnd
+
+Function func_1093
+  StrCmp $var86 1 0 label_1095
+  Abort
+label_1095:
+FunctionEnd
+
+Function func_1096
+  Return
+FunctionEnd
+
+; Function Initialize_____Plugins
+;   SetDetailsPrint none
+;   StrCmp $PLUGINSDIR "" 0 label_1108 ; If: $PLUGINSDIR == ""
+;     Push $V0
+;     SetErrors
+;     GetTempFileName $V0
+;     Delete $V0
+;     CreateDirectory $V0 ; CreateRestrictedDirectory
+;     IfErrors label_1109
+;     StrCpy $PLUGINSDIR $V0
+;     Pop $V0
+;   ; EndIf
+; label_1108:
+;   Return
+; label_1109:
+;   MessageBox MB_OK|MB_ICONSTOP "Error! Can't initialize plug-ins directory. Please try again later." /SDIDOK
+;   Quit
+; FunctionEnd
+
