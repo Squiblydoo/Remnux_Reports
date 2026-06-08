@@ -199,7 +199,7 @@ GammaPanel_x64-setup.exe (NSIS installer, signed GANPATI ESTATES LLP)
 ## 8. Analyst Notes
 
 ### Certificate Anomaly
-GANPATI ESTATES LLP is an Indian real estate company (Jaipur, Rajasthan). The presence of a personal Gmail address (`kisanvyas126@gmail.com`) in an EV certificate subject field is irregular for a legitimate code-signing certificate, and a real estate firm is an atypical holder of software signing credentials. This cert is almost certainly obtained fraudulently, stolen from a legitimate business, or issued through a compromised CA verification process. The same issuer (GlobalSign GCC R45 EV CodeSigning CA 2020) has been seen on other malicious samples but with different serials — this serial `1a68e8aefbdbd2b972f8d6bd` has not been seen in prior analyses in this workspace.
+GANPATI ESTATES LLP is an Indian real estate company (Jaipur, Rajasthan). The presence of a personal Gmail address (`kisanvyas126@gmail.com`) in an EV certificate subject field is irregular for a legitimate code-signing certificate, and a real estate firm is an atypical holder of software signing credentials. This cert is almost certainly obtained fraudulently, stolen from a legitimate business, or issued through a compromised CA verification process.
 
 ### C2 Not Recovered — Recommended Follow-Up
 The actual C2 URL is protected by:
