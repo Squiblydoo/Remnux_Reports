@@ -1,0 +1,4 @@
+https://storage.googleapis.com/lecoo/DataPlugin.dll
+https://storage.googleapis.com/lecoo/lecco.dat
+https://storage.googleapis.com/lecoo/LecooPlatform.exe
+https://storage.googleapis.com/lecoo/image.jpg
