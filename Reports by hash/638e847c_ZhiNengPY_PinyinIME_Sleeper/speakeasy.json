@@ -1,0 +1,5772 @@
+{
+    "path": "/home/remnux/mal/\u667a\u80fd\u62fc\u97f3\u8f93\u5165\u6cd5.bin",
+    "sha256": "638e847cb8a4faefcbe006fe062c383f9b606bfd3795a3256ee49059e20059fa",
+    "size": 472056,
+    "arch": "x86",
+    "filetype": "exe",
+    "emu_version": "1.5.11",
+    "os_run": "windows.6_1",
+    "report_version": "1.1.0",
+    "emulation_total_runtime": 0.601,
+    "timestamp": 1782729819,
+    "strings": {
+        "static": {
+            "ansi": [
+                "!This program cannot be run in DOS mode.",
+                "Rich",
+                ".text",
+                "`.rdata",
+                "@.data",
+                ".gfids",
+                "@.tls",
+                ".rsrc",
+                "@.reloc",
+                "t5;p",
+                ",;0u",
+                "t.;9u",
+                "S_VX]Z\\SVVPZ[ZT]^P]U[YVT\\Z",
+                "WV\\Y[SQTPXX\\QU]S\\ZSYSU",
+                "QRX_RPYRWPZTSX[Y^V[U^SY\\",
+                "RY^YU\\WU_WRX_TS_S_VY]]PYRUj",
+                "ZSVXT^RTUVPS^RQQ_[]^",
+                "R_T_UU[RWZT]SYR[]",
+                "YPSV",
+                "YPSV",
+                "YPSV",
+                "~tPS",
+                "@PVW",
+                "_^[]",
+                "_^[]",
+                "\u007fwK9q",
+                "~_^]",
+                "[_^]",
+                ";0u,9E",
+                "_[^]",
+                "wI9q",
+                "_^[]",
+                "j8Yjx",
+                "w 9F",
+                "j@RP",
+                "QZ^&",
+                "_^[]",
+                "D3XPh",
+                "9^luIW",
+                "9^lu ",
+                "SVWP",
+                "PVVh`",
+                "Y_^[",
+                "u0Wh",
+                "QPhl",
+                "QPhl",
+                "6Vhl",
+                "[_^]",
+                "UQRTVQRRS\\W^]_ZWSY\\W\\^SZTZQY\\VZ",
+                "S^V_XWQQUR]]VT[Q]VWXSPTZ[P",
+                "_^[]",
+                "~!Wj",
+                "RUVQRT_TW]QXWVWX^XV[YRPZ",
+                "t ^VV][XYSXUVWYVYPPUZU_RRY\\^_[]QX_",
+                "TXVSQZ^R]_X^PVWU]V^Ph",
+                "VSU]_]R^XZT\\[^RY]UQZ",
+                "URZSPSWUPPYT\\XPV][X\\",
+                "SPTVX\\_P^VY[YW^^^[U[",
+                "WZUTPPS\\^\\X^^]WRPR]WV_[R]_Y",
+                "PU[VP_[RSSW^SWRRRRU^]SZW",
+                "VZT]]^PQSPZ[^V]YRT^Y",
+                "<s\\uv",
+                "_[W^YQYP_PTVUXXTQRUVYW[[S",
+                "U]QUSPZYWW[[U_SSSWPUY[R]]",
+                "RUVQRT_TW]QXWVWX^XV[YRPZ",
+                "t ^VV][XYSXUVWYVYPPUZU_RRY\\^_[]QX_",
+                "TXVSQZ^R]_X^PVWU]V^P",
+                "[]_]^RVUZ^W^U_X^U[^ZP",
+                "\\XY\\QQS\\VQTY_QSUZ^UUWQW[]TRUT",
+                "Q_PV_R[QW^\\TQR]RTR\\^V\\UTTXS\\f",
+                "TPXRZ\\T\\PZZPU[WZZST_\\TS^V^",
+                "_VTXTZZTTUUS]WYU[",
+                "S[Q]]YYU[TYWX]_P\\QXZZYV",
+                "u+SS",
+                "t3Sj",
+                "t'j\\P",
+                "u7Sj)",
+                "YPSW",
+                "YPSW",
+                "Q_PV_R[QW^\\TQR]RTR\\^V\\UTTXS\\",
+                "VSU]_]R^XZT\\[^RY]UQZ",
+                "URZSPSWUPPYT\\XPV][X\\",
+                "SPTVX\\_P^VY[YW^^^[U[",
+                "TX\\_[Z\\^YURUZQW[X",
+                "^Z\\TYTRP[PQYW_U[WP[WT^Z[R_X]QQT",
+                "SVWt.",
+                "Q_PV_R[QW^\\TQR]RTR\\^V\\UTTXS\\",
+                "_TVRW\\XR_Z^\\YZVS",
+                "ZTVV_WU\\TZ[Z^RTW",
+                "\\XW_T[RRUR]^VXRZPV\\YQh",
+                "]T^U_Y]USUSW[]QWS^",
+                "TX\\_[Z\\^YURUZQW[X",
+                "^Z\\TYTRP[PQYW_U[WP[WT^Z[R_X]QQT",
+                "_TVRW\\XR_Z^\\YZVS",
+                "ZTVV_WU\\TZ[Z^RTW",
+                "\\XW_T[RRUR]^VXRZPV\\YQ",
+                "]T^U_Y]USUSW[]QWS^",
+                "XV[PXW[]\\QQUXQUVT",
+                "t SRZWYVPQ_\\^ZYZQ_WX]TP_XQ]V^Y^^VW",
+                "UQRTVQRRS\\W^]_ZWSY\\W\\^SZTZQY\\VZ",
+                "t S^V_XWQQUR]]VT[Q]VWXSPTZ[P",
+                "ZQRTQUS\\_WW^UW[ZY]]QV",
+                "YX]S_X_W\\QZ]R_XP\\VUVSP",
+                "QQSV3",
+                "UQRTVQRRS\\W^]_ZWSY\\W\\^SZTZQY\\VZ",
+                "S^V_XWQQUR]]VT[Q]VWXSPTZ[P3",
+                "VSU]_]R^XZT\\[^RY]UQZ",
+                "URZSPSWUPPYT\\XPV][X\\",
+                "SPTVX\\_P^VY[YW^^^[U[",
+                "[]_]^RVUZ^W^U_X^U[^ZP",
+                "\\XY\\QQS\\VQTY_QSUZ^UUWQW[]TRUT",
+                "_[^]",
+                "[]_]^RVUZ^W^U_X^U[^ZP",
+                "\\XY\\QQS\\VQTY_QSUZ^UUWQW[]TRUT",
+                "PVWh",
+                "t)Q_PV_R[QW^\\TQR]RTR\\^V\\UTTXS\\",
+                "^Z[UY]WVSZXWUSWUh",
+                "_TVRW\\XR_Z^\\YZVS",
+                "ZTVV_WU\\TZ[Z^RTW",
+                "\\XW_T[RRUR]^VXRZPV\\YQ",
+                "TX\\_[Z\\^YURUZQW[X",
+                "^Z\\TYTRP[PQYW_U[WP[WT^Z[R_X]QQT",
+                "TX\\_[Z\\^YURUZQW[X",
+                "^Z\\TYTRP[PQYW_U[WP[WT^Z[R_X]QQT",
+                "_TVRW\\XR_Z^\\YZVS",
+                "ZTVV_WU\\TZ[Z^RTW",
+                "\\XW_T[RRUR]^VXRZPV\\YQ",
+                "XV[PXW[]\\QQUXQUVT3",
+                "t SRZWYVPQ_\\^ZYZQ_WX]TP_XQ]V^Y^^VWh",
+                "UQRTVQRRS\\W^]_ZWSY\\W\\^SZTZQY\\VZ",
+                "S^V_XWQQUR]]VT[Q]VWXSPTZ[P",
+                "ZQRTQUS\\_WW^UW[ZY]]QV",
+                "YX]S_X_W\\QZ]R_XP\\VUVSP",
+                "SVWP",
+                "UQRTVQRRS\\W^]_ZWSY\\W\\^SZTZQY\\VZ",
+                "t S^V_XWQQUR]]VT[Q]VWXSPTZ[P",
+                "ZQRTQUS\\_WW^UW[ZY]]QV",
+                "YX]S_X_W\\QZ]R_XP\\VUVSP",
+                "SPSh?",
+                "PSh?",
+                "VSU]_]R^XZT\\[^RY]UQZ",
+                "URZSPSWUPPYT\\XPV][X\\",
+                "SPTVX\\_P^VY[YW^^^[U[h",
+                "ZSVXT^RTUVPS^RQQ_[]^",
+                "R_T_UU[RWZT]SYR[]",
+                "Y_^[",
+                "ZSVXT^RTUVPS^RQQ_[]^",
+                "R_T_UU[RWZT]SYR[]",
+                "TX\\_[Z\\^YURUZQW[X",
+                "^Z\\TYTRP[PQYW_U[WP[WT^Z[R_X]QQT3",
+                "QPQh?",
+                "_TVRW\\XR_Z^\\YZVS",
+                "ZTVV_WU\\TZ[Z^RTW",
+                "\\XW_T[RRUR]^VXRZPV\\YQ3",
+                "SPSh?",
+                "XV[PXW[]\\QQUXQUVT3",
+                "t SRZWYVPQ_\\^ZYZQ_WX]TP_XQ]V^Y^^VW",
+                ";0u,9E",
+                "[_[_V]RUQ_XZ_U\\UUWPTR[S[W[T",
+                "YZTSUUP[SPPW]WWT]X",
+                "Y^PWYSVYV\\ZTQ]ZQU[",
+                "u*_9{",
+                "ts_9~",
+                "sc_9~",
+                "wo_9~",
+                "_w`9~",
+                "j_j V",
+                "f99t",
+                "f91u",
+                "f99u",
+                "PSSSj",
+                "7_^]",
+                "_^[]",
+                "AQPQ",
+                "SSSSSSS",
+                "PSSS",
+                "SSSS",
+                "PSh4",
+                "PShP",
+                "t*Sj",
+                "VSSP",
+                "t 9A",
+                "6j(N",
+                "SSSSSSS",
+                "PSSS",
+                "SSSS",
+                "PSh?",
+                "@^_[]",
+                "X_^]",
+                "tN9}",
+                "tN9}",
+                "QQSVW",
+                "SSht",
+                "uyV3",
+                "VWhD",
+                "G$;p",
+                "j B9u",
+                "SSht",
+                "PVVj%V",
+                "tlSV",
+                "tWWS",
+                "WSVP",
+                "F(hD",
+                "QQQQP",
+                "QQQQP",
+                "QQQQP",
+                "SVWP",
+                "9{(t",
+                "Y_^[",
+                "?PSj",
+                "C$;0u",
+                "WWWWj",
+                "9_(tJSSh",
+                "SVWh",
+                "\\X[X^QQ\\VXTSY[_Y",
+                "]PXRXWYU\\S]___TW",
+                "Z[^U\\]T]V]RS]^]P]WR[S]RQ",
+                "SVWj",
+                ">_^[]",
+                "s#9>w",
+                "SWjd",
+                "PVVh",
+                "PVVh",
+                "SWjd",
+                "t5;p",
+                ",;0u",
+                "t.;9u",
+                "Y__^[",
+                "u&h(",
+                "j Y+",
+                "SVWj",
+                "Y_^3",
+                "tB+}",
+                "8csm",
+                "WVS3",
+                "N+D$",
+                "ineI",
+                "5ntel",
+                "5Genu",
+                "t#=`",
+                "8csm",
+                "hPIA",
+                "Y__^[",
+                "~4_^",
+                ";F0\u007f",
+                ";F0u",
+                "QSVW",
+                "^P\\QU_X][]Q^Q^RU\\S_PYX\\]X^RS_",
+                "Q_XRYTTVYZXST]RX__]XYXYVS",
+                "]WR^WTUYRPTURTW]ZTSP[QSZ",
+                "Y^PWYSVYV\\ZTQ]ZQU[",
+                "QSVW",
+                "S_VX]Z\\SVVPZ[ZT]^P]U[YVT\\Z",
+                "WV\\Y[SQTPXX\\QU]S\\ZSYSU",
+                "QRX_RPYRWPZTSX[Y^V[U^SY\\",
+                "RY^YU\\WU_WRX_TS_S_VY]]PYRU",
+                "TPXRZ\\T\\PZZPU[WZZST_\\TS^V^",
+                "_VTXTZZTTUUS]WYU[",
+                "S[Q]]YYU[TYWX]_P\\QXZZYV",
+                "@_^[",
+                "\\X[X^QQ\\VXTSY[_Y",
+                "]PXRXWYU\\S]___TW",
+                "Z[^U\\]T]V]RS]^]P]WR[S]RQ3",
+                "[_[_V]RUQ_XZ_U\\UUWPTR[S[W[T3",
+                "YZTSUUP[SPPW]WWT]Xhh",
+                "YPWh",
+                "t*PT_R[UPZVTVRUS_ZRW\\^Y_]_U^\\YXP",
+                "t@f9>u",
+                "P]T\\TVPT]TP^XW_X",
+                "PZ[PV][SP[ZP]SYRSTPWUVQ",
+                "\\X[X^QQ\\VXTSY[_Y",
+                "]PXRXWYU\\S]___TW",
+                "Z[^U\\]T]V]RS]^]P]WR[S]RQ",
+                "[_[_V]RUQ_XZ_U\\UUWPTR[S[W[T",
+                "YZTSUUP[SPPW]WWT]XV",
+                "QSVW",
+                "P]T\\TVPT]TP^XW_X",
+                "PZ[PV][SP[ZP]SYRSTPWUVQV",
+                "Y_^[",
+                "ZSVXT^RTUVPS^RQQ_[]^",
+                "R_T_UU[RWZT]SYR[]",
+                "P]T\\TVPT]TP^XW_X",
+                "PZ[PV][SP[ZP]SYRSTPWUVQ",
+                "t!PT_R[UPZVTVRUS_ZRW\\^Y_]_U^\\YXP",
+                "SXW]URRURZQU]XP\\VQUZ_",
+                "SQTV^YRTR\\]ZR\\S^QQ]T_UZV]TTZ",
+                "\\X[X^QQ\\VXTSY[_Y",
+                "]PXRXWYU\\S]___TW",
+                "Z[^U\\]T]V]RS]^]P]WR[S]RQ",
+                "XW^T\\_[\\RX\\X_YYZWRXY]",
+                "ZZYZU]R_[W[R]WQ__[XSSTTU^",
+                "SRZ\\_^ZQPUS]^U[^ZYW_WYY",
+                "V[Y]]U\\YVRV\\QP_VX_\\SUX\\",
+                "ZSVXT^RTUVPS^RQQ_[]^",
+                "R_T_UU[RWZT]SYR[]3",
+                "6WSj",
+                "XW^T\\_[\\RX\\X_YYZWRXY]",
+                "V^Z_VZTYT_]^RSXZS[]VU_VY^]QQWW",
+                "VX^WY_VXQ[]X_[WV[]",
+                "PT_R[UPZVTVRUS_ZRW\\^Y_]_U^\\YXP",
+                "S_VX]Z\\SVVPZ[ZT]^P]U[YVT\\Z",
+                "WV\\Y[SQTPXX\\QU]S\\ZSYSU",
+                "QRX_RPYRWPZTSX[Y^V[U^SY\\",
+                "RY^YU\\WU_WRX_TS_S_VY]]PYRU",
+                "QQQQj",
+                "_^[]",
+                ";0u,9E",
+                "oF f",
+                "oF f",
+                "oF f",
+                "oV f",
+                "o^0f",
+                "\u007fW f",
+                "\u007f_0f",
+                "of@f",
+                "onPf",
+                "ov`f",
+                "o~pf",
+                "\u007fg@f",
+                "\u007foPf",
+                "\u007fw`f",
+                "\u007f Ju",
+                "FGIu",
+                "FGIu",
+                "oF f",
+                "oF f",
+                "oF f",
+                "oV f",
+                "o^0f",
+                "\u007fW f",
+                "\u007f_0f",
+                "of@f",
+                "onPf",
+                "ov`f",
+                "o~pf",
+                "\u007fg@f",
+                "\u007foPf",
+                "\u007fw`f",
+                "\u007f Ju",
+                "FGIu",
+                "FGIu",
+                "QQSVWd",
+                ";p$u",
+                "8csm",
+                "j8hx",
+                "?csm",
+                "8csm",
+                ">csm",
+                ">csm",
+                ">csm",
+                "u PW",
+                "?MOC",
+                "?RCC",
+                "|c;F",
+                "@u(j",
+                "u Qj",
+                "97~%",
+                "_^[]",
+                "YYPV",
+                "8RCC",
+                "8MOC",
+                "8csm",
+                "9p u\"",
+                ":csm",
+                "ft%9q",
+                ":csm",
+                "r39z",
+                "@_^[]",
+                "@_^[]",
+                "\u007fG f",
+                "\u007fG0f",
+                "\u007fG@f",
+                "\u007fGPf",
+                "\u007fG`f",
+                "j Y+",
+                "q<xA",
+                "8_^]",
+                "xf~U",
+                "8csm",
+                "j Y+",
+                "_^[]",
+                "^_[]",
+                "j Y+",
+                "^_[3",
+                "BVj(j",
+                "j Y+",
+                "URPQQh",
+                "L$,3",
+                "UVWS",
+                "[_^]",
+                "SVWj",
+                "RhBRA",
+                "_^[]",
+                "SVWUj",
+                "hxRA",
+                "]_^[",
+                ";t$,v-",
+                "UQPXY]Y[",
+                "PPPPP",
+                "VVVVV",
+                "VVVVV",
+                "8\"up",
+                "8\"u7",
+                "~8@_",
+                "F4^[]",
+                "QQSV",
+                "~8@_",
+                "F4^[",
+                "~!Sf",
+                "_[^]",
+                "<Pt8",
+                "y1*t",
+                "y2*t",
+                "A1<Fu",
+                "<Nu&",
+                "u<dt",
+                "<Xu]",
+                "Tt1jhZ;",
+                "OjlZ;",
+                "X\u007f>t7",
+                "p\u007fMt?",
+                "^$+^8+",
+                "jAZjX",
+                "\u007f>t6;",
+                "p\u007fMt?",
+                "j-Xf",
+                "jXXf;",
+                "jA_f;",
+                "t0jXXf",
+                "jAXf;",
+                "~$+~8+",
+                "y1*t",
+                "y2*t",
+                "F1<at",
+                "F1<gt",
+                "v(PQ",
+                "F1<gt",
+                "N @@",
+                "QQVW",
+                "jgYjG",
+                "F2f;",
+                "v(PQ",
+                "F2jgYf;",
+                "jGYf;",
+                "N @@",
+                "jsXf",
+                "F8SP",
+                "9F(~",
+                "W49u",
+                "BBF;u",
+                "u&9E",
+                "C;^8u",
+                "QQSV",
+                "G;~8u",
+                "QQVW",
+                "j0Xj",
+                "j:Xf;",
+                "u0jAXf;",
+                "jZXf;",
+                "j0Xf;",
+                "j:Xf;",
+                "u0jAXf;",
+                "jZXf;",
+                "t1;E",
+                "SVWjA_jZ+",
+                "uBjAYjZ+",
+                "t:f;",
+                "YY;E",
+                "tGVVj",
+                "f97u",
+                "f98t V",
+                "jA^f;",
+                "f9:u",
+                "~0WPQ",
+                "j<SW",
+                "j<SW",
+                "SSSSS",
+                "t&:a",
+                "wIPS3",
+                "|%=2",
+                "6PWQ",
+                "X_^]",
+                "PPPPPPPP",
+                "-p2C",
+                "j X+",
+                "j X+",
+                "f9:t",
+                "f9:t",
+                "f9:t",
+                "f9:t",
+                "f9:t",
+                "wOtD",
+                "j Y+",
+                "YYh(",
+                "t#Vh",
+                "j Y+",
+                "f9;u",
+                "PWWS",
+                "A98u",
+                "j\"Xf9",
+                "j\"Xu",
+                "@f91t",
+                "j\"^f91j\\^u8",
+                "u 8]",
+                "j\"^f9q",
+                "j\\^u",
+                "t*8]",
+                "QQSVW",
+                "PPPPP",
+                "t/j=[f;",
+                "Cf93u",
+                "PPPPP",
+                "Y_^]",
+                "QSSSSj",
+                "j Y+",
+                "j Y+",
+                "j Y;E",
+                "j Y+",
+                "j _;",
+                "j Y+",
+                "j Y+",
+                "h`%C",
+                "h`%C",
+                "Vj 2",
+                "PPPPPPPP",
+                "FLY;",
+                "uIhd",
+                "uQhd",
+                "9E(j",
+                "PPPPPWS",
+                "QQQP",
+                "PP9E u:PPVWP",
+                "_^[]",
+                "^[_]",
+                "Vh 0C",
+                "Vh(0C",
+                "h 0C",
+                "Vh00C",
+                "h(0C",
+                "Vh80C",
+                "h00C",
+                "VhD0C",
+                "h@0C",
+                "VhL0C",
+                "hD0C",
+                "VhT0C",
+                "hL0C",
+                "Vh\\0C",
+                "hT0C",
+                "h\\0C",
+                "Vhx0C",
+                "hp0C",
+                "hx0C",
+                "TVh@0C",
+                "h80C",
+                "SVW3",
+                "x7;5h",
+                "f9>t",
+                "S\u007fpt\\+",
+                "f9>t",
+                "f9>t",
+                ">=ur",
+                "f9>t",
+                "f9>t",
+                "D8(Ht",
+                "Zf9U",
+                "D8(HXt:f",
+                ";f9E",
+                "Xf9E",
+                "D8(Ht5F",
+                "D9,+",
+                "2D9-$",
+                "0D9-",
+                "_f99",
+                "Ht$;}",
+                "SShU",
+                "@( t",
+                "@_^]",
+                "_[^]",
+                "~';_",
+                "GWVj",
+                "QVWSj",
+                "_^[]",
+                "0SVW",
+                "u$SW",
+                "8] j0",
+                "j0Yf",
+                "v6j0",
+                "Wj0XPV",
+                "jdSQ",
+                "Fj0X",
+                "80t/",
+                "-jd_;",
+                "PPPPP",
+                "Wj0V",
+                "_^[t",
+                "QWPV",
+                " _^[",
+                "PPPPP",
+                "QQVW",
+                "a\u007f(t",
+                "u,t6",
+                "$[_^",
+                "x7;5h",
+                ";PVW",
+                "u'j$",
+                "F8YY",
+                "SSPQSS",
+                "RPQj",
+                "PPPj",
+                "PPSW",
+                "@_^[",
+                "SSSSS",
+                "uySW",
+                "u kE$<",
+                "uDiE",
+                "_WVj@",
+                ">:uBFV",
+                "PPPPP",
+                "PSj?",
+                "PSj?",
+                "SSSSS",
+                "QQSV",
+                "9E WW",
+                "t4SWV",
+                "j Y+",
+                "= 2C",
+                "-p2C",
+                "-z2C",
+                "-p2C",
+                "-p2C",
+                "-p2C",
+                "-p2C",
+                "$f=\u007f",
+                "\u007ft==",
+                "\u007ft_f",
+                "$f=\u007f",
+                "taj*Xf",
+                "j?Xf",
+                "PPPPP",
+                "PPPPP",
+                "VWj\\^j:",
+                "j\\Zf;",
+                "j:Zf;",
+                "WWWPWS",
+                "PWWS",
+                "t-f9",
+                "j.Xu",
+                "hA-B",
+                "_^[]",
+                "IH;A",
+                "SSVWh ",
+                "9wLt",
+                "f9:t!V",
+                "f9:u",
+                "QSVW",
+                "YWWW",
+                "SVWW",
+                "WSVPP",
+                "|VWj=S",
+                "SSSSS",
+                "PPPPP",
+                "QQSWj0j@",
+                "Y_[^]",
+                "xi;5h",
+                "xg;5h",
+                "_^[]",
+                "_^[]",
+                "f;1u",
+                "SVWf9",
+                "_^[]",
+                "Y_^[",
+                "YY^]",
+                "j@%@",
+                "SVW3",
+                "SVjA[jZ^+",
+                "jAZjZ^",
+                "t@f;",
+                "uG9E",
+                "SSSSS",
+                "\u007f(t!",
+                "uz9}",
+                "PPPPP",
+                "PPPV",
+                "DSVW",
+                "j Y+",
+                "j X+",
+                "jrY;",
+                "j Y+",
+                "j X+",
+                "jrY;",
+                "j X+",
+                "j X+",
+                "jrY;",
+                "stW;",
+                "stW;",
+                "_^[t",
+                "PPPPP",
+                "X_^]",
+                "<2=u",
+                "v!j\"X_^[",
+                "PPPPP",
+                " SVW3",
+                " SVW3",
+                "VPRQ",
+                "PRPQh",
+                "@hPzC",
+                "<$tL",
+                "-z2C",
+                "~\"VW",
+                "_^[]",
+                "hPIA",
+                "Y_^[",
+                "Y_^[",
+                "WVU3",
+                "N+D$",
+                "hPIA",
+                "<$Xf",
+                ";csm",
+                "?csm",
+                "_^[]",
+                "ZYXu",
+                "ZYXu",
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f>\u007f\u007f\u007f?456789:;<=\u007f\u007f\u007f@\u007f\u007f\u007f",
+                "\u007f\u007f\u007f\u007f\u007f\u007f",
+                " !\"#$%&'()*+,-./0123\u007f\u007f\u007f\u007f\u007f",
+                "string too long",
+                "invalid string position",
+                "map/set<T> too long",
+                "0123456789abcdef$",
+                "Unknown exception",
+                "%02x",
+                "vector<T> too long",
+                "WTSQueryUserToken",
+                "WTSGetActiveConsoleSessionId",
+                "config\\systemprofile",
+                "1898fab324d0ec9cbf65d84762043320",
+                "42aac3ca619847e32ccca33762da1e39",
+                "2802ae38dbd7a8e353a369fe9a7f3442",
+                "5391e61b01dab8851e6029984c58469e",
+                "GetNativeSystemInfo",
+                "Wow64DisableWow64FsRedirection",
+                "Wow64RevertWow64FsRedirection",
+                "IsWow64Process",
+                "ConvertSidToStringSidW",
+                "*g~b0Ri",
+                "Q1Y%",
+                "l(W\u007fO(u-N",
+                "b(u7bCgP",
+                "Y6RI",
+                "l(W\u007fO(u-N",
+                "bCgP",
+                "Y6RI",
+                "{SO)",
+                "08040804",
+                "InstallLayoutOrTip",
+                "29ab494c7e7128b53b59f7ffc9d7bb5a",
+                "8dd8539219cc16cc07d80e4822596eb9",
+                "792768912d3ec14163e3deb1d903490f",
+                "65ac8b902e5d3c23b250ce2ea3858fda",
+                "9aafb0a5c0f032d4f8a923f77aa11a81",
+                "e143ebc3452599963654c39c7685d802",
+                "a070e428367f40dccea1d005382b99a4",
+                "e8dd2f8e97d295ef09e1499a357d54bf",
+                "7205a5eacd790caa9a86d8a0b8c891de",
+                "f3350eed271673056bc26db5017095eb",
+                "d226943601a6bfa945ae0bf05287764d",
+                "fa903dd0413b0d698a127ac1dd4a3e15",
+                "09fbf3e361cf43bcf595193166830ee0",
+                "d6276fe63c23792a0419f95a75805b35",
+                "3bafbe0cf0de0fc3249f7a1d4d3424e1",
+                "47d7a4fba0195ba830ae49c31bbe6497",
+                "90c9adea4387a323ef0453b0cd889fcc",
+                "5fc2e47710f6c9273fa949911fcce363",
+                "bf39dd196552ddbefce9b1c6d6a6dcd7",
+                "03fa5e92dfc68bd5b6698663d907b71e",
+                "6d0a96904251a960333628b0d1276fb4",
+                "089ffa58aa3b4d2f4e83388c31dce6f9",
+                "bad allocation",
+                "identifier removed",
+                "illegal byte sequence",
+                "inappropriate io control operation",
+                "interrupted",
+                "invalid argument",
+                "invalid seek",
+                "io error",
+                "is a directory",
+                "message size",
+                "network down",
+                "network reset",
+                "network unreachable",
+                "no buffer space",
+                "no child process",
+                "no link",
+                "no lock available",
+                "no message available",
+                "no message",
+                "no protocol option",
+                "no space on device",
+                "no stream resources",
+                "no such device or address",
+                "no such device",
+                "no such file or directory",
+                "no such process",
+                "not a directory",
+                "not a socket",
+                "not a stream",
+                "not connected",
+                "not enough memory",
+                "not supported",
+                "operation canceled",
+                "operation in progress",
+                "operation not permitted",
+                "operation not supported",
+                "operation would block",
+                "owner dead",
+                "permission denied",
+                "protocol error",
+                "protocol not supported",
+                "read only file system",
+                "resource deadlock would occur",
+                "resource unavailable try again",
+                "result out of range",
+                "state not recoverable",
+                "stream timeout",
+                "text file busy",
+                "timed out",
+                "too many files open in system",
+                "too many files open",
+                "too many links",
+                "too many symbolic link levels",
+                "value too large",
+                "wrong protocol type",
+                "address family not supported",
+                "address in use",
+                "address not available",
+                "already connected",
+                "argument list too long",
+                "argument out of domain",
+                "bad address",
+                "bad file descriptor",
+                "bad message",
+                "broken pipe",
+                "connection aborted",
+                "connection already in progress",
+                "connection refused",
+                "connection reset",
+                "cross device link",
+                "destination address required",
+                "device or resource busy",
+                "directory not empty",
+                "executable format error",
+                "file exists",
+                "file too large",
+                "filename too long",
+                "function not supported",
+                "host unreachable",
+                "invalid random_device value",
+                "FlsAlloc",
+                "FlsFree",
+                "FlsGetValue",
+                "FlsSetValue",
+                "InitializeCriticalSectionEx",
+                "InitOnceExecuteOnce",
+                "CreateEventExW",
+                "CreateSemaphoreW",
+                "CreateSemaphoreExW",
+                "CreateThreadpoolTimer",
+                "SetThreadpoolTimer",
+                "WaitForThreadpoolTimerCallbacks",
+                "CloseThreadpoolTimer",
+                "CreateThreadpoolWait",
+                "SetThreadpoolWait",
+                "CloseThreadpoolWait",
+                "FlushProcessWriteBuffers",
+                "FreeLibraryWhenCallbackReturns",
+                "GetCurrentProcessorNumber",
+                "CreateSymbolicLinkW",
+                "GetCurrentPackageId",
+                "GetTickCount64",
+                "GetFileInformationByHandleEx",
+                "SetFileInformationByHandle",
+                "GetSystemTimePreciseAsFileTime",
+                "InitializeConditionVariable",
+                "WakeConditionVariable",
+                "WakeAllConditionVariable",
+                "SleepConditionVariableCS",
+                "InitializeSRWLock",
+                "AcquireSRWLockExclusive",
+                "TryAcquireSRWLockExclusive",
+                "ReleaseSRWLockExclusive",
+                "SleepConditionVariableSRW",
+                "CreateThreadpoolWork",
+                "SubmitThreadpoolWork",
+                "CloseThreadpoolWork",
+                "CompareStringEx",
+                "GetLocaleInfoEx",
+                "LCMapStringEx",
+                "0123456789abcdefghijklmnopqrstuvwxyz",
+                "0123456789abcdefghijklmnopqrstuvwxyz",
+                "bad array new length",
+                "GetSystemWow64DirectoryW",
+                "bad exception",
+                "__based(",
+                "__cdecl",
+                "__pascal",
+                "__stdcall",
+                "__thiscall",
+                "__fastcall",
+                "__vectorcall",
+                "__clrcall",
+                "__eabi",
+                "__ptr64",
+                "__restrict",
+                "__unaligned",
+                "restrict(",
+                " new",
+                " delete",
+                "operator",
+                "`vftable'",
+                "`vbtable'",
+                "`vcall'",
+                "`typeof'",
+                "`local static guard'",
+                "`string'",
+                "`vbase destructor'",
+                "`vector deleting destructor'",
+                "`default constructor closure'",
+                "`scalar deleting destructor'",
+                "`vector constructor iterator'",
+                "`vector destructor iterator'",
+                "`vector vbase constructor iterator'",
+                "`virtual displacement map'",
+                "`eh vector constructor iterator'",
+                "`eh vector destructor iterator'",
+                "`eh vector vbase constructor iterator'",
+                "`copy constructor closure'",
+                "`udt returning'",
+                "`RTTI",
+                "`local vftable'",
+                "`local vftable constructor closure'",
+                " new[]",
+                " delete[]",
+                "`omni callsig'",
+                "`placement delete closure'",
+                "`placement delete[] closure'",
+                "`managed vector constructor iterator'",
+                "`managed vector destructor iterator'",
+                "`eh vector copy constructor iterator'",
+                "`eh vector vbase copy constructor iterator'",
+                "`dynamic initializer for '",
+                "`dynamic atexit destructor for '",
+                "`vector copy constructor iterator'",
+                "`vector vbase copy constructor iterator'",
+                "`managed vector copy constructor iterator'",
+                "`local static thread guard'",
+                "operator \"\" ",
+                " Type Descriptor'",
+                " Base Class Descriptor at (",
+                " Base Class Array'",
+                " Class Hierarchy Descriptor'",
+                " Complete Object Locator'",
+                "( 8PX",
+                "700WP",
+                "`h````",
+                "xpxxxx",
+                "('8PW",
+                "700PP",
+                "`h`hhh",
+                "xwpwpp",
+                "(null)",
+                "d8L2",
+                "[aOni*{",
+                "@2&@",
+                "\"RP(",
+                "eLK(w",
+                "FEMh",
+                "h0'D",
+                "owM&",
+                "~ $s%r",
+                "@b;zO]",
+                "$qE}",
+                ";*xh",
+                "[\"93",
+                "iu+-,",
+                "\\lo}",
+                "obwQ4",
+                "&Sgw",
+                "?nz(",
+                "=87M",
+                "v2!L.2",
+                "X/4B",
+                "k=yI",
+                "^<V7w",
+                "W&|.",
+                " !\"#$%&'()*+,-./0123456789:;<=>?@abcdefghijklmnopqrstuvwxyz[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f",
+                " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`ABCDEFGHIJKLMNOPQRSTUVWXYZ{|}~\u007f",
+                "CorExitProcess",
+                "tanh",
+                "asin",
+                "acos",
+                "atan",
+                "atan2",
+                "sqrt",
+                "ceil",
+                "floor",
+                "fabs",
+                "modf",
+                "ldexp",
+                "_cabs",
+                "_hypot",
+                "fmod",
+                "frexp",
+                "_logb",
+                "_nextafter",
+                "log10",
+                "sinh",
+                "cosh",
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "January",
+                "February",
+                "March",
+                "April",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+                "MM/dd/yy",
+                "dddd, MMMM dd, yyyy",
+                "HH:mm:ss",
+                "LocaleNameToLCID",
+                "SystemFunction036",
+                "NAN(SNAN)",
+                "nan(snan)",
+                "NAN(IND)",
+                "nan(ind)",
+                "e+000",
+                "1#INF",
+                "1#QNAN",
+                "1#SNAN",
+                "1#IND",
+                "?X&eB",
+                "?Ltm",
+                "tLVv",
+                "?h6_~",
+                "37.=",
+                "?7Tf(",
+                "=\\uI=",
+                "g:\"(",
+                "$O1=",
+                "uXO=",
+                "1w<=",
+                ">'eH",
+                "pnJ=",
+                "Ht=c",
+                "]vQ<)8",
+                "U\".\u007f",
+                "z1}B",
+                "X4I+",
+                "|)P!?Ua0",
+                "+34?",
+                "??7;",
+                "MkK?",
+                "R_V?",
+                "9&\\?\u007f",
+                "Eb2]A=",
+                "f#I=",
+                "hb?O2",
+                "H`3=",
+                "c?e2",
+                "Le?2",
+                "0h?[",
+                "2ieO=",
+                "|W8A=",
+                "np?z ",
+                ")(q?",
+                "}~:f",
+                "t?,&",
+                "\u007fu?^p?o4",
+                "!9v?",
+                "GYM=",
+                "Pex?0",
+                "6K{?",
+                "X-F=",
+                "w}?0",
+                "y1~?|\"",
+                "V%A+=",
+                "4';=",
+                "#D5p",
+                "La8i",
+                "{4Wf",
+                "Ai0T",
+                "@VNQ",
+                "p4\"%",
+                "P'E=",
+                "ls1=",
+                "?PiB",
+                "{^C=",
+                "n{;=",
+                "3<L=",
+                "?|I7Z#",
+                "aDJ=",
+                ">,'1D=",
+                "+NB=",
+                "?g)([|X>=",
+                "?|[{",
+                "~*L=",
+                "u!K=",
+                "?IT$7",
+                "-8 ?",
+                ".h ?",
+                "2 !?",
+                "4P!?",
+                "!y##",
+                "98\"?",
+                ":h\"?bC",
+                "? #?",
+                "@H#?43",
+                "Ax#?uN}*",
+                "r7Yr7=",
+                ".K=\"=",
+                "F0$?3=1",
+                "H`$?h|",
+                "%?uY",
+                "NH%?",
+                "Px%?",
+                "%?\\9",
+                "&?~YK|",
+                "sU0&?W",
+                "VX&?",
+                "4g%6",
+                ":]=O>",
+                "#w_j",
+                "(+E ",
+                "V~|_",
+                "!|.4",
+                "G\"jm",
+                "6(`J",
+                "k:UG",
+                "UY =",
+                "Bfe9",
+                "CqTR;",
+                "AiFC.",
+                "?5a1",
+                "<{Q}<",
+                "hI{L[",
+                "<8bunz8",
+                "<V/>",
+                "?(FN\\",
+                "<'*6",
+                "?3xj",
+                "<)TH",
+                "K<<H!",
+                "m1WY$",
+                "?#%X.y",
+                "F||<##",
+                "$x<e",
+                "<]%>",
+                "T~OXu",
+                "?.)T",
+                "zyC7",
+                "k7+%",
+                "<@En[vP",
+                "log10",
+                "lzZ?",
+                "?5Wg4p",
+                "Nv$^",
+                "BC .=",
+                "(lX ",
+                "?\u007f[+",
+                "#{ =",
+                "`~R=",
+                "}s\"=",
+                "?\u007f%S#[k",
+                "\"B <1=",
+                "\\-!y",
+                "#.X'=",
+                "i9+=",
+                "SchedulerKind",
+                "MaxConcurrency",
+                "MinConcurrency",
+                "TargetOversubscriptionFactor",
+                "LocalContextCacheSize",
+                "ContextStackSize",
+                "ContextPriority",
+                "SchedulingProtocol",
+                "DynamicProgressFeedback",
+                "WinRTInitialization",
+                "MaxPolicyElementKey",
+                "Y/}J",
+                "rLp>B",
+                "1eaB@",
+                "sqrt",
+                "fUUU",
+                "?RbSQ",
+                "<zQ}<",
+                "_/:>",
+                "<8bunz8",
+                "cC<-",
+                "v<'*6",
+                "<)TH",
+                "<$\"U",
+                "e<bN",
+                "{<6w",
+                "<\\%>",
+                "l,kg<i",
+                "<'Za",
+                "<@En[vP",
+                ".text$di",
+                ".text$mn",
+                ".text$x",
+                ".text$yd",
+                ".idata$5",
+                ".00cfg",
+                ".CRT$XCA",
+                ".CRT$XCAA",
+                ".CRT$XCC",
+                ".CRT$XCL",
+                ".CRT$XCU",
+                ".CRT$XCZ",
+                ".CRT$XIA",
+                ".CRT$XIAA",
+                ".CRT$XIAC",
+                ".CRT$XIC",
+                ".CRT$XIZ",
+                ".CRT$XLA",
+                ".CRT$XLZ",
+                ".CRT$XPA",
+                ".CRT$XPB",
+                ".CRT$XPX",
+                ".CRT$XPXA",
+                ".CRT$XPZ",
+                ".CRT$XTA",
+                ".CRT$XTZ",
+                ".rdata",
+                ".rdata$T",
+                ".rdata$r",
+                ".rdata$sxdata",
+                ".rdata$zzzdbg",
+                ".rtc$IAA",
+                ".rtc$IZZ",
+                ".rtc$TAA",
+                ".rtc$TZZ",
+                ".xdata$x",
+                ".idata$2",
+                ".idata$3",
+                ".idata$4",
+                ".idata$6",
+                ".data",
+                ".data$r",
+                ".bss",
+                ".gfids$x",
+                ".gfids$y",
+                ".tls",
+                ".tls$",
+                ".tls$ZZZ",
+                ".rsrc$01",
+                ".rsrc$02",
+                "GetFileVersionInfoSizeW",
+                "GetFileVersionInfoW",
+                "VerQueryValueW",
+                "VERSION.dll",
+                "PathAddBackslashW",
+                "PathFileExistsW",
+                "PathAppendW",
+                "SHLWAPI.dll",
+                "ImmGetIMEFileNameW",
+                "ImmSetHotKey",
+                "ImmInstallIMEW",
+                "IMM32.dll",
+                "lstrlenW",
+                "GetModuleFileNameW",
+                "GetPrivateProfileStringW",
+                "WritePrivateProfileStringW",
+                "DecodePointer",
+                "HeapDestroy",
+                "HeapAlloc",
+                "HeapReAlloc",
+                "HeapFree",
+                "HeapSize",
+                "GetProcessHeap",
+                "RaiseException",
+                "GetLastError",
+                "InitializeCriticalSectionAndSpinCount",
+                "DeleteCriticalSection",
+                "MultiByteToWideChar",
+                "WideCharToMultiByte",
+                "GetFileSize",
+                "WriteFile",
+                "ReadFile",
+                "FindClose",
+                "CloseHandle",
+                "GetTempPathW",
+                "CreateFileW",
+                "GetFileAttributesExW",
+                "DeleteFileW",
+                "FindNextFileW",
+                "CopyFileW",
+                "MoveFileExW",
+                "GetCurrentProcessId",
+                "LoadLibraryW",
+                "FreeLibrary",
+                "GetProcAddress",
+                "GetLongPathNameW",
+                "GetEnvironmentVariableW",
+                "GetSystemDirectoryW",
+                "CreateDirectoryW",
+                "WTSGetActiveConsoleSessionId",
+                "LocalFree",
+                "GetCurrentProcess",
+                "GetCurrentThreadId",
+                "WaitForSingleObject",
+                "GetTickCount",
+                "GetModuleHandleW",
+                "SetUnhandledExceptionFilter",
+                "SetErrorMode",
+                "GlobalAlloc",
+                "GlobalFree",
+                "LocalAlloc",
+                "OpenProcess",
+                "GetExitCodeProcess",
+                "lstrcmpiW",
+                "CreateProcessW",
+                "CreateToolhelp32Snapshot",
+                "Process32FirstW",
+                "Process32NextW",
+                "LockResource",
+                "LoadResource",
+                "SizeofResource",
+                "FindResourceW",
+                "FindResourceExW",
+                "GetSystemWow64DirectoryW",
+                "InitializeCriticalSection",
+                "EnterCriticalSection",
+                "LeaveCriticalSection",
+                "KERNEL32.dll",
+                "GetKeyboardLayoutList",
+                "LoadKeyboardLayoutW",
+                "UnloadKeyboardLayout",
+                "MessageBoxW",
+                "USER32.dll",
+                "RegCloseKey",
+                "RegCreateKeyExW",
+                "RegOpenKeyExW",
+                "RegQueryValueExW",
+                "RegSetValueExW",
+                "RevertToSelf",
+                "ImpersonateLoggedOnUser",
+                "RegDeleteKeyW",
+                "RegDeleteValueW",
+                "RegEnumKeyW",
+                "RegOpenKeyW",
+                "OpenProcessToken",
+                "GetTokenInformation",
+                "InitializeSecurityDescriptor",
+                "SetSecurityDescriptorDacl",
+                "LookupAccountSidW",
+                "DuplicateTokenEx",
+                "RegEnumKeyExW",
+                "RegQueryInfoKeyW",
+                "RegCreateKeyW",
+                "RegEnumValueW",
+                "ADVAPI32.dll",
+                "SHGetSpecialFolderPathW",
+                "SHGetSpecialFolderPathA",
+                "SHGetFolderPathW",
+                "SHELL32.dll",
+                "WTSQueryUserToken",
+                "WTSAPI32.dll",
+                "QueryPerformanceCounter",
+                "EncodePointer",
+                "SetLastError",
+                "CreateEventW",
+                "TlsAlloc",
+                "TlsGetValue",
+                "TlsSetValue",
+                "TlsFree",
+                "GetSystemTimeAsFileTime",
+                "CompareStringW",
+                "LCMapStringW",
+                "GetStringTypeW",
+                "GetCPInfo",
+                "SetEvent",
+                "ResetEvent",
+                "WaitForSingleObjectEx",
+                "UnhandledExceptionFilter",
+                "TerminateProcess",
+                "IsProcessorFeaturePresent",
+                "IsDebuggerPresent",
+                "GetStartupInfoW",
+                "InitializeSListHead",
+                "OutputDebugStringW",
+                "RtlUnwind",
+                "LoadLibraryExW",
+                "FindFirstFileExW",
+                "ExitProcess",
+                "GetModuleHandleExW",
+                "GetStdHandle",
+                "GetACP",
+                "GetCurrentThread",
+                "GetFileType",
+                "GetConsoleMode",
+                "ReadConsoleW",
+                "GetConsoleCP",
+                "FlushFileBuffers",
+                "SetFilePointerEx",
+                "GetTimeZoneInformation",
+                "IsValidCodePage",
+                "GetOEMCP",
+                "GetCommandLineA",
+                "GetCommandLineW",
+                "GetEnvironmentStringsW",
+                "FreeEnvironmentStringsW",
+                "SetEnvironmentVariableA",
+                "SetStdHandle",
+                "WriteConsoleW",
+                "SetEndOfFile",
+                "GetThreadTimes",
+                "Copyright (c) by P.J. Plauger, licensed by Dinkumware, Ltd. ALL RIGHTS RESERVED.",
+                "\u007f\u007f\u007f\u007f\u007f\u007f\u007f\u007f",
+                "                          ",
+                "abcdefghijklmnopqrstuvwxyz",
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                "                          ",
+                "abcdefghijklmnopqrstuvwxyz",
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                ".?AVexception@std@@",
+                ".?AVCBaseConfigure@@",
+                ".?AVCWin32Heap@ATL@@",
+                ".?AUIAtlMemMgr@ATL@@",
+                ".?AUIAtlStringMgr@ATL@@",
+                ".?AVCAtlStringMgr@ATL@@",
+                ".?AVCAtlException@ATL@@",
+                ".?AVCBaseExConfigure@@",
+                ".?AVCConfigure@@",
+                ".?AVCNullCmd@@",
+                ".?AVCInstallIMECmd@@",
+                ".?AVCUnInstallIMECmd@@",
+                ".?AVCCommand@@",
+                ".?AVbad_alloc@std@@",
+                ".?AVlogic_error@std@@",
+                ".?AVlength_error@std@@",
+                ".?AVout_of_range@std@@",
+                ".?AVtype_info@@",
+                ".?AVbad_array_new_length@std@@",
+                ".?AVbad_exception@std@@",
+                ".?AV_Ref_count_base@std@@",
+                ".?AV?$_Ref_count_obj_alloc@V__ExceptionPtr@@U?$_StaticAllocator@H@@@std@@",
+                ".?AV?$_Ref_count_obj@V__ExceptionPtr@@@std@@",
+                "IHDR",
+                "pHYs",
+                "IDATx",
+                " 4`CT",
+                "x{@!",
+                "Ft\"}",
+                "!:6x!",
+                "wF6<",
+                "~&s&",
+                "j>54",
+                "D#5Y",
+                "EL<T\"",
+                "Fdj-)",
+                "U1r3",
+                "_<e Y",
+                "q9s.",
+                "[x?D",
+                ":\"!G",
+                "Gw01",
+                "e1o[",
+                "Cfau",
+                "R3%Q",
+                "S(ST",
+                "mR\"7",
+                "c7G)",
+                "c.-rr^",
+                "o<R6",
+                "H~.K",
+                "*O>|",
+                "-2~A ",
+                "o$Z.B\\",
+                "wsB-",
+                "$Z7`",
+                "r%=\\S",
+                "<3IN",
+                "o!cKP",
+                "CL@mo",
+                "tO@_3",
+                "J(sWsy",
+                "-S7:f",
+                "vmjh",
+                "EFc+bT",
+                ")>yCW&",
+                "EQdoO:",
+                "CH!QI",
+                "YCHJ",
+                "5EQJb",
+                "(cV$",
+                "D'57]b[i",
+                " )%l",
+                "/?MV",
+                "x(|1",
+                "y=+Y",
+                "dnQO",
+                "Ue}tGG\"b",
+                "iGO0x",
+                "M0xg",
+                "'HWj",
+                ")sLG",
+                "$=:&",
+                "#hK~[",
+                "{ccT",
+                "+K:F",
+                "<^ZH",
+                "Bbvj",
+                "sDvk",
+                ".Ocw",
+                "Ngy$",
+                "&dyL",
+                "Abnb",
+                "YCP1",
+                "Q\\ B",
+                "-TVR",
+                "@\u007fNR",
+                "*U'3",
+                "$5CO}",
+                "@dCM",
+                "-##g",
+                "hN6np]GD",
+                "h2xD}",
+                "C*4b",
+                "@UA{",
+                "O#`%vU0",
+                "AXmJ",
+                "{?*t",
+                ",'?$",
+                "=G*fK",
+                "B3Z3~",
+                "Fkp.",
+                "V[,g",
+                "0ha=",
+                "8~eV",
+                "X]y9",
+                "\"d!/2k",
+                "8xxf4_DY",
+                "A'`k",
+                ";jf5",
+                "7PXc",
+                "LwI=",
+                "Y)/Sk",
+                "Vf`*",
+                "IDAT",
+                "mgg`",
+                "^$n)",
+                ".{gN.",
+                "g4@m",
+                "q'Z{",
+                ">qNDw",
+                "=9%4",
+                "ywJ>0",
+                "?y+V",
+                "+IMe",
+                "xG;\\",
+                "^dIB",
+                "RuEeLW",
+                "-k=h",
+                "SM|p!",
+                "u<lH",
+                "XDaG&3",
+                "VX]y9V",
+                ")W|@;",
+                "h\"c{",
+                "02;7/",
+                "8]i#",
+                "a}Z^",
+                "v354",
+                "_H6m",
+                "z6eS",
+                "\u007fo`_",
+                "`Qoxt",
+                ",r#G",
+                "%FtiQ",
+                "|)@1",
+                "g/Ui}",
+                "E^J+",
+                "p`A|[:",
+                "CC+Ozx",
+                "rhDV",
+                " ~$35n",
+                "X6eSn",
+                "&gko",
+                "(i]$",
+                "i,'Ot",
+                "^IF69",
+                "s?a=W",
+                "yXc!",
+                "WbS6",
+                "}ove",
+                "7-,6",
+                "\"CEj+",
+                "6eSN\u007fY~",
+                "i,{o}EZ",
+                "~3<\u007fxq",
+                "K&Dv ",
+                "i[$L",
+                "PnkMJ",
+                "<y7H",
+                "?#c%",
+                "Y~E<",
+                "Vy`O",
+                "W\\R@kS6",
+                "a:s)",
+                "b]o^",
+                "_0ha",
+                "|AEWX~",
+                "~yC#Q",
+                "=JaS6",
+                "?$+D",
+                "a2HJ",
+                "?CO*",
+                "/k$i",
+                "M'1A",
+                "26n6@",
+                "-L}y",
+                ".\\t\u007f",
+                "bQww",
+                ".Sto",
+                "3NS0",
+                "h3\\s",
+                "(Vt6",
+                "Wcl>dO",
+                "gvZK",
+                "m9pl/",
+                "2vOoN",
+                "$P=WnL/",
+                ";I05",
+                "uSNW",
+                "9l)NP",
+                "lSIha",
+                "&t6[",
+                "=WnXe",
+                "*m9` @",
+                "Cww +",
+                "%3ql",
+                "yX]SO",
+                "0Yt5",
+                "X\"Gs",
+                "IDATRg",
+                "V3 p",
+                "(BPfg",
+                "Zf{*",
+                "CWK`\u007fI",
+                "{0lt6M",
+                "H;6,",
+                "?JvF",
+                "|-Io5`",
+                "HE[\u007f",
+                "i\u007fgw",
+                "Gq6d",
+                ",5}kQ\"",
+                "?(l_",
+                "*PaN",
+                "*F}tN",
+                "H`su",
+                "cQ[r",
+                ".KAg1",
+                "2W A",
+                "bS`:",
+                "EQ,S",
+                "IVgz",
+                "*Vf-k",
+                "'j'N",
+                "5ez{_",
+                "]&Pl",
+                "2jjQ",
+                "BAm7@",
+                ",'E{=",
+                "!=>y",
+                "'{Lpq4",
+                "84e=",
+                "/5A5",
+                "ydO#",
+                "kGKj",
+                "4Lr:0ak",
+                "Q+0F",
+                "1wgJ",
+                "M\"iXA",
+                "X]q9v",
+                "$r3 e",
+                "C\"CH;",
+                "&dv{2x",
+                "S5R$Y",
+                "q|%UO*",
+                "%BT;",
+                "7j~R",
+                "P3La",
+                "q1>rT",
+                "cK(@C",
+                ">'nR",
+                "D+M<",
+                "Vw)X",
+                "P/w*<p",
+                "\"VW\u007f<",
+                "iZdkL9",
+                "3aH|",
+                "k!Tc",
+                "q@11",
+                "l8#KF",
+                "0J[\"",
+                "\"(RX",
+                "p<W\"",
+                "l!2'",
+                "+LO|",
+                ",3Zj'",
+                "E!Bg",
+                "c&tgTR@",
+                "Y5w>J",
+                "m]Of)",
+                ",X j",
+                "8wQ)",
+                "\\L.Jc",
+                "J^71",
+                "g&@.3H",
+                "vF@*",
+                "~mZ`",
+                "X^qy8M",
+                "IpHn;]",
+                "ID\u007fl\"",
+                "K?u7\u007f",
+                "\"v.W",
+                "{2CtO\\m",
+                "Rs/y",
+                "t;d`F",
+                "]9I%",
+                "&xwH",
+                ">8e]",
+                "^\u007f?}",
+                "9'bY",
+                "tTYC",
+                "? 4;",
+                "PJ>Z",
+                "QM+)",
+                "]V1@",
+                "i7gl%",
+                "IDAT",
+                "hvJ}",
+                "L\"aUi",
+                "x)d\u007f",
+                "Wy/{",
+                "Zr;T",
+                "^(~>",
+                ",8:3b",
+                "d.10",
+                "Sb8K",
+                "Z-mm",
+                "=sSo",
+                "p@,\u007f",
+                "Tj'f",
+                ";!;vCv",
+                "1`/P",
+                "wCWBP",
+                "@nH!",
+                "#bq;",
+                "!9Aq",
+                "=jc0!",
+                "]{!;v",
+                "3_XK",
+                "Gsx_X",
+                "mcG%",
+                "F,9\"R\\",
+                "I1'M",
+                "4,u01",
+                "_;vc",
+                "$%'O",
+                "=G={",
+                "^\u007fY]",
+                "m7?:",
+                "g6O+X{",
+                "mm%Q",
+                "&Q@v",
+                "} ;vw=Y",
+                ".eU#",
+                "r;lZ",
+                " rO2",
+                "VOJU",
+                ",{{$",
+                "U:r:'",
+                "LGLQ:",
+                "\"^#KjH",
+                " ;vc",
+                "+uqF",
+                "i{pM",
+                ".x8V",
+                ":dki",
+                "\u007fyXg",
+                "#nP}c",
+                "u> K",
+                "yv\\|",
+                "I:)bS",
+                "&9u?",
+                "nRx{",
+                "q\"O]",
+                "[vVz!",
+                ";skZ",
+                "ok^q",
+                "3EdO]",
+                "W;^Z",
+                "uv0}",
+                "NHmlg ",
+                "2~LT",
+                "\\}z#)",
+                "D|AS_",
+                "L'>M",
+                "_6:%%",
+                "%FF`",
+                "}'-c7",
+                "5&Ed",
+                "4!HL",
+                "O~8);M",
+                "^[GW",
+                "h*R(-",
+                "e:Yi",
+                "q;l3lES[",
+                "JY0`",
+                "LwqZ\u007f",
+                " 6&T",
+                "t>G!",
+                "o,In",
+                "1?6e",
+                ";zOM",
+                "sV\\[",
+                "s$jt",
+                "'R83",
+                "IDAT",
+                "M\u007f.m",
+                "&k_m",
+                "\\A_b\"",
+                "/=GK^",
+                "^ffu",
+                "YNu6H",
+                "l>zk",
+                "Uagk",
+                "sV>\"",
+                "kkt6z:",
+                "Eg.e",
+                "Xyo!",
+                "5V.|",
+                ";\u007fcB",
+                "!g=`>",
+                "MI<L",
+                "IvKLW#z",
+                "T,8|a",
+                "Nl(a",
+                "McOm",
+                "ek0N$",
+                "5VHv",
+                "PYi?L",
+                "F\u007fTI",
+                ")1!I",
+                "`Z6)t",
+                "+knl?f",
+                "]#Jz",
+                "BAS.",
+                "^*+T",
+                "K<&Nd",
+                "auXvG_",
+                "-]is",
+                "10jUb",
+                "EKz3",
+                "uLK&GBVd",
+                "KJI\"",
+                "{f5El",
+                "F;Mm",
+                "a/?cI",
+                "hk\\iZ",
+                "61&V",
+                "QcqFB",
+                "T<1OK",
+                "(&@ceL}3",
+                "h++W",
+                "\\UYh",
+                "%OXs",
+                "L?L1",
+                "^AT[@",
+                "$}W+Y",
+                "~jcS",
+                "3RU>s",
+                "+?}D",
+                "Y+nQ",
+                "sErTF",
+                "F@x0",
+                "H&ei",
+                ":C]$",
+                "eJJX",
+                "PdpO",
+                "9~m%",
+                "buO&d",
+                "<t)Z_",
+                "SZZm0:",
+                "M5=W",
+                "G>+7",
+                "I<gD0",
+                ":Z,z",
+                "Cl3N06F<",
+                "'-W8",
+                " =+p",
+                "8}c&",
+                "9oR)",
+                "3)2 ",
+                "n,#Y",
+                "ir>^",
+                "yi\\Qjqto",
+                "@s;VWf@",
+                "]Mc4",
+                ",2..",
+                ")bsI",
+                "tcYE,",
+                "8^;j",
+                "s$ZfF<k2uv",
+                "Y,C@",
+                "mZaA",
+                ",~!F:",
+                "6\"O,",
+                "?tn}r",
+                "2`Z[Lbu",
+                "4]F{",
+                "RlIU\"",
+                ".^o,",
+                "vR/[",
+                "1IDAT?",
+                "qPiy",
+                "XeaN}",
+                "@ u4h",
+                "K7_r",
+                "IG0/",
+                "^?zs",
+                "^|f+j",
+                "/ ,y",
+                "&{gyz",
+                "C;'*",
+                "p\u007f|C",
+                "IEND",
+                "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>",
+                "<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\"><assemblyIdentity version=\"1.0.0.0\" processorArchitecture=\"X86\" name=\"Microsoft.Windows.ImeRegister\" type=\"win32\"></assemblyIdentity><description>",
+                "</description><trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v2\"><security><requestedPrivileges><requestedExecutionLevel level=\"requireAdministrator\" uiAccess=\"false\"></requestedExecutionLevel></requestedPrivileges></security></trustInfo></assembly>",
+                "0&000<0F0R0\\0h0n0s0y0",
+                "1#1)1/151A1S1",
+                "2:5S5c5p5",
+                "6:6g6",
+                "7H8S8h8",
+                "9@:[:",
+                "3[3h3O9",
+                "=A>U>",
+                "8V9o9",
+                "<(=R=p=",
+                "90O0y0",
+                "1*1E1J1O1&282Y2^2c2",
+                "3+30353",
+                "5O5e5",
+                "6.6@6[6`6e6<7N7o7t7y7",
+                "8 8A8F8K8",
+                "8):[:g:",
+                ";\\;y;",
+                ";\"<8<",
+                "=$>5>@>Q>b>s>",
+                ">-?T?",
+                "1*1?1D1I1y1",
+                "122>2p2u2{2",
+                "3J3\\3",
+                "4&4+4K4P4`4e4j4",
+                "5$6t6b7}7",
+                "7\"9(9",
+                ": :%:+:/:4:::F:O:V:Z:`:d:j:s:y:",
+                ":$;4;H;d;",
+                "2/2K2V2k2",
+                "3C3`3",
+                "4 4*4e4",
+                "5J5P5[5",
+                "7#7S7",
+                "8p9F:e:",
+                ":r;w;",
+                "<<<R<m<x<%=B=Y=k=",
+                "=;>H>f>v>",
+                "1+3<3E3",
+                "354_4l4Z5",
+                "6N6f6",
+                "7f7r7",
+                "7{8%909",
+                "<)=p=",
+                "8$818>8D8",
+                ":$;6;I;U;y;",
+                "<,<Y<",
+                ">)>7>O>t>",
+                "0\"1U1",
+                "353D3m3",
+                "3F4\u007f4",
+                "4-516H6[6i6",
+                "7.7>7u7",
+                "!0)040Z0f0",
+                "2<2H2",
+                "2+3x364]4h4s4z4",
+                "646K6]6s6",
+                "939?9S9r9",
+                "9D:k:v:",
+                "<*=s=",
+                ">)?5?P?\\?",
+                "060}0",
+                "212<2M2",
+                "2?3J3[3",
+                "595V5e5j5q5",
+                "777q7",
+                "798o8",
+                ":3:m:",
+                ":0;;;",
+                "=)>S>o>",
+                "050c0",
+                "122p2w2",
+                "2$363",
+                "9%:>:a:",
+                ";W;c;z;",
+                "<!<N<~<",
+                "1/151I1c1i1}1",
+                "2+2c2x2",
+                "3D3M3]3g3o3|3",
+                "4T4_4",
+                "4#5.5h5s5",
+                "576B6|6",
+                "7K7V7",
+                "8%8_8j8",
+                "8.999s9~9",
+                ":B:M:",
+                ";R;X;^;d;j;p;v;|;",
+                "< <?<Q<h<",
+                "=$=2=",
+                ">3>;>A>V>q>w>~>",
+                "? ?&?,?1?7?=?C?H?N?T?Z?_?e?k?q?v?|?",
+                "0#0)0.040:0@0E0K0Q0W0\\0b0h0n0s0y0\u007f0",
+                "1 1&1+11171=1B1H1N1T1Y1_1e1k1p1v1|1",
+                "2%2G2",
+                "3H4[4n4z4",
+                "4]5j5",
+                "6$6-6A6I6\\6h6w6|6",
+                "6 7(7?7E7K7V7^7h7z7",
+                "8]8f8q8x8",
+                "9)939C9S9c9l9",
+                ":[:c:k:/;7;j;y;",
+                "<?<{<",
+                "<t=0?Y?",
+                "0&0+080",
+                "0-1T2l2r2",
+                "2r3{3",
+                "4,474@4S4",
+                "425Q5[5l5",
+                "5<6Q6n6",
+                "757=7Q7W7",
+                "8.8=8F8L8R8",
+                "8\"9E9T9!:h:q:",
+                ";(;4;@;L;U;",
+                ";N<o<)=<=Q=h=",
+                "=!>'>2>9>S>Z>i>v>",
+                "1D2d2o2",
+                "4.4A4+5",
+                "9B:P:i:",
+                "1 1v1",
+                "1d4w4",
+                "6;7@7D7H7L7",
+                ";P<t=",
+                "5!5%5)5-5155595=5A5E5I5M5Q5U5Y5]5a5e5i5m5q5u5y5}5",
+                ":);9;P;X;",
+                "<*<3<8<=<a<m<r<w<",
+                "=&=+=;=E=j=|=",
+                "?'?5?;?V?~?",
+                "]0o0t0",
+                "1!182l2",
+                "2U3o3x3",
+                "5:5E5",
+                "5)727:7(8",
+                "9*989D9P9^9n9",
+                ":2:F:",
+                "< <$<(<,<",
+                "<@=D=H=L=P=T=X=\\=",
+                "=`>d>h>l>p>t>x>|>",
+                "8#8'8+8/83878;8?8C8G8K8O8",
+                "9C?]?",
+                "0 131",
+                "4[5e526Q6V6",
+                "g0|0",
+                "2(2U2\\2g2u2|2",
+                "3 4&4S4",
+                "5:6G6W6d6N7",
+                ";(;Y;",
+                "=/=E=\\=c=o=",
+                ">,>9>K>S>]>f>w>",
+                "?_?i?o?u?",
+                "\"0-022<2[2b2",
+                "5+5U5",
+                "6!6,6@6",
+                "657H7W7x7",
+                "7+8C8",
+                "8#9:9",
+                ":D:I:V:b:{:",
+                ";!;/;8;=;J;O;",
+                "=.=6=",
+                "1%2B2_2m2",
+                "3)30393}3",
+                "384u4",
+                "5S5^5h5n5",
+                "6<6E6M7",
+                "7I8E9Y9",
+                ";*;6;G;P;",
+                "0D0T0k0s0",
+                "1D1h1",
+                "202;2@2E2`2j2",
+                "353@3E3J3k3{3",
+                "4*4/444R4{4",
+                "5\"5D5R5a5",
+                "7U8e8}8",
+                "8N9d9",
+                ": :h:",
+                ":0N0k0",
+                "3(3f3y3",
+                "5F6[6",
+                "7#7-7k7",
+                "7/8K8j8",
+                "8&9E9~9",
+                "97:n:",
+                ";G<p<",
+                "<>=l=",
+                "0m0<2C2",
+                "4O4l5",
+                "&0H0",
+                "5!5'5N5z5",
+                "6X8`8l8y8",
+                "9$9,9",
+                "98:@:\u007f:",
+                ";&;9;?;E;",
+                ">9>A>",
+                ">n?x?",
+                "0%0+040v0",
+                "1;1S1",
+                "3!4?4J4",
+                "4*575D5Q5h5/6",
+                ";K;a;w;",
+                "<)=5=M=U=",
+                "?f?n?",
+                "0^1f1",
+                "1!2P2",
+                "313I3Q3r3",
+                "5 5-5.6_6",
+                "9[:\\;l;};",
+                "=.=b=",
+                "041`1i2",
+                "323P3Z3k3p3",
+                "4'4\u007f4",
+                "72777B7V7a7x7",
+                "8@8v8",
+                "9O9v9",
+                ":L:o:",
+                ";S;_;s;",
+                "131;1d1k1",
+                "2\"2+2U2h2r2",
+                "3K3a3",
+                "4K4]4o4",
+                "5#5D5V5h5z5",
+                "9:9i9",
+                "4(5s7",
+                "8\u007f9 ;+;>;H;f;q;",
+                ";K<c<",
+                "=-=~=",
+                "*727i7p7",
+                "2%2,232o3",
+                "<*=]=",
+                "=@>q>o?",
+                "%2A2a2g2l2r2",
+                "4D4h4s4",
+                "5T6k6",
+                "7a8m8",
+                "9*929O9_9k9z9",
+                ":a=~=",
+                "0@0J0^0h0n0y0",
+                "1F1k1",
+                "3Z3o3z3",
+                "3C4f4",
+                "8X8b8",
+                "9V9^9f9n9",
+                ":v:i;|;",
+                "<V=f=r=",
+                "0O0#1m1",
+                "122U2",
+                "2&3Y3",
+                "4=4X4",
+                "505S5",
+                "5&6A6\\6w6",
+                "6-7X7{7",
+                "8Q8y8",
+                "8#9K9f9",
+                ":!:+:5:?:I:S:^:",
+                "d0h0l0p0t0x0|0",
+                ",4044484<4@4D4H4L4h4l4p4",
+                "?$?,?4?<?D?L?T?\\?d?l?t?|?",
+                "0$0,040<0D0L0T0\\0d0l0t0|0",
+                "7$7,747<7D7L7T7\\7d7l7t7|7",
+                "8$8,848<8D8L8T8\\8d8l8t8|8",
+                "9$9,949<9D9L9T9\\9d9l9t9|9",
+                ":$:,:4:<:D:L:T:\\:d:l:t:|:",
+                ";$;,;4;<;D;L;T;\\;d;l;t;|;",
+                "<$<,<4<<<D<L<T<\\<d<l<t<|<",
+                "=$=,=4=<=D=L=T=\\=d=l=t=|=",
+                "> >(>0>8>@>H>P>X>`>h>p>x>",
+                "? ?(?0?8?@?H?P?X?`?h?p?x?",
+                "0 0(00080@0H0P0X0`0h0p0x0",
+                "1 1(10181@1H1P1X1`1h1p1x1",
+                "2 2(20282@2H2P2X2`2h2p2x2",
+                "3 3(30383@3H3P3X3`3h3p3x3",
+                "4 4(40484@4H4P4X4`4h4p4x4",
+                "5$6(6,6",
+                "7p8t8x8|8",
+                "9 9$9(9,9094989<9@9D9H9L9P9T9X9\\9`9d9h9l9p9t9x9|9",
+                "5 5$5(5,5054585D5L5P5T5X5\\5",
+                "6$6,646<6D6L6T6\\6d6l6t6|6",
+                ": :$:(:,:0:4:8:<:@:D:H:L:P:T:X:\\:`:d:h:l:p:t:x:|:",
+                "; ;$;(;,;0;4;8;<;@;D;H;L;P;T;X;\\;`;d;h;p;t;x;|;",
+                "2`3d3h3l3t3|3",
+                "4$4,444<4D4L4T4\\4d4l4t4|4",
+                "5$5,545<5D5L5T5\\5d5l5t5|5",
+                "6$6,646<6D6L6T6\\6d6l6t6|6",
+                "7$7,747<7D7L7T7\\7d7l7t7|7",
+                "8$8,848<8D8L8T8\\8d8l8t8|8",
+                "9$9,949<9D9L9T9\\9d9l9t9|9",
+                ":$:,:4:<:D:L:T:\\:d:l:t:|:",
+                "; ;(;0;8;@;H;P;X;`;h;p;x;",
+                "< <(<0<8<@<H<P<X<`<h<p<x<",
+                "= =(=0=8=@=H=P=X=`=h=p=x=",
+                "> >(>0>8>@>H>P>X>`>h>p>x>",
+                "? ?(?0?8?@?H?P?X?`?h?p?x?",
+                "0 0(00080@0H0P0X0`0h0p0x0",
+                "1 1(10181@1H1P1X1`1h1p1x1",
+                "7 7$7(7,7074787<7@7",
+                "=0=4=D=H=P=h=x=|=",
+                ">(>,>4>L>\\>`>t>x>",
+                "? ?$?(?,?4?L?\\?`?p?t?x?",
+                "000@0D0T0X0`0x0",
+                "1 1$14181<1@1H1`1p1t1",
+                "2 2$2(202H2X2\\2l2p2t2|2",
+                "3(383<3L3P3T3\\3t3l8|8",
+                "9$9,949<9D9L9T9`9",
+                ":$:0:8:X:l:|:",
+                ": ;4;<;H;h;|;",
+                "<,<8<X<d<",
+                "=0=<=`=",
+                ">0><>\\>h>",
+                "?8?@?L?l?x?",
+                "$0H0T0\\0t0",
+                "1$1,141<1H1p1",
+                "2(242\\2",
+                "303<3\\3h3",
+                "4 4(4<4D4L4T4X4\\4d4x4",
+                "5 545<5D5P5p5|5",
+                "6(646h6p6t6",
+                "7 7L7P7X7`7h7l7t7",
+                "808P8X8\\8x8",
+                "989X9x9",
+                ":8:X:x:",
+                ";8;X;x;",
+                "<(<0<H<T<|<",
+                "=$=8=@=X=`=l=",
+                "0 0$0(0,0004080<0@0D0H0L0P0",
+                "2(2,2024282<2@2D2X2",
+                ";,;L;l;",
+                "< <8<T<t<",
+                "N0L0",
+                "DigiCert Inc1",
+                "www.digicert.com1!0",
+                "DigiCert Trusted Root G40",
+                "210429000000Z",
+                "360428235959Z0i1",
+                "DigiCert, Inc.1A0?",
+                "8DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA10",
+                ">Mp$d",
+                "}4}L",
+                "!xE.",
+                "IpB2",
+                "6*f(_",
+                "[K]taM?",
+                "m&vh",
+                "J>@G_",
+                "#!Y`",
+                "x8E0",
+                "SA|X=G",
+                "q]dL",
+                "k0i0$",
+                "http://ocsp.digicert.com0A",
+                "5http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C",
+                "<0:08",
+                "2http://crl3.digicert.com/DigiCertTrustedRootG4.crl0",
+                ":#D=",
+                ":]Hm",
+                "v~7q",
+                "!usR",
+                "ov7,",
+                "/\"lA",
+                "jj@0HK4",
+                "VxN0",
+                "DigiCert, Inc.1A0?",
+                "8DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA10",
+                "250725000000Z",
+                "280722235959Z0",
+                "Private Organization1",
+                "91110105MA007G6FX41",
+                "1-0+",
+                "1-0+",
+                "_;T9x*",
+                "!p67:8c",
+                "7*ju.",
+                "kPDe",
+                "{Z,_",
+                "`HT/S",
+                "=8P!",
+                "hk0=",
+                "60402",
+                "0)0'",
+                "http://www.digicert.com/CPS0",
+                "Mhttp://crl3.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0S",
+                "Mhttp://crl4.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crl0",
+                "http://ocsp.digicert.com0\\",
+                "Phttp://cacerts.digicert.com/DigiCertTrustedG4CodeSigningRSA4096SHA3842021CA1.crt0",
+                "u3S2&6",
+                "/dae",
+                "t0-9",
+                "0}0i1",
+                "DigiCert, Inc.1A0?",
+                "8DigiCert Trusted G4 Code Signing RSA4096 SHA384 2021 CA1",
+                "=f-L?",
+                "O+P8",
+                "L!Sy",
+                "ejaM",
+                "\"lk[",
+                "V_K3$",
+                "_% f",
+                "20251027083110Z",
+                "DigiCert, Inc.1A0?",
+                "8DigiCert Trusted G4 TimeStamping RSA4096 SHA256 2025 CA10",
+                "250604000000Z",
+                "360903235959Z0c1",
+                "DigiCert, Inc.1;09",
+                "2DigiCert SHA256 RSA4096 Timestamp Responder 2025 10",
+                "B0c2",
+                "7!O$",
+                "OQiK",
+                "p%w+q4",
+                "pRj-",
+                "e7t ",
+                "3C!x",
+                "u.OX",
+                "http://ocsp.digicert.com0]",
+                "Qhttp://cacerts.digicert.com/DigiCertTrustedG4TimeStampingRSA4096SHA2562025CA1.crt0_",
+                "X0V0T",
+                "Nhttp://crl3.digicert.com/DigiCertTrustedG4TimeStampingRSA4096SHA2562025CA1.crl0 ",
+                "c@r!",
+                "r&fR{a|",
+                "\\Q?%",
+                "(lC'",
+                "%5wB",
+                "%CNh",
+                ".@C\"",
+                "DigiCert Inc1",
+                "www.digicert.com1!0",
+                "DigiCert Trusted Root G40",
+                "250507000000Z",
+                "380114235959Z0i1",
+                "DigiCert, Inc.1A0?",
+                "8DigiCert Trusted G4 TimeStamping RSA4096 SHA256 2025 CA10",
+                "P]&G",
+                "\"9<x:",
+                "|4^o",
+                "q)5U",
+                "h`i<",
+                "TxF4",
+                "k cS",
+                "q]dL",
+                "k0i0$",
+                "http://ocsp.digicert.com0A",
+                "5http://cacerts.digicert.com/DigiCertTrustedRootG4.crt0C",
+                "<0:08",
+                "2http://crl3.digicert.com/DigiCertTrustedRootG4.crl0 ",
+                "Dwj|",
+                ":U|r*C",
+                "o84s[",
+                "a:m1&",
+                "DigiCert Inc1",
+                "www.digicert.com1$0\"",
+                "DigiCert Assured ID Root CA0",
+                "220801000000Z",
+                "311109235959Z0b1",
+                "DigiCert Inc1",
+                "www.digicert.com1!0",
+                "DigiCert Trusted Root G40",
+                "]J<0\"0i3",
+                "t;mq",
+                "u]xf",
+                "v=Y]Bv",
+                "p,A`",
+                "RQGt",
+                "|Lu?c",
+                " Qko",
+                "q]dL",
+                "m0k0$",
+                "http://ocsp.digicert.com0C",
+                "7http://cacerts.digicert.com/DigiCertAssuredIDRootCA.crt0E",
+                ">0<0:",
+                "4http://crl3.digicert.com/DigiCertAssuredIDRootCA.crl0",
+                "Jz/-",
+                "5FjiT",
+                "wZ\\T",
+                "~qj#k\"",
+                "T-'~",
+                "0}0i1",
+                "DigiCert, Inc.1A0?",
+                "8DigiCert Trusted G4 TimeStamping RSA4096 SHA256 2025 CA1",
+                "251027083110Z0+",
+                "hyR0",
+                "A~0/",
+                "/1(0&0$0\"",
+                "34DY",
+                "9>Do",
+                "AS-L0b",
+                "$*1R\\",
+                "-dE2"
+            ],
+            "unicode": [
+                "jjjjj",
+                "jjjjj",
+                "5f645768",
+                "@ZhiNengPY",
+                "%s%s",
+                "C:\\log%s.txt",
+                "ZhiNengPYIME",
+                "ZhiNengPYIME.users",
+                ".ini",
+                "CfgRootPath",
+                "Globals",
+                "ZhiNengPYInfo.ini",
+                "AppInfo",
+                "CfgUserPath",
+                "Config",
+                "%s%s\\",
+                "UseVestige.ini",
+                "Cache.ini",
+                "ShttPath",
+                "SOFTWARE\\",
+                "InstallPath",
+                "Config.exe",
+                "roaming",
+                "ZhiNengPYInput",
+                "guanf",
+                "Spreader",
+                "SoftWare",
+                "zh-CHS",
+                "ar-SA",
+                "bg-BG",
+                "ca-ES",
+                "zh-TW",
+                "cs-CZ",
+                "da-DK",
+                "de-DE",
+                "el-GR",
+                "en-US",
+                "fi-FI",
+                "fr-FR",
+                "he-IL",
+                "hu-HU",
+                "is-IS",
+                "it-IT",
+                "ja-JP",
+                "ko-KR",
+                "nl-NL",
+                "nb-NO",
+                "pl-PL",
+                "pt-BR",
+                "ro-RO",
+                "ru-RU",
+                "hr-HR",
+                "sk-SK",
+                "sq-AL",
+                "sv-SE",
+                "th-TH",
+                "tr-TR",
+                "ur-PK",
+                "id-ID",
+                "uk-UA",
+                "be-BY",
+                "sl-SI",
+                "et-EE",
+                "lv-LV",
+                "lt-LT",
+                "fa-IR",
+                "vi-VN",
+                "hy-AM",
+                "az-AZ-Latn",
+                "eu-ES",
+                "mk-MK",
+                "tn-ZA",
+                "xh-ZA",
+                "zu-ZA",
+                "af-ZA",
+                "ka-GE",
+                "fo-FO",
+                "hi-IN",
+                "mt-MT",
+                "se-NO",
+                "ms-MY",
+                "kk-KZ",
+                "ky-KG",
+                "sw-KE",
+                "uz-UZ-Latn",
+                "tt-RU",
+                "bn-IN",
+                "pa-IN",
+                "gu-IN",
+                "ta-IN",
+                "te-IN",
+                "kn-IN",
+                "ml-IN",
+                "mr-IN",
+                "sa-IN",
+                "mn-MN",
+                "cy-GB",
+                "gl-ES",
+                "kok-IN",
+                "syr-SY",
+                "div-MV",
+                "quz-BO",
+                "ns-ZA",
+                "mi-NZ",
+                "ar-IQ",
+                "zh-CN",
+                "de-CH",
+                "en-GB",
+                "es-MX",
+                "fr-BE",
+                "it-CH",
+                "nl-BE",
+                "nn-NO",
+                "pt-PT",
+                "sr-SP-Latn",
+                "sv-FI",
+                "az-AZ-Cyrl",
+                "se-SE",
+                "ms-BN",
+                "uz-UZ-Cyrl",
+                "quz-EC",
+                "ar-EG",
+                "zh-HK",
+                "de-AT",
+                "en-AU",
+                "es-ES",
+                "fr-CA",
+                "sr-SP-Cyrl",
+                "se-FI",
+                "quz-PE",
+                "ar-LY",
+                "zh-SG",
+                "de-LU",
+                "en-CA",
+                "es-GT",
+                "fr-CH",
+                "hr-BA",
+                "smj-NO",
+                "ar-DZ",
+                "zh-MO",
+                "de-LI",
+                "en-NZ",
+                "es-CR",
+                "fr-LU",
+                "bs-BA-Latn",
+                "smj-SE",
+                "ar-MA",
+                "en-IE",
+                "es-PA",
+                "fr-MC",
+                "sr-BA-Latn",
+                "sma-NO",
+                "ar-TN",
+                "en-ZA",
+                "es-DO",
+                "sr-BA-Cyrl",
+                "sma-SE",
+                "ar-OM",
+                "en-JM",
+                "es-VE",
+                "sms-FI",
+                "ar-YE",
+                "en-CB",
+                "es-CO",
+                "smn-FI",
+                "ar-SY",
+                "en-BZ",
+                "es-PE",
+                "ar-JO",
+                "en-TT",
+                "es-AR",
+                "ar-LB",
+                "en-ZW",
+                "es-EC",
+                "ar-KW",
+                "en-PH",
+                "es-CL",
+                "ar-AE",
+                "es-UY",
+                "ar-BH",
+                "es-PY",
+                "ar-QA",
+                "es-BO",
+                "es-SV",
+                "es-HN",
+                "es-NI",
+                "es-PR",
+                "zh-CHT",
+                "af-za",
+                "ar-ae",
+                "ar-bh",
+                "ar-dz",
+                "ar-eg",
+                "ar-iq",
+                "ar-jo",
+                "ar-kw",
+                "ar-lb",
+                "ar-ly",
+                "ar-ma",
+                "ar-om",
+                "ar-qa",
+                "ar-sa",
+                "ar-sy",
+                "ar-tn",
+                "ar-ye",
+                "az-az-cyrl",
+                "az-az-latn",
+                "be-by",
+                "bg-bg",
+                "bn-in",
+                "bs-ba-latn",
+                "ca-es",
+                "cs-cz",
+                "cy-gb",
+                "da-dk",
+                "de-at",
+                "de-ch",
+                "de-de",
+                "de-li",
+                "de-lu",
+                "div-mv",
+                "el-gr",
+                "en-au",
+                "en-bz",
+                "en-ca",
+                "en-cb",
+                "en-gb",
+                "en-ie",
+                "en-jm",
+                "en-nz",
+                "en-ph",
+                "en-tt",
+                "en-us",
+                "en-za",
+                "en-zw",
+                "es-ar",
+                "es-bo",
+                "es-cl",
+                "es-co",
+                "es-cr",
+                "es-do",
+                "es-ec",
+                "es-es",
+                "es-gt",
+                "es-hn",
+                "es-mx",
+                "es-ni",
+                "es-pa",
+                "es-pe",
+                "es-pr",
+                "es-py",
+                "es-sv",
+                "es-uy",
+                "es-ve",
+                "et-ee",
+                "eu-es",
+                "fa-ir",
+                "fi-fi",
+                "fo-fo",
+                "fr-be",
+                "fr-ca",
+                "fr-ch",
+                "fr-fr",
+                "fr-lu",
+                "fr-mc",
+                "gl-es",
+                "gu-in",
+                "he-il",
+                "hi-in",
+                "hr-ba",
+                "hr-hr",
+                "hu-hu",
+                "hy-am",
+                "id-id",
+                "is-is",
+                "it-ch",
+                "it-it",
+                "ja-jp",
+                "ka-ge",
+                "kk-kz",
+                "kn-in",
+                "kok-in",
+                "ko-kr",
+                "ky-kg",
+                "lt-lt",
+                "lv-lv",
+                "mi-nz",
+                "mk-mk",
+                "ml-in",
+                "mn-mn",
+                "mr-in",
+                "ms-bn",
+                "ms-my",
+                "mt-mt",
+                "nb-no",
+                "nl-be",
+                "nl-nl",
+                "nn-no",
+                "ns-za",
+                "pa-in",
+                "pl-pl",
+                "pt-br",
+                "pt-pt",
+                "quz-bo",
+                "quz-ec",
+                "quz-pe",
+                "ro-ro",
+                "ru-ru",
+                "sa-in",
+                "se-fi",
+                "se-no",
+                "se-se",
+                "sk-sk",
+                "sl-si",
+                "sma-no",
+                "sma-se",
+                "smj-no",
+                "smj-se",
+                "smn-fi",
+                "sms-fi",
+                "sq-al",
+                "@sr-ba-cyrl",
+                "sr-ba-latn",
+                "sr-sp-cyrl",
+                "sr-sp-latn",
+                "sv-fi",
+                "sv-se",
+                "sw-ke",
+                "syr-sy",
+                "ta-in",
+                "te-in",
+                "th-th",
+                "tn-za",
+                "tr-tr",
+                "tt-ru",
+                "uk-ua",
+                "ur-pk",
+                "uz-uz-cyrl",
+                "uz-uz-latn",
+                "vi-vn",
+                "xh-za",
+                "zh-chs",
+                "zh-cht",
+                "zh-cn",
+                "zh-hk",
+                "zh-mo",
+                "zh-sg",
+                "zh-tw",
+                "zu-za",
+                "%s.bak%d",
+                "\\VarFileInfo\\Translation",
+                "\\StringFileInfo\\%04x%04x\\%s",
+                "[%d-%d-%d %d-%d-%d][%d]:%s",
+                "\\Local",
+                "\\LocalLow",
+                "\\Roaming",
+                "%s\\%s\\",
+                "config\\systemprofile",
+                "documents and settings\\localservice",
+                "Kernel32.dll",
+                "Wtsapi32.dll",
+                "EXPLORER.EXE",
+                "desktop",
+                "program",
+                "Program Files\\",
+                "curr",
+                "temp",
+                "\\Temp\\",
+                "TEMP",
+                "recirle",
+                "downloads",
+                "Downloads\\",
+                "USERPROFILE",
+                "\\Downloads\\",
+                "\\AppData\\LocalLow\\",
+                "locallow",
+                "LocalLow",
+                "Roaming",
+                "local",
+                "Local",
+                "system",
+                "system32",
+                "systemprofile",
+                "kernel32.dll",
+                "okernel32",
+                "@chrome.exe",
+                "360se.exe",
+                "sogouexplorer.exe",
+                "qqbrowser.exe",
+                "firefox.exe",
+                "opera.exe",
+                "wnie.exe",
+                "scie.exe",
+                "maxthon.exe",
+                "360chrome.exe",
+                "baidubrowser.exe",
+                "iexplore.exe",
+                "safari.exe",
+                "twchrome.exe",
+                "spark.exetheworld.exe",
+                "%s.del",
+                "%s.del%d",
+                "explorer.exe",
+                "Advapi32.dll",
+                "Control Panel\\Input Method\\Hot Keys",
+                "Target IME",
+                "%08d",
+                "Key Modifiers",
+                "Virtual Key",
+                "C:\\log\\",
+                "%s%s.log",
+                "%s\\%s.txt",
+                "%s%s64.ime",
+                "%s%s.ime",
+                "%sregsvr32.exe /s %s",
+                "%s%s32.ime",
+                "32.ime",
+                "64.ime",
+                ".ime",
+                "RegisterIME ImeFile:%s",
+                "ProductName",
+                "RegisterIME ImeDescrible:Name:%s",
+                "RegisterIME nCopyTimes1:%d",
+                "RegisterIME regsvr Cmd1:%s",
+                "RegisterIME nCopyTimes2:%d",
+                "RegisterIME nCopyTimes3:%d",
+                ") - %s",
+                "RegisterIME GetIMERegInfo Failed",
+                "RegisterIME DeleteRepeatVectorTImeLayout %s",
+                "RegisterIME SaveVectorTImeLayout",
+                "%sregsvr32.exe /s /u %s",
+                "UnRegisterIME Cmd:%s",
+                "UnDeleteIme Return:%d",
+                "UnRegisterIME regsvr:%s",
+                "%s.ime",
+                "System\\CurrentControlSet\\Control\\Keyboard Layouts",
+                "Ime File",
+                "UninstallIME UnloadKeyboardLayout!!!",
+                "Keyboard Layout\\Preload",
+                "Software\\Microsoft\\CTF\\SortOrder\\AssemblyItem\\",
+                "%.8d",
+                "CLSID",
+                "{00000000-0000-0000-0000-000000000000}",
+                "KeyboardLayout",
+                "00000804",
+                "Profile",
+                "System\\CurrentControlSet\\Control\\Keyboard Layouts\\",
+                "Layout text",
+                "0804:{B5305715-1EEA-4941-9033-955875F65B0A}{90611F22-4744-46C0-9010-D195296F59F1}",
+                "input.dll",
+                "RegisterIME InstallLayoutOrTip return %d!!!",
+                "kernel32.DLL",
+                "Layout Text",
+                "@/InstallIME",
+                "@/UnInstallIME",
+                "ZNPYTSF",
+                "ZNPY",
+                "Power",
+                "ERROR : Unable to initialize critical section in CAtlBaseModule",
+                "advapi32.dll",
+                "Badvapi32",
+                "api-ms-win-core-fibers-l1-1-1",
+                "api-ms-win-core-synch-l1-2-0",
+                "(null)",
+                "         (((((                  H",
+                "      (                          ",
+                "         (((((                  H",
+                "mscoree.dll",
+                "Sunday",
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "January",
+                "February",
+                "March",
+                "April",
+                "June",
+                "July",
+                "August",
+                "September",
+                "October",
+                "November",
+                "December",
+                "MM/dd/yy",
+                "dddd, MMMM dd, yyyy",
+                "HH:mm:ss",
+                "Capi-ms-win-appmodel-runtime-l1-1-1",
+                "api-ms-win-core-datetime-l1-1-1",
+                "api-ms-win-core-file-l2-1-1",
+                "api-ms-win-core-localization-l1-2-1",
+                "api-ms-win-core-localization-obsolete-l1-2-0",
+                "api-ms-win-core-processthreads-l1-1-2",
+                "api-ms-win-core-string-l1-1-0",
+                "api-ms-win-core-sysinfo-l1-2-1",
+                "api-ms-win-core-winrt-l1-1-0",
+                "api-ms-win-core-xstate-l2-1-0",
+                "api-ms-win-rtcore-ntuser-window-l1-1-0",
+                "api-ms-win-security-systemfunctions-l1-1-0",
+                "ext-ms-win-kernel32-package-current-l1-1-0",
+                "ext-ms-win-ntuser-dialogbox-l1-1-0",
+                "ext-ms-win-ntuser-windowstation-l1-1-0",
+                "user32",
+                "UTF-8",
+                "UTF-16LEUNICODE",
+                "CONOUT$",
+                "VS_VERSION_INFO",
+                "StringFileInfo",
+                "080404b0",
+                "CompanyName",
+                "FileDescription",
+                "InternalName",
+                "LegalCopyright",
+                "Copyright (C) 2023",
+                "OriginalFilename",
+                "ProductName",
+                "ProductVersion",
+                "1.0.9.21211",
+                "VarFileInfo",
+                "Translation"
+            ]
+        },
+        "in_memory": {
+            "ansi": [
+                "svchost.exe myarg1 myarg2",
+                "((((((((((((((((((((((((((",
+                "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+                "a070e428367f40dccea1d005382b99a4",
+                "5fc2e47710f6c9273fa949911fcce363",
+                "03fa5e92dfc68bd5b6698663d907b71e"
+            ],
+            "unicode": [
+                "SOFTWARE\\ZhiNengPY",
+                "              ",
+                "svchost.exe myarg1 myarg2",
+                "svchost.exe",
+                "myarg1",
+                "myarg2",
+                "comspec C:\\Windows\\system32\\cmd.exe systemroot C:\\Windows windir C:\\Windows temp C:\\Windows\\temp\\ userprofile C:\\Users\\speakeasy_user systemdrive C: allusersprofile C:\\ProgramData programfiles C:\\Program Files",
+                "/InstallIME",
+                "/UnInstallIME",
+                "C:\\log\\",
+                ".bin.txt",
+                "C:\\Windows\\system32\\"
+            ]
+        }
+    },
+    "entry_points": [
+        {
+            "ep_type": "module_entry",
+            "start_addr": "0x40f121",
+            "ep_args": [
+                "0x4000",
+                "0x4010",
+                "0x4020",
+                "0x4030"
+            ],
+            "apihash": "6d2e051ffb1c56fa992c7f62f1d4d50c8c934d05e7114d8c9417296aad94da83",
+            "apis": [
+                {
+                    "pc": "0x40f6e5",
+                    "api_name": "KERNEL32.GetSystemTimeAsFileTime",
+                    "args": [
+                        "0x1211fd4"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x40f6f4",
+                    "api_name": "KERNEL32.GetCurrentThreadId",
+                    "args": [],
+                    "ret_val": "0x434"
+                },
+                {
+                    "pc": "0x40f6fd",
+                    "api_name": "KERNEL32.GetCurrentProcessId",
+                    "args": [],
+                    "ret_val": "0x420"
+                },
+                {
+                    "pc": "0x40f70a",
+                    "api_name": "KERNEL32.QueryPerformanceCounter",
+                    "args": [
+                        "0x1211fcc"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x40f2cf",
+                    "api_name": "KERNEL32.IsProcessorFeaturePresent",
+                    "args": [
+                        "PF_XMMI64_INSTRUCTIONS_AVAILABLE"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x414bb1",
+                    "api_name": "KERNEL32.LoadLibraryExW",
+                    "args": [
+                        "api-ms-win-core-synch-l1-2-0",
+                        "0x0",
+                        "LOAD_LIBRARY_SEARCH_SYSTEM32"
+                    ],
+                    "ret_val": "0x77000000"
+                },
+                {
+                    "pc": "0x414b3d",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "InitializeCriticalSectionEx"
+                    ],
+                    "ret_val": "0xfeee0000"
+                },
+                {
+                    "pc": "0x414d14",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43e280",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x414bb1",
+                    "api_name": "KERNEL32.LoadLibraryExW",
+                    "args": [
+                        "api-ms-win-core-fibers-l1-1-1",
+                        "0x0",
+                        "LOAD_LIBRARY_SEARCH_SYSTEM32"
+                    ],
+                    "ret_val": "0x77000000"
+                },
+                {
+                    "pc": "0x414b3d",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "FlsAlloc"
+                    ],
+                    "ret_val": "0xfeee0001"
+                },
+                {
+                    "pc": "0x414c23",
+                    "api_name": "kernel32.FlsAlloc",
+                    "args": [
+                        "0x414efb"
+                    ],
+                    "ret_val": "0x0"
+                },
+                {
+                    "pc": "0x414b3d",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "FlsSetValue"
+                    ],
+                    "ret_val": "0xfeee0002"
+                },
+                {
+                    "pc": "0x414cd4",
+                    "api_name": "kernel32.FlsSetValue",
+                    "args": [
+                        "0x0",
+                        "0x43e254"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d0c6",
+                    "api_name": "KERNEL32.LoadLibraryExW",
+                    "args": [
+                        "api-ms-win-core-synch-l1-2-0",
+                        "0x0",
+                        "LOAD_LIBRARY_SEARCH_SYSTEM32"
+                    ],
+                    "ret_val": "0x77000000"
+                },
+                {
+                    "pc": "0x41d058",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "InitializeCriticalSectionEx"
+                    ],
+                    "ret_val": "0xfeee0000"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43e2e8",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43e300",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43e318",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43e330",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43e348",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43e360",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43e378",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43e390",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43e3a8",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43e3c0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43e3d8",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43e3f0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43e408",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x4212ec",
+                    "api_name": "KERNEL32.GetProcessHeap",
+                    "args": [],
+                    "ret_val": "0x4580"
+                },
+                {
+                    "pc": "0x41d0c6",
+                    "api_name": "KERNEL32.LoadLibraryExW",
+                    "args": [
+                        "api-ms-win-core-fibers-l1-1-1",
+                        "0x0",
+                        "LOAD_LIBRARY_SEARCH_SYSTEM32"
+                    ],
+                    "ret_val": "0x77000000"
+                },
+                {
+                    "pc": "0x41d058",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "FlsAlloc"
+                    ],
+                    "ret_val": "0xfeee0001"
+                },
+                {
+                    "pc": "0x41d1ba",
+                    "api_name": "kernel32.FlsAlloc",
+                    "args": [
+                        "0x41c9a7"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41cb4b",
+                    "api_name": "KERNEL32.GetLastError",
+                    "args": [],
+                    "ret_val": "0x0"
+                },
+                {
+                    "pc": "0x41d058",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "FlsGetValue"
+                    ],
+                    "ret_val": "0xfeee0003"
+                },
+                {
+                    "pc": "0x41d266",
+                    "api_name": "kernel32.FlsGetValue",
+                    "args": [
+                        "0x1"
+                    ],
+                    "ret_val": "0x0"
+                },
+                {
+                    "pc": "0x41a2f1",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x8",
+                        "0x364"
+                    ],
+                    "ret_val": "0x45a0"
+                },
+                {
+                    "pc": "0x41d058",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "FlsSetValue"
+                    ],
+                    "ret_val": "0xfeee0002"
+                },
+                {
+                    "pc": "0x41d2bf",
+                    "api_name": "kernel32.FlsSetValue",
+                    "args": [
+                        "0x1",
+                        "0x45a0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e360"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e360"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e348"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e348"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41cbbd",
+                    "api_name": "KERNEL32.SetLastError",
+                    "args": [
+                        "0x0"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e390"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2f1",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x8",
+                        "0xc00"
+                    ],
+                    "ret_val": "0x7000"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7000",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7030",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7060",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7090",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x70c0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x70f0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7120",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7150",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7180",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x71b0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x71e0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7210",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7240",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7270",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x72a0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x72d0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7300",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7330",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7360",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7390",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x73c0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x73f0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7420",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7450",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7480",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x74b0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x74e0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7510",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7540",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7570",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x75a0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x75d0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7600",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7630",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7660",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7690",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x76c0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x76f0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7720",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7750",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7780",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x77b0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x77e0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7810",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7840",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7870",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x78a0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x78d0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7900",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7930",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7960",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7990",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x79c0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x79f0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7a20",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7a50",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7a80",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7ab0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7ae0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7b10",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7b40",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7b70",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7ba0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x7bd0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e390"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41d69e",
+                    "api_name": "KERNEL32.GetStartupInfoW",
+                    "args": [
+                        "0x1211efc"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41d794",
+                    "api_name": "KERNEL32.GetStdHandle",
+                    "args": [
+                        "0xfffffff6"
+                    ],
+                    "ret_val": "0xf001"
+                },
+                {
+                    "pc": "0x41d7a6",
+                    "api_name": "KERNEL32.GetFileType",
+                    "args": [
+                        "0xf001"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d794",
+                    "api_name": "KERNEL32.GetStdHandle",
+                    "args": [
+                        "0xfffffff5"
+                    ],
+                    "ret_val": "0xf002"
+                },
+                {
+                    "pc": "0x41d7a6",
+                    "api_name": "KERNEL32.GetFileType",
+                    "args": [
+                        "0xf002"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d794",
+                    "api_name": "KERNEL32.GetStdHandle",
+                    "args": [
+                        "0xfffffff4"
+                    ],
+                    "ret_val": "0xf003"
+                },
+                {
+                    "pc": "0x41d7a6",
+                    "api_name": "KERNEL32.GetFileType",
+                    "args": [
+                        "0xf003"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e390"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x4239f7",
+                    "api_name": "KERNEL32.GetCommandLineA",
+                    "args": [],
+                    "ret_val": "0x7c90"
+                },
+                {
+                    "pc": "0x423a02",
+                    "api_name": "KERNEL32.GetCommandLineW",
+                    "args": [],
+                    "ret_val": "0x7cb0"
+                },
+                {
+                    "pc": "0x41cac6",
+                    "api_name": "KERNEL32.GetLastError",
+                    "args": [],
+                    "ret_val": "0x0"
+                },
+                {
+                    "pc": "0x41d266",
+                    "api_name": "kernel32.FlsGetValue",
+                    "args": [
+                        "0x1"
+                    ],
+                    "ret_val": "0x45a0"
+                },
+                {
+                    "pc": "0x41cb2e",
+                    "api_name": "KERNEL32.SetLastError",
+                    "args": [
+                        "0x0"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e360"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e360"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x42341b",
+                    "api_name": "KERNEL32.GetACP",
+                    "args": [],
+                    "ret_val": "0x4e4"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x220"
+                    ],
+                    "ret_val": "0x7cf0"
+                },
+                {
+                    "pc": "0x42387a",
+                    "api_name": "KERNEL32.IsValidCodePage",
+                    "args": [
+                        "0x4e4"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x42388d",
+                    "api_name": "KERNEL32.GetCPInfo",
+                    "args": [
+                        "0x4e4",
+                        "0x1211f2c"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x4234d6",
+                    "api_name": "KERNEL32.GetCPInfo",
+                    "args": [
+                        "0x4e4",
+                        "0x12117f4"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x421354",
+                    "api_name": "KERNEL32.MultiByteToWideChar",
+                    "args": [
+                        "0x4e4",
+                        "0x1",
+                        " \u0001\u0002\u0003\u0004\u0005\u0006\u0007\b\t\n\u000b\f\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f\u0080\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008a\u008b\u008c\u008d\u008e\u008f\u0090\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009a\u009b\u009c\u009d\u009e\u009f\u00a0\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac\u00ad\u00ae\u00af\u00b0\u00b1\u00b2\u00b3\u00b4\u00b5\u00b6\u00b7\u00b8\u00b9\u00ba\u00bb\u00bc\u00bd\u00be\u00bf\u00c0\u00c1\u00c2\u00c3\u00c4\u00c5\u00c6\u00c7\u00c8\u00c9\u00ca\u00cb\u00cc\u00cd\u00ce\u00cf\u00d0\u00d1\u00d2\u00d3\u00d4\u00d5\u00d6\u00d7\u00d8\u00d9\u00da\u00db\u00dc\u00dd\u00de\u00df\u00e0\u00e1\u00e2\u00e3\u00e4\u00e5\u00e6\u00e7\u00e8\u00e9\u00ea\u00eb\u00ec\u00ed\u00ee\u00ef\u00f0\u00f1\u00f2\u00f3\u00f4\u00f5\u00f6\u00f7\u00f8\u00f9\u00fa\u00fb\u00fc\u00fd\u00fe\u00ff\u00b0\u00af\u0089\u00f6D\u001f!\u0001\u00dd9B",
+                        "0x100",
+                        "0x0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x10c"
+                },
+                {
+                    "pc": "0x4213dd",
+                    "api_name": "KERNEL32.MultiByteToWideChar",
+                    "args": [
+                        "0x4e4",
+                        "0x1",
+                        "0x1211e08",
+                        "0x100",
+                        "0x1211578",
+                        "0x10c"
+                    ],
+                    "ret_val": "0x100"
+                },
+                {
+                    "pc": "0x4213ef",
+                    "api_name": "KERNEL32.GetStringTypeW",
+                    "args": [
+                        "0x1",
+                        "0x1211578",
+                        "0x100",
+                        "0x1211808"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41cd76",
+                    "api_name": "KERNEL32.MultiByteToWideChar",
+                    "args": [
+                        "0x4e4",
+                        "0x1",
+                        " \u0001\u0002\u0003\u0004\u0005\u0006\u0007\b\t\n\u000b\f\r\u000e\u000f\u0010\u0011\u0012\u0013\u0014\u0015\u0016\u0017\u0018\u0019\u001a\u001b\u001c\u001d\u001e\u001f !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~\u007f\u0080\u0081\u0082\u0083\u0084\u0085\u0086\u0087\u0088\u0089\u008a\u008b\u008c\u008d\u008e\u008f\u0090\u0091\u0092\u0093\u0094\u0095\u0096\u0097\u0098\u0099\u009a\u009b\u009c\u009d\u009e\u009f\u00a0\u00a1\u00a2\u00a3\u00a4\u00a5\u00a6\u00a7\u00a8\u00a9\u00aa\u00ab\u00ac\u00ad\u00ae\u00af\u00b0\u00b1\u00b2\u00b3\u00b4\u00b5\u00b6\u00b7\u00b8\u00b9\u00ba\u00bb\u00bc\u00bd\u00be\u00bf\u00c0\u00c1\u00c2\u00c3\u00c4\u00c5\u00c6\u00c7\u00c8\u00c9\u00ca\u00cb\u00cc\u00cd\u00ce\u00cf\u00d0\u00d1\u00d2\u00d3\u00d4\u00d5\u00d6\u00d7\u00d8\u00d9\u00da\u00db\u00dc\u00dd\u00de\u00df\u00e0\u00e1\u00e2\u00e3\u00e4\u00e5\u00e6\u00e7\u00e8\u00e9\u00ea\u00eb\u00ec\u00ed\u00ee\u00ef\u00f0\u00f1\u00f2\u00f3\u00f4\u00f5\u00f6\u00f7\u00f8\u00f9\u00fa\u00fb\u00fc\u00fd\u00fe\u00ff\u00b0\u00af\u0089\u00f6D\u001f!\u0001\u00dd9B",
+                        "0x100",
+                        "0x0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x10c"
+                },
+                {
+                    "pc": "0x41cdfc",
+                    "api_name": "KERNEL32.MultiByteToWideChar",
+                    "args": [
+                        "0x4e4",
+                        "0x1",
+                        "0x1211e08",
+                        "0x100",
+                        "0x1211528",
+                        "0x10c"
+                    ],
+                    "ret_val": "0x100"
+                },
+                {
+                    "pc": "0x41d0c6",
+                    "api_name": "KERNEL32.LoadLibraryExW",
+                    "args": [
+                        "api-ms-win-core-localization-l1-2-1",
+                        "0x0",
+                        "LOAD_LIBRARY_SEARCH_SYSTEM32"
+                    ],
+                    "ret_val": "0x77000000"
+                },
+                {
+                    "pc": "0x41d058",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "LCMapStringEx"
+                    ],
+                    "ret_val": "0xfeee0004"
+                },
+                {
+                    "pc": "0x41d3e5",
+                    "api_name": "kernel32.LCMapStringEx",
+                    "args": [
+                        "0x0",
+                        "0x100",
+                        "0x1211528",
+                        "0x10c",
+                        "0x0",
+                        "0x0",
+                        "0x0",
+                        "0x0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x10c"
+                },
+                {
+                    "pc": "0x41d3e5",
+                    "api_name": "kernel32.LCMapStringEx",
+                    "args": [
+                        "0x0",
+                        "0x100",
+                        "0x1211528",
+                        "0x10c",
+                        "0x1211308",
+                        "0x10c",
+                        "0x0",
+                        "0x0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x10c"
+                },
+                {
+                    "pc": "0x41cef6",
+                    "api_name": "KERNEL32.WideCharToMultiByte",
+                    "args": [
+                        "0x4e4",
+                        "0x0",
+                        "0x1211308",
+                        "0x10c",
+                        "0x1211d08",
+                        "0x100",
+                        "0x0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x100"
+                },
+                {
+                    "pc": "0x41cd76",
+                    "api_name": "KERNEL32.MultiByteToWideChar",
+                    "args": [
+                        "0x4e4",
+                        "0x1",
+                        "",
+                        "0x1",
+                        "0x0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41cdfc",
+                    "api_name": "KERNEL32.MultiByteToWideChar",
+                    "args": [
+                        "0x4e4",
+                        "0x1",
+                        "0x1211e08",
+                        "0x1",
+                        "0x1211758",
+                        "0x1"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d3e5",
+                    "api_name": "kernel32.LCMapStringEx",
+                    "args": [
+                        "0x0",
+                        "0x200",
+                        "0x1211758",
+                        "0x1",
+                        "0x0",
+                        "0x0",
+                        "0x0",
+                        "0x0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d3e5",
+                    "api_name": "kernel32.LCMapStringEx",
+                    "args": [
+                        "0x0",
+                        "0x200",
+                        "0x1211758",
+                        "0x1",
+                        "0x1211748",
+                        "0x1",
+                        "0x0",
+                        "0x0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41cef6",
+                    "api_name": "KERNEL32.WideCharToMultiByte",
+                    "args": [
+                        "0x4e4",
+                        "0x0",
+                        "0x1211748",
+                        "0x1",
+                        "0x1211c08",
+                        "0x100",
+                        "0x0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x100"
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e360"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e360"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x80"
+                    ],
+                    "ret_val": "0x7f20"
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41af6d",
+                    "api_name": "KERNEL32.GetModuleFileNameW",
+                    "args": [
+                        "0x0",
+                        "C:\\Windows\\system32\\\u667a\u80fd\u62fc\u97f3\u8f93\u5165\u6cd5.bin",
+                        "0x104"
+                    ],
+                    "ret_val": "0x1f"
+                },
+                {
+                    "pc": "0x41a2f1",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x8",
+                        "0x44"
+                    ],
+                    "ret_val": "0x7fb0"
+                },
+                {
+                    "pc": "0x40f75b",
+                    "api_name": "KERNEL32.InitializeSListHead",
+                    "args": [
+                        "0x43e198"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41cac6",
+                    "api_name": "KERNEL32.GetLastError",
+                    "args": [],
+                    "ret_val": "0x0"
+                },
+                {
+                    "pc": "0x41d266",
+                    "api_name": "kernel32.FlsGetValue",
+                    "args": [
+                        "0x1"
+                    ],
+                    "ret_val": "0x45a0"
+                },
+                {
+                    "pc": "0x41cb2e",
+                    "api_name": "KERNEL32.SetLastError",
+                    "args": [
+                        "0x0"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x423ace",
+                    "api_name": "KERNEL32.GetEnvironmentStringsW",
+                    "args": [],
+                    "ret_val": "0x8000"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x1a6"
+                    ],
+                    "ret_val": "0x81b0"
+                },
+                {
+                    "pc": "0x423b0e",
+                    "api_name": "KERNEL32.FreeEnvironmentStringsW",
+                    "args": [
+                        "0x8000"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41a2f1",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x8",
+                        "0x8"
+                    ],
+                    "ret_val": "0x8360"
+                },
+                {
+                    "pc": "0x41a2f1",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x8",
+                        "0x1a4"
+                    ],
+                    "ret_val": "0x8370"
+                },
+                {
+                    "pc": "0x41a3d4",
+                    "api_name": "KERNEL32.HeapFree",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x81b0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x40de7b",
+                    "api_name": "KERNEL32.GetModuleHandleW",
+                    "args": [
+                        "kernel32.dll"
+                    ],
+                    "ret_val": "0x77000000"
+                },
+                {
+                    "pc": "0x40de89",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "FlsAlloc"
+                    ],
+                    "ret_val": "0xfeee0001"
+                },
+                {
+                    "pc": "0x40dea0",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "FlsFree"
+                    ],
+                    "ret_val": "0xfeee0005"
+                },
+                {
+                    "pc": "0x40deb7",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "FlsGetValue"
+                    ],
+                    "ret_val": "0xfeee0003"
+                },
+                {
+                    "pc": "0x40dece",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "FlsSetValue"
+                    ],
+                    "ret_val": "0xfeee0002"
+                },
+                {
+                    "pc": "0x40dee5",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "InitializeCriticalSectionEx"
+                    ],
+                    "ret_val": "0xfeee0000"
+                },
+                {
+                    "pc": "0x40defc",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "InitOnceExecuteOnce"
+                    ],
+                    "ret_val": "0xfeee0006"
+                },
+                {
+                    "pc": "0x40df13",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "CreateEventExW"
+                    ],
+                    "ret_val": "0xfeee0007"
+                },
+                {
+                    "pc": "0x40df2a",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "CreateSemaphoreW"
+                    ],
+                    "ret_val": "0xfeee0008"
+                },
+                {
+                    "pc": "0x40df41",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "CreateSemaphoreExW"
+                    ],
+                    "ret_val": "0xfeee0009"
+                },
+                {
+                    "pc": "0x40df58",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "CreateThreadpoolTimer"
+                    ],
+                    "ret_val": "0xfeee000a"
+                },
+                {
+                    "pc": "0x40df6f",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "SetThreadpoolTimer"
+                    ],
+                    "ret_val": "0xfeee000b"
+                },
+                {
+                    "pc": "0x40df86",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "WaitForThreadpoolTimerCallbacks"
+                    ],
+                    "ret_val": "0xfeee000c"
+                },
+                {
+                    "pc": "0x40df9d",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "CloseThreadpoolTimer"
+                    ],
+                    "ret_val": "0xfeee000d"
+                },
+                {
+                    "pc": "0x40dfb4",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "CreateThreadpoolWait"
+                    ],
+                    "ret_val": "0xfeee000e"
+                },
+                {
+                    "pc": "0x40dfcb",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "SetThreadpoolWait"
+                    ],
+                    "ret_val": "0xfeee000f"
+                },
+                {
+                    "pc": "0x40dfe2",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "CloseThreadpoolWait"
+                    ],
+                    "ret_val": "0xfeee0010"
+                },
+                {
+                    "pc": "0x40dff9",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "FlushProcessWriteBuffers"
+                    ],
+                    "ret_val": "0xfeee0011"
+                },
+                {
+                    "pc": "0x40e010",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "FreeLibraryWhenCallbackReturns"
+                    ],
+                    "ret_val": "0xfeee0012"
+                },
+                {
+                    "pc": "0x40e027",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "GetCurrentProcessorNumber"
+                    ],
+                    "ret_val": "0xfeee0013"
+                },
+                {
+                    "pc": "0x40e03e",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "CreateSymbolicLinkW"
+                    ],
+                    "ret_val": "0xfeee0014"
+                },
+                {
+                    "pc": "0x40e055",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "GetCurrentPackageId"
+                    ],
+                    "ret_val": "0xfeee0015"
+                },
+                {
+                    "pc": "0x40e06c",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "GetTickCount64"
+                    ],
+                    "ret_val": "0xfeee0016"
+                },
+                {
+                    "pc": "0x40e083",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "GetFileInformationByHandleEx"
+                    ],
+                    "ret_val": "0xfeee0017"
+                },
+                {
+                    "pc": "0x40e09a",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "SetFileInformationByHandle"
+                    ],
+                    "ret_val": "0xfeee0018"
+                },
+                {
+                    "pc": "0x40e0b1",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "GetSystemTimePreciseAsFileTime"
+                    ],
+                    "ret_val": "0xfeee0019"
+                },
+                {
+                    "pc": "0x40e0c8",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "InitializeConditionVariable"
+                    ],
+                    "ret_val": "0xfeee001a"
+                },
+                {
+                    "pc": "0x40e0df",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "WakeConditionVariable"
+                    ],
+                    "ret_val": "0xfeee001b"
+                },
+                {
+                    "pc": "0x40e0f6",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "WakeAllConditionVariable"
+                    ],
+                    "ret_val": "0xfeee001c"
+                },
+                {
+                    "pc": "0x40e10d",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "SleepConditionVariableCS"
+                    ],
+                    "ret_val": "0xfeee001d"
+                },
+                {
+                    "pc": "0x40e124",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "InitializeSRWLock"
+                    ],
+                    "ret_val": "0xfeee001e"
+                },
+                {
+                    "pc": "0x40e13b",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "AcquireSRWLockExclusive"
+                    ],
+                    "ret_val": "0xfeee001f"
+                },
+                {
+                    "pc": "0x40e152",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "TryAcquireSRWLockExclusive"
+                    ],
+                    "ret_val": "0xfeee0020"
+                },
+                {
+                    "pc": "0x40e169",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "ReleaseSRWLockExclusive"
+                    ],
+                    "ret_val": "0xfeee0021"
+                },
+                {
+                    "pc": "0x40e180",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "SleepConditionVariableSRW"
+                    ],
+                    "ret_val": "0xfeee0022"
+                },
+                {
+                    "pc": "0x40e197",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "CreateThreadpoolWork"
+                    ],
+                    "ret_val": "0xfeee0023"
+                },
+                {
+                    "pc": "0x40e1ae",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "SubmitThreadpoolWork"
+                    ],
+                    "ret_val": "0xfeee0024"
+                },
+                {
+                    "pc": "0x40e1c5",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "CloseThreadpoolWork"
+                    ],
+                    "ret_val": "0xfeee0025"
+                },
+                {
+                    "pc": "0x40e1dc",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "CompareStringEx"
+                    ],
+                    "ret_val": "0xfeee0026"
+                },
+                {
+                    "pc": "0x40e1f3",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "GetLocaleInfoEx"
+                    ],
+                    "ret_val": "0xfeee0027"
+                },
+                {
+                    "pc": "0x40e20a",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "LCMapStringEx"
+                    ],
+                    "ret_val": "0xfeee0004"
+                },
+                {
+                    "pc": "0x414d14",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43de44",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x40e5ff",
+                    "api_name": "KERNEL32.GetModuleHandleW",
+                    "args": [
+                        "kernel32.dll"
+                    ],
+                    "ret_val": "0x77000000"
+                },
+                {
+                    "pc": "0x40e615",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "InitializeConditionVariable"
+                    ],
+                    "ret_val": "0xfeee001a"
+                },
+                {
+                    "pc": "0x40e623",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "SleepConditionVariableCS"
+                    ],
+                    "ret_val": "0xfeee001d"
+                },
+                {
+                    "pc": "0x40e631",
+                    "api_name": "KERNEL32.GetProcAddress",
+                    "args": [
+                        "0x77000000",
+                        "WakeAllConditionVariable"
+                    ],
+                    "ret_val": "0xfeee001c"
+                },
+                {
+                    "pc": "0x40e654",
+                    "api_name": "kernel32.InitializeConditionVariable",
+                    "args": [
+                        "0x43de5c"
+                    ],
+                    "ret_val": "0x0"
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2f1",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x8",
+                        "0x800"
+                    ],
+                    "ret_val": "0x8520"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43c140",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43c178",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41d371",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43c1b0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x421225",
+                    "api_name": "KERNEL32.IsProcessorFeaturePresent",
+                    "args": [
+                        "PF_XMMI64_INSTRUCTIONS_AVAILABLE"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x40f5f8",
+                    "api_name": "KERNEL32.SetUnhandledExceptionFilter",
+                    "args": [
+                        "0x40f5f9"
+                    ],
+                    "ret_val": "0x0"
+                },
+                {
+                    "pc": "0x40e23d",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43db88",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x40e23d",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43dba0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x40e23d",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43dbb8",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x40e23d",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43dbd0",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x40e23d",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43dbe8",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x40e23d",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43dc00",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x40e23d",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43dc18",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x40e23d",
+                    "api_name": "kernel32.InitializeCriticalSectionEx",
+                    "args": [
+                        "0x43dc30",
+                        "0xfa0",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x429072",
+                    "api_name": "KERNEL32.EncodePointer",
+                    "args": [
+                        "0x43ecd0"
+                    ],
+                    "ret_val": "0x43ecd1"
+                },
+                {
+                    "pc": "0x42908a",
+                    "api_name": "KERNEL32.GetCurrentThread",
+                    "args": [],
+                    "ret_val": "0x220"
+                },
+                {
+                    "pc": "0x429091",
+                    "api_name": "KERNEL32.GetThreadTimes",
+                    "args": [
+                        "0x220",
+                        "0x1211f70",
+                        "0x1211f78",
+                        "0x1211f78",
+                        "0x1211f78"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x401133",
+                    "api_name": "KERNEL32.InitializeSListHead",
+                    "args": [
+                        "0x43ecd8"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x405aa1",
+                    "api_name": "KERNEL32.InitializeCriticalSectionAndSpinCount",
+                    "args": [
+                        "0x43e1b4",
+                        "0x0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x40e749",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43de44"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x40e796",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43de44"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x405a24",
+                    "api_name": "KERNEL32.GetProcessHeap",
+                    "args": [],
+                    "ret_val": "0x4580"
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x40e749",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43de44"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x40e796",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43de44"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x40e775",
+                    "api_name": "kernel32.WakeAllConditionVariable",
+                    "args": [
+                        "0x43de5c"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x40"
+                    ],
+                    "ret_val": "0x8d30"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x8"
+                    ],
+                    "ret_val": "0x8d80"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x2c"
+                    ],
+                    "ret_val": "0x8d90"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x2c"
+                    ],
+                    "ret_val": "0x8dc0"
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x40"
+                    ],
+                    "ret_val": "0x8df0"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x20"
+                    ],
+                    "ret_val": "0x8e40"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x2c"
+                    ],
+                    "ret_val": "0x8e70"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x20"
+                    ],
+                    "ret_val": "0x8ea0"
+                },
+                {
+                    "pc": "0x41a3d4",
+                    "api_name": "KERNEL32.HeapFree",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x8e40"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x40"
+                    ],
+                    "ret_val": "0x8ed0"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x20"
+                    ],
+                    "ret_val": "0x8f20"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x2c"
+                    ],
+                    "ret_val": "0x8f50"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x20"
+                    ],
+                    "ret_val": "0x8f80"
+                },
+                {
+                    "pc": "0x41a3d4",
+                    "api_name": "KERNEL32.HeapFree",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x8f20"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x401072",
+                    "api_name": "KERNEL32.InitializeCriticalSection",
+                    "args": [
+                        "0x43db64"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x429309",
+                    "api_name": "KERNEL32.EncodePointer",
+                    "args": [
+                        "0x43a3b0"
+                    ],
+                    "ret_val": "0x43a3b1"
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x40f596",
+                    "api_name": "KERNEL32.GetStartupInfoW",
+                    "args": [
+                        "0x1211f64"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x40d399",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43db64"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x198"
+                    ],
+                    "ret_val": "0x9050"
+                },
+                {
+                    "pc": "0x403b76",
+                    "api_name": "KERNEL32.GetModuleFileNameW",
+                    "args": [
+                        "0x0",
+                        "C:\\Windows\\system32\\\u667a\u80fd\u62fc\u97f3\u8f93\u5165\u6cd5.bin",
+                        "0x104"
+                    ],
+                    "ret_val": "0x1f"
+                },
+                {
+                    "pc": "0x41cb4b",
+                    "api_name": "KERNEL32.GetLastError",
+                    "args": [],
+                    "ret_val": "0x0"
+                },
+                {
+                    "pc": "0x41d266",
+                    "api_name": "kernel32.FlsGetValue",
+                    "args": [
+                        "0x1"
+                    ],
+                    "ret_val": "0x45a0"
+                },
+                {
+                    "pc": "0x41cbbd",
+                    "api_name": "KERNEL32.SetLastError",
+                    "args": [
+                        "0x0"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x30"
+                    ],
+                    "ret_val": "0x91f0"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x30"
+                    ],
+                    "ret_val": "0x9230"
+                },
+                {
+                    "pc": "0x41a3d4",
+                    "api_name": "KERNEL32.HeapFree",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x91f0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41a260",
+                    "api_name": "KERNEL32.EnterCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x41a2a8",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43e318"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x40d3e4",
+                    "api_name": "KERNEL32.LeaveCriticalSection",
+                    "args": [
+                        "0x43db64"
+                    ],
+                    "ret_val": null
+                },
+                {
+                    "pc": "0x4060e3",
+                    "api_name": "KERNEL32.GetModuleFileNameW",
+                    "args": [
+                        "0x400000",
+                        "C:\\Windows\\system32\\\u667a\u80fd\u62fc\u97f3\u8f93\u5165\u6cd5.bin",
+                        "0x105"
+                    ],
+                    "ret_val": "0x1f"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x30"
+                    ],
+                    "ret_val": "0x9270"
+                },
+                {
+                    "pc": "0x41a3d4",
+                    "api_name": "KERNEL32.HeapFree",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x9270"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x30"
+                    ],
+                    "ret_val": "0x92b0"
+                },
+                {
+                    "pc": "0x41a3d4",
+                    "api_name": "KERNEL32.HeapFree",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x92b0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x30"
+                    ],
+                    "ret_val": "0x92f0"
+                },
+                {
+                    "pc": "0x41a3d4",
+                    "api_name": "KERNEL32.HeapFree",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x92f0"
+                    ],
+                    "ret_val": "0x1"
+                },
+                {
+                    "pc": "0x41a42a",
+                    "api_name": "KERNEL32.HeapAlloc",
+                    "args": [
+                        "0x4580",
+                        "0x0",
+                        "0x30"
+                    ],
+                    "ret_val": "0x9330"
+                },
+                {
+                    "pc": "0x404d00",
+                    "api_name": "ADVAPI32.RegOpenKeyExW",
+                    "args": [
+                        "HKEY_CURRENT_USER",
+                        "SOFTWARE\\ZhiNengPY",
+                        "0x0",
+                        "0x20019",
+                        "0x1210cd8"
+                    ],
+                    "ret_val": "0x3"
+                },
+                {
+                    "pc": "0x404e28",
+                    "api_name": "ADVAPI32.RegCloseKey",
+                    "args": [
+                        "0x0"
+                    ],
+                    "ret_val": "0x6"
+                }
+            ],
+            "ret_val": "0x1211924",
+            "error": {
+                "type": "unsupported_api",
+                "pc": "0xfeedf264",
+                "address": "0xfeedf264",
+                "instr": "disasm_failed",
+                "regs": {
+                    "esp": "0x01210cb0",
+                    "ebp": "0x01211f4c",
+                    "eip": "0xfeedf264",
+                    "esi": "0x00000000",
+                    "edi": "0x00009050",
+                    "eax": "0x01211924",
+                    "ebx": "0x00000208",
+                    "ecx": "0x00000000",
+                    "edx": "0x00de5c3a"
+                },
+                "stack": [
+                    "sp+0x00: 0x00404e39 -> emu.module.\u667a\u80fd\u62fc\u97f3\u8f93\u5165\u6cd5.0x400000",
+                    "sp+0x04: 0x00000000",
+                    "sp+0x08: 0x01211924 -> emu.stack.0x1200000",
+                    "sp+0x0c: 0x0000002b",
+                    "sp+0x10: 0x00000000",
+                    "sp+0x14: 0xf689aff0",
+                    "sp+0x18: 0x00000000",
+                    "sp+0x1c: 0x00009050 -> api.heap.HeapAlloc.0x9050",
+                    "sp+0x20: 0x00000000",
+                    "sp+0x24: 0x00000000",
+                    "sp+0x28: 0x00000000",
+                    "sp+0x2c: 0x00000000",
+                    "sp+0x30: 0x00000000",
+                    "sp+0x34: 0x00000000",
+                    "sp+0x38: 0x00000000",
+                    "sp+0x3c: 0x00000000"
+                ],
+                "api_name": "SHELL32.SHGetSpecialFolderPathW"
+            },
+            "registry_access": [
+                {
+                    "event": "open_key",
+                    "path": "HKEY_CURRENT_USER\\SOFTWARE\\ZhiNengPY"
+                }
+            ],
+            "dynamic_code_segments": []
+        }
+    ]
+}
