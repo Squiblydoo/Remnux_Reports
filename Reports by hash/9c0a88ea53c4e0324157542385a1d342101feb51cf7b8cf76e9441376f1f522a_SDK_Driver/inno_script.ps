@@ -1,0 +1,232 @@
+external class TWizardForm;
+external class TUninstallProgressForm;
+
+typedef AnyMethod = ProcPtr()
+typedef Boolean = U08
+typedef Integer = S32
+typedef TExecWait = U08
+typedef TFILETIME = struct {U32, U32}
+typedef TFindRec = struct {
+  UnicodeString,
+  U32,
+  U32,
+  U32,
+  struct {U32, U32},
+  struct {U32, U32},
+  struct {U32, U32},
+  UnicodeString,
+  S32
+}
+
+global WIZARDFORM: TWizardForm
+global UNINSTALLPROGRESSFORM: TUninstallProgressForm
+
+external function Exec(Filename: AnsiString, Params: AnsiString, WorkingDir: AnsiString, ShowCmd: Integer, Wait: TExecWait, *ResultCode: Integer): Boolean
+external function ExpandConstant(S: AnsiString): AnsiString
+external function ExtractTemporaryFiles(Pattern: AnsiString): Integer
+external function FILECOPY(Argument1, Argument2, Argument3)
+external function FindFirst(FileName: AnsiString, *FindRec: TFindRec): Boolean
+external function FindNext(*FindRec: TFindRec): Boolean
+external procedure FindClose(*FindRec: TFindRec)
+external function __stdcall shell32::SHCreateDirectoryExW(Argument1, Argument2, Argument3)
+
+procedure !MAIN()
+begin
+  0x000   0  Ret
+end;
+
+procedure COPYTREE(Argument1: UnicodeString, Argument2: UnicodeString)
+begin
+  0x000   0  PushType      TFindRec
+  0x005   1  PushType      S32
+  0x00A   2  PushType      S32
+  0x00F   3  Assign        LocalVar3 := 0
+  0x01E   3  PushType      UnicodeString
+  0x023   4  Assign        LocalVar4 := Argument2
+  0x02E   4  PushType      S32
+  0x033   5  Assign        LocalVar5 := 0
+  0x042   5  PushVar       LocalVar2
+  0x048   6  Call          shell32::SHCreateDirectoryExW
+  0x04D   6  Pop
+  0x04E   5  Pop
+  0x04F   4  Pop
+  0x050   3  Pop
+  0x051   2  Pop
+  0x052   1  PushType      Boolean
+  0x057   2  PushType      Pointer
+  0x05C   3  SetPtr        LocalVar3 := LocalVar1
+  0x067   3  PushType      UnicodeString
+  0x06C   4  PushType      UnicodeString
+  0x071   5  Assign        LocalVar5 := Argument1
+  0x07C   5  Calculate     LocalVar5 += '\\*'
+  0x090   5  Assign        LocalVar4 := LocalVar5
+  0x09B   5  Pop
+  0x09C   4  PushVar       LocalVar2
+  0x0A2   5  Call          FindFirst
+  0x0A7   5  Pop
+  0x0A8   4  Pop
+  0x0A9   3  Pop
+  0x0AA   2  SetFlag       !LocalVar2
+  0x0B1   2  Pop
+  0x0B2   1  JumpFlag      JumpDestination05
+  0x0B7   1  PushEH        End:0x302 Finally:0x2EA
+  0x0C8   1  PushType      Boolean
+JumpDestination01:
+  0x0CD   2  PushType      Boolean
+  0x0D2   3  PushType      Boolean
+  0x0D7   4  Compare       LocalVar4 := LocalVar1[0x00] != '.'
+  0x0EE   4  JumpFalse     JumpDestination02, LocalVar4
+  0x0F8   4  PushType      Boolean
+  0x0FD   5  Compare       LocalVar5 := LocalVar1[0x00] != '..'
+  0x11A   5  Calculate     LocalVar4 &= LocalVar5
+  0x126   5  Pop
+JumpDestination02:
+  0x127   4  Assign        LocalVar3 := LocalVar4
+  0x132   4  Pop
+  0x133   3  SetFlag       !LocalVar3
+  0x13A   3  Pop
+  0x13B   2  JumpFlag      JumpDestination04
+  0x140   2  PushType      Boolean
+  0x145   3  PushType      U32
+  0x14A   4  Assign        LocalVar4 := LocalVar1[0x01]
+  0x159   4  Calculate     LocalVar4 &= 16
+  0x169   4  Compare       LocalVar3 := LocalVar4 != 0
+  0x17E   4  Pop
+  0x17F   3  SetFlag       !LocalVar3
+  0x186   3  Pop
+  0x187   2  JumpFlag      JumpDestination03
+  0x18C   2  PushType      UnicodeString
+  0x191   3  PushType      UnicodeString
+  0x196   4  Assign        LocalVar4 := Argument2
+  0x1A1   4  Calculate     LocalVar4 += '\\'
+  0x1AF   4  Calculate     LocalVar4 += LocalVar1[0x00]
+  0x1BF   4  Assign        LocalVar3 := LocalVar4
+  0x1CA   4  Pop
+  0x1CB   3  PushType      UnicodeString
+  0x1D0   4  PushType      UnicodeString
+  0x1D5   5  Assign        LocalVar5 := Argument1
+  0x1E0   5  Calculate     LocalVar5 += '\\'
+  0x1EE   5  Calculate     LocalVar5 += LocalVar1[0x00]
+  0x1FE   5  Assign        LocalVar4 := LocalVar5
+  0x209   5  Pop
+  0x20A   4  Call          COPYTREE
+  0x20F   4  Pop
+  0x210   3  Pop
+  0x211   2  Jump          JumpDestination04
+JumpDestination03:
+  0x216   2  PushType      Boolean
+  0x21B   3  PushType      Boolean
+  0x220   4  Assign        LocalVar4 := 0
+  0x22C   4  PushType      UnicodeString
+  0x231   5  PushType      UnicodeString
+  0x236   6  Assign        LocalVar6 := Argument2
+  0x241   6  Calculate     LocalVar6 += '\\'
+  0x24F   6  Calculate     LocalVar6 += LocalVar1[0x00]
+  0x25F   6  Assign        LocalVar5 := LocalVar6
+  0x26A   6  Pop
+  0x26B   5  PushType      UnicodeString
+  0x270   6  PushType      UnicodeString
+  0x275   7  Assign        LocalVar7 := Argument1
+  0x280   7  Calculate     LocalVar7 += '\\'
+  0x28E   7  Calculate     LocalVar7 += LocalVar1[0x00]
+  0x29E   7  Assign        LocalVar6 := LocalVar7
+  0x2A9   7  Pop
+  0x2AA   6  PushVar       LocalVar3
+  0x2B0   7  Call          FILECOPY
+  0x2B5   7  Pop
+  0x2B6   6  Pop
+  0x2B7   5  Pop
+  0x2B8   4  Pop
+  0x2B9   3  Pop
+JumpDestination04:
+  0x2BA   2  PushType      Pointer
+  0x2BF   3  SetPtr        LocalVar3 := LocalVar1
+  0x2CA   3  PushVar       LocalVar2
+  0x2D0   4  Call          FindNext
+  0x2D5   4  Pop
+  0x2D6   3  Pop
+  0x2D7   2  BooleanNot    LocalVar2
+  0x2DD   2  JumpFalse     JumpDestination01, LocalVar2
+  0x2E7   2  Pop
+  0x2E8   1  PopEH         EndTry
+  0x2EA   1  PushType      Pointer
+  0x2EF   2  SetPtr        LocalVar2 := LocalVar1
+  0x2FA   2  Call          FindClose
+  0x2FF   2  Pop
+  0x300   1  PopEH         EndFinally
+JumpDestination05:
+  0x302   1  Ret
+end;
+
+function InitializeSetup(): Boolean
+begin
+  0x000   0  PushType      UnicodeString
+  0x005   1  PushType      UnicodeString
+  0x00A   2  PushType      UnicodeString
+  0x00F   3  PushType      S32
+  0x014   4  PushType      S32
+  0x019   5  PushType      UnicodeString
+  0x01E   6  Assign        LocalVar6 := '*'
+  0x02B   6  PushVar       LocalVar5
+  0x031   7  Call          ExtractTemporaryFiles
+  0x036   7  Pop
+  0x037   6  Pop
+  0x038   5  Pop
+  0x039   4  PushType      UnicodeString
+  0x03E   5  Assign        LocalVar5 := '{tmp}\\payload'
+  0x067   5  PushVar       LocalVar1
+  0x06D   6  Call          ExpandConstant
+  0x072   6  Pop
+  0x073   5  Pop
+  0x074   4  PushType      UnicodeString
+  0x079   5  PushType      UnicodeString
+  0x07E   6  PushType      UnicodeString
+  0x083   7  Assign        LocalVar7 := '{localappdata}'
+  0x0AE   7  PushVar       LocalVar6
+  0x0B4   8  Call          ExpandConstant
+  0x0B9   8  Pop
+  0x0BA   7  Pop
+  0x0BB   6  Assign        LocalVar5 := LocalVar6
+  0x0C6   6  Pop
+  0x0C7   5  Calculate     LocalVar5 += '\\Programs\\Franz'
+  0x0F5   5  Assign        LocalVar2 := LocalVar5
+  0x100   5  Pop
+  0x101   4  PushType      UnicodeString
+  0x106   5  Assign        LocalVar5 := LocalVar2
+  0x111   5  PushType      UnicodeString
+  0x116   6  Assign        LocalVar6 := LocalVar1
+  0x121   6  Call          COPYTREE
+  0x126   6  Pop
+  0x127   5  Pop
+  0x128   4  PushType      UnicodeString
+  0x12D   5  Assign        LocalVar5 := LocalVar2
+  0x138   5  Calculate     LocalVar5 += '\\'
+  0x146   5  Calculate     LocalVar5 += 'Franz.exe'
+  0x168   5  Assign        LocalVar3 := LocalVar5
+  0x173   5  Pop
+  0x174   4  PushType      Boolean
+  0x179   5  PushType      Pointer
+  0x17E   6  SetPtr        LocalVar6 := LocalVar4
+  0x189   6  PushType      TExecWait
+  0x18E   7  Assign        LocalVar7 := 0
+  0x19A   7  PushType      S32
+  0x19F   8  Assign        LocalVar8 := 1
+  0x1AE   8  PushType      UnicodeString
+  0x1B3   9  Assign        LocalVar9 := LocalVar2
+  0x1BE   9  PushType      UnicodeString
+  0x1C3  10  Assign        LocalVar10 := ''
+  0x1D2  10  PushType      UnicodeString
+  0x1D7  11  Assign        LocalVar11 := LocalVar3
+  0x1E2  11  PushVar       LocalVar5
+  0x1E8  12  Call          Exec
+  0x1ED  12  Pop
+  0x1EE  11  Pop
+  0x1EF  10  Pop
+  0x1F0   9  Pop
+  0x1F1   8  Pop
+  0x1F2   7  Pop
+  0x1F3   6  Pop
+  0x1F4   5  Pop
+  0x1F5   4  Assign        ReturnValue := 0
+  0x201   4  Ret
+end;
