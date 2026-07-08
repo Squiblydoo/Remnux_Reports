@@ -1,0 +1,151 @@
+{
+  "network": [],
+  "files": [],
+  "registry": [],
+  "mutexes": [],
+  "processes": [
+    {
+      "api": "KERNEL32.CreateThread",
+      "start_addr": "0x18002d294"
+    }
+  ],
+  "memory": [],
+  "strings": [],
+  "misc": [
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-synch-l1-2-0",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "InitializeCriticalSectionEx",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-fibers-l1-1-1",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsAlloc",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsSetValue",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-fibers-l1-1-2",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsGetValue2",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-localization-l1-2-1",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "LCMapStringEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetSystemTimePreciseAsFileTime",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetTempPath2W",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "kernel32",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "AreFileApisANSI",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-string-l1-1-0",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CompareStringEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "EnumSystemLocalesEx",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-datetime-l1-1-1",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetDateFormatEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetLocaleInfoEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetTimeFormatEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetUserDefaultLocaleName",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "IsValidLocaleName",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-localization-obsolete-l1-2-0",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "LCIDToLocaleName",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "LocaleNameToLCID",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExA",
+      "module": "C:\\Windows\\system32\\PackageServices.dll",
+      "handle": null
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExA",
+      "module": "C:\\Windows\\system32\\PackageServices.dll",
+      "handle": null
+    }
+  ]
+}
