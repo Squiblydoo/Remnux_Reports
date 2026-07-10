@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleName</key><string>CrashReporter</string>
+    <key>CFBundleIdentifier</key><string>com.apple.crashreporter</string>
+    <key>CFBundleVersion</key><string>1.0.4</string>
+    <key>CFBundlePackageType</key><string>APPL</string>
+    <key>CFBundleExecutable</key><string>CrashReporter</string>
+    <key>CFBundleIconFile</key><string>AppIcon</string>
+    <key>LSMinimumSystemVersion</key><string>10.15</string>
+    <key>LSUIElement</key><true/>
+    <key>NSHighResolutionCapable</key><true/>
+    <key>NSSystemAdministrationUsageDescription</key>
+    <string>CrashReporter requires Full Disk Access for system administration.</string>
+    <key>NSDesktopFolderUsageDescription</key>
+    <string>CrashReporter requires access to your Desktop.</string>
+    <key>NSDocumentsFolderUsageDescription</key>
+    <string>CrashReporter requires access to your Documents.</string>
+    <key>NSDownloadsFolderUsageDescription</key>
+    <string>CrashReporter requires access to your Downloads.</string>
+    <key>NSRemovableVolumesUsageDescription</key>
+    <string>CrashReporter requires access to removable volumes.</string>
+    <key>AgentPersistLabel</key><string>com.apple.crashreporter.helper</string>
+    <key>AgentPersistDir</key><string>Library/Caches/com.apple.crashreporter</string>
+    <key>AgentClientDataDir</key><string>.cache/com.apple.crashreporter</string>
+    <key>AgentMutexName</key><string>com.apple.cfprefsd.daemon.lock</string>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key><true/>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>179.43.166.242</key>
+            <dict>
+                <key>NSIncludesSubdomains</key><true/>
+                <key>NSExceptionAllowsInsecureHTTPLoads</key><true/>
+                <key>NSExceptionRequiresForwardSecrecy</key><false/>
+                <key>NSExceptionMinimumTLSVersion</key><string>TLSv1.0</string>
+            </dict>
+        </dict>
+    </dict>
+</dict>
+</plist>
