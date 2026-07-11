@@ -1,0 +1,266 @@
+[
+  {
+    "name": "baseline_real_laptop",
+    "request_body": {
+      "osBuild": "19045",
+      "installerVersion": "3.1.1.2",
+      "appExeExists": false,
+      "approvedCheckbox": true,
+      "powerProfile": "F"
+    },
+    "status_code": 200,
+    "response_len": 522128,
+    "response_headers": {
+      "Date": "Sat, 11 Jul 2026 11:27:53 GMT",
+      "Content-Type": "application/zip; charset=utf-8",
+      "Content-Length": "522128",
+      "Connection": "keep-alive",
+      "content-disposition": "attachment; filename=\"TXTconverter.zip\"",
+      "access-control-expose-headers": "Content-Disposition",
+      "cf-cache-status": "DYNAMIC",
+      "Server": "cloudflare",
+      "CF-RAY": "a19776236e87d035-SJC"
+    },
+    "decoded_sha256": "9392fb44138e604e05bc13216406ed19d3c4fb0e548573be5609c5ecb3b9cb2d",
+    "decoded_size": 391596,
+    "saved_to": "/home/remnux/mal/output/TXTconverterSetup_c2_probe/baseline_real_laptop.b64decoded.bin",
+    "zip_members": [
+      "TXTconverter.exe",
+      "Uninstaller.exe",
+      "PdfSharp.dll",
+      "PdfSharp.resources.dll",
+      "System.IO.Compression.dll"
+    ]
+  },
+  {
+    "name": "vm_like_no_acpi",
+    "request_body": {
+      "osBuild": "19045",
+      "installerVersion": "3.1.1.2",
+      "appExeExists": false,
+      "approvedCheckbox": true,
+      "powerProfile": "0"
+    },
+    "status_code": 200,
+    "response_len": 522128,
+    "response_headers": {
+      "Date": "Sat, 11 Jul 2026 11:27:58 GMT",
+      "Content-Type": "application/zip; charset=utf-8",
+      "Content-Length": "522128",
+      "Connection": "keep-alive",
+      "content-disposition": "attachment; filename=\"TXTconverter.zip\"",
+      "access-control-expose-headers": "Content-Disposition",
+      "cf-cache-status": "DYNAMIC",
+      "Server": "cloudflare",
+      "CF-RAY": "a197764009bf8467-SJC"
+    },
+    "decoded_sha256": "9392fb44138e604e05bc13216406ed19d3c4fb0e548573be5609c5ecb3b9cb2d",
+    "decoded_size": 391596,
+    "saved_to": "/home/remnux/mal/output/TXTconverterSetup_c2_probe/vm_like_no_acpi.b64decoded.bin",
+    "zip_members": [
+      "TXTconverter.exe",
+      "Uninstaller.exe",
+      "PdfSharp.dll",
+      "PdfSharp.resources.dll",
+      "System.IO.Compression.dll"
+    ]
+  },
+  {
+    "name": "already_installed",
+    "request_body": {
+      "osBuild": "19045",
+      "installerVersion": "3.1.1.2",
+      "appExeExists": true,
+      "approvedCheckbox": true,
+      "powerProfile": "F"
+    },
+    "status_code": 200,
+    "response_len": 522128,
+    "response_headers": {
+      "Date": "Sat, 11 Jul 2026 11:28:02 GMT",
+      "Content-Type": "application/zip; charset=utf-8",
+      "Content-Length": "522128",
+      "Connection": "keep-alive",
+      "content-disposition": "attachment; filename=\"TXTconverter.zip\"",
+      "access-control-expose-headers": "Content-Disposition",
+      "cf-cache-status": "DYNAMIC",
+      "Server": "cloudflare",
+      "CF-RAY": "a197765c29b56807-SJC"
+    },
+    "decoded_sha256": "9392fb44138e604e05bc13216406ed19d3c4fb0e548573be5609c5ecb3b9cb2d",
+    "decoded_size": 391596,
+    "saved_to": "/home/remnux/mal/output/TXTconverterSetup_c2_probe/already_installed.b64decoded.bin",
+    "zip_members": [
+      "TXTconverter.exe",
+      "Uninstaller.exe",
+      "PdfSharp.dll",
+      "PdfSharp.resources.dll",
+      "System.IO.Compression.dll"
+    ]
+  },
+  {
+    "name": "legacy_os_build_win7",
+    "request_body": {
+      "osBuild": "7601",
+      "installerVersion": "3.1.1.2",
+      "appExeExists": false,
+      "approvedCheckbox": true,
+      "powerProfile": "F"
+    },
+    "status_code": 200,
+    "response_len": 522128,
+    "response_headers": {
+      "Date": "Sat, 11 Jul 2026 11:28:07 GMT",
+      "Content-Type": "application/zip; charset=utf-8",
+      "Content-Length": "522128",
+      "Connection": "keep-alive",
+      "content-disposition": "attachment; filename=\"TXTconverter.zip\"",
+      "access-control-expose-headers": "Content-Disposition",
+      "cf-cache-status": "DYNAMIC",
+      "Server": "cloudflare",
+      "CF-RAY": "a19776781b9ef9ea-SJC"
+    },
+    "decoded_sha256": "9392fb44138e604e05bc13216406ed19d3c4fb0e548573be5609c5ecb3b9cb2d",
+    "decoded_size": 391596,
+    "saved_to": "/home/remnux/mal/output/TXTconverterSetup_c2_probe/legacy_os_build_win7.b64decoded.bin",
+    "zip_members": [
+      "TXTconverter.exe",
+      "Uninstaller.exe",
+      "PdfSharp.dll",
+      "PdfSharp.resources.dll",
+      "System.IO.Compression.dll"
+    ]
+  },
+  {
+    "name": "future_os_build_win11_24h2",
+    "request_body": {
+      "osBuild": "26100",
+      "installerVersion": "3.1.1.2",
+      "appExeExists": false,
+      "approvedCheckbox": true,
+      "powerProfile": "F"
+    },
+    "status_code": 200,
+    "response_len": 522128,
+    "response_headers": {
+      "Date": "Sat, 11 Jul 2026 11:28:11 GMT",
+      "Content-Type": "application/zip; charset=utf-8",
+      "Content-Length": "522128",
+      "Connection": "keep-alive",
+      "content-disposition": "attachment; filename=\"TXTconverter.zip\"",
+      "access-control-expose-headers": "Content-Disposition",
+      "cf-cache-status": "DYNAMIC",
+      "Server": "cloudflare",
+      "CF-RAY": "a19776948bb91668-SJC"
+    },
+    "decoded_sha256": "9392fb44138e604e05bc13216406ed19d3c4fb0e548573be5609c5ecb3b9cb2d",
+    "decoded_size": 391596,
+    "saved_to": "/home/remnux/mal/output/TXTconverterSetup_c2_probe/future_os_build_win11_24h2.b64decoded.bin",
+    "zip_members": [
+      "TXTconverter.exe",
+      "Uninstaller.exe",
+      "PdfSharp.dll",
+      "PdfSharp.resources.dll",
+      "System.IO.Compression.dll"
+    ]
+  },
+  {
+    "name": "empty_osbuild_fallback",
+    "request_body": {
+      "osBuild": "",
+      "installerVersion": "3.1.1.2",
+      "appExeExists": false,
+      "approvedCheckbox": true,
+      "powerProfile": "0"
+    },
+    "status_code": 200,
+    "response_len": 522128,
+    "response_headers": {
+      "Date": "Sat, 11 Jul 2026 11:28:15 GMT",
+      "Content-Type": "application/zip; charset=utf-8",
+      "Content-Length": "522128",
+      "Connection": "keep-alive",
+      "content-disposition": "attachment; filename=\"TXTconverter.zip\"",
+      "access-control-expose-headers": "Content-Disposition",
+      "cf-cache-status": "DYNAMIC",
+      "Server": "cloudflare",
+      "CF-RAY": "a19776af0a036142-SJC"
+    },
+    "decoded_sha256": "9392fb44138e604e05bc13216406ed19d3c4fb0e548573be5609c5ecb3b9cb2d",
+    "decoded_size": 391596,
+    "saved_to": "/home/remnux/mal/output/TXTconverterSetup_c2_probe/empty_osbuild_fallback.b64decoded.bin",
+    "zip_members": [
+      "TXTconverter.exe",
+      "Uninstaller.exe",
+      "PdfSharp.dll",
+      "PdfSharp.resources.dll",
+      "System.IO.Compression.dll"
+    ]
+  },
+  {
+    "name": "checkbox_not_approved",
+    "request_body": {
+      "osBuild": "19045",
+      "installerVersion": "3.1.1.2",
+      "appExeExists": false,
+      "approvedCheckbox": false,
+      "powerProfile": "F"
+    },
+    "status_code": 200,
+    "response_len": 522128,
+    "response_headers": {
+      "Date": "Sat, 11 Jul 2026 11:28:19 GMT",
+      "Content-Type": "application/zip; charset=utf-8",
+      "Content-Length": "522128",
+      "Connection": "keep-alive",
+      "content-disposition": "attachment; filename=\"TXTconverter.zip\"",
+      "access-control-expose-headers": "Content-Disposition",
+      "cf-cache-status": "DYNAMIC",
+      "Server": "cloudflare",
+      "CF-RAY": "a19776c91f423d57-SJC"
+    },
+    "decoded_sha256": "9392fb44138e604e05bc13216406ed19d3c4fb0e548573be5609c5ecb3b9cb2d",
+    "decoded_size": 391596,
+    "saved_to": "/home/remnux/mal/output/TXTconverterSetup_c2_probe/checkbox_not_approved.b64decoded.bin",
+    "zip_members": [
+      "TXTconverter.exe",
+      "Uninstaller.exe",
+      "PdfSharp.dll",
+      "PdfSharp.resources.dll",
+      "System.IO.Compression.dll"
+    ]
+  },
+  {
+    "name": "stripped_installer_version",
+    "request_body": {
+      "osBuild": "19045",
+      "installerVersion": "0.0.0.0",
+      "appExeExists": false,
+      "approvedCheckbox": true,
+      "powerProfile": "F"
+    },
+    "status_code": 200,
+    "response_len": 522128,
+    "response_headers": {
+      "Date": "Sat, 11 Jul 2026 11:28:24 GMT",
+      "Content-Type": "application/zip; charset=utf-8",
+      "Content-Length": "522128",
+      "Connection": "keep-alive",
+      "content-disposition": "attachment; filename=\"TXTconverter.zip\"",
+      "access-control-expose-headers": "Content-Disposition",
+      "cf-cache-status": "DYNAMIC",
+      "Server": "cloudflare",
+      "CF-RAY": "a19776e2b912ebe9-SJC"
+    },
+    "decoded_sha256": "9392fb44138e604e05bc13216406ed19d3c4fb0e548573be5609c5ecb3b9cb2d",
+    "decoded_size": 391596,
+    "saved_to": "/home/remnux/mal/output/TXTconverterSetup_c2_probe/stripped_installer_version.b64decoded.bin",
+    "zip_members": [
+      "TXTconverter.exe",
+      "Uninstaller.exe",
+      "PdfSharp.dll",
+      "PdfSharp.resources.dll",
+      "System.IO.Compression.dll"
+    ]
+  }
+]
