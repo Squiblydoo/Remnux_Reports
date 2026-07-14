@@ -1,0 +1,346 @@
+{
+  "network": [],
+  "files": [],
+  "registry": [],
+  "mutexes": [],
+  "processes": [],
+  "memory": [],
+  "strings": [],
+  "misc": [
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-synch-l1-2-0",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "InitializeCriticalSectionEx",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-fibers-l1-1-1",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsAlloc",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsSetValue",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-synch-l1-2-0",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "InitializeCriticalSectionEx",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-fibers-l1-1-1",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsAlloc",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsGetValue",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsSetValue",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-localization-l1-2-1",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "LCMapStringEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsAlloc",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsFree",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsGetValue",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsSetValue",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "InitializeCriticalSectionEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "InitOnceExecuteOnce",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CreateEventExW",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CreateSemaphoreW",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CreateSemaphoreExW",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CreateThreadpoolTimer",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "SetThreadpoolTimer",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "WaitForThreadpoolTimerCallbacks",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CloseThreadpoolTimer",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CreateThreadpoolWait",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "SetThreadpoolWait",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CloseThreadpoolWait",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlushProcessWriteBuffers",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FreeLibraryWhenCallbackReturns",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetCurrentProcessorNumber",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CreateSymbolicLinkW",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetCurrentPackageId",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetTickCount64",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetFileInformationByHandleEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "SetFileInformationByHandle",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetSystemTimePreciseAsFileTime",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "InitializeConditionVariable",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "WakeConditionVariable",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "WakeAllConditionVariable",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "SleepConditionVariableCS",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "InitializeSRWLock",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "AcquireSRWLockExclusive",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "TryAcquireSRWLockExclusive",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "ReleaseSRWLockExclusive",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "SleepConditionVariableSRW",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CreateThreadpoolWork",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "SubmitThreadpoolWork",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CloseThreadpoolWork",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CompareStringEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetLocaleInfoEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "LCMapStringEx",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "kernel32",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "AreFileApisANSI",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-string-l1-1-0",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CompareStringEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "EnumSystemLocalesEx",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-datetime-l1-1-1",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetDateFormatEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetLocaleInfoEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetTimeFormatEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetUserDefaultLocaleName",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "IsValidLocaleName",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-localization-obsolete-l1-2-0",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "LCIDToLocaleName",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "LocaleNameToLCID",
+      "resolved": true
+    }
+  ]
+}

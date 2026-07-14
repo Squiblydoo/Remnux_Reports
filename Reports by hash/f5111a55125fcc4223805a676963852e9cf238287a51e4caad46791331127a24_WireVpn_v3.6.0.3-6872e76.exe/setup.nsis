@@ -1,0 +1,1235 @@
+; NSIS script NSIS-2
+; Install
+
+SetCompressor lzma
+SetCompressorDictSize 1024
+
+; ------------------------------------------------------------------------
+; HEADER SIZE: 35619
+; START HEADER SIZE: 300
+; MAX STRING LENGTH: 1024
+; STRING CHARS: 3385
+
+OutFile [NSIS].exe
+!include WinMessages.nsh
+
+ShowInstDetails show
+InstallDirRegKey HKLM "${PRODUCT_UNINST_KEY}" "UninstallString"
+LicenseBkColor /windows
+
+
+; ------------------------------------------------------------------------
+; LANG TABLES: 1
+; LANG STRINGS: 51
+
+Name "Wire Vpn 3.6.0.3"
+BrandingText " "
+
+; LANG: 2052
+LangString LSTR_0 2052 " "
+LangString LSTR_1 2052 "ÿ °²×°"
+LangString LSTR_2 2052 "Wire Vpn 3.6.0.3"
+LangString LSTR_5 2052 "ÎÞ·¨Ð´Èë: "
+LangString LSTR_8 2052 "ÎÞ·¨ÕÒµ½·ûºÅ: "
+LangString LSTR_9 2052 "ÎÞ·¨¼ÓÔØ: "
+LangString LSTR_10 2052 "´´½¨ÎÄ¼þ¼Ð: "
+LangString LSTR_11 2052 "´´½¨¿ì½Ý·½Ê½: "
+LangString LSTR_12 2052 "´´½¨Ð¶ÔØ³ÌÐò: "
+LangString LSTR_13 2052 "É¾³ýÎÄ¼þ: "
+LangString LSTR_14 2052 "ÖØÐÂÆô¶¯ºóÉ¾³ý: "
+LangString LSTR_15 2052 "ÕýÔÚ´´½¨¿ì½Ý·½Ê½Ê±·¢Éú´íÎó: "
+LangString LSTR_16 2052 "ÕýÔÚ´´½¨Ê±·¢Éú´íÎó: "
+LangString LSTR_17 2052 "ÕýÔÚ½âÑ¹ËõÊý¾Ý·¢Éú´íÎó£¡ÒÑËð»µµÄ°²×°³ÌÐò£¿"
+LangString LSTR_20 2052 "ÔËÐÐ: "
+LangString LSTR_21 2052 "³éÈ¡: "
+LangString LSTR_22 2052 "³éÈ¡: ÎÞ·¨Ð´ÈëÎÄ¼þ "
+LangString LSTR_23 2052 "°²×°Ëð»Ù: ÎÞÐ§µÄ²Ù×÷´úÂë "
+LangString LSTR_24 2052 "Ã»ÓÐ OLE ÓÃÓÚ: "
+LangString LSTR_25 2052 "Êä³öÄ¿Â¼: "
+LangString LSTR_26 2052 "ÒÆ³ýÄ¿Â¼: "
+LangString LSTR_29 2052 "ÒÑÌø¹ý: "
+LangString LSTR_30 2052 "¸´ÖÆÏ¸½Úµ½¼ôÌù°å "
+LangString LSTR_36 2052 "ËÎÌå"
+LangString LSTR_37 2052 9
+LangString LSTR_38 2052 "²»ÄÜ´ò¿ªÒªÐ´ÈëµÄÎÄ¼þ: $\r$\n$\t$\"$V0$\"$\r$\nµ¥»÷ [Abort] ·ÅÆú°²×°£¬$\r$\n [Retry] ÖØÐÂ³¢ÊÔÐ´ÈëÎÄ¼þ£¬»ò$\r$\n [Ignore] ºöÂÔÕâ¸öÎÄ¼þ¡£"
+LangString LSTR_39 2052 "×Ô¶¨Òå"
+LangString LSTR_40 2052 "È¡Ïû(&C)"
+LangString LSTR_41 2052 "< ÉÏÒ»²½(&B)"
+LangString LSTR_42 2052 "°²×°(&I)"
+LangString LSTR_43 2052 "µ¥»÷ [°²×°(I)] ¿ªÊ¼°²×°½ø³Ì¡£"
+LangString LSTR_44 2052 ": ÕýÔÚ°²×°"
+LangString LSTR_45 2052 "ÏÔÊ¾Ï¸½Ú(&D)"
+LangString LSTR_46 2052 "ÒÑÍê³É"
+LangString LSTR_47 2052 "ÏÂÒ»²½(&N) >"
+LangString LSTR_48 2052 "µ¥»÷ [ÏÂÒ»²½(N)] ¼ÌÐø¡£"
+LangString LSTR_49 2052 " "
+LangString LSTR_50 2052 "¹Ø±Õ(&L)"
+
+
+InstType ""
+InstallDir "$PROGRAMFILES\WireVpnPc"
+; install_directory_auto_append = "WireVpnPc"
+; wininit = "$WINDIR\wininit.ini"
+
+
+; ------------------------------------------------------------------------
+; PAGES: 3
+
+; Page 0
+Page custom func_551 "" /ENABLECANCEL
+
+; Page 1
+Page instfiles "" func_804 ""
+  CompletedText ""
+  DetailsButtonText ""
+
+; ; Page 2
+; Page COMPLETED
+
+
+; ------------------------------------------------------------------------
+Function .onGUIInit
+  GetDlgItem $var33 $HWNDPARENT 1037
+  CreateFont $var34 4294967259 4294967258 700
+  SendMessage $var33 0x0030 $var34 0
+  SetCtlColors $var33 "" 0xFFFFFF
+  GetDlgItem $var33 $HWNDPARENT 1038
+  SetCtlColors $var33 "" 0xFFFFFF
+  GetDlgItem $var33 $HWNDPARENT 1034
+  SetCtlColors $var33 "" 0xFFFFFF
+  GetDlgItem $var33 $HWNDPARENT 1039
+  SetCtlColors $var33 "" 0xFFFFFF
+  GetDlgItem $var33 $HWNDPARENT 1028
+  SetCtlColors $var33 /BRANDING ""
+  GetDlgItem $var33 $HWNDPARENT 1256
+  SetCtlColors $var33 /BRANDING ""
+  SendMessage $var33 0x000C 0 "STR:ÿ "
+FunctionEnd
+
+Function .onUserAbort
+  Return
+label_62:
+  Push $V1
+  Exch
+  Pop $V1
+  Exch
+  Push $V0
+  Exch
+  Pop $V0
+  Exch
+  Push $V2
+  Push $V3
+  Push $V4
+  Push $V5
+  Push $V6
+  Push $V7
+  Push $V8
+  Push $V9
+  Push $R3
+  Push $R4
+  Push $R5
+  Push $R6
+  Push $R7
+  Push $R8
+  Push $R9
+  ClearErrors
+label_86:
+  StrCpy $R9 $V0 1 -1
+  StrCmp $R9 "\" 0 label_90 ; While: $R9 == "\"
+    StrCpy $V0 $V0 -1
+  ; EndWhile
+label_90:
+  IfFileExists "$V0\*.*" 0 label_245 ; If: FileExists "$V0\*.*"
+    StrCpy $V3 ""
+    StrCpy $V4 ""
+    StrCpy $V5 ""
+    StrCpy $V6 ""
+    StrCpy $V8 0
+    StrCpy $R3 ""
+    StrCpy $R4 ""
+    StrCpy $R5 ""
+    ; Do
+label_99:
+      StrCpy $R9 $V1 1
+      StrCpy $V1 $V1 "" 1
+    StrCmp $R9 " " label_99 ; LoopWhile: $R9 == " "
+    StrCmp $R9 "" label_129 ; If: $R9 != ""
+      StrCmp $R9 "/" 0 label_99
+      StrCpy $V9 -1
+      ; Do
+label_105:
+        IntOp $V9 $V9 + 1
+        StrCpy $R9 $V1 1 $V9
+        StrCmp $R9 "" label_109
+      StrCmp $R9 "/" 0 label_105 ; LoopUntil: $R9 != "/"
+label_109:
+      StrCpy $V8 $V1 $V9
+      StrCpy $V8 $V8 "" 2
+label_111:
+      StrCpy $R9 $V8 "" -1
+      StrCmp $R9 " " 0 label_115 ; While: $R9 == " "
+        StrCpy $V8 $V8 -1
+      ; EndWhile
+label_115:
+      StrCpy $R9 $V1 2
+      StrCpy $V1 $V1 "" $V9
+      StrCmp $R9 "M=" 0 label_120 ; If: $R9 == "M="
+        StrCpy $V4 $V8
+        Goto label_99
+      ; EndIf
+label_120:
+      StrCmp $R9 "S=" 0 label_123 ; If: $R9 == "S="
+        StrCpy $V6 $V8
+        Goto label_99
+      ; EndIf
+label_123:
+      StrCmp $R9 "G=" 0 label_245
+      StrCpy $V7 $V8
+      StrCmp $V7 "" label_128
+      StrCmp $V7 1 label_128
+      StrCmp $V7 0 0 label_245
+label_128:
+      Goto label_99
+    ; EndIf
+label_129:
+    StrCmp $V6 "" label_159 ; If: $V6 != ""
+      StrCpy $V9 0
+label_131:
+      StrCpy $R9 $V6 1 $V9
+      StrCmp $R9 "" label_136 ; While: $R9 != ""
+        StrCmp $R9 ":" label_136
+        IntOp $V9 $V9 + 1
+      ; EndWhile
+label_136:
+      StrCpy $V5 $V6 $V9
+      IntOp $V9 $V9 + 1
+      StrCpy $V1 $V6 1 -1
+      StrCpy $V6 $V6 -1 $V9
+      StrCmp $V5 "" label_142 ; If: $V5 != ""
+        IntOp $V5 $V5 + 0
+      ; EndIf
+label_142:
+      StrCmp $V6 "" label_144 ; If: $V6 != ""
+        IntOp $V6 $V6 + 0
+      ; EndIf
+label_144:
+      StrCmp $V1 "B" 0 label_148 ; If: $V1 == "B"
+        StrCpy $V1 1
+        StrCpy $V2 "bytes"
+        Goto label_159
+      ; EndIf
+label_148:
+      StrCmp $V1 "K" 0 label_152 ; If: $V1 == "K"
+        StrCpy $V1 1024
+        StrCpy $V2 "Kb"
+        Goto label_159
+      ; EndIf
+label_152:
+      StrCmp $V1 "M" 0 label_156 ; If: $V1 == "M"
+        StrCpy $V1 1048576
+        StrCpy $V2 "Mb"
+        Goto label_159
+      ; EndIf
+label_156:
+      StrCmp $V1 "G" 0 label_245
+      StrCpy $V1 1073741824
+      StrCpy $V2 "Gb"
+    ; EndIf
+label_159:
+    StrCmp $V4 "" 0 label_161 ; If: $V4 == ""
+      StrCpy $V4 "*.*"
+    ; EndIf
+label_161:
+    StrCmp $V7 "" 0 label_163 ; If: $V7 == ""
+      StrCpy $V7 1
+    ; EndIf
+label_163:
+    StrCpy $V8 1
+    Push $V0
+    SetDetailsPrint textonly
+    ; Do
+label_166:
+      IntOp $V8 $V8 - 1
+      Pop $R8
+      FindFirst $V0 $R7 "$R8\$V4"
+      IfErrors label_204
+      StrCmp $R7 "." 0 label_177
+      FindNext $V0 $R7
+      StrCmp $R7 ".." 0 label_177
+      FindNext $V0 $R7
+      IfErrors 0 label_177
+      FindClose $V0
+      Goto label_204
+      ; Do
+label_177:
+        IfFileExists "$R8\$R7\*.*" 0 label_180
+        IntOp $R5 $R5 + 1
+        Goto label_201
+label_180:
+        StrCpy $R6 0
+        StrCmp "$V5$V6" "" 0 label_184
+        IntOp $R4 $R4 + 1
+        Goto label_201
+label_184:
+        FileOpen $V9 "$R8\$R7" r
+        IfErrors label_188
+        FileSeek $V9 0 END $R6
+        FileClose $V9
+label_188:
+        StrCmp $V5 "" label_190
+        IntCmp $R6 $V5 0 label_201
+label_190:
+        StrCmp $V6 "" label_192
+        IntCmp $R6 $V6 0 0 label_201
+label_192:
+        IntOp $R4 $R4 + 1
+        Call Initialize_____Plugins
+        SetOverwrite off
+        File "$PLUGINSDIR\System.dll"
+        SetDetailsPrint lastused
+        Push $R6
+        Push "+"
+        Push $R3
+        CallInstDLL "$PLUGINSDIR\System.dll" "Int64Op"
+        Pop $R3
+label_201:
+        FindNext $V0 $R7
+      IfErrors 0 label_177 ; LoopUntil: not Errors
+      FindClose $V0
+label_204:
+      StrCmp "$V5$V6" "" label_215
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push $V1
+      Push "/"
+      Push $R3
+      CallInstDLL "$PLUGINSDIR\System.dll" "Int64Op"
+      Pop $V9
+      DetailPrint "Size:$V9 $V2  Files:$R4  Folders:$R5"
+      Goto label_216
+label_215:
+      DetailPrint "Files:$R4  Folders:$R5"
+label_216:
+      StrCmp $V7 0 label_232
+      FindFirst $V0 $R7 "$R8\*.*"
+      StrCmp $R7 "." 0 label_225
+      FindNext $V0 $R7
+      StrCmp $R7 ".." 0 label_225
+      FindNext $V0 $R7
+      IfErrors 0 label_225
+      FindClose $V0
+    StrCmp $V8 0 label_232 label_166 ; LoopUntil: $V8 != 0
+    ; Do
+label_225:
+      IfFileExists "$R8\$R7\*.*" 0 label_228
+      Push "$R8\$R7"
+      IntOp $V8 $V8 + 1
+label_228:
+      FindNext $V0 $R7
+    IfErrors 0 label_225 ; LoopUntil: not Errors
+    FindClose $V0
+    StrCmp $V8 0 label_232 label_166
+label_232:
+    StrCmp $R3 "" label_241 ; If: $R3 != ""
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push $V1
+      Push "/"
+      Push $R3
+      CallInstDLL "$PLUGINSDIR\System.dll" "Int64Op"
+      Pop $R3
+    ; EndIf
+label_241:
+    StrCpy $V2 $R4
+    StrCpy $V1 $R5
+    StrCpy $V0 $R3
+  ; Else
+label_245:
+    SetErrors
+    StrCpy $V0 ""
+    StrCpy $V1 ""
+    StrCpy $V2 ""
+  ; EndIf
+label_249:
+  SetDetailsPrint both
+  Pop $R9
+  Pop $R8
+  Pop $R7
+  Pop $R6
+  Pop $R5
+  Pop $R4
+  Pop $R3
+  Pop $V9
+  Pop $V8
+  Pop $V7
+  Pop $V6
+  Pop $V5
+  Pop $V4
+  Pop $V3
+  Push $V2
+  Exch
+  Pop $V2
+  Exch
+  Push $V1
+  Exch
+  Pop $V1
+  Exch 2
+  Push $V0
+  Exch
+  Pop $V0
+  Return
+label_276:
+  Pop $V0
+  Pop $V1
+  Pop $V2
+  IntFmt $V0 "0x%08X" $V0
+  WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\WireVpnPc" "EstimatedSize" $V0
+FunctionEnd
+
+  WriteINIStr "$INSTDIR\Wire Vpn.url" "InternetShortcut" "URL" "www.wirevpn.app"
+  CreateShortCut "$SMPROGRAMS\Wire Vpn\WireVpn¹ÙÍø.lnk" "$INSTDIR\Wire Vpn.url"
+  CreateShortCut "$SMPROGRAMS\Wire Vpn\uninstall.lnk" "$INSTDIR\uninstall.exe"
+  Return
+  WriteUninstaller "$INSTDIR\uninstall.exe" ;  "$INSTDIR\$INSTDIR\uninstall.exe"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\WireVpnPc" "DisplayName" "Wire Vpn"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\WireVpnPc" "UninstallString" "$\"$INSTDIR\uninstall.exe$\""
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\WireVpnPc" "DisplayIcon" "$\"$INSTDIR\WireVpn.exe$\""
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\WireVpnPc" "InstallLocation" $INSTDIR
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\WireVpnPc" "Publisher" "Wire Vpn"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\WireVpnPc" "HelpLink" "www.wirevpn.app"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\WireVpnPc" "DisplayVersion" "3.6.0.3"
+  Return
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "WM_SJONELINKAGREEMENT"
+  Push $var32
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "NSISScriptSendMessage"
+  Return
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "WM_SJONECUSTOMINSTALL"
+  Push $var32
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "NSISScriptSendMessage"
+  Return
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "WM_SJMSGLOOPSTOP"
+  Push $var32
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "NSISScriptSendMessage"
+  Return
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "WM_SJMSGLOOPSTOP_RETURN"
+  Push $var32
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "NSISScriptSendMessage"
+  Return
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "WM_SJONECHECKSTATUS"
+  Push $var32
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "NSISScriptSendMessage"
+  Return
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "WM_SJTWOSURE"
+  Push $var32
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "NSISScriptSendMessage"
+  Return
+  Command0
+  Command0
+  Command0
+  Command0
+  Command0
+  Command0
+  Command0
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "ÇëÑ¡Ôñ°²×°Ä¿Â¼"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "NSISOpenFolderDialog"
+  Pop $V0
+  StrCmp $V0 -1 0 label_352
+  Goto label_523
+label_352:
+  StrCpy $INSTDIR "$V0\WireVpnPc"
+  Push $INSTDIR
+  Call :label_356
+  Goto label_389
+label_356:
+  Push $V0
+  Exch
+  Pop $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $V0 2
+  StrCmp $V1 "\\" label_368
+  StrCpy $V2 $V1 1 1
+  StrCmp $V2 ":" 0 label_381
+  StrCpy $V0 $V1
+  Goto label_382
+label_368:
+  StrCpy $V2 1
+  StrCpy $V3 ""
+label_370:
+  IntOp $V2 $V2 + 1
+  StrCpy $V1 $V0 1 $V2
+  StrCmp "$V1$V3" "" label_381
+  StrCmp $V1 "" label_378
+  StrCmp $V1 "\" 0 label_370
+  StrCmp $V3 1 label_378
+  StrCpy $V3 1
+  Goto label_370
+label_378:
+  StrCpy $V0 $V0 $V2
+  StrCpy $V2 $V0 1 -1
+  StrCmp $V2 "\" 0 label_382
+label_381:
+  StrCpy $V0 ""
+label_382:
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Push $V0
+  Exch
+  Pop $V0
+  Return
+label_389:
+  Pop $V1
+  Push $V1
+  Push "/D=F /S=M"
+  Call :label_394
+  Goto label_500
+label_394:
+  Push $V1
+  Exch
+  Pop $V1
+  Exch
+  Push $V0
+  Exch
+  Pop $V0
+  Exch
+  Push $V2
+  Push $V3
+  Push $V4
+  Push $V5
+  Push $V6
+  ClearErrors
+label_408:
+  StrCpy $V2 $V0 1 -1
+  StrCmp $V2 "\" 0 label_412
+  StrCpy $V0 $V0 -1
+  Goto label_408
+label_412:
+  IfFileExists "$V0\NUL" 0 label_488
+  StrCpy $V5 ""
+  StrCpy $V6 ""
+label_415:
+  StrCpy $V2 $V1 1
+  StrCpy $V1 $V1 "" 1
+  StrCmp $V2 " " label_415
+  StrCmp $V2 "" label_443
+  StrCmp $V2 "/" 0 label_415
+  StrCpy $V3 -1
+label_421:
+  IntOp $V3 $V3 + 1
+  StrCpy $V2 $V1 1 $V3
+  StrCmp $V2 "" label_425
+  StrCmp $V2 "/" 0 label_421
+label_425:
+  StrCpy $V4 $V1 $V3
+  StrCpy $V4 $V4 "" 2
+label_427:
+  StrCpy $V2 $V4 1 -1
+  StrCmp $V2 " " 0 label_431
+  StrCpy $V4 $V4 -1
+  Goto label_427
+label_431:
+  StrCpy $V2 $V1 2
+  StrCpy $V1 $V1 "" $V3
+  StrCmp $V2 "D=" 0 label_440
+  StrCpy $V5 $V4
+  StrCmp $V5 "" label_439
+  StrCmp $V5 "T" label_439
+  StrCmp $V5 "O" label_439
+  StrCmp $V5 "F" 0 label_488
+label_439:
+  Goto label_415
+label_440:
+  StrCmp $V2 "S=" 0 label_488
+  StrCpy $V6 $V4
+  Goto label_415
+label_443:
+  StrCmp $V5 "" 0 label_445
+  StrCpy $V5 "T"
+label_445:
+  StrCmp $V6 "" 0 label_448
+  StrCpy $V6 1
+  Goto label_459
+label_448:
+  StrCmp $V6 "B" 0 label_451
+  StrCpy $V6 1
+  Goto label_459
+label_451:
+  StrCmp $V6 "K" 0 label_454
+  StrCpy $V6 1024
+  Goto label_459
+label_454:
+  StrCmp $V6 "M" 0 label_457
+  StrCpy $V6 1048576
+  Goto label_459
+label_457:
+  StrCmp $V6 "G" 0 label_488
+  StrCpy $V6 1073741824
+label_459:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::GetDiskFreeSpaceExA(t, *l, *l, *l)i(r0,.r2,.r3,.)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  StrCmp $V5 "T" 0 label_467
+  StrCpy $V0 $V3
+  Goto label_479
+label_467:
+  StrCmp $V5 "O" 0 label_477
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push $V2
+  Push "-"
+  Push $V3
+  CallInstDLL "$PLUGINSDIR\System.dll" "Int64Op"
+  Pop $V0
+  Goto label_479
+label_477:
+  StrCmp $V5 "F" 0 label_479
+  StrCpy $V0 $V2
+label_479:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push $V6
+  Push "/"
+  Push $V0
+  CallInstDLL "$PLUGINSDIR\System.dll" "Int64Op"
+  Pop $V0
+  Goto label_490
+label_488:
+  SetErrors
+  StrCpy $V0 ""
+label_490:
+  Pop $V6
+  Pop $V5
+  Pop $V4
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Push $V0
+  Exch
+  Pop $V0
+  Return
+label_500:
+  Pop $V2
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push $V2
+  Push "WM_SJTHREEUPDATEFREESPACE"
+  Push $var32
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "NSISScriptSendMessage"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push 15
+  Push "WM_SJTHREEUPDATEREQUIREDSPACE"
+  Push $var32
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "NSISScriptSendMessage"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push $INSTDIR
+  Push "text"
+  Push "edit_choose_url"
+  Push "SEdit"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "SetControlProperties"
+label_523:
+  Return
+  Command0
+  Command0
+  Command0
+  Command0
+  Command0
+  Command0
+  Command0
+  Exec "$\"$INSTDIR\WireVpn.exe$\""
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "OPenExePage"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "ClosePage"
+  Return
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "ClosePage"
+  Return
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "ClosePage"
+  Return
+Function func_551    ; Page 0, Pre
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "user32::SetWindowPos(i$HWNDPARENT,i0,i0,i0,i0,i0,i0x0002)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push $PLUGINSDIR
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "InitWindow"
+  Pop $var32
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "link_agreement"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "FindChildByName"
+  Pop $V0
+  StrCmp $V0 -1 0 label_571 ; If: $V0 == -1
+    MessageBox MB_OK "ERROR_MESSAGE1"
+  ; Else
+label_571:
+    StrCpy $V0 296
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\setupdll.dll"
+    SetDetailsPrint lastused
+    Push $V0
+    Push "link_agreement"
+    CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "BindControlAndNSISScript"
+  ; EndIf
+label_578:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "btn_custominstall"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "FindChildByName"
+  Pop $V0
+  StrCmp $V0 -1 0 label_587 ; If: $V0 == -1
+    MessageBox MB_OK "ERROR_MESSAGE2"
+  ; Else
+label_587:
+    StrCpy $V0 303
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\setupdll.dll"
+    SetDetailsPrint lastused
+    Push $V0
+    Push "btn_custominstall"
+    CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "BindControlAndNSISScript"
+  ; EndIf
+label_594:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "btn_install"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "FindChildByName"
+  Pop $V0
+  StrCmp $V0 -1 0 label_603 ; If: $V0 == -1
+    MessageBox MB_OK "ERROR_MESSAGE3"
+  ; Else
+label_603:
+    StrCpy $V0 310
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\setupdll.dll"
+    SetDetailsPrint lastused
+    Push $V0
+    Push "btn_install"
+    CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "BindControlAndNSISScript"
+  ; EndIf
+label_610:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "btn_install_new"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "FindChildByName"
+  Pop $V0
+  StrCmp $V0 -1 0 label_619 ; If: $V0 == -1
+    MessageBox MB_OK "ERROR_MESSAGE31"
+  ; Else
+label_619:
+    StrCpy $V0 310
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\setupdll.dll"
+    SetDetailsPrint lastused
+    Push $V0
+    Push "btn_install_new"
+    CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "BindControlAndNSISScript"
+  ; EndIf
+label_626:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "name_install_return"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "FindChildByName"
+  Pop $V0
+  StrCmp $V0 -1 0 label_635 ; If: $V0 == -1
+    MessageBox MB_OK "ERROR_MESSAGE32"
+  ; Else
+label_635:
+    StrCpy $V0 317
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\setupdll.dll"
+    SetDetailsPrint lastused
+    Push $V0
+    Push "name_install_return"
+    CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "BindControlAndNSISScript"
+  ; EndIf
+label_642:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "chk_agreement"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "FindChildByName"
+  Pop $V0
+  StrCmp $V0 -1 0 label_651 ; If: $V0 == -1
+    MessageBox MB_OK "ERROR_MESSAGE4"
+  ; Else
+label_651:
+    StrCpy $V0 324
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\setupdll.dll"
+    SetDetailsPrint lastused
+    Push $V0
+    Push "chk_agreement"
+    CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "BindControlAndNSISScript"
+  ; EndIf
+label_658:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "btn_agreement_sure"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "FindChildByName"
+  Pop $V0
+  StrCmp $V0 -1 0 label_667 ; If: $V0 == -1
+    MessageBox MB_OK "ERROR_MESSAGE5"
+  ; Else
+label_667:
+    StrCpy $V0 331
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\setupdll.dll"
+    SetDetailsPrint lastused
+    Push $V0
+    Push "btn_agreement_sure"
+    CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "BindControlAndNSISScript"
+  ; EndIf
+label_674:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "btn_choose_changedir"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "FindChildByName"
+  Pop $V0
+  StrCmp $V0 -1 0 label_683 ; If: $V0 == -1
+    MessageBox MB_OK "ERROR_MESSAGE7"
+  ; Else
+label_683:
+    StrCpy $V0 345
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\setupdll.dll"
+    SetDetailsPrint lastused
+    Push $V0
+    Push "btn_choose_changedir"
+    CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "BindControlAndNSISScript"
+  ; EndIf
+label_690:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "btn_finish_feel"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "FindChildByName"
+  Pop $V0
+  StrCmp $V0 -1 0 label_699 ; If: $V0 == -1
+    MessageBox MB_OK "ERROR_MESSAGE9"
+  ; Else
+label_699:
+    StrCpy $V0 532
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\setupdll.dll"
+    SetDetailsPrint lastused
+    Push $V0
+    Push "btn_finish_feel"
+    CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "BindControlAndNSISScript"
+  ; EndIf
+label_706:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "btn_finish_finish"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "FindChildByName"
+  Pop $V0
+  StrCmp $V0 -1 0 label_715 ; If: $V0 == -1
+    MessageBox MB_OK "ERROR_MESSAGE10"
+  ; Else
+label_715:
+    StrCpy $V0 542
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\setupdll.dll"
+    SetDetailsPrint lastused
+    Push $V0
+    Push "btn_finish_finish"
+    CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "BindControlAndNSISScript"
+  ; EndIf
+label_722:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "btn_close"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "FindChildByName"
+  Pop $V0
+  StrCmp $V0 -1 0 label_731 ; If: $V0 == -1
+    MessageBox MB_OK "ERROR_MESSAGE11"
+  ; Else
+label_731:
+    StrCpy $V0 547
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\setupdll.dll"
+    SetDetailsPrint lastused
+    Push $V0
+    Push "btn_close"
+    CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "BindControlAndNSISScript"
+  ; EndIf
+label_738:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push 0
+  Push "curSel"
+  Push "tab_main"
+  Push "STabCtrl"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "SetControlProperties"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "true"
+  Push "enable"
+  Push "btn_install"
+  Push "SImageButton"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "SetControlProperties"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "false"
+  Push "checked"
+  Push "btn_custominstall"
+  Push "SCheckBox2"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "SetControlProperties"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "true"
+  Push "checked"
+  Push "chk_agreement"
+  Push "SCheckBox2"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "SetControlProperties"
+  Push $INSTDIR
+  Call :label_356
+  Pop $V0
+  Push $V0
+  Push "/D=F /S=M"
+  Call :label_394
+  Pop $V2
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push $V2
+  Push "WM_SJTHREEUPDATEFREESPACE"
+  Push $var32
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "NSISScriptSendMessage"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push 15
+  Push "WM_SJTHREEUPDATEREQUIREDSPACE"
+  Push $var32
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "NSISScriptSendMessage"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push $INSTDIR
+  Push "text"
+  Push "edit_choose_url"
+  Push "SEdit"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "SetControlProperties"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "ShowPage"
+FunctionEnd
+
+Function func_804    ; Page 1, Show
+  ShowWindow $HWNDPARENT 0
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "user32::SetWindowPos(i$HWNDPARENT,i0,i0,i0,i0,i0,i0x0002)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "text"
+  Push "edit_choose_url"
+  Push "SEdit"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "GetControlProperties"
+  Pop $V0
+  StrCpy $INSTDIR "$V0\WireVpnPc"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push 3
+  Push "curSel"
+  Push "tab_main"
+  Push "STabCtrl"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "SetControlProperties"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\setupdll.dll"
+  SetDetailsPrint lastused
+  Push "pg_installing"
+  CallInstDLL "$PLUGINSDIR\setupdll.dll" /NOUNLOAD "BindingProgress"
+FunctionEnd
+
+Function func_833
+label_833:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::CreateMutexA(i 0, i 0, t $\"MyMutex_Install$\") i .R1 ?e"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Pop $R0
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::CloseHandle(i R1) i.s"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  StrCmp $R0 0 label_848 ; If: $R0 != 0
+    MessageBox MB_RETRYCANCEL|MB_ICONEXCLAMATION "°²×°³ÌÐòÒÑ¾­ÔËÐÐ£¡" IDRETRY label_833
+    Quit
+    Goto label_856
+  ; EndIf
+label_848:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::CreateMutexA(i 0, i 0, t $\"MyMutex_Install$\") i .R1 ?e"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Pop $R0
+  StrCmp $R0 0 label_856
+  Quit
+label_856:
+FunctionEnd
+
+Function .onInit
+  Call :label_859
+  Goto label_892
+label_859:
+  StrCmp $CMDLINE "" 0 label_862 ; If: $CMDLINE == ""
+    Push ""
+    Return
+  ; EndIf
+label_862:
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrLen $V1 $CMDLINE
+  StrCpy $V2 2
+  StrCpy $V3 $CMDLINE 1
+  StrCmp $V3 "$\"" label_871
+  StrCpy $V3 " "
+  ; Do
+label_871:
+    IntCmp $V2 $V1 label_875 0 label_875
+    StrCpy $V0 $CMDLINE 1 $V2
+    IntOp $V2 $V2 + 1
+  StrCmp $V3 $V0 0 label_871 ; LoopUntil: $V3 != $V0
+label_875:
+  IntCmp $V2 $V1 label_880 0 label_880 ; While: $V2 >= $V1
+    StrCpy $V0 $CMDLINE 1 $V2
+    StrCmp $V0 " " 0 label_880
+    IntOp $V2 $V2 + 1
+  ; EndWhile
+label_880:
+  StrCpy $V0 $CMDLINE "" $V2
+label_881:
+  StrCpy $V1 $V0 1 -1
+  StrCmp $V1 " " 0 label_885 ; While: $V1 == " "
+    StrCpy $V0 $V0 -1
+  ; EndWhile
+label_885:
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Push $V0
+  Exch
+  Pop $V0
+  Return
+label_892:
+  Pop $R0
+  Push $R0
+  Push "/S"
+  Call :label_897
+  Goto label_986
+label_897:
+  Push $V1
+  Exch
+  Pop $V1
+  Exch
+  Push $V0
+  Exch
+  Pop $V0
+  Exch
+  Push $V2
+  Push $V3
+  Push $V4
+  Push $V5
+  Push $V6
+  Push $V7
+  ClearErrors
+  StrCpy $V2 $V1 "" 1
+  StrCpy $V1 $V1 1
+  StrLen $V3 $V2
+  StrCpy $V7 0
+label_916:
+  StrCpy $V4 -1
+  StrCpy $V6 ""
+label_918:
+  IntOp $V4 $V4 + 1
+  StrCpy $V5 $V0 1 $V4
+  StrCmp "$V5$V7" 0 label_973 ; While: "$V5$V7" != 0
+    StrCmp $V5 "" label_960
+    StrCmp $V5 "$\"" 0 label_929
+    StrCmp $V6 "" 0 label_926
+    StrCpy $V6 "$\""
+    Goto label_918
+label_926:
+    StrCmp $V6 "$\"" 0 label_929
+    StrCpy $V6 ""
+    Goto label_918
+label_929:
+    StrCmp $V5 "'" 0 label_936
+    StrCmp $V6 "" 0 label_933
+    StrCpy $V6 "'"
+    Goto label_918
+label_933:
+    StrCmp $V6 "'" 0 label_936
+    StrCpy $V6 ""
+    Goto label_918
+label_936:
+    StrCmp $V5 "`" 0 label_943
+    StrCmp $V6 "" 0 label_940
+    StrCpy $V6 "`"
+    Goto label_918
+label_940:
+    StrCmp $V6 "`" 0 label_943
+    StrCpy $V6 ""
+    Goto label_918
+label_943:
+    StrCmp $V6 "$\"" label_918
+    StrCmp $V6 "'" label_918
+    StrCmp $V6 "`" label_918
+    StrCmp $V5 $V1 0 label_918
+    StrCmp $V7 0 label_948 label_960
+label_948:
+    IntOp $V4 $V4 + 1
+    StrCpy $V5 $V0 $V3 $V4
+    StrCmp $V5 "" label_973
+    StrCmp $V5 $V2 0 label_918
+    IntOp $V4 $V4 + $V3
+    StrCpy $V0 $V0 "" $V4
+label_954:
+    StrCpy $V4 $V0 1
+    StrCmp $V4 " " 0 label_958 ; While: $V4 == " "
+      StrCpy $V0 $V0 "" 1
+    ; EndWhile
+label_958:
+    StrCpy $V7 1
+  ; EndWhile
+label_960:
+  StrCpy $V0 $V0 $V4
+label_961:
+  StrCpy $V4 $V0 1 -1
+  StrCmp $V4 " " 0 label_965 ; While: $V4 == " "
+    StrCpy $V0 $V0 -1
+  ; EndWhile
+label_965:
+  StrCpy $V3 $V0 1
+  StrCpy $V4 $V0 1 -1
+  StrCmp $V3 $V4 0 label_975 ; If: $V3 == $V4
+    StrCmp $V3 "$\"" label_971
+    StrCmp $V3 "'" label_971
+    StrCmp $V3 "`" 0 label_975
+label_971:
+    StrCpy $V0 $V0 -1 1
+    Goto label_975
+label_973:
+    SetErrors
+    StrCpy $V0 ""
+  ; EndIf
+label_975:
+  Pop $V7
+  Pop $V6
+  Pop $V5
+  Pop $V4
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Push $V0
+  Exch
+  Pop $V0
+  Return
+label_986:
+  Pop $R1
+  IfErrors label_990 ; If: not Errors
+    StrCpy $R0 "$R0 /NCRC"
+    SetSilent normal
+  ; EndIf
+label_990:
+  Call Initialize_____Plugins
+  SetDetailsPrint lastused
+  SetOutPath $PLUGINSDIR
+  StrCpy $OUTDIR $OUTDIR
+  SetOverwrite ifnewer
+  File "setupdll.dll"
+  SetOutPath $OUTDIR
+  Call func_833
+FunctionEnd
+
+; Function Initialize_____Plugins
+;   SetDetailsPrint none
+;   StrCmp $PLUGINSDIR "" 0 label_1008 ; If: $PLUGINSDIR == ""
+;     Push $V0
+;     SetErrors
+;     GetTempFileName $V0
+;     Delete $V0
+;     CreateDirectory $V0 ; CreateRestrictedDirectory
+;     IfErrors label_1009
+;     StrCpy $PLUGINSDIR $V0
+;     Pop $V0
+;   ; EndIf
+; label_1008:
+;   Return
+; label_1009:
+;   MessageBox MB_OK|MB_ICONSTOP "Error! Can't initialize plug-ins directory. Please try again later." /SDIDOK
+;   Quit
+; FunctionEnd
+
