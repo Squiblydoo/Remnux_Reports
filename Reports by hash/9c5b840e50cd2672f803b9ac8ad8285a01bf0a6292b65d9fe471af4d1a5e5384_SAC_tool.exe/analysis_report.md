@@ -1,5 +1,7 @@
 # SAC_tool.exe — Malware Analysis Report
 
+> **Revision note**: this report was substantially revised after a second ANY.RUN detonation. SAC_tool.exe contains a self-check that requires its own process filename to contain a specific string; the first submission (original filename) hit this gate and produced a false-clean "No threats detected" verdict. Resubmitting under the filename `image20260714569#sac.exe` (contains `sac`, satisfying the gate) produced a full detonation with a 100/100 malicious verdict, confirmed C2 traffic, and an ANY.RUN vendor attribution to **APT-Q-27**. All findings below reflect the corrected, full picture. §7 documents both runs for transparency.
+
 ## 1. File Metadata
 
 | Field | Value |
@@ -19,101 +21,98 @@
 - Subject: `杭州思维宇宙科技有限公司` (Hangzhou Siwei Universe Technology Co., Ltd.), Zhejiang, CN
 - Serial: `5df273a440e188cfd64188d1ef1e5931`
 - Validity: 2026-04-27 → 2027-03-03
-- The PE overlay (25,912 bytes, present because `HasOverlay`) is the Authenticode PKCS#7 `SignedData` blob itself — not a hidden secondary payload.
+- The PE overlay (25,912 bytes) is the Authenticode PKCS#7 `SignedData` blob itself — not a hidden secondary payload.
 
-**Version-info / build metadata mismatch (notable anomaly)**: The embedded `VersionInfo` and `AssemblyInfo` claim `CompanyName: Amazon.com`, `ProductName: SAC tool`, `LegalCopyright: Copyright © Amazon.com 2024` — while the actual code-signing certificate belongs to an unrelated Chinese company. This is a masquerade pattern (fake brand metadata paired with an unrelated signing identity), not a genuine Amazon tool.
+**Version-info / build metadata mismatch**: `VersionInfo`/`AssemblyInfo` claim `CompanyName: Amazon.com`, `ProductName: SAC tool`, `LegalCopyright: Copyright © Amazon.com 2024` — while the signing certificate belongs to an unrelated Chinese company. Brand-spoofing masquerade paired with an unrelated signing identity.
 
 ## 2. Classification
 
-**Confidence: Medium (downloader/loader with active anti-analysis logic; no confirmed family attribution).**
+**Confidence: High — APT-Q-27 / ZhongStealer family (loader/downloader + backdoor stage), new "nikeupdat" wave.**
 
-- KesaKode offline (local hash DB) and KesaKode online (cloud lookup, verbose mode, 9,994/10,000 monthly quota remaining) both returned **zero family matches** — no code-sharing signal with any tracked family in the KesaKode corpus.
-- No YARA family/capability hits beyond generic `DotNet` and compiler-detection signatures.
-- **Not attributed to APT-Q-27/ZhongStealer** (a family tracked in prior analyses) despite surface similarities (GCS-bucket staging, `image.jpg` decoy): none of the strict cross-reference criteria were met — no exact payload-hash reuse, no matching cert serial (`0d2ad57b...` LENOVO cert not present), no PDB path match (`084049` not found), and the known `(byte+0x77)^0x62` / LZNT1 extraction pipeline applied to the three downloaded payloads produced no valid PE and no matching strings (see §8). One candidate payload (`vcnfq.uqv`) coincidentally matches the exact byte size (340,992) of the confirmed ZhongStealer `windui.dll` core, but its SHA256 differs entirely and it does not decode to a PE — this is a size coincidence, not evidence.
-- Functionally, this is a **generic .NET downloader/dropper** with heavy string obfuscation (custom resource-based decryption, Eazfuscator/ConfuserEx-style control-flow flattening with anti-tamper caller-assembly checks) and a built-in anti-sandbox/anti-VM gate.
+This supersedes the initial static-only assessment. Confirmed via dynamic detonation (§7):
+- **ANY.RUN's own proprietary Suricata signature fired**: `BACKDOOR [ANY.RUN] APT-Q-27 related HTTP activity` (SID 85006522, priority 1) against the C2 connection — this is vendor threat-intel attribution, not pattern-matching against our own prior samples.
+- ANY.RUN behavioral tags: `apt-q-27`, `backdoor`, `websocket`, `auto-reg` (the `auto-reg` tag matches the family's documented WebSocket REGISTER-frame C2 protocol).
+- **C2 domain `host.keensie.com`** (resolves to `35.78.126.246:3133`, AWS/AMAZON-02, reputation malicious) shares the apex domain with the previously-documented family C2 rotation `api.keensie.com` (see `family_apt_q27_zhongstealer.md` fingerprint #4) — a different subdomain, not a byte-identical match, but combined with the vendor signature this is treated as confirmatory rather than coincidental.
+- The WebSocket handshake (`GET http://host.keensie.com:3133/\`, HTTP 101 Switching Protocols) uses a malformed/non-standard request path, consistent with the family's documented non-standard WS handshake behavior.
+
+**What does NOT match prior waves** (noted for completeness — this appears to be a TTP evolution, not a reused toolkit): no `(byte+0x77)^0x62` decrypt / LZNT1 Delphi-core pattern was recovered from the three opaque downloaded payloads; no LENOVO cert serial; no `084049` PDB path; KesaKode (online, authoritative, and offline) returned zero code-sharing matches against the corpus. The C2-facing component in this wave is a **legitimate, unmodified, correctly-signed Tencent TBS SDK executable (`minibrowser.exe`)** rather than a custom shellcode-loader DLL — no anomalous modules were loaded into its process, so this is not classic DLL side-loading; the malicious behavior is most likely driven by one of the co-downloaded data files being consumed as a config/update-channel input by `minibrowser.exe`'s own legitimate remote-update logic (mechanism not fully reversed — see §8).
 
 ## 3. Capabilities
 
-Recovered from full ILSpy decompilation (`/home/remnux/mal/output/SAC_tool_decompiled/`) plus capa:
+Recovered from full ILSpy decompilation (`/home/remnux/mal/output/SAC_tool_decompiled/`), capa, and confirmed/extended by dynamic detonation:
 
-- **Execution gate**: refuses to run its main logic unless its own process filename (minus extension) contains a specific (still-encrypted) substring; otherwise it shows a MessageBox and exits. This blocks naive sandbox submissions that rename the sample.
-- **Anti-sandbox / anti-VM checks** (all must fail to allow execution):
-  - Known analysis-tool process names (2 candidates, e.g. likely `vboxservice`/`vmtoolsd`-class names)
-  - MAC address OUI prefix matching (3 candidate vendor prefixes — typical VMware/VirtualBox OUI check)
-  - System drive total size < 40 GB
-  - Presence of known VM guest-tool driver files (3 candidate paths)
-  - Sandbox-related environment variables (3 candidates, e.g. `SbieDll`-class)
-  - Machine name / username / domain name containing a sandbox marker string, plus a matching env var
-  - `SystemDirectory` path containing the sandbox marker + 3 suspicious process names
-  - Exact username match against a known analyst/sandbox account name
-  - WMI `Win32_BIOS`/related class Serial/Version check against a known VM string, plus DNS-suffix check, plus a `hosts`-file content check
-  - WMI `Win32_ComputerSystem` Manufacturer/Model string check (2 separate WMI queries)
-- **Manifest-based downloader**: decodes a base64 (possibly double-base64) embedded string to a manifest URL, HTTP GETs it, parses the response as newline-delimited absolute URIs, and downloads each (5-way concurrent, `SemaphoreSlim(5)`) to a hidden folder under `%LOCALAPPDATA%\<obfuscated subpath>\<date>_<4-char GUID>\`, setting `FileAttributes.Hidden` on both the folder and each downloaded file.
-- **Conditional auto-execution** of downloaded files by extension only:
-  - `.exe` / another exec-type extension → `Process.Start` (hidden window)
-  - `.ps1` → `powershell -File <path>` (hidden window)
-  - `.vbs` → `wscript <path>` (hidden window)
-  - `.jpg/.png/.gif/.bmp/.ico`-class extensions → `Process.Start(UseShellExecute:true)` (opens with default viewer — decoy display)
-  - Files with **no matching extension are downloaded but never auto-launched by SAC_tool.exe itself**
-- TLS 1.2-only `HttpClient` with a custom `ServerCertificateCustomValidationCallback` that **accepts all certificates** (disables cert validation for its own outbound traffic), custom User-Agent and headers, 45s timeout, cookies disabled.
-- Cleans up its own temp working directory on disposal.
-- capa MBC/ATT&CK highlights: `Deobfuscate/Decode Files or Information [T1140]`, `Hide Artifacts::Hidden Window [T1564.003]`, `File and Directory Permissions Modification [T1222]`, `Account/Process/System/Software/Network Discovery`, `Windows Management Instrumentation [T1047]`.
+- **Execution gate**: refuses to run its main logic unless its own process filename (minus extension) contains a specific substring (confirmed to include, at minimum, the substring `sac`, case-insensitive or matched as a fragment — satisfied by both `SAC_tool` and `image20260714569#sac`); otherwise shows a MessageBox and exits.
+- **Anti-sandbox / anti-VM gate**: ~10 checks (VM process names, MAC OUI prefixes, disk size <40GB, VM driver files, Sandboxie-class env vars, sandbox username/machine-name markers, WMI BIOS/ComputerSystem manufacturer checks) — did not visibly trip in the successful run, so remains only partially characterized.
+- **Manifest-based downloader**: fetches `https://storage.googleapis.com/nikeupdat/ls.txt` (**confirmed dynamically** — this is the real manifest URL), a 5-line plaintext list of absolute URLs, and downloads each to a hidden folder: **confirmed path** `C:\Users\admin\AppData\Local\Microsoft\SACtool\PCManager\Update\temp_<yyyyMMdd>_<4-char>@<year>\`.
+- **Conditional auto-execution** by extension: `.exe` → launched directly; `.ps1`/`.vbs` → interpreter-launched; image extensions → shell-opened (decoy display); no-match extensions (the `.uqv`/`.gtk` files) are downloaded but not auto-launched by SAC_tool.exe itself.
+- **Persistence**: writes `HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run` value `miniUpdate` = path to the downloaded `minibrowser.exe` — Run-key autorun persistence, confirmed dynamically (fired twice, once per launch).
+- **C2 component** (`minibrowser.exe`, launched by SAC_tool.exe): creates a mutex with non-ASCII/non-standard bytes in its name, opens a raw TCP connection to `35.78.126.246:3133` and performs an HTTP `GET .../\ ` → `101 Switching Protocols` WebSocket upgrade — i.e. establishes a live WebSocket C2 channel, matching the family's documented backdoor protocol.
+- TLS 1.2-only `HttpClient` with a custom `ServerCertificateCustomValidationCallback` that accepts all certificates.
+- capa MBC/ATT&CK: `Deobfuscate/Decode Files or Information [T1140]`, `Hide Artifacts::Hidden Window [T1564.003]`, discovery techniques, `Windows Management Instrumentation [T1047]`. Dynamic run adds `T1547.001` (Registry Run Key persistence) and backdoor/C2 behavior.
 
-## 4. Attack Chain
+## 4. Attack Chain (confirmed via dynamic detonation, task `30e95295-c35b-46dd-9282-a59e06f381c6`)
 
-1. User/victim runs `SAC_tool.exe` (must be run under a filename containing the expected substring, or it silently self-terminates after a decoy MessageBox).
-2. Anti-sandbox gate evaluates ~10 independent VM/sandbox indicators; if any hit, the downloader logic is skipped (`_0002()` returns `false` silently — no error, no visible failure).
-3. If clear, the tool decodes an embedded base64 manifest URL and fetches a newline-delimited list of absolute URLs.
-4. **Observed manifest content** (recovered from this session's companion investigation into the same delivery chain, downloaded directly from the bucket the tool is architected to fetch from — `https://storage.googleapis.com/nikeupdat/`):
-   - `oihtq.uqv` (350,208 bytes) — high-entropy opaque blob, no PE magic, not auto-executed by SAC_tool.exe (no extension match)
-   - `ousctr.gtk` (433,576 bytes) — high-entropy opaque blob, same as above
-   - `vcnfq.uqv` (340,992 bytes) — high-entropy opaque blob (shows partial repeating byte pattern suggestive of block/stream-cipher output), same as above
-   - `minibrowser.exe` (368,288 bytes) — **exact SHA256 match** (`26fba07c17efbb6c48a2e746e42df1ee26405c6aa557039492553e5bc27598a1`) to a previously analyzed sample: genuine, unmodified Tencent TBS MiniBrowser SDK component, re-signed with an unrelated "Feidelai (Chengdu) Home Co., Ltd." EV cert, assessed low-risk. `.exe` extension → SAC_tool.exe **will auto-launch this**.
-   - `image.jpg` (11,343 bytes) — decoy image → SAC_tool.exe **will auto-open this** with the default viewer.
-5. Net effect of SAC_tool.exe's own execution logic: it launches the benign-looking `minibrowser.exe` and opens a decoy JPEG, producing an innocuous-looking UX for the victim, while three unidentified opaque payloads sit hidden on disk, downloaded but not executed by this component. Their purpose (staged for a later-stage loader, or meant to be side-loaded/read by `minibrowser.exe` or another dropped component not present in this manifest snapshot) could not be determined from static analysis alone.
+1. Victim runs `SAC_tool.exe` (filename gate must be satisfied — likely why the actor named the delivered sample to include "sac" as a substring, or relies on it not being renamed by casual sandboxes/analysts).
+2. Tool GETs `https://storage.googleapis.com/nikeupdat/ls.txt` (200 OK, 265 bytes) — the manifest.
+3. Downloads all 5 listed files concurrently into `%LOCALAPPDATA%\Microsoft\SACtool\PCManager\Update\temp_20260721_7637@2026\`:
+   - `oihtq.uqv` (350,208B, sha256 `b30886bf461f3d27c7d83bf1678c1fc4fe9ca1b709caf26b624d14f7f8b2ec61`) — opaque, not auto-launched
+   - `ousctr.gtk` (433,576B, sha256 `68d29c03dbe279669e7ec6e9ac5aff72002442a9db2c74f8c1b9beb909e438c2`) — opaque, not auto-launched
+   - `vcnfq.uqv` (340,992B, sha256 `8791799132966c34f547c31f496e927ccf9580b5e4bfac295772cf86386b4bc6`) — opaque, not auto-launched
+   - `minibrowser.exe` (368,288B, sha256 `26fba07c17efbb6c48a2e746e42df1ee26405c6aa557039492553e5bc27598a1`, exact match to a previously analyzed genuine Tencent TBS SDK component) — **launched immediately**
+   - `image.jpg` (11,343B, sha256 `0ce9b137f378211a4f6ba43bae5e7056d577d757441671028b94b46a05b2b0c1`) — decoy, opened with default viewer
+4. Writes `HKCU\...\Run\miniUpdate` = path to the downloaded `minibrowser.exe` (persistence).
+5. `minibrowser.exe` runs from the SACtool temp directory, creates a non-standard-named mutex, and opens a WebSocket connection to `host.keensie.com:3133` (`35.78.126.246`) — flagged by ANY.RUN's own signature set as APT-Q-27 backdoor traffic.
+6. On a second launch (triggered by the freshly-written Run key, pid 6180, parent Explorer), the same mutex-creation and Run-key-write behavior repeats, confirming persistence works as intended.
+7. Net effect: victim sees a browser/PC-manager-style app open (decoy), while a live WebSocket C2 channel is established in the background and persistence is installed; three unidentified payloads sit on disk for a purpose not fully determined (see §8).
 
 ## 5. IOCs
 
 **Network**
+- `hxxps[://]storage[.]googleapis[.]com/nikeupdat/ls[.]txt` — manifest (confirmed)
 - `hxxps[://]storage[.]googleapis[.]com/nikeupdat/oihtq[.]uqv`
 - `hxxps[://]storage[.]googleapis[.]com/nikeupdat/ousctr[.]gtk`
 - `hxxps[://]storage[.]googleapis[.]com/nikeupdat/vcnfq[.]uqv`
 - `hxxps[://]storage[.]googleapis[.]com/nikeupdat/minibrowser[.]exe`
 - `hxxps[://]storage[.]googleapis[.]com/nikeupdat/image[.]jpg`
-- The actual manifest URL fetched by SAC_tool.exe itself remains string-encrypted and was not recovered (see §8); the above bucket is assessed with medium confidence to be its target, based on this session's parallel download of the bucket contents and the exact structural match to the tool's file-type handling logic (exe + image decoy pattern), but this was not confirmed via dynamic capture of SAC_tool.exe's own traffic (ANY.RUN did not observe it reaching any non-Microsoft host — see §7).
+- **C2**: `host[.]keensie[.]com` → `35[.]78[.]126[.]246:3133/TCP` (reputation: malicious; ANY.RUN signature `BACKDOOR APT-Q-27 related HTTP activity`); WebSocket upgrade path `/\ ` (malformed/non-standard)
 
 **Filesystem**
-- Downloads to a hidden subfolder of `%LOCALAPPDATA%` with a `<date>_<4-char-GUID>` naming pattern (exact subpath string-encrypted, not recovered)
-- Temp working file: `%TEMP%\<GUID-based name>` (created/deleted at runtime)
+- `C:\Users\admin\AppData\Local\Microsoft\SACtool\PCManager\Update\temp_<yyyyMMdd>_<4-char-hex>@<year>\` (hidden staging folder; all downloaded files placed here, hidden attribute set)
+- `C:\Users\<user>\AppData\Local\Temp\<original filename>` (drop location observed for the sample itself)
+
+**Registry**
+- `HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\Run` value `miniUpdate` = `...\temp_<...>\minibrowser.exe` (persistence)
+
+**Mutex**
+- Non-ASCII/non-standard-character mutex name (raw: contains bytes `56 89 15 B0 34 12 87 FE AB 49` interspersed with non-printable/high Unicode code points), created by `minibrowser.exe` at C2-connect time
 
 **Certificates**
-- Code-signing cert serial `5df273a440e188cfd64188d1ef1e5931`, subject 杭州思维宇宙科技有限公司, issued by Certum EV Code Signing 2021 CA
+- Code-signing cert serial `5df273a440e188cfd64188d1ef1e5931`, subject 杭州思维宇宙科技有限公司, Certum EV Code Signing 2021 CA
 
 **Hashes**
 - SAC_tool.exe: `9c5b840e50cd2672f803b9ac8ad8285a01bf0a6292b65d9fe471af4d1a5e5384`
-- Downloaded `minibrowser.exe` (exact match to prior analysis, assessed low-risk): `26fba07c17efbb6c48a2e746e42df1ee26405c6aa557039492553e5bc27598a1`
-- Downloaded `oihtq.uqv`: `mk7...` — sha256 not yet computed/needed beyond confirming non-PE
-- Downloaded `ousctr.gtk` / `vcnfq.uqv`: opaque, unidentified format
-
-**Mutexes**: none observed (static or dynamic).
+- Downloaded `minibrowser.exe` (C2/backdoor component in this wave; exact-hash match to prior standalone analysis): `26fba07c17efbb6c48a2e746e42df1ee26405c6aa557039492553e5bc27598a1`
+- `oihtq.uqv`: `b30886bf461f3d27c7d83bf1678c1fc4fe9ca1b709caf26b624d14f7f8b2ec61`
+- `ousctr.gtk`: `68d29c03dbe279669e7ec6e9ac5aff72002442a9db2c74f8c1b9beb909e438c2`
+- `vcnfq.uqv`: `8791799132966c34f547c31f496e927ccf9580b5e4bfac295772cf86386b4bc6`
+- `image.jpg`: `0ce9b137f378211a4f6ba43bae5e7056d577d757441671028b94b46a05b2b0c1`
+- `ls.txt` manifest: MD5 `0176812039e3e0e6d2b5e45d3e1fe30a`
 
 ## 6. Emulation Results
 
-Speakeasy/angr emulation was not applicable — this is a .NET-only assembly (no unmanaged code beyond P/Invoke declarations for `kernel32`/`user32` console/window functions), and speakeasy targets native x86/x64 code paths. FLOSS explicitly does not support .NET string deobfuscation (confirmed via direct run: *"FLOSS does NOT attempt to deobfuscate any strings from .NET binaries"*).
-
-String recovery was attempted via full ILSpy decompilation instead. The string-decryption routine (`_0002_0015._0002(int id)`) uses a custom scheme (embedded-resource-backed byte stream + XOR + LZNT1-style back-reference decompression) protected by a `StackTrace`-based caller-assembly check (classic Eazfuscator/ConfuserEx-style anti-tamper) that returns a canary value if invoked from outside the original assembly context — this blocks straightforward reflection-based bulk string extraction and was not defeated in this pass (would require IL-level unpacking, e.g. de4dot, which is not installed on this REMnux instance).
+Not applicable — pure .NET assembly, no native code path for speakeasy/angr to target. FLOSS does not support .NET string deobfuscation (confirmed via direct run). The custom resource-backed string-encryption routine remains undefeated statically (StackTrace-based anti-tamper caller check; would require de4dot or IL patching, not installed on this host) — however dynamic detonation recovered the operationally relevant strings (manifest URL, download path, C2) directly from behavior, making further static string-decryption work lower priority.
 
 ## 7. Sandbox Results
 
-**ANY.RUN**: Task `35c57d69-047f-41cb-b9e6-684a69f9c89c` — verdict score **0/100**, "No threats detected", no behavioral tags. Only HTTP traffic observed was routine Windows/Microsoft telemetry (OCSP/CRL checks, `settings-win.data.microsoft.com`, `login.live.com`) — **no contact with `storage.googleapis.com` or any non-Microsoft host was observed.**
+**Run 1 — original filename** (`SAC_tool.exe`): task `35c57d69-047f-41cb-b9e6-684a69f9c89c`, verdict **0/100, "No threats detected"**, no tags, only Microsoft telemetry traffic observed. https://app.any.run/tasks/35c57d69-047f-41cb-b9e6-684a69f9c89c — **false negative**, caused by the sample's own filename-content execution gate not being satisfied by ANY.RUN's stored filename.
 
-Public report: https://app.any.run/tasks/35c57d69-047f-41cb-b9e6-684a69f9c89c
+**Run 2 — renamed to `image20260714569#sac.exe`** (satisfies the filename gate): task `30e95295-c35b-46dd-9282-a59e06f381c6`, verdict **100/100, "Malicious activity"**, tags `apt-q-27`, `backdoor`, `websocket`, `auto-reg`. Full manifest download, `minibrowser.exe` launch, Run-key persistence, and WebSocket C2 connection to `host.keensie.com:3133` all observed and logged, including ANY.RUN's own `BACKDOOR APT-Q-27 related HTTP activity` Suricata detection. https://app.any.run/tasks/30e95295-c35b-46dd-9282-a59e06f381c6
 
-**This "No threats detected" verdict should be treated with low confidence as evidence of benignity.** Static analysis shows SAC_tool.exe implements ~10 independent anti-sandbox/anti-VM checks (§3) plus a filename-content execution gate, any one of which — if triggered by ANY.RUN's environment or submission filename — would cause the tool to silently skip its download/execution logic without any visible error, exactly matching what was observed (clean run, no network activity beyond OS noise). The absence of malicious network activity is therefore most plausibly explained by successful anti-analysis evasion, not absence of malicious functionality.
+**Lesson generalized**: this sample's anti-analysis design specifically targets naive automated submission (original/hash-based filenames). Any future ANY.RUN (or similar sandbox) submission of a sample with a visible "must contain substring in own filename" gate should be retried with a filename containing the likely substring (e.g. fragments of the claimed product name) before trusting a clean verdict.
 
 ## 8. Analyst Notes
 
-- **ZhongStealer extraction pipeline attempted and inconclusive**: as part of this session's investigation, the three opaque downloaded payloads (`oihtq.uqv`, `ousctr.gtk`, `vcnfq.uqv`) were run through the established `updat.log → LZNT1 → UPX` ZhongStealer extraction procedure. All three produced non-PE, unidentifiable output (`file` reported "data" / a PGP-sub-key false-positive) with no `.pdb` or `LENOVO`-cert strings recovered. This is a negative result — either these payloads use a different encoding entirely, or the extraction parameters (key/offset) differ from the known ZhongStealer wave formula. **No attribution should be drawn from this attempt in either direction.**
-- **Residual gap — true C2/manifest URL unrecovered**: the base64-decoded manifest string that SAC_tool.exe itself fetches was not statically recovered due to the anti-tamper string-decryption gate (§6). Recommended follow-up: install `de4dot` or manually patch out the `StackTrace` caller-assembly check in a copy of the assembly (via `dnlib`/IL rewriting) to force real string decryption, or execute the sample under controlled dynamic instrumentation (x64dbg/dnSpy with a breakpoint on the resource-decrypt method) with the correct filename to satisfy the execution gate.
-- **Residual gap — purpose of the 3 opaque payloads unresolved**: they are downloaded by SAC_tool.exe's logic but not auto-executed by any code path found in this binary. Recommended follow-up: determine whether `minibrowser.exe` (genuine Tencent TBS SDK) has a DLL side-load path that any renamed version of these blobs could satisfy, or whether a separate, not-yet-observed component in the delivery chain is responsible for loading them.
-- **Alternative hypothesis**: given the fake "Amazon.com" branding metadata, the mismatched Chinese EV signing identity, the anti-sandbox gate, and the generic-downloader architecture with no family-specific fingerprint, this may be a bespoke/one-off loader built for a specific campaign rather than a reused toolkit — consistent with the zero KesaKode match (no code shared with any sample in the corpus).
+- **Mechanism behind `minibrowser.exe`'s C2 behavior not fully reversed**: no anomalous DLL modules were loaded into its process (all 65 loaded modules are standard Windows system DLLs), ruling out classic DLL side-loading as the mechanism. The most likely explanation is that `minibrowser.exe` (part of a legitimate PC-manager/updater application suite, per the `PCManager\Update` staging path) has built-in remote-config/auto-update networking, and the attacker is supplying it a malicious config or update-channel target via one of the co-downloaded opaque files (`oihtq.uqv`/`ousctr.gtk`/`vcnfq.uqv`) rather than via code injection. This was not confirmed by direct reversal of `minibrowser.exe`'s config-reading logic — recommended follow-up if this wave recurs.
+- **Correction to prior assessment**: `minibrowser.exe` (hash `26fba07c...`) was previously assessed standalone as "low-risk/likely benign" (see `topic_minibrowserexe.md`). That assessment's own caveat — "if this file surfaces again alongside other files in a delivery chain, that companion context is where the real signal would be" — is now confirmed: in this delivery context, the identical binary performs live WebSocket backdoor C2. The file itself is unmodified; the risk is entirely contextual/environmental (files it reads from its own directory).
+- **Purpose of the 3 opaque payloads still not fully determined**: they are not auto-executed by SAC_tool.exe and were not loaded as PE modules by `minibrowser.exe`. Recommended follow-up: manually extract `minibrowser.exe` and identify what local files/paths its legitimate update-check or config-load routine reads, to determine which (if any) of the three blobs it consumes and how.
+- **TTP evolution vs. reused toolkit**: this wave does not match the family's previously documented shellcode/LZNT1/Delphi-core delivery mechanism (fingerprints #1, #2, #5, #6 in `family_apt_q27_zhongstealer.md` all failed to match). Only the GCS-staging-bucket pattern (#3, new bucket name `nikeupdat`) and a partial C2-domain-family match (#4, `keensie.com` apex, new subdomain and port) tie it to the family, corroborated independently by ANY.RUN's proprietary detection. This may represent a new delivery mechanism for the same actor rather than a variant of the known loader.
