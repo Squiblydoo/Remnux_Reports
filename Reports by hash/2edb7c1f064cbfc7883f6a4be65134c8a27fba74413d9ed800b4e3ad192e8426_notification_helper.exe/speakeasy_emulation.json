@@ -1,0 +1,196 @@
+{
+  "network": [],
+  "files": [],
+  "registry": [],
+  "mutexes": [],
+  "processes": [],
+  "memory": [],
+  "strings": [],
+  "misc": [
+    {
+      "api": "GetProcAddress",
+      "name": "FlsAlloc",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsFree",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsGetValue",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsSetValue",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "InitializeCriticalSectionEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CreateEventExW",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CreateSemaphoreExW",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "SetThreadStackGuarantee",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CreateThreadpoolTimer",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "SetThreadpoolTimer",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "WaitForThreadpoolTimerCallbacks",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CloseThreadpoolTimer",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CreateThreadpoolWait",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "SetThreadpoolWait",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CloseThreadpoolWait",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlushProcessWriteBuffers",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FreeLibraryWhenCallbackReturns",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetCurrentProcessorNumber",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetLogicalProcessorInformation",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CreateSymbolicLinkW",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "SetDefaultDllDirectories",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "EnumSystemLocalesEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "CompareStringEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetDateFormatEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetLocaleInfoEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetTimeFormatEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetUserDefaultLocaleName",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "IsValidLocaleName",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "LCMapStringEx",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetCurrentPackageId",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetTickCount64",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetFileInformationByHandleExW",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "SetFileInformationByHandleW",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "QBRtLoggerRW",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "UnhandledExceptionFilter",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "RaiseFailFastException",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "RtlReportException",
+      "resolved": true
+    }
+  ]
+}
