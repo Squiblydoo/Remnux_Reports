@@ -1,0 +1,16 @@
+{
+  "network": [],
+  "files": [],
+  "registry": [],
+  "mutexes": [],
+  "processes": [],
+  "memory": [],
+  "strings": [],
+  "misc": [
+    {
+      "api": "GetProcAddress",
+      "name": "wine_get_version",
+      "resolved": true
+    }
+  ]
+}

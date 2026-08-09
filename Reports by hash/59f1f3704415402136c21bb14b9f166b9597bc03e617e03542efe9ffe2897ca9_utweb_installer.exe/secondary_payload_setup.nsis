@@ -1,0 +1,3124 @@
+; NSIS script (UTF-8) NSIS-3 Unicode log
+; Install
+
+Unicode true
+SetCompressor lzma
+SetCompressorDictSize 1024
+
+; ------------------------------------------------------------------------
+; HEADER SIZE: 142120
+; START HEADER SIZE: 300
+; MAX STRING LENGTH: 1024
+; STRING CHARS: 42941
+
+OutFile [NSIS].exe
+!include WinMessages.nsh
+
+LicenseBkColor /windows
+
+
+; ------------------------------------------------------------------------
+; LANG TABLES: 15
+; LANG STRINGS: 82
+
+Name "uTorrent Web"
+BrandingText "Nullsoft Install System v3.08"
+
+; LANG: 1036
+LangString LSTR_0 1036 "Nullsoft Install System v3.08"
+LangString LSTR_1 1036 "Installation de 肂"
+LangString LSTR_2 1036 "uTorrent Web"
+LangString LSTR_5 1036 "Impossible d'écrire : "
+LangString LSTR_8 1036 "Impossible de trouver un symbole : "
+LangString LSTR_9 1036 "Impossible de charger : "
+LangString LSTR_11 1036 "Création du raccourci : "
+LangString LSTR_13 1036 "Suppression : "
+LangString LSTR_14 1036 "Suppression au redémarrage : "
+LangString LSTR_15 1036 "Erreur lors de la création du raccourci : "
+LangString LSTR_17 1036 "Erreur lors de la décompression des données ! Installation corrompue ?"
+LangString LSTR_19 1036 "ExecShell: "
+LangString LSTR_20 1036 "Exécution : "
+LangString LSTR_21 1036 "Extraction : "
+LangString LSTR_22 1036 "Extraction : erreur d'écriture du fichier "
+LangString LSTR_23 1036 "Installation corrompue : opcode incorrect"
+LangString LSTR_24 1036 "Pas de OLE pour : "
+LangString LSTR_25 1036 "Destination : "
+LangString LSTR_26 1036 "Suppression du dossier : "
+LangString LSTR_29 1036 "Passé : "
+LangString LSTR_30 1036 "Copier les Détails dans le Presse-papier"
+LangString LSTR_36 1036 "Erreur lors de l'ouverture du fichier en écriture : $\r$\n$\t$\"$V0$\"$\r$\nAppuyez sur Abandonner pour annuler l'installation,$\r$\nRéessayer pour réessayer l'écriture du fichier, ou$\r$\nIgnorer pour passer ce fichier"
+LangString LSTR_37 1036 "Si vous acceptez les conditions de la licence utilisateur, cliquez sur J'accepte pour continuer. Vous devez accepter la licence utilisateur afin d'installer 胑."
+LangString LSTR_38 1036 "Licence utilisateur"
+LangString LSTR_39 1036 "Veuillez examiner les termes de la licence avant d'installer 胑."
+LangString LSTR_40 1036 "Appuyez sur Page Suivante pour lire le reste de la licence utilisateur."
+LangString LSTR_41 1036 "Installation en cours"
+LangString LSTR_42 1036 "Veuillez patienter pendant l'installation de 胑."
+LangString LSTR_43 1036 "Installation terminée"
+LangString LSTR_44 1036 "L'installation s'est terminée avec succès."
+LangString LSTR_45 1036 "Installation interrompue"
+LangString LSTR_46 1036 "L'installation n'a pas été terminée."
+LangString LSTR_47 1036 "&Fermer"
+LangString LSTR_48 1036 0
+LangString LSTR_49 1036 "Fin de l'installation de 胑"
+LangString LSTR_50 1036 "MS Shell Dlg"
+LangString LSTR_51 1036 "Votre ordinateur doit être redémarré afin de compléter l'installation de 胑. Souhaitez-vous redémarrer maintenant ?"
+LangString LSTR_52 1036 "Redémarrer maintenant"
+LangString LSTR_53 1036 "Je souhaite redémarrer moi-même plus tard"
+LangString LSTR_54 1036 "胑 a été installé sur votre ordinateur.$\r$\n$\r$\nCliquez sur Fermer pour quitter le programme d'installation."
+LangString LSTR_55 1036 8
+LangString LSTR_56 1036 "Êtes-vous sûr de vouloir quitter l'installation de 肂 ?"
+LangString LSTR_57 1036 " L'installation de uTorrent Web requiert des privilèges d'administrateur, veuillez réessayer "
+LangString LSTR_58 1036 " L'installation de uTorrent Web requiert des privilèges d'administrateur, abandon ! "
+LangString LSTR_59 1036 " Le service de connexion ne s'exécute pas, abandon ! "
+LangString LSTR_60 1036 " Impossible d'élever, erreur $V0 "
+LangString LSTR_61 1036 " uTorrent Web requiert Windows 7 ou une version supérieure. "
+LangString LSTR_62 1036 " Arrêt de l'application uTorrent Web "
+LangString LSTR_63 1036 " Patientez pendant la fermeture de uTorrent Web "
+LangString LSTR_64 1036 " uTorrent Web ne s'est pas fermé correctement "
+LangString LSTR_65 1036 " Le programme d'installation ne peut pas arrêter d'exécuter uTorrent Web. $\n Souhaitez-vous interrompre le processus ? "
+LangString LSTR_66 1036 " Installer Dir : $INSTDIR "
+LangString LSTR_67 1036 " Échec de l'extraction du programme de désinstallation "
+LangString LSTR_68 1036 " Échec de la sauvegarde des réglages du programme de désinstallation "
+LangString LSTR_69 1036 " Échec de l'installation de la règle du pare-feu "
+LangString LSTR_70 1036 "Personnalisée"
+LangString LSTR_71 1036 "Annuler"
+LangString LSTR_72 1036 "< &Précédent"
+LangString LSTR_73 1036 "J'a&ccepte"
+LangString LSTR_74 1036 "Cliquez sur Installer pour démarrer l'installation."
+LangString LSTR_75 1036 "P&lus d'infos"
+LangString LSTR_76 1036 "Terminé"
+LangString LSTR_77 1036 "&Suivant >"
+LangString LSTR_78 1036 "Cliquez sur Suivant pour continuer."
+LangString LSTR_79 1036 " "
+LangString LSTR_80 1036 "&Fermer"
+LangString LSTR_81 1036 "uTorrent Web"
+
+
+; LANG: 1031
+LangString LSTR_0 1031 "Nullsoft Install System v3.08"
+LangString LSTR_1 1031 "Installation von 肂"
+LangString LSTR_2 1031 "uTorrent Web"
+LangString LSTR_5 1031 "Fehler beim Schreiben: "
+LangString LSTR_8 1031 "Symbol ist nicht vorhanden: "
+LangString LSTR_9 1031 "Fehler beim Laden von "
+LangString LSTR_11 1031 "Verknüpfung wird erstellt: "
+LangString LSTR_13 1031 "Datei wird gelöscht: "
+LangString LSTR_14 1031 "Datei wird nach Neustart gelöscht: "
+LangString LSTR_15 1031 "Fehler beim Erstellen der Verknüpfung: "
+LangString LSTR_17 1031 "Fehler beim Entpacken. Ist das Installationsprogramm beschädigt?"
+LangString LSTR_19 1031 "ExecShell: "
+LangString LSTR_20 1031 "Wird gestartet: "
+LangString LSTR_21 1031 "Wird entpackt: "
+LangString LSTR_22 1031 "Entpacken: Fehler beim Schreiben der Datei "
+LangString LSTR_23 1031 "Beschädigtes Installationsprogramm: ungültiger Befehlscode"
+LangString LSTR_24 1031 "Kein OLE für: "
+LangString LSTR_25 1031 "Zielverzeichnis: "
+LangString LSTR_26 1031 "Verzeichnis wird entfernt: "
+LangString LSTR_29 1031 "Übersprungen: "
+LangString LSTR_30 1031 "Details in die Zwischenablage kopieren"
+LangString LSTR_36 1031 "Fehler beim Überschreiben der Datei: $\r$\n$\t$\"$V0$\"$\r$\nKlicken Sie auf Abbrechen, um abzubrechen,$\r$\nauf Wiederholen, um den Schreibvorgang erneut zu versuchen,$\r$\noder auf Ignorieren, um diese Datei zu überspringen."
+LangString LSTR_37 1031 "Falls Sie alle Bedingungen des Abkommens akzeptieren, klicken Sie auf Annehmen. Sie müssen die Lizenzvereinbarungen anerkennen, um 胑 installieren zu können."
+LangString LSTR_38 1031 "Lizenzabkommen"
+LangString LSTR_39 1031 "Bitte lesen Sie die Lizenzbedingungen durch, bevor Sie mit der Installation fortfahren."
+LangString LSTR_40 1031 "Drücken Sie die BILD-AB-Taste, um den Rest des Abkommens zu lesen."
+LangString LSTR_41 1031 "Wird installiert ..."
+LangString LSTR_42 1031 "Bitte warten Sie, während 胑 installiert wird."
+LangString LSTR_43 1031 "Die Installation ist vollständig"
+LangString LSTR_44 1031 "Die Installation wurde erfolgreich abgeschlossen."
+LangString LSTR_45 1031 "Abbruch der Installation"
+LangString LSTR_46 1031 "Die Installation wurde nicht vollständig abgeschlossen."
+LangString LSTR_47 1031 "&Fertigstellen"
+LangString LSTR_48 1031 0
+LangString LSTR_49 1031 "Die Installation von 胑 wird abgeschlossen"
+LangString LSTR_50 1031 "MS Shell Dlg"
+LangString LSTR_51 1031 "Windows muss neu gestartet werden, um die Installation von 胑 zu vervollständigen. Möchten Sie Windows jetzt neu starten?"
+LangString LSTR_52 1031 "Jetzt neu starten"
+LangString LSTR_53 1031 "Windows später selbst neu starten"
+LangString LSTR_54 1031 "胑 wurde auf Ihrem Computer installiert.$\r$\n$\r$\nKlicken Sie auf Fertigstellen, um den Installationsassistenten zu schließen."
+LangString LSTR_55 1031 8
+LangString LSTR_56 1031 "Sind Sie sicher, dass Sie die Installation von 肂 abbrechen möchten?"
+LangString LSTR_57 1031 "Das Installieren von uTorrent Web erfordert Administratorrechte, bitte versuchen Sie es erneut"
+LangString LSTR_58 1031 "Das Installieren von uTorrent Web erfordert Administratorrechte, Abbruch wird durchgeführt!"
+LangString LSTR_59 1031 "Logon-Dienst nicht aktiv, Abbruch wird durchgeführt!"
+LangString LSTR_60 1031 "Erhöhung nicht möglich, Fehler $V0"
+LangString LSTR_61 1031 "uTorrent Web benötigt Windows 7 oder höher."
+LangString LSTR_62 1031 "Anwendung uTorrent Web wird angehalten"
+LangString LSTR_63 1031 "Warte darauf, dass uTorrent Web sauber beendet wird"
+LangString LSTR_64 1031 "uTorrent Web wurde nicht sauber beendet"
+LangString LSTR_65 1031 "Installationsprogramm kann uTorrent Web nicht anhalten.$\nMöchten Sie den Prozess abbrechen?"
+LangString LSTR_66 1031 "Installationsverzeichnis: $INSTDIR"
+LangString LSTR_67 1031 "Extrahieren des Deinstallationsprogramms gescheitert"
+LangString LSTR_68 1031 "Speichern der Einstellungen des Deinstallationsprogramms gescheitert"
+LangString LSTR_69 1031 "Speichern der Firewall-Regel gescheitert"
+LangString LSTR_70 1031 "Benutzerdefiniert"
+LangString LSTR_71 1031 "Abbrechen"
+LangString LSTR_72 1031 "< &Zurück"
+LangString LSTR_73 1031 "&Annehmen"
+LangString LSTR_74 1031 "Klicken Sie auf Installieren, um die Installation zu starten."
+LangString LSTR_75 1031 "&Details anzeigen"
+LangString LSTR_76 1031 "Fertig"
+LangString LSTR_77 1031 "&Weiter >"
+LangString LSTR_78 1031 "Klicken Sie auf Weiter, um fortzufahren."
+LangString LSTR_79 1031 " "
+LangString LSTR_80 1031 "&Beenden"
+LangString LSTR_81 1031 "uTorrent Web"
+
+
+; LANG: 1045
+LangString LSTR_0 1045 "Nullsoft Install System v3.08"
+LangString LSTR_1 1045 "Instalator 肂"
+LangString LSTR_2 1045 "uTorrent Web"
+LangString LSTR_5 1045 "Nie można zapisać: "
+LangString LSTR_8 1045 "Nie można odnaleźć symbolu: "
+LangString LSTR_9 1045 "Nie można wczytać: "
+LangString LSTR_11 1045 "Utwórz skrót: "
+LangString LSTR_13 1045 "Usuń plik: "
+LangString LSTR_14 1045 "Usuń przy ponownym uruchomieniu: "
+LangString LSTR_15 1045 "Błąd tworzenia skrótu: "
+LangString LSTR_17 1045 "Błąd wyodrębniania danych! Uszkodzony instalator?"
+LangString LSTR_19 1045 "ExecShell: "
+LangString LSTR_20 1045 "Uruchom: "
+LangString LSTR_21 1045 "Wyodrębnij: "
+LangString LSTR_22 1045 "Wyodrębnij: błąd zapisu do pliku "
+LangString LSTR_23 1045 "Instalator uszkodzony: nieprawidłowy kod operacji"
+LangString LSTR_24 1045 "Brak OLE dla: "
+LangString LSTR_25 1045 "Folder wyjściowy: "
+LangString LSTR_26 1045 "Usuń folder: "
+LangString LSTR_29 1045 "Pominięte: "
+LangString LSTR_30 1045 "Kopiuj szczegóły do schowka"
+LangString LSTR_36 1045 "Błąd otwarcia pliku do zapisu: $\r$\n$\r$\n$V0$\r$\n$\r$\nWybierz 'Anuluj', aby przerwać instalację,$\r$\n'Ponów', aby ponowić zapis do pliku lub$\r$\n'Ignoruj', aby pominąć ten plik."
+LangString LSTR_37 1045 "Jeżeli akceptujesz warunki umowy, kliknij przycisk 'Zgadzam się', aby kontynuować. Musisz zaakceptować warunki umowy, aby zainstalować 胑."
+LangString LSTR_38 1045 "Umowa licencyjna"
+LangString LSTR_39 1045 "Przed instalacją 胑 zapoznaj się z warunkami licencji."
+LangString LSTR_40 1045 "Naciśnij klawisz Page Down, aby zobaczyć dalszą część umowy."
+LangString LSTR_41 1045 "Instalacja"
+LangString LSTR_42 1045 "Proszę czekać, trwa instalacja 胑."
+LangString LSTR_43 1045 "Zakończono instalację"
+LangString LSTR_44 1045 "Instalacja zakończona pomyślnie."
+LangString LSTR_45 1045 "Instalacja przerwana"
+LangString LSTR_46 1045 "Instalacja nie została zakończona pomyślnie."
+LangString LSTR_47 1045 "&Zakończ"
+LangString LSTR_48 1045 0
+LangString LSTR_49 1045 "Kończenie pracy kreatora instalacji 胑"
+LangString LSTR_50 1045 "MS Shell Dlg"
+LangString LSTR_51 1045 "Twój komputer musi zostać ponownie uruchomiony, aby zakończyć instalację 胑. Czy chcesz teraz ponownie uruchomić komputer?"
+LangString LSTR_52 1045 "Uruchom ponownie teraz"
+LangString LSTR_53 1045 "Sam uruchomię ponownie komputer później"
+LangString LSTR_54 1045 "胑 został pomyślnie zainstalowany na Twoim komputerze.$\r$\n$\r$\nKliknij przycisk 'Zakończ', aby zakończyć działanie instalatora."
+LangString LSTR_55 1045 8
+LangString LSTR_56 1045 "Czy na pewno chcesz zakończyć działanie instalatora 肂?"
+LangString LSTR_57 1045 "Instalacja uTorrent Web wymaga uprawnień administratora, spróbuj ponownie"
+LangString LSTR_58 1045 "Instalacja uTorrent Web wymaga uprawnień administratora, przerywam!"
+LangString LSTR_59 1045 "Usługa logowania nie jest uruchomiona, przerywam!"
+LangString LSTR_60 1045 "Nie można podnieść uprawnień, błąd $V0"
+LangString LSTR_61 1045 "uTorrent Web wymaga systemu Windows 7 lub nowszej wersji."
+LangString LSTR_62 1045 "Zatrzymuję aplikację uTorrent Web"
+LangString LSTR_63 1045 "Czekam na zamknięcie uTorrent Web"
+LangString LSTR_64 1045 "Nie można zamknąć uTorrent Web"
+LangString LSTR_65 1045 "Instalator nie może zatrzymać uTorrent Web.$\nCzy chcesz zakończyć proces?"
+LangString LSTR_66 1045 "Katalog instalacyjny: $INSTDIR"
+LangString LSTR_67 1045 "Nie można wyodrębnić deinstalatora"
+LangString LSTR_68 1045 "Nie można zapisać ustawień deinstalatora"
+LangString LSTR_69 1045 "Nie można ustawić reguły zapory sieciowej"
+LangString LSTR_70 1045 "Użytkownika"
+LangString LSTR_71 1045 "Anuluj"
+LangString LSTR_72 1045 "< &Wstecz"
+LangString LSTR_73 1045 "&Zgadzam się"
+LangString LSTR_74 1045 "Kliknij przycisk 'Zainstaluj', aby rozpocząć instalację."
+LangString LSTR_75 1045 "Pokaż &szczegóły"
+LangString LSTR_76 1045 "Zakończono"
+LangString LSTR_77 1045 "&Dalej >"
+LangString LSTR_78 1045 "Kliknij przycisk 'Dalej', aby kontynuować."
+LangString LSTR_79 1045 " "
+LangString LSTR_80 1045 "&Zamknij"
+LangString LSTR_81 1045 "uTorrent Web"
+
+
+; LANG: 2052
+LangString LSTR_0 2052 "Nullsoft Install System v3.08"
+LangString LSTR_1 2052 "肂 安装"
+LangString LSTR_2 2052 "uTorrent Web"
+LangString LSTR_5 2052 "无法写入: "
+LangString LSTR_8 2052 "无法找到符号: "
+LangString LSTR_9 2052 "无法加载: "
+LangString LSTR_11 2052 "创建快捷方式: "
+LangString LSTR_13 2052 "删除文件: "
+LangString LSTR_14 2052 "重新启动后删除: "
+LangString LSTR_15 2052 "创建快捷方式时发生错误: "
+LangString LSTR_17 2052 "解压缩数据时发生错误！请检查安装程序是否损坏。"
+LangString LSTR_19 2052 "执行外壳程序: "
+LangString LSTR_20 2052 "执行: "
+LangString LSTR_21 2052 "解压缩: "
+LangString LSTR_22 2052 "抽取: 无法写入文件 "
+LangString LSTR_23 2052 "安装程序损坏: 无效的操作代码 "
+LangString LSTR_24 2052 "没有 OLE 用于: "
+LangString LSTR_25 2052 "输出目录: "
+LangString LSTR_26 2052 "删除目录: "
+LangString LSTR_29 2052 "已跳过: "
+LangString LSTR_30 2052 "复制详情到剪贴板 "
+LangString LSTR_36 2052 "无法打开要写入的文件: $\r$\n$\t$\"$V0$\"$\r$\n点击 [Abort] 停止安装，$\r$\n [Retry] 重新尝试写入文件，或者$\r$\n [Ignore] 忽略这个文件。"
+LangString LSTR_37 2052 "如果你接受许可证的条款，请点击 [我同意(I)] 继续安装。你必须在同意后才能安装 胑 。"
+LangString LSTR_38 2052 "许可证协议"
+LangString LSTR_39 2052 "在安装 胑 之前，请阅读许可证条款。"
+LangString LSTR_40 2052 "要阅读协议的其余部分，请按 [PgDn] 键向下翻页。"
+LangString LSTR_41 2052 "正在安装"
+LangString LSTR_42 2052 "胑 正在安装，请稍候。"
+LangString LSTR_43 2052 "安装完成"
+LangString LSTR_44 2052 "安装程序成功完成安装。"
+LangString LSTR_45 2052 "安装中止"
+LangString LSTR_46 2052 "安装程序未能完成安装。"
+LangString LSTR_47 2052 "完成(&F)"
+LangString LSTR_48 2052 0
+LangString LSTR_49 2052 "胑 安装程序结束"
+LangString LSTR_50 2052 "宋体"
+LangString LSTR_51 2052 "必须重新启动本机才能完成 胑 的安装。是否立即重新启动？"
+LangString LSTR_52 2052 "是，立即重新启动(&Y)"
+LangString LSTR_53 2052 "否，我会在之后重新启动(&N)"
+LangString LSTR_54 2052 "胑 已经成功安装到本机。$\r$\n点击 [完成(F)] 关闭安装程序。"
+LangString LSTR_55 2052 9
+LangString LSTR_56 2052 "确定要退出 肂 安装程序吗？"
+LangString LSTR_57 2052 "安装uTorrent Web需要管理员权限，请重试"
+LangString LSTR_58 2052 "安装uTorrent Web需要管理员权限，正在中止！"
+LangString LSTR_59 2052 "登录服务未运行，正在中止！"
+LangString LSTR_60 2052 "无法提升，错误$V0"
+LangString LSTR_61 2052 "uTorrent Web需要Windows 7或更高版本。"
+LangString LSTR_62 2052 "停止uTorrent Web应用程序"
+LangString LSTR_63 2052 "正在等待uTorrent Web顺利退出"
+LangString LSTR_64 2052 "uTorrent Web 未能顺利退出"
+LangString LSTR_65 2052 "安装程序无法停止运行uTorrent Web。$\n是否要终止进程？"
+LangString LSTR_66 2052 "安装目录：$INSTDIR"
+LangString LSTR_67 2052 "无法提取卸载程序"
+LangString LSTR_68 2052 "无法保存卸载程序设置"
+LangString LSTR_69 2052 "安装防火墙规则失败"
+LangString LSTR_70 2052 "自定义"
+LangString LSTR_71 2052 "取消(&C)"
+LangString LSTR_72 2052 "< 上一步(&P)"
+LangString LSTR_73 2052 "我接受(&I)"
+LangString LSTR_74 2052 "点击 [安装(I)] 开始安装。"
+LangString LSTR_75 2052 "显示详情(&D)"
+LangString LSTR_76 2052 "已完成"
+LangString LSTR_77 2052 "下一步(&N) >"
+LangString LSTR_78 2052 "点击 [下一步(N)] 继续。"
+LangString LSTR_79 2052 " "
+LangString LSTR_80 2052 "关闭(&L)"
+LangString LSTR_81 2052 "uTorrent Web"
+
+
+; LANG: 1028
+LangString LSTR_0 1028 "Nullsoft Install System v3.08"
+LangString LSTR_1 1028 "肂 安裝"
+LangString LSTR_2 1028 "uTorrent Web"
+LangString LSTR_5 1028 "無法寫入: "
+LangString LSTR_8 1028 "無法找到符號: "
+LangString LSTR_9 1028 "無法載入: "
+LangString LSTR_11 1028 "建立捷徑: "
+LangString LSTR_13 1028 "刪除檔案: "
+LangString LSTR_14 1028 "重新開機後刪除: "
+LangString LSTR_15 1028 "建立捷徑時發生錯誤: "
+LangString LSTR_17 1028 "解壓縮資料發生錯誤！安裝程式是否已損壞？"
+LangString LSTR_19 1028 "執行殼層程式: "
+LangString LSTR_20 1028 "執行: "
+LangString LSTR_21 1028 "抽取: "
+LangString LSTR_22 1028 "抽取: 無法寫入檔案 "
+LangString LSTR_23 1028 "安裝程式損毀: 無效的作業代碼 "
+LangString LSTR_24 1028 "沒有 OLE 用於: "
+LangString LSTR_25 1028 "輸出資料夾: "
+LangString LSTR_26 1028 "移除資料夾: "
+LangString LSTR_29 1028 "已略過: "
+LangString LSTR_30 1028 "複製細節到剪貼簿 "
+LangString LSTR_36 1028 "無法開啟要寫入的檔案: $\r$\n$\t$\"$V0$\"$\r$\n按「中止」停止安裝，$\r$\n「重試」重新嘗試寫入檔案，或$\r$\n「忽略」略過此檔案。"
+LangString LSTR_37 1028 "如果接受協議的條款，按 [我同意(A)] 繼續安裝。必須要接受協議才能安裝 胑 。"
+LangString LSTR_38 1028 "授權協議"
+LangString LSTR_39 1028 "在安裝 胑 之前，請檢閱授權條款。"
+LangString LSTR_40 1028 "檢閱協議的其餘部分，按 [PgDn] 往下捲動頁面。"
+LangString LSTR_41 1028 "安裝"
+LangString LSTR_42 1028 "胑 正在安裝，請稍候。"
+LangString LSTR_43 1028 "完成安裝"
+LangString LSTR_44 1028 "安裝已完成。"
+LangString LSTR_45 1028 "已中止安裝"
+LangString LSTR_46 1028 "安裝並未完成。"
+LangString LSTR_47 1028 "完成(&F)"
+LangString LSTR_48 1028 0
+LangString LSTR_49 1028 "即將完成安裝 胑"
+LangString LSTR_50 1028 "新細明體"
+LangString LSTR_51 1028 "電腦需要重新開機，才能完成安裝 胑 。要馬上重新開機嗎？"
+LangString LSTR_52 1028 "是，馬上重新開機(&Y)"
+LangString LSTR_53 1028 "否，我稍後再自行重新開機(&N)"
+LangString LSTR_54 1028 "已在電腦安裝 胑 。$\r$\n按 [完成(F)] 關閉安裝程式。"
+LangString LSTR_55 1028 9
+LangString LSTR_56 1028 "確定要結束 肂 的安裝程式嗎？"
+LangString LSTR_57 1028 "安裝 uTorrent Web 需要管理者權限，請再試一次"
+LangString LSTR_58 1028 "安裝 uTorrent Web 需要管理者權限，中止中！"
+LangString LSTR_59 1028 "登入系統停止運行，中止中！"
+LangString LSTR_60 1028 "無法提升，錯誤 $V0"
+LangString LSTR_61 1028 "uTorrent Web 需要 Windows 7 或之後版本。"
+LangString LSTR_62 1028 "中止 uTorrent Web 應用程式中"
+LangString LSTR_63 1028 "等待 uTorrent Web 完全關閉中"
+LangString LSTR_64 1028 "uTorrent Web 完全關閉失敗"
+LangString LSTR_65 1028 "安裝程式無法中止 uTorrent Web 運行。$\n 您想要中止程序嗎？"
+LangString LSTR_66 1028 "安裝目錄：$INSTDIR"
+LangString LSTR_67 1028 "解壓縮解除安裝程式失敗"
+LangString LSTR_68 1028 "儲存解除安裝程式設定失敗"
+LangString LSTR_69 1028 "安裝防火牆規則失敗"
+LangString LSTR_70 1028 "自訂"
+LangString LSTR_71 1028 "取消"
+LangString LSTR_72 1028 "< 上一步(&B)"
+LangString LSTR_73 1028 "我同意(&A)"
+LangString LSTR_74 1028 "按「安裝(I)」開始安裝。"
+LangString LSTR_75 1028 "顯示細節(&D)"
+LangString LSTR_76 1028 "已完成"
+LangString LSTR_77 1028 "下一步(&N) >"
+LangString LSTR_78 1028 "按「下一步(N)」繼續。"
+LangString LSTR_79 1028 " "
+LangString LSTR_80 1028 "關閉(&C)"
+LangString LSTR_81 1028 "uTorrent Web"
+
+
+; LANG: 2070
+LangString LSTR_0 2070 "Nullsoft Install System v3.08"
+LangString LSTR_1 2070 "Instalação de 肂"
+LangString LSTR_2 2070 "uTorrent Web"
+LangString LSTR_5 2070 "Não foi possível escrever: "
+LangString LSTR_8 2070 "Símbolo não encontrado: "
+LangString LSTR_9 2070 "Não foi possível carregar: "
+LangString LSTR_11 2070 "Criando atalho: "
+LangString LSTR_13 2070 "Apagando ficheiro: "
+LangString LSTR_14 2070 "Apagar ao reiniciar: "
+LangString LSTR_15 2070 "Erro ao criar atalho: "
+LangString LSTR_17 2070 "Erro ao descomprimir dados! Instalador corrompido?"
+LangString LSTR_19 2070 "Executando pelo Shell: "
+LangString LSTR_20 2070 "Executando: "
+LangString LSTR_21 2070 "Extraindo: "
+LangString LSTR_22 2070 "Extraindo: erro ao escrever ficheiro "
+LangString LSTR_23 2070 "Instalador corrompido: código de operação inválido"
+LangString LSTR_24 2070 "Sem OLE para: "
+LangString LSTR_25 2070 "Pasta de destino: "
+LangString LSTR_26 2070 "Removendo pasta: "
+LangString LSTR_29 2070 "Ignorado: "
+LangString LSTR_30 2070 "Copiar detalhes para a Área de Transfêrencia"
+LangString LSTR_36 2070 "Erro ao abrir ficheiro para escrita: $\r$\n$\t$\"$V0$\"$\r$\nClique em Abortar para abortar a instalação,$\r$\nRepetir para tentar novamente a escrita do ficheiro, ou$\r$\nIgnorar para ignorar este ficheiro."
+LangString LSTR_37 2070 "Se aceitar os termos da licença, clique em 'Aceito' para continuar. Deverá aceitar o contrato para instalar o 胑."
+LangString LSTR_38 2070 "Contrato de Licença"
+LangString LSTR_39 2070 "Por favor, verifique os termos da licença antes de instalar o 胑."
+LangString LSTR_40 2070 "Tecle Page Down para ver o restante da licença."
+LangString LSTR_41 2070 "Instalando"
+LangString LSTR_42 2070 "Por favor, aguarde enquanto o 胑 está sendo instalado."
+LangString LSTR_43 2070 "Instalação Completa"
+LangString LSTR_44 2070 "A instalação foi concluída com sucesso."
+LangString LSTR_45 2070 "Instalação Abortada"
+LangString LSTR_46 2070 "A instalação não foi concluída com sucesso."
+LangString LSTR_47 2070 "&Terminar"
+LangString LSTR_48 2070 0
+LangString LSTR_49 2070 "Concluindo o Assistente de Instalação do 胑"
+LangString LSTR_50 2070 "MS Shell Dlg"
+LangString LSTR_51 2070 "O seu computador deve ser reiniciado para concluír a instalação do 胑. Deseja reiniciar agora?"
+LangString LSTR_52 2070 "Reiniciar Agora"
+LangString LSTR_53 2070 "Eu quero reiniciar manualmente depois"
+LangString LSTR_54 2070 "胑 foi instalado no seu computador.$\r$\n$\r$\nClique em Terminar para fechar este assistente."
+LangString LSTR_55 2070 8
+LangString LSTR_56 2070 "Deseja realmente cancelar a instalação do 肂?"
+LangString LSTR_57 2070 "Para instalar uTorrent Web serão necessárias permissões de administrador, por favor tente de novo"
+LangString LSTR_58 2070 "Para instalar uTorrent Web serão necessárias permissões de administrador, cancelar!"
+LangString LSTR_59 2070 "Serviço de logon não está a funcionar, cancelar!"
+LangString LSTR_60 2070 "Não é possível elevar, erro $V0"
+LangString LSTR_61 2070 "uTorrent Web necessita de Windows 7 ou mais recente."
+LangString LSTR_62 2070 "Parar Aplicação uTorrent Web"
+LangString LSTR_63 2070 "A aguardar encerramento normal de uTorrent Web"
+LangString LSTR_64 2070 "uTorrent Web não consegue encerrar normalmente"
+LangString LSTR_65 2070 "Não é possível parar o funcionamento do instalador uTorrent Web.$\nPretende terminar o processo?"
+LangString LSTR_66 2070 "Dir. Instalação: $INSTDIR"
+LangString LSTR_67 2070 "Erro ao extrair ficheiro de desinstalação"
+LangString LSTR_68 2070 "Erro ao gravar definições de desinstalação"
+LangString LSTR_69 2070 "Erro ao instalar regra de firewall"
+LangString LSTR_70 2070 "Personalizado"
+LangString LSTR_71 2070 "Cancelar"
+LangString LSTR_72 2070 "< &Anterior"
+LangString LSTR_73 2070 "&Aceito"
+LangString LSTR_74 2070 "Clique em 'Instalar' para iniciar a instalação."
+LangString LSTR_75 2070 "Ver &Detalhes"
+LangString LSTR_76 2070 "Concluído"
+LangString LSTR_77 2070 "&Seguinte >"
+LangString LSTR_78 2070 "Clique em 'Seguinte' para continuar."
+LangString LSTR_79 2070 " "
+LangString LSTR_80 2070 "&Fechar"
+LangString LSTR_81 2070 "uTorrent Web"
+
+
+; LANG: 1046
+LangString LSTR_0 1046 "Nullsoft Install System v3.08"
+LangString LSTR_1 1046 "Instalação do 肂"
+LangString LSTR_2 1046 "uTorrent Web"
+LangString LSTR_5 1046 "Não foi possível gravar: "
+LangString LSTR_8 1046 "Não foi possível localizar o símbolo: "
+LangString LSTR_9 1046 "Não foi possível carregar: "
+LangString LSTR_11 1046 "Criar atalho: "
+LangString LSTR_13 1046 "Excluir o arquivo: "
+LangString LSTR_14 1046 "Excluir ao reiniciar: "
+LangString LSTR_15 1046 "Erro ao criar atalho: "
+LangString LSTR_17 1046 "Erro ao descomprimir os dados! Instalador corrompido?"
+LangString LSTR_19 1046 "ExecShell: "
+LangString LSTR_20 1046 "Executar: "
+LangString LSTR_21 1046 "Extrair: "
+LangString LSTR_22 1046 "Extrair: erro ao gravar o arquivo "
+LangString LSTR_23 1046 "Instalador corrompido: opcode inválido"
+LangString LSTR_24 1046 "Sem OLE para: "
+LangString LSTR_25 1046 "Pasta de saída: "
+LangString LSTR_26 1046 "Excluir a pasta: "
+LangString LSTR_29 1046 "Ignorado: "
+LangString LSTR_30 1046 "Copiar os Detalhes para a Área de Transferência"
+LangString LSTR_36 1046 "Erro ao abrir o arquivo para gravação: $\r$\n$\r$\n$V0$\r$\n$\r$\nClique em Abortar para parar a instalação,$\r$\nRepetir para tentar de novo, ou$\r$\nIgnorar para pular este arquivo."
+LangString LSTR_37 1046 "Se você aceita os termos do acordo, clique em Eu Concordo para continuar. Você deve aceitar o acordo para instalar o 胑."
+LangString LSTR_38 1046 "Acordo de Licença"
+LangString LSTR_39 1046 "Por favor, leia com atenção os termos da licença antes de instalar o 胑."
+LangString LSTR_40 1046 "Pressione Page Down para ver o restante do acordo."
+LangString LSTR_41 1046 "Instalando"
+LangString LSTR_42 1046 "Por favor espere enquanto o 胑 está sendo instalado."
+LangString LSTR_43 1046 "Instalação Completa"
+LangString LSTR_44 1046 "A instalação foi completada com sucesso."
+LangString LSTR_45 1046 "Instalação Abortada"
+LangString LSTR_46 1046 "A instalação não foi completada com sucesso."
+LangString LSTR_47 1046 "&Concluir"
+LangString LSTR_48 1046 0
+LangString LSTR_49 1046 "Completando a instalação do 胑"
+LangString LSTR_50 1046 "MS Shell Dlg"
+LangString LSTR_51 1046 "Seu computador deve ser reiniciado para completar a instalação do 胑. Você quer reiniciar agora?"
+LangString LSTR_52 1046 "Reiniciar agora"
+LangString LSTR_53 1046 "Eu quero reiniciar manualmente depois"
+LangString LSTR_54 1046 "O 胑 foi instalado no seu computador.$\r$\n$\r$\nClique em Concluir para fechar o instalador."
+LangString LSTR_55 1046 8
+LangString LSTR_56 1046 "Você tem certeza que quer sair da Instalação do 肂?"
+LangString LSTR_57 1046 "Instalar o uTorrent Web requer privilégios de administrador. Por favor, tente novamente"
+LangString LSTR_58 1046 "Instalar o uTorrent Web requer privilégios de administrador. Cancelando!"
+LangString LSTR_59 1046 "O serviço de login não está funcionando. Cancelando!"
+LangString LSTR_60 1046 "Não é possível elevar, erro $V0"
+LangString LSTR_61 1046 "O uTorrent Web requer Windows 7 ou superior."
+LangString LSTR_62 1046 "Interrompendo o Aplicativo uTorrent Web"
+LangString LSTR_63 1046 "Aguardando o uTorrent Web sair sem problemas"
+LangString LSTR_64 1046 "O uTorrent Web falhou ao sair sem problemas"
+LangString LSTR_65 1046 "O instalador não pode parar de executar o uTorrent Web.$\nVocê deseja encerrar o processo?"
+LangString LSTR_66 1046 "Instalar Dir: $INSTDIR"
+LangString LSTR_67 1046 "Falha ao extrair o desinstalador"
+LangString LSTR_68 1046 "Falha ao salvar as configurações do desinstalador"
+LangString LSTR_69 1046 "Falha ao instalar a regra do firewall"
+LangString LSTR_70 1046 "Personalizado"
+LangString LSTR_71 1046 "Cancelar"
+LangString LSTR_72 1046 "< &Voltar"
+LangString LSTR_73 1046 "Eu &Concordo"
+LangString LSTR_74 1046 "Clique em Instalar para iniciar a instalação."
+LangString LSTR_75 1046 "Mostrar &detalhes"
+LangString LSTR_76 1046 "Completado"
+LangString LSTR_77 1046 "&Próximo >"
+LangString LSTR_78 1046 "Clique em Próximo para continuar."
+LangString LSTR_79 1046 " "
+LangString LSTR_80 1046 "&Fechar"
+LangString LSTR_81 1046 "uTorrent Web"
+
+
+; LANG: 1043
+LangString LSTR_0 1043 "Nullsoft Install System v3.08"
+LangString LSTR_1 1043 "肂-installatie"
+LangString LSTR_2 1043 "uTorrent Web"
+LangString LSTR_5 1043 "Kon niet schrijven: "
+LangString LSTR_8 1043 "Kon symbool niet vinden: "
+LangString LSTR_9 1043 "Kon niet laden: "
+LangString LSTR_11 1043 "Snelkoppeling maken: "
+LangString LSTR_13 1043 "Bestand verwijderen: "
+LangString LSTR_14 1043 "Verwijderen na opnieuw opstarten: "
+LangString LSTR_15 1043 "Fout bij maken snelkoppeling: "
+LangString LSTR_17 1043 "Fout bij uitpakken van gegevens! Gegevens beschadigd?"
+LangString LSTR_19 1043 "ExecShell: "
+LangString LSTR_20 1043 "Uitvoeren: "
+LangString LSTR_21 1043 "Uitpakken: "
+LangString LSTR_22 1043 "Uitpakken: fout bij schrijven naar bestand "
+LangString LSTR_23 1043 "Installatieprogramma beschadigd: ongeldige opcode"
+LangString LSTR_24 1043 "Geen OLE voor: "
+LangString LSTR_25 1043 "Uitvoermap: "
+LangString LSTR_26 1043 "Map verwijderen: "
+LangString LSTR_29 1043 "Overgeslagen: "
+LangString LSTR_30 1043 "Details kopiëren naar klembord"
+LangString LSTR_36 1043 "Fout bij het schrijven naar bestand: $\r$\n$\r$\n$V0$\r$\n$\r$\nKlik op Afbreken om de installatie te stoppen,$\r$\nOpnieuw om het opnieuw te proberen of$\r$\nNegeren om dit bestand over te slaan."
+LangString LSTR_37 1043 "Klik op Akkoord om verder te gaan als u de overeenkomst accepteert. U moet de overeenkomst accepteren om 胑 te installeren."
+LangString LSTR_38 1043 "Licentieovereenkomst"
+LangString LSTR_39 1043 "Lees de licentieovereenkomst voordat u 胑 installeert."
+LangString LSTR_40 1043 "Druk op Page Down om de rest van de overeenkomst te zien."
+LangString LSTR_41 1043 "Bezig met installeren"
+LangString LSTR_42 1043 "Een ogenblik geduld terwijl 胑 wordt geïnstalleerd."
+LangString LSTR_43 1043 "Installatie voltooid"
+LangString LSTR_44 1043 "De installatie is succesvol voltooid."
+LangString LSTR_45 1043 "Installatie afgebroken"
+LangString LSTR_46 1043 "De installatie is niet voltooid."
+LangString LSTR_47 1043 "&Voltooien"
+LangString LSTR_48 1043 0
+LangString LSTR_49 1043 "Voltooien van de 胑-installatiewizard"
+LangString LSTR_50 1043 "MS Shell Dlg"
+LangString LSTR_51 1043 "Uw systeem moet opnieuw worden opgestart om de installatie van 胑 te voltooien. Wilt u nu herstarten?"
+LangString LSTR_52 1043 "Nu herstarten"
+LangString LSTR_53 1043 "Ik wil later handmatig herstarten"
+LangString LSTR_54 1043 "胑 is geïnstalleerd op uw systeem.$\r$\n$\r$\nKlik op Voltooien om deze wizard te sluiten."
+LangString LSTR_55 1043 8
+LangString LSTR_56 1043 "Weet u zeker dat u de 肂-installatie wilt afsluiten?"
+LangString LSTR_57 1043 "Het installeren van uTorrent Web vereist beheerdersrechten, probeer het opnieuw"
+LangString LSTR_58 1043 "Het installeren van uTorrent Web vereist beheerdersrechten, annuleren!"
+LangString LSTR_59 1043 "Aanmeldingsservice niet actief, annuleren!"
+LangString LSTR_60 1043 "Kan niet verhogen, fout $V0"
+LangString LSTR_61 1043 "uTorrent Web vereist Windows 7 of hoger."
+LangString LSTR_62 1043 "Het stoppen van uTorrent Web toepassing"
+LangString LSTR_63 1043 "Het wachten op uTorrent Web om het netjes te verlaten"
+LangString LSTR_64 1043 "uTorrent Web mislukt om het netjes te verlaten"
+LangString LSTR_65 1043 "Het installatieprogramma kan niet stoppen met het functioneren van uTorrent Web.$\n Wilt u het proces beëindigen?"
+LangString LSTR_66 1043 "Installeer Dir: $INSTDIR"
+LangString LSTR_67 1043 "Extraheren van verwijderprogramma is mislukt"
+LangString LSTR_68 1043 "Het opslaan van de instellingen van het verwijderprogramma is mislukt"
+LangString LSTR_69 1043 "Het installeren van de firewallregel is mislukt"
+LangString LSTR_70 1043 "Aangepast"
+LangString LSTR_71 1043 "Annuleren"
+LangString LSTR_72 1043 "< V&orige"
+LangString LSTR_73 1043 "&Akkoord"
+LangString LSTR_74 1043 "Klik op Installeren om de installatie te beginnen."
+LangString LSTR_75 1043 "&Details tonen"
+LangString LSTR_76 1043 "Voltooid"
+LangString LSTR_77 1043 "&Volgende >"
+LangString LSTR_78 1043 "Klik op Volgende om verder te gaan."
+LangString LSTR_79 1043 " "
+LangString LSTR_80 1043 "&Afsluiten"
+LangString LSTR_81 1043 "uTorrent Web"
+
+
+; LANG: 1041
+LangString LSTR_0 1041 "Nullsoft Install System v3.08"
+LangString LSTR_1 1041 "肂 セットアップ"
+LangString LSTR_2 1041 "uTorrent Web"
+LangString LSTR_5 1041 "書き込めません:"
+LangString LSTR_8 1041 "シンボルが見つかりません:"
+LangString LSTR_9 1041 "読み込みに失敗:"
+LangString LSTR_11 1041 "ショートカット作成:"
+LangString LSTR_13 1041 "ファイル削除:"
+LangString LSTR_14 1041 "再起動時に削除:"
+LangString LSTR_15 1041 "ショートカット作成エラー:"
+LangString LSTR_17 1041 "データの展開エラー$\r$\n$\r$\nインストーラが破損していませんか？"
+LangString LSTR_19 1041 "拡張子の関連付け実行: "
+LangString LSTR_20 1041 "実行:"
+LangString LSTR_21 1041 "展開:"
+LangString LSTR_22 1041 "展開:ファイルへの書き込みエラー"
+LangString LSTR_23 1041 "インストーラーが壊れている:無効な opcode"
+LangString LSTR_24 1041 "OLE がありません:"
+LangString LSTR_25 1041 "出力先フォルダ:"
+LangString LSTR_26 1041 "フォルダ削除:"
+LangString LSTR_29 1041 "省略:"
+LangString LSTR_30 1041 "クリップボードへ詳細をコピー"
+LangString LSTR_36 1041 "書き込みファイルオープンのエラー:$\r$\n$\t$\"$V0$\"$\r$\nインストールを中止するには「中止」、$\r$\n再びこのファイルの作成を試みるには「再試行」、$\r$\nこのファイルをスキップして続けるには「無視」を押してください。"
+LangString LSTR_37 1041 "契約のすべての条件に同意するなら、「同意する」 を選択しインストールを続行します。胑 をインストールするには、契約に同意する必要があります。"
+LangString LSTR_38 1041 "使用許諾契約"
+LangString LSTR_39 1041 "胑 をインストールする前に、ライセンス条件を確認してください。"
+LangString LSTR_40 1041 "[Page Down] を押し契約をすべてお読みください。"
+LangString LSTR_41 1041 "インストール"
+LangString LSTR_42 1041 "胑 をインストール中です。お待ちください。"
+LangString LSTR_43 1041 "インストールの完了"
+LangString LSTR_44 1041 "インストールに成功しました。"
+LangString LSTR_45 1041 "インストールの中止"
+LangString LSTR_46 1041 "セットアップは正常に完了しませんでした。"
+LangString LSTR_47 1041 "完了(&F)"
+LangString LSTR_48 1041 0
+LangString LSTR_49 1041 "胑 セットアップの完了"
+LangString LSTR_50 1041 "ＭＳ Ｐゴシック"
+LangString LSTR_51 1041 "胑 のインストールを完了するには、このコンピュータを再起動する必要があります。今すぐ再起動しますか？"
+LangString LSTR_52 1041 "今すぐ再起動"
+LangString LSTR_53 1041 "後で手動で再起動"
+LangString LSTR_54 1041 "胑 は、このコンピュータにインストールされました。$\r$\n$\r$\n「完了」をクリックしセットアップを閉じます。"
+LangString LSTR_55 1041 9
+LangString LSTR_56 1041 "肂 セットアップを中止しますか？"
+LangString LSTR_57 1041 "uTorrent Webをインストールするには、管理者特権が必要です。再試行してください。"
+LangString LSTR_58 1041 " uTorrent Web をインストールするには、管理者特権が必要です。中止する。"
+LangString LSTR_59 1041 "ログオンサービスに対応していません。中止する。"
+LangString LSTR_60 1041 "レベルアップできません。エラー $V0"
+LangString LSTR_61 1041 "uTorrent Web にはWindows 7以上が必要です。"
+LangString LSTR_62 1041 " uTorrent Web アプリケーションを停止する。"
+LangString LSTR_63 1041 " uTorrent Web 完全に退場するための待機中。"
+LangString LSTR_64 1041 "uTorrent Web 完全に退場することに失敗しました。"
+LangString LSTR_65 1041 "インストーラーを停止することはできません。 uTorrent Web.$\n手順を終了しますか。"
+LangString LSTR_66 1041 "Dir: $INSTDIRをインストールする。"
+LangString LSTR_67 1041 "アンインストーラーの抽出に失敗しました。"
+LangString LSTR_68 1041 "アンインストーラー設定の保存は失敗しました。"
+LangString LSTR_69 1041 "ファイアーウォール・ルールのインストールに失敗しました。"
+LangString LSTR_70 1041 "カスタム"
+LangString LSTR_71 1041 "キャンセル"
+LangString LSTR_72 1041 "< 戻る(&B)"
+LangString LSTR_73 1041 "同意する(&A)"
+LangString LSTR_74 1041 "「インストール」をクリックしインストールを開始します。"
+LangString LSTR_75 1041 "詳細を表示(&D)"
+LangString LSTR_76 1041 "完了"
+LangString LSTR_77 1041 "次へ(&N) >"
+LangString LSTR_78 1041 "「次へ」をクリックし続行します。"
+LangString LSTR_79 1041 " "
+LangString LSTR_80 1041 "閉じる(&C)"
+LangString LSTR_81 1041 "uTorrent Web"
+
+
+; LANG: 1034
+LangString LSTR_0 1034 "Nullsoft Install System v3.08"
+LangString LSTR_1 1034 "Instalación de 肂"
+LangString LSTR_2 1034 "uTorrent Web"
+LangString LSTR_5 1034 "No pudo escribirse: "
+LangString LSTR_8 1034 "No pudo encontrarse símbolo: "
+LangString LSTR_9 1034 "No pudo cargarse: "
+LangString LSTR_11 1034 "Creando acceso directo: "
+LangString LSTR_13 1034 "Borrar archivo: "
+LangString LSTR_14 1034 "Borrar al reinicio: "
+LangString LSTR_15 1034 "Error creando acceso directo: "
+LangString LSTR_17 1034 "¡Error descomprimiendo datos! ¿Instalador corrupto?"
+LangString LSTR_19 1034 "Extrayendo  comando: "
+LangString LSTR_20 1034 "Extrayendo : "
+LangString LSTR_21 1034 "Extraer: "
+LangString LSTR_22 1034 "Extraer: error escribiendo al archivo "
+LangString LSTR_23 1034 "Instalador corrupto: código de operación no válido"
+LangString LSTR_24 1034 "Sin OLE para: "
+LangString LSTR_25 1034 "Directorio de salida: "
+LangString LSTR_26 1034 "Eliminar directorio: "
+LangString LSTR_29 1034 "Omitido: "
+LangString LSTR_30 1034 "Copiar Detalles al Portapapeles"
+LangString LSTR_36 1034 "Error abriendo archivo para escritura: $\r$\n$\t$\"$V0$\"$\r$\nPresione abortar para anular la instalación,$\r$\nreintentar para volver a intentar escribir el archivo, u$\r$\nomitir para ignorar este archivo"
+LangString LSTR_37 1034 "Si acepta todos los términos del acuerdo, seleccione Acepto para continuar. Debe aceptar el acuerdo para instalar 胑."
+LangString LSTR_38 1034 "Acuerdo de licencia"
+LangString LSTR_39 1034 "Por favor revise los términos de la licencia antes de instalar 胑."
+LangString LSTR_40 1034 "Presione Avanzar Página para ver el resto del acuerdo."
+LangString LSTR_41 1034 "Instalando"
+LangString LSTR_42 1034 "Por favor espere mientras 胑 se instala."
+LangString LSTR_43 1034 "Instalación Completada"
+LangString LSTR_44 1034 "La instalación se ha completado correctamente."
+LangString LSTR_45 1034 "Instalación Anulada"
+LangString LSTR_46 1034 "La instalación no se completó correctamente."
+LangString LSTR_47 1034 "&Terminar"
+LangString LSTR_48 1034 0
+LangString LSTR_49 1034 "Completando el Asistente de Instalación de 胑"
+LangString LSTR_50 1034 "MS Shell Dlg"
+LangString LSTR_51 1034 "Su sistema debe ser reiniciado para que pueda completarse la instalación de 胑. ¿Desea reiniciar ahora?"
+LangString LSTR_52 1034 "Reiniciar ahora"
+LangString LSTR_53 1034 "Deseo reiniciar manualmente más tarde"
+LangString LSTR_54 1034 "胑 ha sido instalado en su sistema.$\r$\n$\r$\nPresione Terminar para cerrar este asistente."
+LangString LSTR_55 1034 8
+LangString LSTR_56 1034 "¿Está seguro de que desea salir de la instalación de 肂?"
+LangString LSTR_57 1034 "Se requieren permisos de administrador para instalar uTorrent Web. Por favor, vuélvelo a intentar"
+LangString LSTR_58 1034 "Se requieren permisos de administrador para instalar uTorrent Web. Cancelando..."
+LangString LSTR_59 1034 "El servicio de inicio de sesión no funciona. Cancelando..."
+LangString LSTR_60 1034 "No es posible elevar, error $V0"
+LangString LSTR_61 1034 "uTorrent Web requiere Windows 7 o superior"
+LangString LSTR_62 1034 "Deteniendo la aplicación uTorrent Web"
+LangString LSTR_63 1034 "Esperando a que uTorrent Web se cierre con éxito"
+LangString LSTR_64 1034 "uTorrent Web no se cerró con éxito"
+LangString LSTR_65 1034 "El instalador no puede dejar de ejecutar uTorrent Web.  $\n¿Quieres finalizar el proceso?"
+LangString LSTR_66 1034 "Directorio de instalación: $INSTDIR"
+LangString LSTR_67 1034 "Fallo al extraer el instalador"
+LangString LSTR_68 1034 "Fallo al guardar ajustes del instalador"
+LangString LSTR_69 1034 "Fallo al establecer regla del cortafuegos"
+LangString LSTR_70 1034 "Personalizada"
+LangString LSTR_71 1034 "Cancelar"
+LangString LSTR_72 1034 "< &Atrás"
+LangString LSTR_73 1034 "A&cepto"
+LangString LSTR_74 1034 "Presione Instalar para comenzar la instalación."
+LangString LSTR_75 1034 "Ver &detalles"
+LangString LSTR_76 1034 "Completado"
+LangString LSTR_77 1034 "&Siguiente >"
+LangString LSTR_78 1034 "Presione Siguiente para continuar."
+LangString LSTR_79 1034 " "
+LangString LSTR_80 1034 "&Cerrar"
+LangString LSTR_81 1034 "uTorrent Web"
+
+
+; LANG: 1055
+LangString LSTR_0 1055 "Nullsoft Install System v3.08"
+LangString LSTR_1 1055 "肂 Kurulumu"
+LangString LSTR_2 1055 "uTorrent Web"
+LangString LSTR_5 1055 "Yazılamadı: "
+LangString LSTR_8 1055 "Simge bulunamadı: "
+LangString LSTR_9 1055 "Yüklenemedi: "
+LangString LSTR_11 1055 "Kısayol oluştur: "
+LangString LSTR_13 1055 "Dosya sil: "
+LangString LSTR_14 1055 "Açılışta sil: "
+LangString LSTR_15 1055 "Kısayol oluşturulurken hata meydana geldi: "
+LangString LSTR_17 1055 "Veriyi açarken hata meydana geldi! Acaba kurulum uygulaması mı bozuk?"
+LangString LSTR_19 1055 "ExecShell: "
+LangString LSTR_20 1055 "Çalıştır: "
+LangString LSTR_21 1055 "Aç: "
+LangString LSTR_22 1055 "Açma: Dosyaya yazarken hata meydana geldi "
+LangString LSTR_23 1055 "Kurulum bozuk: Geçersiz kod"
+LangString LSTR_24 1055 "OLE yok: "
+LangString LSTR_25 1055 "Çıktı dizini: "
+LangString LSTR_26 1055 "Dizini sil: "
+LangString LSTR_29 1055 "Atlandı: "
+LangString LSTR_30 1055 "Ayrıntıları panoya kopyala"
+LangString LSTR_36 1055 "Dosya yazmak için açılırken hata meydana geldi: $\r$\n$\r$\n$V0$\r$\n$\r$\nKurulumu durdurmak için Dur düğmesine,$\r$\nyeniden denemek için Yeniden Dene düğmesine,$\r$\nbu dosyayı atlamak için Yoksay düğmesine basın."
+LangString LSTR_37 1055 "Sözleşme koşullarını kabul ediyorsanız, 'Kabul Ediyorum'a basınız. 胑 programını kurmak için sözleşme koşullarını kabul etmelisiniz."
+LangString LSTR_38 1055 "Lisans Sözleşmesi"
+LangString LSTR_39 1055 "Lütfen 胑 programını kurmadan önce sözleşmeyi okuyunuz."
+LangString LSTR_40 1055 "Sözleşmenin geri kalanını okumak için 'page down' tuşuna basabilirsiniz."
+LangString LSTR_41 1055 "Kuruluyor"
+LangString LSTR_42 1055 "Lütfen 胑 kurulurken bekleyiniz."
+LangString LSTR_43 1055 "Kurulum Tamamlandı"
+LangString LSTR_44 1055 "Kurulum başarıyla tamamlandı."
+LangString LSTR_45 1055 "Kurulum İptal Edildi"
+LangString LSTR_46 1055 "Kurulum tam olarak tamamlanmadı."
+LangString LSTR_47 1055 "&Bitir"
+LangString LSTR_48 1055 0
+LangString LSTR_49 1055 "胑 Kurulum sihirbazı tamamlanıyor."
+LangString LSTR_50 1055 "MS Shell Dlg"
+LangString LSTR_51 1055 "胑 kurulumunun tamamlanması için bilgisayarınızı yeniden başlatmanız gerekiyor.Bilgisayarınızı yeniden başlatmak istiyor musunuz?"
+LangString LSTR_52 1055 "Yeniden başlat"
+LangString LSTR_53 1055 "Bilgisayarımı daha sonra başlatacağım."
+LangString LSTR_54 1055 "胑  bilgisayariniza yüklendi.$\r$\n$\r$\nLütfen 'Bitir'e basarak kurulumu sonlandırın."
+LangString LSTR_55 1055 8
+LangString LSTR_56 1055 "肂 kurulumundan çıkmak istediğinize emin misiniz?"
+LangString LSTR_57 1055 "uTorrent Web'i yüklemek yönetici ayrıcalıkları gerektirir, lütfen tekrar deneyin"
+LangString LSTR_58 1055 "uTorrent Web'i yüklemek yönetici ayrıcalıkları gerektirir, iptal ediliyor!"
+LangString LSTR_59 1055 "Oturum açma hizmeti çalışmıyor, iptal ediliyor!"
+LangString LSTR_60 1055 "Yükseltilemiyor, hata $V0"
+LangString LSTR_61 1055 "uTorrent Web, Windows 7 veya daha üst modelini gerektirir."
+LangString LSTR_62 1055 "uTorrent Web Uygulaması Durduruluyor"
+LangString LSTR_63 1055 "Temiz bir şekilde çıkmak için uTorrent Web bekleniyor"
+LangString LSTR_64 1055 "uTorrent Web, temiz bir şekilde dışarı çıkmada başarısız oldu"
+LangString LSTR_65 1055 "Program yükleyici, çalışmakta olan uTorrent Web'i durduramıyor.$\nİşlemi sonlandırmak istiyor musunuz?"
+LangString LSTR_66 1055 "Dir'i yükle: $INSTDIR"
+LangString LSTR_67 1055 "Program kaldırıcıyı çıkartmak başarısız oldu"
+LangString LSTR_68 1055 "Program kaldırıcının ayarlarını kaydetmek başarısız oldu"
+LangString LSTR_69 1055 "Güvenlik duvarı kuralını yüklemek başarısız oldu"
+LangString LSTR_70 1055 "Özel"
+LangString LSTR_71 1055 "Vazgeç"
+LangString LSTR_72 1055 "< &Geri"
+LangString LSTR_73 1055 "&Katılıyorum"
+LangString LSTR_74 1055 "Kurulumu başlatmak için Kur düğmesine basın."
+LangString LSTR_75 1055 "&Ayrıntıları göster"
+LangString LSTR_76 1055 "Tamamlandı"
+LangString LSTR_77 1055 "İ&leri >"
+LangString LSTR_78 1055 "Devam etmek için İleri düğmesine basın."
+LangString LSTR_79 1055 " "
+LangString LSTR_80 1055 "&Kapat"
+LangString LSTR_81 1055 "uTorrent Web"
+
+
+; LANG: 1040
+LangString LSTR_0 1040 "Nullsoft Install System v3.08"
+LangString LSTR_1 1040 "Installazione di 肂"
+LangString LSTR_2 1040 "uTorrent Web"
+LangString LSTR_5 1040 "Impossibile scrivere: "
+LangString LSTR_8 1040 "Impossibile trovare il simbolo: "
+LangString LSTR_9 1040 "Impossibile caricare: "
+LangString LSTR_11 1040 "Creazione collegamento: "
+LangString LSTR_13 1040 "Eliminazione file: "
+LangString LSTR_14 1040 "Elimina al riavvio: "
+LangString LSTR_15 1040 "Errore nella creazione del collegamento: "
+LangString LSTR_17 1040 "Errore nella decompressione dei dati! Probabile programma di installazione corrotto."
+LangString LSTR_19 1040 "ExecShell: "
+LangString LSTR_20 1040 "Esecuzione di: "
+LangString LSTR_21 1040 "Estrazione di: "
+LangString LSTR_22 1040 "Estrazione: errore nella scrittura nel file "
+LangString LSTR_23 1040 "Programma di installazione corrotto: opcode non valido"
+LangString LSTR_24 1040 "Nessuna OLE per: "
+LangString LSTR_25 1040 "Cartella destinazione: "
+LangString LSTR_26 1040 "Rimozione cartella: "
+LangString LSTR_29 1040 "Saltato: "
+LangString LSTR_30 1040 "Copia i dettagli negli Appunti"
+LangString LSTR_36 1040 "Errore nell'apertura del file per la scrittura: $\r$\n$\t$\"$V0$\"$\r$\nSeleziona 'Termina' per interrompere l'installazione,$\r$\n'Riprova' per ritentare, oppure$\r$\n'Ignora' per saltare questo file."
+LangString LSTR_37 1040 "Se accetti tutti i termini dell'accordo di licenza, seleziona 'Accetto' per continuare. Per installare 胑 è necessario accettare i termini dell'accordo di licenza."
+LangString LSTR_38 1040 "Accordo di licenza"
+LangString LSTR_39 1040 "Leggi le condizioni dell'accordo di licenza prima di installare 胑."
+LangString LSTR_40 1040 "Premi 'PagGiù' per visualizzare il resto dell'accordo di licenza."
+LangString LSTR_41 1040 "Installazione"
+LangString LSTR_42 1040 "Attendi il completamento dell'installazione di 胑."
+LangString LSTR_43 1040 "Installazione completata"
+LangString LSTR_44 1040 "L'installazione è stata completata correttamente."
+LangString LSTR_45 1040 "Installazione interrotta"
+LangString LSTR_46 1040 "L'installazione non è stata completata correttamente."
+LangString LSTR_47 1040 "&Chiudi"
+LangString LSTR_48 1040 0
+LangString LSTR_49 1040 "Installazione di 胑 completata."
+LangString LSTR_50 1040 "MS Shell Dlg"
+LangString LSTR_51 1040 "Per completare l'installazione di 胑 il computer deve essere riavviato. Vuoi riavviarlo ora?"
+LangString LSTR_52 1040 "Riavvia ora"
+LangString LSTR_53 1040 "Preferisco riavviarlo manualmente più tardi"
+LangString LSTR_54 1040 "胑 è stato installato.$\r$\n$\r$\nScegli 'Chiudi' per chiudere il programma di installazione."
+LangString LSTR_55 1040 8
+LangString LSTR_56 1040 "Sei sicuro di voler interrompere l'installazione di 肂 ?"
+LangString LSTR_57 1040 "L'installazione di uTorrent Web richiede i privilegi da amministratore, per favore riprova"
+LangString LSTR_58 1040 "L'installazione di uTorrent Web richiede i privilegi da amministratore, interruzione in corso!"
+LangString LSTR_59 1040 "Il servizio di accesso non è in esecuzione, interruzione in corso!"
+LangString LSTR_60 1040 "Impossibile assegnare i privilegi, errore $V0"
+LangString LSTR_61 1040 "uTorrent Web richede Windows 7 o sistema più recente."
+LangString LSTR_62 1040 "Interruzione dell'Applicazione uTorrent Web in corso"
+LangString LSTR_63 1040 "In attesa della chiusura sicura di uTorrent Web"
+LangString LSTR_64 1040 "Impossibile la chiusura sicura di uTorrent Web "
+LangString LSTR_65 1040 "L'applicazione di installazione non riesce a interrompere uTorrent Web.$\nVuoi terminare il processo?"
+LangString LSTR_66 1040 "Directory di installazione: $INSTDIR"
+LangString LSTR_67 1040 "Impossibile estrarre l'applicazione di disinstallazione"
+LangString LSTR_68 1040 "Impossibile salvare le impostazioni dell'applicazione di disinstallazione"
+LangString LSTR_69 1040 "Impossibile installare la regola per il firewall"
+LangString LSTR_70 1040 "Personalizzata"
+LangString LSTR_71 1040 "Annulla"
+LangString LSTR_72 1040 "< &Indietro"
+LangString LSTR_73 1040 "&Accetto"
+LangString LSTR_74 1040 "Per avviare l'installazione, seleziona 'Installa'."
+LangString LSTR_75 1040 "Visualizza &dettagli"
+LangString LSTR_76 1040 "Installazione completata"
+LangString LSTR_77 1040 "&Avanti >"
+LangString LSTR_78 1040 "Per proseguire, seleziona 'Avanti'."
+LangString LSTR_79 1040 " "
+LangString LSTR_80 1040 "&Fine"
+LangString LSTR_81 1040 "uTorrent Web"
+
+
+; LANG: 1042
+LangString LSTR_0 1042 "Nullsoft Install System v3.08"
+LangString LSTR_1 1042 "肂 설치"
+LangString LSTR_2 1042 "uTorrent Web"
+LangString LSTR_5 1042 "기록할 수 없음: "
+LangString LSTR_8 1042 "심볼을 찾을 수 없음: "
+LangString LSTR_9 1042 "불러올 수 없음: "
+LangString LSTR_11 1042 "바로 가기 생성: "
+LangString LSTR_13 1042 "파일 삭제: "
+LangString LSTR_14 1042 "재부팅시 삭제: "
+LangString LSTR_15 1042 "바로 가기 생성 오류: "
+LangString LSTR_17 1042 "압축 해제중 오류 발생! 설치 파일이 손상되었습니다."
+LangString LSTR_19 1042 "쉘 실행: "
+LangString LSTR_20 1042 "실행: "
+LangString LSTR_21 1042 "압축 해제: "
+LangString LSTR_22 1042 "압축 해제: 파일을 기록하는 도중 오류 발생 "
+LangString LSTR_23 1042 "인스톨러 손상됨: 잘못된 실행코드"
+LangString LSTR_24 1042 "OLE 정보 없음: "
+LangString LSTR_25 1042 "대상 폴더: "
+LangString LSTR_26 1042 "폴더 삭제: "
+LangString LSTR_29 1042 "건너뜀: "
+LangString LSTR_30 1042 "자세한 내용을 클립보드로 복사"
+LangString LSTR_36 1042 "다음 파일을 열 수 없습니다.: $\r$\n$\t$\"$V0$\"$\r$\n'중단'을 눌러 설치를 종료하거나,$\r'다시 시도'를 눌러 다시 시도해 보거나,$\r'무시'를 눌러 이 파일을 건너 뛰세요."
+LangString LSTR_37 1042 "내용에 동의하셨다면 '동의함'을 눌러 주세요. 胑(을)를 설치하기 위해서는 반드시 내용에 동의하셔야 합니다."
+LangString LSTR_38 1042 "사용권 계약"
+LangString LSTR_39 1042 "胑(을)를 설치하시기 전에 사용권 계약 내용을 살펴보시기 바랍니다."
+LangString LSTR_40 1042 "사용권 계약 동의 사항의 나머지 부분을 보시려면 [Page Down] 키를 눌러 주세요."
+LangString LSTR_41 1042 "설치중"
+LangString LSTR_42 1042 "胑(을)를 설치하는 동안 잠시 기다려 주세요."
+LangString LSTR_43 1042 "설치 완료"
+LangString LSTR_44 1042 "설치가 성공적으로 완료되었습니다."
+LangString LSTR_45 1042 "설치 취소"
+LangString LSTR_46 1042 "프로그램 설치가 취소되었습니다."
+LangString LSTR_47 1042 "마침"
+LangString LSTR_48 1042 0
+LangString LSTR_49 1042 "胑 설치 완료"
+LangString LSTR_50 1042 "굴림"
+LangString LSTR_51 1042 "胑의 설치를 완료하기 위해서는 시스템을 다시 시작해야 합니다. 지금 재부팅 하시겠습니까?"
+LangString LSTR_52 1042 "지금 재부팅 하겠습니다."
+LangString LSTR_53 1042 "나중에 재부팅 하겠습니다."
+LangString LSTR_54 1042 "胑의 설치가 완료되었습니다.$\r$\n$\r$\n설치 프로그램을 마치려면 '마침' 버튼을 눌러 주세요."
+LangString LSTR_55 1042 9
+LangString LSTR_56 1042 "肂 설치를 취소하시겠습니까?"
+LangString LSTR_57 1042 "uTorrent Web 설치에 관리자 권한이 필요합니다. 다시 시도해 주세요"
+LangString LSTR_58 1042 "uTorrent Web 설치에 관리자 권한이 필요합니다. 중단됨!"
+LangString LSTR_59 1042 "로그온 서비스가 실행되고 있지 않습니다. 중단됨!"
+LangString LSTR_60 1042 "업그레이드 불가, 오류 $V0"
+LangString LSTR_61 1042 "uTorrent Web은 윈도우 7 혹은 그 이상 버전을 요구합니다."
+LangString LSTR_62 1042 "uTorrent Web 어플리케이션 중지하기"
+LangString LSTR_63 1042 "깔끔한 종료를 위해 uTorrent Web 기다리는 중"
+LangString LSTR_64 1042 "uTorrent Web을 깔끔하게 종료하는 데 실패했습니다"
+LangString LSTR_65 1042 "인스톨러가 uTorrent Web를 중단할 수 없습니다. $\n 프로세스를 종료하시겠습니까?"
+LangString LSTR_66 1042 "디렉토리 설치: $INSTDIR"
+LangString LSTR_67 1042 "언인스톨러 해제에 실패했습니다"
+LangString LSTR_68 1042 "언인스톨러 설정을 저장하지 못했습니다"
+LangString LSTR_69 1042 "방화벽 룰 설치에 실패했습니다."
+LangString LSTR_70 1042 "사용자 정의"
+LangString LSTR_71 1042 "취소"
+LangString LSTR_72 1042 "< 뒤로"
+LangString LSTR_73 1042 "동의함"
+LangString LSTR_74 1042 "설치를 시작하시려면 '설치' 버튼을 눌러 주세요."
+LangString LSTR_75 1042 "자세히 보기"
+LangString LSTR_76 1042 "완료"
+LangString LSTR_77 1042 "다음 >"
+LangString LSTR_78 1042 "계속하시려면 '다음' 버튼을 눌러 주세요."
+LangString LSTR_79 1042 " "
+LangString LSTR_80 1042 "닫음"
+LangString LSTR_81 1042 "uTorrent Web"
+
+
+; LANG: 1049
+LangString LSTR_0 1049 "Nullsoft Install System v3.08"
+LangString LSTR_1 1049 "Установка 肂"
+LangString LSTR_2 1049 "uTorrent Web"
+LangString LSTR_5 1049 "Невозможно записать: "
+LangString LSTR_8 1049 "Невозможно найти символ: "
+LangString LSTR_9 1049 "Невозможно загрузить: "
+LangString LSTR_11 1049 "Создание ярлыка: "
+LangString LSTR_13 1049 "Удаление файла: "
+LangString LSTR_14 1049 "Удаление при перезагрузке ПК: "
+LangString LSTR_15 1049 "Ошибка создания ярлыка: "
+LangString LSTR_17 1049 "Ошибка распаковки данных! Возможно, повреждён дистрибутив."
+LangString LSTR_19 1049 "Выполнение команды оболочки: "
+LangString LSTR_20 1049 "Выполнение: "
+LangString LSTR_21 1049 "Извлечение: "
+LangString LSTR_22 1049 "Извлечение: ошибка записи файла "
+LangString LSTR_23 1049 "Дистрибутив поврежден: недопустимый код"
+LangString LSTR_24 1049 "Нет OLE для: "
+LangString LSTR_25 1049 "Папка установки: "
+LangString LSTR_26 1049 "Удаление папки: "
+LangString LSTR_29 1049 "Пропуск: "
+LangString LSTR_30 1049 "Копировать сведения в буфер обмена"
+LangString LSTR_36 1049 "Невозможно открыть файл для записи: $\r$\n$\t$\"$V0$\"$\r$\n$\"Прервать$\": остановить установку;$\r$\n$\"Повтор$\": повторить попытку;$\r$\n$\"Пропуск$\": пропустить это действие."
+LangString LSTR_37 1049 "Если вы принимаете условия соглашения, нажмите кнопку $\"Принимаю$\". Чтобы установить программу, необходимо принять соглашение."
+LangString LSTR_38 1049 "Лицензионное соглашение"
+LangString LSTR_39 1049 "Перед установкой 胑 ознакомьтесь с лицензионным соглашением."
+LangString LSTR_40 1049 "Для перемещения по тексту используйте клавиши $\"PageUp$\" и $\"PageDown$\"."
+LangString LSTR_41 1049 "Копирование файлов"
+LangString LSTR_42 1049 "Подождите, идет копирование файлов 胑..."
+LangString LSTR_43 1049 "Установка завершена"
+LangString LSTR_44 1049 "Установка успешно завершена."
+LangString LSTR_45 1049 "Установка прервана"
+LangString LSTR_46 1049 "Установка не завершена."
+LangString LSTR_47 1049 "&Готово"
+LangString LSTR_48 1049 0
+LangString LSTR_49 1049 "Завершение работы мастера установки 胑"
+LangString LSTR_50 1049 "MS Shell Dlg"
+LangString LSTR_51 1049 "Для завершения установки 胑 необходимо перезагрузить компьютер. Хотите сделать это сейчас?"
+LangString LSTR_52 1049 "Да, перезагрузить ПК сейчас"
+LangString LSTR_53 1049 "Нет, я перезагружу ПК позже"
+LangString LSTR_54 1049 "Установка 胑 выполнена.$\r$\n$\r$\nНажмите кнопку $\"Готово$\" для выхода из программы установки."
+LangString LSTR_55 1049 8
+LangString LSTR_56 1049 "Вы действительно хотите отменить установку 肂?"
+LangString LSTR_57 1049 "Для установки uTorrent Web требуются права администратора. Пожалуйста, попробуйте снова"
+LangString LSTR_58 1049 "Для установки uTorrent Web требуются права администратора. Работа принудительно прекращается!"
+LangString LSTR_59 1049 "Служба автозапуска не работает. Работа принудительно прекращается!"
+LangString LSTR_60 1049 "Повысить не удалось, ошибка $V0"
+LangString LSTR_61 1049 "Для работы uTorrent Web нужна Windows 7 или выше."
+LangString LSTR_62 1049 "Остановка приложения uTorrent Web"
+LangString LSTR_63 1049 "Ожидание корректного завершения работы uTorrent Web"
+LangString LSTR_64 1049 "uTorrent Web не удалось завершить работу корректно"
+LangString LSTR_65 1049 "Установщику не удается прекратить работу uTorrent Web.$\nХотите завершить процесс?"
+LangString LSTR_66 1049 "Директория установки: $INSTDIR"
+LangString LSTR_67 1049 "Извлечь установщик не удалось"
+LangString LSTR_68 1049 "Сохранить настройки программы удаления не удалось"
+LangString LSTR_69 1049 "Не удалось задать правило брандмауэра"
+LangString LSTR_70 1049 "По выбору"
+LangString LSTR_71 1049 "Отмена"
+LangString LSTR_72 1049 "< &Назад"
+LangString LSTR_73 1049 "Принима&ю"
+LangString LSTR_74 1049 "Нажмите кнопку $\"Установить$\", чтобы установить программу."
+LangString LSTR_75 1049 "&Детали..."
+LangString LSTR_76 1049 "Готово"
+LangString LSTR_77 1049 "&Далее >"
+LangString LSTR_78 1049 "Нажмите кнопку $\"Далее$\" для продолжения."
+LangString LSTR_79 1049 " "
+LangString LSTR_80 1049 "&Закрыть"
+LangString LSTR_81 1049 "uTorrent Web"
+
+
+; LANG: 1033
+LangString LSTR_0 1033 "Nullsoft Install System v3.08"
+LangString LSTR_1 1033 "肂 Setup"
+LangString LSTR_2 1033 "uTorrent Web"
+LangString LSTR_5 1033 "Can't write: "
+LangString LSTR_8 1033 "Could not find symbol: "
+LangString LSTR_9 1033 "Could not load: "
+LangString LSTR_11 1033 "Create shortcut: "
+LangString LSTR_13 1033 "Delete file: "
+LangString LSTR_14 1033 "Delete on reboot: "
+LangString LSTR_15 1033 "Error creating shortcut: "
+LangString LSTR_17 1033 "Error decompressing data! Corrupted installer?"
+LangString LSTR_19 1033 "ExecShell: "
+LangString LSTR_20 1033 "Execute: "
+LangString LSTR_21 1033 "Extract: "
+LangString LSTR_22 1033 "Extract: error writing to file "
+LangString LSTR_23 1033 "Installer corrupted: invalid opcode"
+LangString LSTR_24 1033 "No OLE for: "
+LangString LSTR_25 1033 "Output folder: "
+LangString LSTR_26 1033 "Remove folder: "
+LangString LSTR_29 1033 "Skipped: "
+LangString LSTR_30 1033 "Copy Details To Clipboard"
+LangString LSTR_36 1033 "Error opening file for writing: $\r$\n$\r$\n$V0$\r$\n$\r$\nClick Abort to stop the installation,$\r$\nRetry to try again, or$\r$\nIgnore to skip this file."
+LangString LSTR_37 1033 "If you accept the terms of the agreement, click I Agree to continue. You must accept the agreement to install 胑."
+LangString LSTR_38 1033 "License Agreement"
+LangString LSTR_39 1033 "Please review the license terms before installing 胑."
+LangString LSTR_40 1033 "Press Page Down to see the rest of the agreement."
+LangString LSTR_41 1033 "Installing"
+LangString LSTR_42 1033 "Please wait while 胑 is being installed."
+LangString LSTR_43 1033 "Installation Complete"
+LangString LSTR_44 1033 "Setup was completed successfully."
+LangString LSTR_45 1033 "Installation Aborted"
+LangString LSTR_46 1033 "Setup was not completed successfully."
+LangString LSTR_47 1033 "&Finish"
+LangString LSTR_48 1033 0
+LangString LSTR_49 1033 "Completing 胑 Setup"
+LangString LSTR_50 1033 "MS Shell Dlg"
+LangString LSTR_51 1033 "Your computer must be restarted in order to complete the installation of 胑. Do you want to reboot now?"
+LangString LSTR_52 1033 "Reboot now"
+LangString LSTR_53 1033 "I want to manually reboot later"
+LangString LSTR_54 1033 "胑 has been installed on your computer.$\r$\n$\r$\nClick Finish to close Setup."
+LangString LSTR_55 1033 8
+LangString LSTR_56 1033 "Are you sure you want to quit 肂 Setup?"
+LangString LSTR_57 1033 "Installing uTorrent Web requires admin privileges, please try again"
+LangString LSTR_58 1033 "Installing uTorrent Web requires admin privileges, aborting!"
+LangString LSTR_59 1033 "Logon service not running, aborting!"
+LangString LSTR_60 1033 "Unable to elevate, error $V0"
+LangString LSTR_61 1033 "uTorrent Web requires Windows 7 or above."
+LangString LSTR_62 1033 "Stopping uTorrent Web Application"
+LangString LSTR_63 1033 "Waiting for uTorrent Web to exit cleanly"
+LangString LSTR_64 1033 "uTorrent Web failed to exit cleanly"
+LangString LSTR_65 1033 "Installer cannot stop running uTorrent Web.$\nDo you want to terminate process?"
+LangString LSTR_66 1033 "Install Dir: $INSTDIR"
+LangString LSTR_67 1033 "Failed to extract uninstaller"
+LangString LSTR_68 1033 "Failed to save uninstaller settings"
+LangString LSTR_69 1033 "Failed to install firewall rule"
+LangString LSTR_70 1033 "Custom"
+LangString LSTR_71 1033 "Cancel"
+LangString LSTR_72 1033 "< &Back"
+LangString LSTR_73 1033 "I &Agree"
+LangString LSTR_74 1033 "Click Install to start the installation."
+LangString LSTR_75 1033 "Show &details"
+LangString LSTR_76 1033 "Completed"
+LangString LSTR_77 1033 "&Next >"
+LangString LSTR_78 1033 "Click Next to continue."
+LangString LSTR_79 1033 " "
+LangString LSTR_80 1033 "&Close"
+LangString LSTR_81 1033 "uTorrent Web"
+
+
+InstType ""
+InstallDir "$APPDATA\uTorrent Web"
+; install_directory_auto_append = "uTorrent Web"
+; wininit = "$WINDIR\wininit.ini"
+
+
+; ------------------------------------------------------------------------
+; PAGES: 4
+
+; Page 0
+Page license func_362 func_365 func_371 /ENABLECANCEL
+  LicenseText "" ""
+  LicenseData #788
+
+; Page 1
+Page instfiles func_372 func_375 func_381
+  CompletedText ""
+  DetailsButtonText ""
+
+; ; Page 2
+; Page COMPLETED
+
+; Page 3
+Page custom func_415 func_587
+
+
+; ------------------------------------------------------------------------
+Function func_0
+  Push $V1
+  Push $V0
+  ReadRegStr $V1 HKLM "SOFTWARE\Microsoft\VisualStudio\14.0\VC\Runtimes\x86" "Installed"
+  StrCmp $V1 1 label_57 ; If: $V1 != 1
+    Push $V0
+    Push $V1
+    Push $V2
+    Push $V3
+    StrCpy $V1 $var44
+    IntCmp $var45 0 label_12 label_12 ; If: $var45 <= 0
+      StrCpy $V2 ",$\"vcRuntimeNotFound$\""
+    ; Else
+label_12:
+      StrCpy $V2 "$\"vcRuntimeNotFound$\""
+    ; EndIf
+label_13:
+    StrCpy $V1 "$V1$V2"
+    StrCpy $var44 $V1
+    IntOp $var45 $var45 + 1
+    Pop $V3
+    Pop $V2
+    Pop $V1
+    Pop $V0
+    ExecWait "$\"$TEMP\ut_web_redist\vcredist_x86.exe$\" /install /quiet /norestart" $V0
+    StrCmp $V0 0 label_57
+    StrCmp $V0 3010 label_23 label_40 ; If: $V0 == 3010
+label_23:
+      Push $V0
+      Push $V1
+      Push $V2
+      Push $V3
+      StrCpy $V1 $var44
+      IntCmp $var45 0 label_31 label_31 ; If: $var45 <= 0
+        StrCpy $V2 ",$\"vcRuntimeFinishedRestart$\""
+      ; Else
+label_31:
+        StrCpy $V2 "$\"vcRuntimeFinishedRestart$\""
+      ; EndIf
+label_32:
+      StrCpy $V1 "$V1$V2"
+      StrCpy $var44 $V1
+      IntOp $var45 $var45 + 1
+      Pop $V3
+      Pop $V2
+      Pop $V1
+      Pop $V0
+      Goto label_73
+    ; EndIf
+label_40:
+    Push $V0
+    Push $V1
+    Push $V2
+    Push $V3
+    StrCpy $V1 $var44
+    IntCmp $var45 0 label_48 label_48 ; If: $var45 <= 0
+      StrCpy $V2 ",$\"vcRuntimeFailedInstall$\""
+    ; Else
+label_48:
+      StrCpy $V2 "$\"vcRuntimeFailedInstall$\""
+    ; EndIf
+label_49:
+    StrCpy $V1 "$V1$V2"
+    StrCpy $var44 $V1
+    IntOp $var45 $var45 + 1
+    Pop $V3
+    Pop $V2
+    Pop $V1
+    Pop $V0
+  ; Else
+label_57:
+    Push $V0
+    Push $V1
+    Push $V2
+    Push $V3
+    StrCpy $V1 $var44
+    IntCmp $var45 0 label_65 label_65 ; If: $var45 <= 0
+      StrCpy $V2 ",$\"vcRuntimeFinished$\""
+    ; Else
+label_65:
+      StrCpy $V2 "$\"vcRuntimeFinished$\""
+    ; EndIf
+label_66:
+    StrCpy $V1 "$V1$V2"
+    StrCpy $var44 $V1
+    IntOp $var45 $var45 + 1
+    Pop $V3
+    Pop $V2
+    Pop $V1
+    Pop $V0
+  ; EndIf
+label_73:
+  RMDir /r "$TEMP\ut_web_redist"
+  Pop $V0
+  Pop $V1
+FunctionEnd
+
+Function func_77
+  Push $V0
+  Exch
+  Pop $V0
+  Push $V1
+  Push $V2
+  Push $R0
+  Push $R1
+  Push $R2
+  StrCpy $V2 "$V0,"
+  Push 0
+  Call Initialize_____Plugins
+  SetOverwrite off
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push 4096
+  CallInstDLL "$PLUGINSDIR\System.dll" "Alloc"
+  Pop $R0
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "Psapi::EnumProcesses(i R0, i 4096, *i .R1)i .r0"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  IntCmp $V0 0 label_293 ; If: $V0 = 0
+    IntOp $R1 $R1 / 4
+    IntOp $R1 $R1 - 1
+    ClearErrors
+    StrCpy $R2 0
+    Goto label_105
+label_104:
+    IntOp $R2 $R2 + 1
+label_105:
+    IntCmp $R2 $R1 0 0 label_293 ; While: $R2 <= $R1
+      IntOp $V0 $R2 << 2
+      IntOp $V0 $V0 + $R0
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "*$V0(i .r0)"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+      IntCmp $V0 0 label_290
+      Push $V0
+      Call func_308
+      Pop $V1
+      Push $V2
+      Push ","
+      Push "E/$V1"
+      Call :label_122
+      Goto label_285
+label_122:
+      Push $V1
+      Exch
+      Pop $V1
+      Exch
+      Push $V0
+      Exch
+      Pop $V0
+      Exch
+      Exch 2
+      Push $R0
+      Exch
+      Pop $R0
+      Exch 2
+      Push $V2
+      Push $V3
+      Push $V4
+      Push $V5
+      Push $V6
+      Push $V7
+      Push $V8
+      Push $V9
+      Push $R1
+      Push $R2
+      ClearErrors
+      StrCpy $V9 ""
+label_147:
+      StrCpy $V2 $V1 1
+      StrCpy $V1 $V1 "" 1
+      StrCmp $V2 "E" 0 label_152 ; While: $V2 == "E"
+        StrCpy $V9 "E"
+      ; EndWhile
+label_152:
+      StrCpy $V3 ""
+      StrCmp $V2 "+" label_159
+      StrCmp $V2 "-" label_159
+      StrCmp $V2 "/" label_172
+      StrCmp $V2 "#" label_172
+      StrCmp $V2 "*" label_172
+      Goto label_261
+label_159:
+      StrCpy $V4 $V1 1 -1
+      StrCmp $V4 "*" label_164
+      StrCmp $V4 "}" label_164
+      StrCmp $V4 "{" label_164
+      Goto label_167
+label_164:
+      StrCpy $V1 $V1 -1
+      StrCpy $V3 "$V4$V3"
+      Goto label_159
+label_167:
+      StrCmp $V3 "*" label_261
+      StrCmp $V3 "**" label_261
+      StrCmp $V3 "}{" label_261
+      IntOp $V1 $V1 + 0
+      StrCmp $V1 0 label_263
+label_172:
+      StrCmp $R0 "" label_265
+      StrCpy $V4 0
+      StrCpy $V5 0
+      StrCpy $V6 0
+      StrLen $V7 $V0
+      Goto label_179
+      ; Do
+label_178:
+        IntOp $V6 $V6 + 1
+label_179:
+        StrCpy $V8 $R0 $V7 $V6
+        StrCmp "$V8$V5" 0 label_265
+        StrLen $R2 $V8
+        IntCmp $R2 0 label_184
+      StrCmp $V8 $V0 label_188 label_178 ; LoopUntil: $V8 != $V0
+label_184:
+      StrCmp $V3 "{" label_203
+      StrCmp $V3 "}" label_203
+      StrCmp $V2 "*" label_203
+      StrCmp $V5 $V6 label_203 label_192
+label_188:
+      StrCmp $V3 "{" label_192
+      StrCmp $V3 "}" label_192
+      StrCmp $V2 "*" label_192
+      StrCmp $V5 $V6 label_200
+label_192:
+      IntOp $V4 $V4 + 1
+      StrCmp "$V2$V4" "+$V1" label_214
+      StrCmp $V2 "/" 0 label_200
+      IntOp $V8 $V6 - $V5
+      StrCpy $V8 $R0 $V8 $V5
+      StrCmp $V1 $V8 0 label_200
+      StrCpy $R1 $V4
+      Goto label_268
+label_200:
+      IntOp $V6 $V6 + $V7
+      StrCpy $V5 $V6
+      Goto label_179
+label_203:
+      StrCmp $V2 "-" 0 label_208
+      StrCpy $V2 "+"
+      IntOp $V1 $V4 - $V1
+      IntOp $V1 $V1 + 1
+      IntCmp $V1 0 label_263 label_263 label_172
+label_208:
+      StrCmp $V2 "#" 0 label_211
+      StrCpy $R1 $V4
+      Goto label_268
+label_211:
+      StrCmp $V2 "*" 0 label_263
+      StrCpy $R1 $V4
+      Goto label_268
+label_214:
+      StrCmp $V3 "" 0 label_218
+      IntOp $V6 $V6 - $V5
+      StrCpy $R1 $R0 $V6 $V5
+      Goto label_268
+label_218:
+      StrCmp $V3 "{" 0 label_221
+      StrCpy $R1 $R0 $V6
+      Goto label_268
+label_221:
+      StrCmp $V3 "}" 0 label_225
+      IntOp $V6 $V6 + $V7
+      StrCpy $R1 $R0 "" $V6
+      Goto label_268
+label_225:
+      StrCmp $V3 "{*" label_227
+      StrCmp $V3 "*{" 0 label_229
+label_227:
+      StrCpy $R1 $R0 $V6
+      Goto label_268
+label_229:
+      StrCmp $V3 "*}" label_231
+      StrCmp $V3 "}*" 0 label_233
+label_231:
+      StrCpy $R1 $R0 "" $V5
+      Goto label_268
+label_233:
+      StrCmp $V3 "}}" 0 label_236
+      StrCpy $R1 $R0 "" $V6
+      Goto label_268
+label_236:
+      StrCmp $V3 "{{" 0 label_239
+      StrCpy $R1 $R0 $V5
+      Goto label_268
+label_239:
+      StrCmp $V3 "{}" 0 label_261
+      StrLen $V3 $R0
+      StrCmp $V3 $V6 0 label_244
+      StrCpy $V0 ""
+      Goto label_245
+label_244:
+      IntOp $V6 $V6 + $V7
+label_245:
+      StrCpy $V8 $R0 "" $V6
+      StrCmp "$V4$V8" 1 label_252
+      StrCmp $V4 1 label_249 label_254
+      ; Do
+label_248:
+        IntOp $V6 $V6 + $V7
+label_249:
+        StrCpy $V3 $R0 $V7 $V6
+        StrCmp $V3 "" label_252
+      StrCmp $V3 $V0 label_248 label_254 ; LoopWhile: $V3 == $V0
+label_252:
+      StrCpy $R1 ""
+      Goto label_268
+label_254:
+      StrCmp $V5 0 0 label_257
+      StrCpy $V0 ""
+      Goto label_258
+label_257:
+      IntOp $V5 $V5 - $V7
+label_258:
+      StrCpy $V3 $R0 $V5
+      StrCpy $R1 "$V3$V0$V8"
+      Goto label_268
+label_261:
+      StrCpy $R1 3
+      Goto label_266
+label_263:
+      StrCpy $R1 2
+      Goto label_266
+label_265:
+      StrCpy $R1 1
+label_266:
+      StrCmp $V9 "E" 0 label_269
+      SetErrors
+label_268:
+      StrCpy $R0 $R1
+label_269:
+      Pop $R2
+      Pop $R1
+      Pop $V9
+      Pop $V8
+      Pop $V7
+      Pop $V6
+      Pop $V5
+      Pop $V4
+      Pop $V3
+      Pop $V2
+      Pop $V1
+      Pop $V0
+      Push $R0
+      Exch
+      Pop $R0
+      Return
+label_285:
+      Pop $V0
+      IfErrors label_290
+      Pop $V0
+      Push 1
+      Goto label_293
+label_290:
+    ; EndWhile
+    Goto label_104
+  ; EndIf
+label_293:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push $R0
+  CallInstDLL "$PLUGINSDIR\System.dll" "Free"
+  Pop $V0
+  Pop $R2
+  Pop $R1
+  Pop $R0
+  Pop $V2
+  Pop $V1
+  Push $V0
+  Exch
+  Pop $V0
+FunctionEnd
+
+Function func_308
+  Push $V2
+  Exch
+  Pop $V2
+  Push $V0
+  Push $V1
+  Push $V3
+  Push $R0
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "Kernel32::OpenProcess(i 1040, i 0, i r2)i .r3"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  StrCpy $V2 "<unknown>"
+  IntCmp $V3 0 label_354 ; If: $V3 = 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push 1024
+    CallInstDLL "$PLUGINSDIR\System.dll" "Alloc"
+    Pop $R0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "Psapi::EnumProcessModules(i r3, i R0, i 1024, *i .r1)i .r0"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    IntCmp $V0 0 label_344 ; If: $V0 = 0
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "*$R0(i .r0)"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "Psapi::GetModuleBaseName(i r3, i r0, t .r2, i 256)i .r0"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    ; EndIf
+label_344:
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push $R0
+    CallInstDLL "$PLUGINSDIR\System.dll" "Free"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "kernel32::CloseHandle(i r3)"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  ; EndIf
+label_354:
+  Pop $R0
+  Pop $V3
+  Pop $V1
+  Pop $V0
+  Push $V2
+  Exch
+  Pop $V2
+FunctionEnd
+
+Function func_362    ; Page 0, Pre
+  SendMessage $var32 0x000C 0 "STR:"
+  SendMessage $var34 0x000C 0 "STR:"
+FunctionEnd
+
+Function func_365    ; Page 0, Show
+  FindWindow $var46 "#32770" "" $HWNDPARENT
+  GetDlgItem $var47 $var46 1040
+  GetDlgItem $var48 $var46 1006
+  GetDlgItem $var49 $var46 1000
+  SendMessage $var47 0x000C 0 "STR:"
+FunctionEnd
+
+Function func_371    ; Page 0, Leave
+  Return
+FunctionEnd
+
+Function func_375    ; Page 1, Show
+  FindWindow $var50 "#32770" "" $HWNDPARENT
+  GetDlgItem $var51 $var50 1006
+  GetDlgItem $var52 $var50 1004
+  GetDlgItem $var53 $var50 1027
+  GetDlgItem $var54 $var50 1016
+FunctionEnd
+
+Function func_381    ; Page 1, Leave
+  Call func_1258
+  IfAbort label_386 ; If: not Abort
+    SendMessage $var32 0x000C 0 "STR:"
+    SendMessage $var34 0x000C 0 "STR:"
+  ; Else
+label_386:
+    SendMessage $var32 0x000C 0 "STR:"
+    SendMessage $var34 0x000C 0 "STR:"
+  ; EndIf
+label_388:
+  IfAbort label_389
+label_389:
+FunctionEnd
+
+Function func_390
+  Call Initialize_____Plugins
+  SetDetailsPrint lastused
+  SetOverwrite on
+  File "$PLUGINSDIR\modern-wizard.bmp"
+  SetAutoClose true
+FunctionEnd
+
+Function func_395
+  LockWindow on
+  ShowWindow $var38 0
+  ShowWindow $var37 0
+  ShowWindow $var32 0
+  ShowWindow $var34 0
+  ShowWindow $var36 0
+  ShowWindow $var39 0
+  ShowWindow $var40 1
+  LockWindow off
+FunctionEnd
+
+Function func_405
+  LockWindow on
+  ShowWindow $var38 1
+  ShowWindow $var37 1
+  ShowWindow $var32 1
+  ShowWindow $var34 1
+  ShowWindow $var36 1
+  ShowWindow $var39 1
+  ShowWindow $var40 0
+  LockWindow off
+FunctionEnd
+
+Function func_415    ; Page 3, Pre
+  SendMessage $var41 0x000C 0 "STR:"
+  Call Initialize_____Plugins
+  SetOverwrite off
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push 1044
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "Create"
+  Pop $var55
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push 4294967247
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "SetRTL"
+  SetCtlColors $var55 "" 0xFFFFFF
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push ""
+  Push "193u"
+  Push "109u"
+  Push "0u"
+  Push "0u"
+  Push 0
+  Push "0x40000000|0x10000000|0x04000000|0x0000000E|0x00000100"
+  Push "STATIC"
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+  Pop $var56
+  SetBrandingImage /IMGID=7469 "mmon Files"
+  IfRebootFlag 0 label_508 ; If: RebootFlag
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967246
+    Push "28u"
+    Push "195u"
+    Push "10u"
+    Push "120u"
+    Push 0x00000020
+    Push "0x40000000|0x10000000|0x04000000|0x00000100"
+    Push "STATIC"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var58
+    SetCtlColors $var58 0x000000 0xFFFFFF
+    CreateFont $var59 4294967245 12 700
+    SendMessage $var58 0x0030 $var59 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967244
+    Push "40u"
+    Push "195u"
+    Push "45u"
+    Push "120u"
+    Push 0x00000020
+    Push "0x40000000|0x10000000|0x04000000|0x00000100"
+    Push "STATIC"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var60
+    SetCtlColors $var60 0x000000 0xFFFFFF
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967243
+    Push "10u"
+    Push "195u"
+    Push "90u"
+    Push "120u"
+    Push 0
+    Push "0x40000000|0x10000000|0x04000000|0x00010000|0x00000000|0x00000C00|0x00000009|0x00002000"
+    Push "BUTTON"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var62
+    SetCtlColors $var62 0x000000 0xFFFFFF
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967242
+    Push "10u"
+    Push "195u"
+    Push "115u"
+    Push "120u"
+    Push 0
+    Push "0x40000000|0x10000000|0x04000000|0x00010000|0x00000000|0x00000C00|0x00000009|0x00002000"
+    Push "BUTTON"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var63
+    SetCtlColors $var63 0x000000 0xFFFFFF
+    SendMessage $var62 0x00F1 1 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "user32::SetFocus(p$var62)"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  ; Else
+label_508:
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967246
+    Push "28u"
+    Push "195u"
+    Push "10u"
+    Push "120u"
+    Push 0x00000020
+    Push "0x40000000|0x10000000|0x04000000|0x00000100"
+    Push "STATIC"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var58
+    SetCtlColors $var58 0x000000 0xFFFFFF
+    CreateFont $var59 4294967245 12 700
+    SendMessage $var58 0x0030 $var59 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967241
+    Push "130u"
+    Push "195u"
+    Push "45u"
+    Push "120u"
+    Push 0x00000020
+    Push "0x40000000|0x10000000|0x04000000|0x00000100"
+    Push "STATIC"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var60
+    SetCtlColors $var60 0x000000 0xFFFFFF
+  ; EndIf
+label_538:
+  Push $V1
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "*(i12,i0,p)p.r1"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "USER32::SystemParametersInfo(i0x42,i12,pr1,i0)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "*$V1(i,i.s)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Pop $var64
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push $V1
+  CallInstDLL "$PLUGINSDIR\System.dll" "Free"
+  Pop $V1
+  IntOp $var64 $var64 & 0x01
+  IntCmp $var64 0 label_573 ; If: $var64 = 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "UXTHEME::SetWindowTheme(p$var62,w$\" $\",w$\" $\")"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "UXTHEME::SetWindowTheme(p$var63,w$\" $\",w$\" $\")"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  ; EndIf
+label_573:
+  Call func_395
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "Show"
+  Call func_405
+  IntCmp $var57 0 label_586
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push $var57
+  Push "gdi32::DeleteObject(ps)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+label_586:
+FunctionEnd
+
+Function func_587    ; Page 3, Leave
+  IfRebootFlag 0 label_594
+  SendMessage $var62 0x00F0 0 0 $var61
+  IntCmp $var61 1 0 label_593 label_593 ; If: $var61 != 1
+    Reboot
+    Quit
+    Goto label_594
+  ; EndIf
+label_593:
+  Return
+label_594:
+FunctionEnd
+
+Function .onGUIInit
+  GetDlgItem $var32 $HWNDPARENT 1037
+  CreateFont $var33 4294967245 4294967240 700
+  SendMessage $var32 0x0030 $var33 0
+  GetDlgItem $var34 $HWNDPARENT 1038
+  SetCtlColors $var32 0x000000 0xFFFFFF
+  SetCtlColors $var34 0x000000 0xFFFFFF
+  GetDlgItem $var35 $HWNDPARENT 1034
+  SetCtlColors $var35 "" 0xFFFFFF
+  GetDlgItem $var36 $HWNDPARENT 1039
+  SetCtlColors $var36 "" 0xFFFFFF
+  GetDlgItem $var38 $HWNDPARENT 1028
+  SetCtlColors $var38 /BRANDING ""
+  GetDlgItem $var37 $HWNDPARENT 1256
+  SetCtlColors $var37 /BRANDING ""
+  SendMessage $var37 0x000C 0 "STR:肀 "
+  GetDlgItem $var39 $HWNDPARENT 1035
+  GetDlgItem $var40 $HWNDPARENT 1045
+  GetDlgItem $var41 $HWNDPARENT 1
+  GetDlgItem $var42 $HWNDPARENT 2
+  GetDlgItem $var43 $HWNDPARENT 3
+  Call func_390
+FunctionEnd
+
+Function .onUserAbort
+  MessageBox MB_YESNO|MB_ICONEXCLAMATION 4294967239 IDYES label_619
+  Abort
+label_619:
+  Call func_627
+FunctionEnd
+
+Function func_621
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "shell32.dll::SHChangeNotify(i, i, i, i) v (0x08000000, 0, 0, 0)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+FunctionEnd
+
+Function func_627
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\INetC.dll"
+  SetDetailsPrint lastused
+  Push "$TEMP\utweb_install.log"
+  Push "http://i-4101.b-5416.utweb.bench.utorrent.com/e?i=4101"
+  Push "/SILENT"
+  Push "{$\"ostype$\": $\"windows$\", $\"osv$\": $\"$var69$\", $\"v$\": $\"1.3.0.5416$\", $\"l$\": $\"$var70$\", $\"cl$\": $\"uTorrent Web$\",$\"eventName$\": $\"utweb$\", $\"action$\": $\"installer.5416.install.cancel$\", $\"installerRunID$\": $\"$var71$\"}"
+  CallInstDLL "$PLUGINSDIR\INetC.dll" "post"
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_643 label_643 ; If: $var45 <= 0
+    StrCpy $V2 ",$\"installCancel$\""
+  ; Else
+label_643:
+    StrCpy $V2 "$\"installCancel$\""
+  ; EndIf
+label_644:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+  Call :label_653
+  Goto label_686
+label_653:
+  StrCmp $CMDLINE "" 0 label_656 ; If: $CMDLINE == ""
+    Push ""
+    Return
+  ; EndIf
+label_656:
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrLen $V1 $CMDLINE
+  StrCpy $V2 2
+  StrCpy $V3 $CMDLINE 1
+  StrCmp $V3 "$\"" label_665
+  StrCpy $V3 " "
+  ; Do
+label_665:
+    IntCmp $V2 $V1 label_669 0 label_669
+    StrCpy $V0 $CMDLINE 1 $V2
+    IntOp $V2 $V2 + 1
+  StrCmp $V3 $V0 0 label_665 ; LoopUntil: $V3 != $V0
+label_669:
+  IntCmp $V2 $V1 label_674 0 label_674 ; While: $V2 >= $V1
+    StrCpy $V0 $CMDLINE 1 $V2
+    StrCmp $V0 " " 0 label_674
+    IntOp $V2 $V2 + 1
+  ; EndWhile
+label_674:
+  StrCpy $V0 $CMDLINE "" $V2
+label_675:
+  StrCpy $V1 $V0 1 -1
+  StrCmp $V1 " " 0 label_679 ; While: $V1 == " "
+    StrCpy $V0 $V0 -1
+  ; EndWhile
+label_679:
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Push $V0
+  Exch
+  Pop $V0
+  Return
+label_686:
+  Pop $R0
+  Push $R0
+  Push "/OLDVERSION"
+  Call :label_691
+  Goto label_780
+label_691:
+  Push $V1
+  Exch
+  Pop $V1
+  Exch
+  Push $V0
+  Exch
+  Pop $V0
+  Exch
+  Push $V2
+  Push $V3
+  Push $V4
+  Push $V5
+  Push $V6
+  Push $V7
+  ClearErrors
+  StrCpy $V2 $V1 "" 1
+  StrCpy $V1 $V1 1
+  StrLen $V3 $V2
+  StrCpy $V7 0
+label_710:
+  StrCpy $V4 -1
+  StrCpy $V6 ""
+label_712:
+  IntOp $V4 $V4 + 1
+  StrCpy $V5 $V0 1 $V4
+  StrCmpS "$V5$V7" 0 label_767 ; While: "$V5$V7" S!= 0
+    StrCmpS $V5 "" label_754
+    StrCmpS $V5 "$\"" 0 label_723
+    StrCmpS $V6 "" 0 label_720
+    StrCpy $V6 "$\""
+    Goto label_712
+label_720:
+    StrCmpS $V6 "$\"" 0 label_723
+    StrCpy $V6 ""
+    Goto label_712
+label_723:
+    StrCmpS $V5 "'" 0 label_730
+    StrCmpS $V6 "" 0 label_727
+    StrCpy $V6 "'"
+    Goto label_712
+label_727:
+    StrCmpS $V6 "'" 0 label_730
+    StrCpy $V6 ""
+    Goto label_712
+label_730:
+    StrCmpS $V5 "`" 0 label_737
+    StrCmpS $V6 "" 0 label_734
+    StrCpy $V6 "`"
+    Goto label_712
+label_734:
+    StrCmpS $V6 "`" 0 label_737
+    StrCpy $V6 ""
+    Goto label_712
+label_737:
+    StrCmpS $V6 "$\"" label_712
+    StrCmpS $V6 "'" label_712
+    StrCmpS $V6 "`" label_712
+    StrCmpS $V5 $V1 0 label_712
+    StrCmpS $V7 0 label_742 label_754
+label_742:
+    IntOp $V4 $V4 + 1
+    StrCpy $V5 $V0 $V3 $V4
+    StrCmpS $V5 "" label_767
+    StrCmpS $V5 $V2 0 label_712
+    IntOp $V4 $V4 + $V3
+    StrCpy $V0 $V0 "" $V4
+label_748:
+    StrCpy $V4 $V0 1
+    StrCmpS $V4 " " 0 label_752 ; While: $V4 S== " "
+      StrCpy $V0 $V0 "" 1
+    ; EndWhile
+label_752:
+    StrCpy $V7 1
+  ; EndWhile
+label_754:
+  StrCpy $V0 $V0 $V4
+label_755:
+  StrCpy $V4 $V0 1 -1
+  StrCmpS $V4 " " 0 label_759 ; While: $V4 S== " "
+    StrCpy $V0 $V0 -1
+  ; EndWhile
+label_759:
+  StrCpy $V3 $V0 1
+  StrCpy $V4 $V0 1 -1
+  StrCmpS $V3 $V4 0 label_769 ; If: $V3 S== $V4
+    StrCmpS $V3 "$\"" label_765
+    StrCmpS $V3 "'" label_765
+    StrCmpS $V3 "`" 0 label_769
+label_765:
+    StrCpy $V0 $V0 -1 1
+    Goto label_769
+label_767:
+    SetErrors
+    StrCpy $V0 ""
+  ; EndIf
+label_769:
+  Pop $V7
+  Pop $V6
+  Pop $V5
+  Pop $V4
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Push $V0
+  Exch
+  Pop $V0
+  Return
+label_780:
+  Pop $V1
+  IfErrors label_783 ; If: not Errors
+    StrCpy $V1 $V1 "" 1
+  ; EndIf
+label_783:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\INetC.dll"
+  SetDetailsPrint lastused
+  Push "$TEMP\utweb_install.log"
+  Push "http://i-4101.b-5416.utweb.bench.utorrent.com/e?i=4101"
+  Push "/SILENT"
+  Push "{$\"ostype$\": $\"windows$\", $\"osv$\": $\"$var69$\", $\"v$\": $\"1.3.0.5416$\", $\"oldv$\": $\"$V1$\", $\"l$\": $\"$var70$\", $\"cl$\": $\"uTorrent Web$\",$\"eventName$\": $\"utweb$\", $\"action$\": $\"status.5416.installReport$\", $\"status$\": [$var44], $\"installerRunID$\": $\"$var71$\"}"
+  CallInstDLL "$PLUGINSDIR\INetC.dll" "post"
+  SetErrorLevel -2
+FunctionEnd
+
+Function .onInstSuccess
+  Call :label_653
+  Pop $R0
+  Push $R0
+  Push "/OLDVERSION"
+  Call :label_691
+  Pop $V0
+  IfErrors 0 label_802 ; If: Errors
+    Call func_1204
+  ; Else
+label_802:
+    Goto label_821
+  ; EndIf
+label_803:
+  IfSilent 0 label_821 ; If: Silent
+    Push $V0
+    Push $V1
+    Push $V2
+    Push $V3
+    StrCpy $V1 $var44
+    IntCmp $var45 0 label_812 label_812 ; If: $var45 <= 0
+      StrCpy $V2 ",$\"silentInstallSuccess$\""
+    ; Else
+label_812:
+      StrCpy $V2 "$\"silentInstallSuccess$\""
+    ; EndIf
+label_813:
+    StrCpy $V1 "$V1$V2"
+    StrCpy $var44 $V1
+    IntOp $var45 $var45 + 1
+    Pop $V3
+    Pop $V2
+    Pop $V1
+    Pop $V0
+  ; Else
+label_821:
+    Call func_1222
+  ; EndIf
+label_822:
+  Call :label_653
+  Pop $R0
+  Push $R0
+  Push "/OLDVERSION"
+  Call :label_691
+  Pop $V1
+  IfErrors label_830 ; If: not Errors
+    StrCpy $V1 $V1 "" 1
+  ; EndIf
+label_830:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\INetC.dll"
+  SetDetailsPrint lastused
+  Push "$TEMP\utweb_install.log"
+  Push "http://i-4101.b-5416.utweb.bench.utorrent.com/e?i=4101"
+  Push "/SILENT"
+  Push "{$\"ostype$\": $\"windows$\", $\"osv$\": $\"$var69$\", $\"v$\": $\"1.3.0.5416$\", $\"oldv$\": $\"$V1$\", $\"l$\": $\"$var70$\", $\"cl$\": $\"uTorrent Web$\",$\"eventName$\": $\"utweb$\", $\"action$\": $\"status.5416.installReport$\", $\"status$\": [$var44], $\"installerRunID$\": $\"$var71$\"}"
+  CallInstDLL "$PLUGINSDIR\INetC.dll" "post"
+  SetErrorLevel 0
+FunctionEnd
+
+Function .onInstFailed
+  IfSilent 0 label_857 ; If: Silent
+    Push $V0
+    Push $V1
+    Push $V2
+    Push $V3
+    StrCpy $V1 $var44
+    IntCmp $var45 0 label_849 label_849 ; If: $var45 <= 0
+      StrCpy $V2 ",$\"silentInstallFailed$\""
+    ; Else
+label_849:
+      StrCpy $V2 "$\"silentInstallFailed$\""
+    ; EndIf
+label_850:
+    StrCpy $V1 "$V1$V2"
+    StrCpy $var44 $V1
+    IntOp $var45 $var45 + 1
+    Pop $V3
+    Pop $V2
+    Pop $V1
+    Pop $V0
+  ; EndIf
+label_857:
+  Call :label_653
+  Pop $R0
+  Push $R0
+  Push "/OLDVERSION"
+  Call :label_691
+  Pop $V1
+  IfErrors label_865 ; If: not Errors
+    StrCpy $V1 $V1 "" 1
+  ; EndIf
+label_865:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\INetC.dll"
+  SetDetailsPrint lastused
+  Push "$TEMP\utweb_install.log"
+  Push "http://i-4101.b-5416.utweb.bench.utorrent.com/e?i=4101"
+  Push "/SILENT"
+  Push "{$\"ostype$\": $\"windows$\", $\"osv$\": $\"$var69$\", $\"v$\": $\"1.3.0.5416$\", $\"oldv$\": $\"$V1$\", $\"l$\": $\"$var70$\", $\"cl$\": $\"uTorrent Web$\",$\"eventName$\": $\"utweb$\", $\"action$\": $\"status.5416.installReport$\", $\"status$\": [$var44], $\"installerRunID$\": $\"$var71$\"}"
+  CallInstDLL "$PLUGINSDIR\INetC.dll" "post"
+  SetErrorLevel -1
+FunctionEnd
+
+Function .onInit
+  StrCpy $var45 0
+  Call :label_878
+  Goto label_903
+label_878:
+  StrCmp $var72 "" label_880 ; If: $var72 != ""
+    Return
+  ; EndIf
+label_880:
+  Push $V0
+  GetOSInfo
+  GetOSInfo
+  IntOp $var72 $var72 << 16
+  IntOp $var73 $V0 & 2
+  IntOp $var73 $var73 << 29
+  IntCmp $var73 0 label_891 ; If: $var73 = 0
+    IntCmpU 0x06000000 $var72 0 0 label_890 ; If: 0x06000000 <= $var72
+      IntCmpU 0x09000000 $var72 label_890 label_890
+      IntOp $var72 $var72 | 0x00000001
+    ; EndIf
+label_890:
+  ; Else
+label_891:
+    IntCmp $var72 0x05020000 0 label_893 label_893
+    StrCpy $var72 0x05010000
+  ; EndIf
+label_893:
+  IntCmp $V0 0 label_896 ; If: $V0 = 0
+    IntOp $var73 $var73 | 0x80000000
+    IntOp $var72 $var72 | 0x80000000
+  ; EndIf
+label_896:
+  GetOSInfo
+  IntOp $var73 $var73 | $V0
+  GetOSInfo
+  IntOp $V0 $V0 << 16
+  IntOp $var73 $var73 | $V0
+  Pop $V0
+  Return
+label_903:
+  IntCmp $var72 0x86010000 0 label_906 label_906 ; If: $var72 != 0x86010000
+    StrCpy $var69 "6.1"
+  ; Else
+label_906:
+    Call :label_878
+    IntCmp $var72 0x86020000 0 label_910 label_910 ; If: $var72 != 0x86020000
+      StrCpy $var69 "6.2"
+      Goto label_919
+    ; EndIf
+label_910:
+    Call :label_878
+    IntCmp $var72 0x86030000 0 label_914 label_914 ; If: $var72 != 0x86030000
+      StrCpy $var69 "6.3"
+      Goto label_919
+    ; EndIf
+label_914:
+    Call :label_878
+    IntCmp $var72 0x8A000000 0 label_918 label_918 ; If: $var72 != 0x8A000000
+      StrCpy $var69 "10.0"
+      Goto label_919
+    ; EndIf
+label_918:
+    StrCpy $var69 "6.x"
+  ; EndIf
+label_919:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push 1024
+  CallInstDLL "$PLUGINSDIR\System.dll" "Alloc"
+  Pop $V0
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "Kernel32::GetSystemDefaultLocaleName(t,i)i(.r0,1024)i"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  StrCpy $var70 $V0
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "ole32::CoCreateGuid(g .s)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Pop $var71
+  Call :label_653
+  Pop $R0
+  Push $R0
+  Push "/OLDVERSION"
+  Call :label_691
+  Pop $V0
+  IfErrors label_945 ; If: not Errors
+  ; Else
+label_945:
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\UAC.dll"
+    SetDetailsPrint lastused
+    Push 0
+    CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+    Goto label_1076
+    ; Do
+label_951:
+      IntCmp $V1 1 0 label_953 label_953
+      Quit
+label_953:
+      IntCmp $V3 0 label_955
+      Goto label_1080
+label_955:
+      IntCmp $V1 3 0 label_973 label_973
+      Push $V0
+      Push $V1
+      Push $V2
+      Push $V3
+      StrCpy $V1 $var44
+      IntCmp $var45 0 label_964 label_964
+      StrCpy $V2 ",$\"installElvReq$\""
+      Goto label_965
+label_964:
+      StrCpy $V2 "$\"installElvReq$\""
+label_965:
+      StrCpy $V1 "$V1$V2"
+      StrCpy $var44 $V1
+      IntOp $var45 $var45 + 1
+      Pop $V3
+      Pop $V2
+      Pop $V1
+      Pop $V0
+      MessageBox MB_YESNO|MB_ICONEXCLAMATION|MB_SETFOREGROUND|MB_TOPMOST 4294967238 /SDIDNO IDYES label_945 IDNO 0
+label_973:
+      Push $V0
+      Push $V1
+      Push $V2
+      Push $V3
+      StrCpy $V1 $var44
+      IntCmp $var45 0 label_981 label_981
+      StrCpy $V2 ",$\"elvAbortAdminReq$\""
+      Goto label_982
+label_981:
+      StrCpy $V2 "$\"elvAbortAdminReq$\""
+label_982:
+      StrCpy $V1 "$V1$V2"
+      StrCpy $var44 $V1
+      IntOp $var45 $var45 + 1
+      Pop $V3
+      Pop $V2
+      Pop $V1
+      Pop $V0
+      MessageBox MB_OK|MB_ICONSTOP|MB_SETFOREGROUND|MB_TOPMOST 4294967237
+      Call :label_653
+      Pop $R0
+      Push $R0
+      Push "/OLDVERSION"
+      Call :label_691
+      Pop $V1
+      IfErrors label_998
+      StrCpy $V1 $V1 "" 1
+label_998:
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\INetC.dll"
+      SetDetailsPrint lastused
+      Push "$TEMP\utweb_install.log"
+      Push "http://i-4101.b-5416.utweb.bench.utorrent.com/e?i=4101"
+      Push "/SILENT"
+      Push "{$\"ostype$\": $\"windows$\", $\"osv$\": $\"$var69$\", $\"v$\": $\"1.3.0.5416$\", $\"oldv$\": $\"$V1$\", $\"l$\": $\"$var70$\", $\"cl$\": $\"uTorrent Web$\",$\"eventName$\": $\"utweb$\", $\"action$\": $\"status.5416.installReportElevationFail$\", $\"status$\": [$var44], $\"installerRunID$\": $\"$var71$\"}"
+      CallInstDLL "$PLUGINSDIR\INetC.dll" "post"
+      Quit
+label_1007:
+      Push $V0
+      Push $V1
+      Push $V2
+      Push $V3
+      StrCpy $V1 $var44
+      IntCmp $var45 0 label_1015 label_1015
+      StrCpy $V2 ",$\"elvAbortNoLogonSvc$\""
+      Goto label_1016
+label_1015:
+      StrCpy $V2 "$\"elvAbortNoLogonSvc$\""
+label_1016:
+      StrCpy $V1 "$V1$V2"
+      StrCpy $var44 $V1
+      IntOp $var45 $var45 + 1
+      Pop $V3
+      Pop $V2
+      Pop $V1
+      Pop $V0
+      MessageBox MB_OK|MB_ICONSTOP|MB_SETFOREGROUND|MB_TOPMOST 4294967236
+      Call :label_653
+      Pop $R0
+      Push $R0
+      Push "/OLDVERSION"
+      Call :label_691
+      Pop $V1
+      IfErrors label_1032
+      StrCpy $V1 $V1 "" 1
+label_1032:
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\INetC.dll"
+      SetDetailsPrint lastused
+      Push "$TEMP\utweb_install.log"
+      Push "http://i-4101.b-5416.utweb.bench.utorrent.com/e?i=4101"
+      Push "/SILENT"
+      Push "{$\"ostype$\": $\"windows$\", $\"osv$\": $\"$var69$\", $\"v$\": $\"1.3.0.5416$\", $\"oldv$\": $\"$V1$\", $\"l$\": $\"$var70$\", $\"cl$\": $\"uTorrent Web$\",$\"eventName$\": $\"utweb$\", $\"action$\": $\"status.5416.installReportElevationFail$\", $\"status$\": [$var44], $\"installerRunID$\": $\"$var71$\"}"
+      CallInstDLL "$PLUGINSDIR\INetC.dll" "post"
+      Quit
+label_1041:
+      Push $V0
+      Push $V1
+      Push $V2
+      Push $V3
+      StrCpy $V1 $var44
+      IntCmp $var45 0 label_1049 label_1049
+      StrCpy $V2 ",$\"elvAbortOther$\""
+      Goto label_1050
+label_1049:
+      StrCpy $V2 "$\"elvAbortOther$\""
+label_1050:
+      StrCpy $V1 "$V1$V2"
+      StrCpy $var44 $V1
+      IntOp $var45 $var45 + 1
+      Pop $V3
+      Pop $V2
+      Pop $V1
+      Pop $V0
+      MessageBox MB_OK|MB_ICONSTOP|MB_SETFOREGROUND|MB_TOPMOST 4294967235
+      Call :label_653
+      Pop $R0
+      Push $R0
+      Push "/OLDVERSION"
+      Call :label_691
+      Pop $V1
+      IfErrors label_1066
+      StrCpy $V1 $V1 "" 1
+label_1066:
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\INetC.dll"
+      SetDetailsPrint lastused
+      Push "$TEMP\utweb_install.log"
+      Push "http://i-4101.b-5416.utweb.bench.utorrent.com/e?i=4101"
+      Push "/SILENT"
+      Push "{$\"ostype$\": $\"windows$\", $\"osv$\": $\"$var69$\", $\"v$\": $\"1.3.0.5416$\", $\"oldv$\": $\"$V1$\", $\"l$\": $\"$var70$\", $\"cl$\": $\"uTorrent Web$\",$\"eventName$\": $\"utweb$\", $\"action$\": $\"status.5416.installReportElevationFail$\", $\"status$\": [$var44], $\"installerRunID$\": $\"$var71$\"}"
+      CallInstDLL "$PLUGINSDIR\INetC.dll" "post"
+      Quit
+      Goto label_1080
+label_1076:
+    StrCmp $V0 0 label_951 ; LoopWhile: $V0 == 0
+    StrCmp $V0 1223 label_973
+    StrCmp $V0 1062 label_1007
+    Goto label_1041
+label_1080:
+    Push $V0
+    Push $V1
+    Push $V2
+    Push $V3
+    StrCpy $V1 $var44
+    IntCmp $var45 0 label_1088 label_1088 ; If: $var45 <= 0
+      StrCpy $V2 ",$\"elvOK$\""
+    ; Else
+label_1088:
+      StrCpy $V2 "$\"elvOK$\""
+    ; EndIf
+label_1089:
+    StrCpy $V1 "$V1$V2"
+    StrCpy $var44 $V1
+    IntOp $var45 $var45 + 1
+    Pop $V3
+    Pop $V2
+    Pop $V1
+    Pop $V0
+  ; EndIf
+label_1096:
+  Call :label_878
+  IntOp $var64 $var72 & 0x7FFFFFFF
+  IntCmp $var64 0x06010000 label_1133 0 label_1133 ; If: $var64 >= 0x06010000
+    Push $V0
+    Push $V1
+    Push $V2
+    Push $V3
+    StrCpy $V1 $var44
+    IntCmp $var45 0 label_1107 label_1107 ; If: $var45 <= 0
+      StrCpy $V2 ",$\"notAtLeastWin7$\""
+    ; Else
+label_1107:
+      StrCpy $V2 "$\"notAtLeastWin7$\""
+    ; EndIf
+label_1108:
+    StrCpy $V1 "$V1$V2"
+    StrCpy $var44 $V1
+    IntOp $var45 $var45 + 1
+    Pop $V3
+    Pop $V2
+    Pop $V1
+    Pop $V0
+    Call :label_653
+    Pop $R0
+    Push $R0
+    Push "/OLDVERSION"
+    Call :label_691
+    Pop $V1
+    IfErrors label_1123 ; If: not Errors
+      StrCpy $V1 $V1 "" 1
+    ; EndIf
+label_1123:
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\INetC.dll"
+    SetDetailsPrint lastused
+    Push "$TEMP\utweb_install.log"
+    Push "http://i-4101.b-5416.utweb.bench.utorrent.com/e?i=4101"
+    Push "/SILENT"
+    Push "{$\"ostype$\": $\"windows$\", $\"osv$\": $\"$var69$\", $\"v$\": $\"1.3.0.5416$\", $\"oldv$\": $\"$V1$\", $\"l$\": $\"$var70$\", $\"cl$\": $\"uTorrent Web$\",$\"eventName$\": $\"utweb$\", $\"action$\": $\"status.5416.osTooOld$\", $\"status$\": [$var44], $\"installerRunID$\": $\"$var71$\"}"
+    CallInstDLL "$PLUGINSDIR\INetC.dll" "post"
+    MessageBox MB_OK|MB_ICONEXCLAMATION|MB_SETFOREGROUND|MB_TOPMOST 4294967234
+    Quit
+  ; EndIf
+label_1133:
+  Call :label_878
+  IntCmp $var72 0x86010000 0 label_1153 label_1153 ; If: $var72 != 0x86010000
+    GetOSInfo
+    IntCmp $var64 1 label_1153 0 label_1153
+    Push $V0
+    Push $V1
+    Push $V2
+    Push $V3
+    StrCpy $V1 $var44
+    IntCmp $var45 0 label_1145 label_1145 ; If: $var45 <= 0
+      StrCpy $V2 ",$\"notAtLeastWin7SP1$\""
+    ; Else
+label_1145:
+      StrCpy $V2 "$\"notAtLeastWin7SP1$\""
+    ; EndIf
+label_1146:
+    StrCpy $V1 "$V1$V2"
+    StrCpy $var44 $V1
+    IntOp $var45 $var45 + 1
+    Pop $V3
+    Pop $V2
+    Pop $V1
+    Pop $V0
+  ; EndIf
+label_1153:
+  Call :label_878
+  IntCmp $var72 0x86020000 0 label_1173 label_1173 ; If: $var72 != 0x86020000
+    GetOSInfo
+    IntCmp $var64 1 label_1173 0 label_1173
+    Push $V0
+    Push $V1
+    Push $V2
+    Push $V3
+    StrCpy $V1 $var44
+    IntCmp $var45 0 label_1165 label_1165 ; If: $var45 <= 0
+      StrCpy $V2 ",$\"notAtLeastWin8SP1$\""
+    ; Else
+label_1165:
+      StrCpy $V2 "$\"notAtLeastWin8SP1$\""
+    ; EndIf
+label_1166:
+    StrCpy $V1 "$V1$V2"
+    StrCpy $var44 $V1
+    IntOp $var45 $var45 + 1
+    Pop $V3
+    Pop $V2
+    Pop $V1
+    Pop $V0
+  ; EndIf
+label_1173:
+  Return
+FunctionEnd
+
+Function func_1204
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_1212 label_1212 ; If: $var45 <= 0
+    StrCpy $V2 ",$\"settingsSave$\""
+  ; Else
+label_1212:
+    StrCpy $V2 "$\"settingsSave$\""
+  ; EndIf
+label_1213:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+  Call func_1175
+FunctionEnd
+
+Function func_1222
+  StrCpy $V1 "$INSTDIR\utweb.exe"
+  StrCpy $V2 "/RUNONSTARTUP"
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_1232 label_1232 ; If: $var45 <= 0
+    StrCpy $V2 ",$\"launchProduct$\""
+  ; Else
+label_1232:
+    StrCpy $V2 "$\"launchProduct$\""
+  ; EndIf
+label_1233:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+  Goto label_1243
+label_1243:
+  Push $OUTDIR
+  SetOutPath $INSTDIR
+  Push $V0
+  StrCpy $V0 1242
+  StrCpy $V0 "1$V0:13"
+  Push $V0
+  Exch
+  Pop $V0
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\UAC.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+  Pop $OUTDIR
+  SetOutPath $OUTDIR
+FunctionEnd
+
+Function func_1258
+  IfAbort 0 label_1283
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\INetC.dll"
+  SetDetailsPrint lastused
+  Push "$TEMP\utweb_install.log"
+  Push "http://i-4101.b-5416.utweb.bench.utorrent.com/e?i=4101"
+  Push "/SILENT"
+  Push "{$\"ostype$\": $\"windows$\", $\"osv$\": $\"$var69$\", $\"v$\": $\"1.3.0.5416$\", $\"l$\": $\"$var70$\", $\"cl$\": $\"uTorrent Web$\",$\"eventName$\": $\"utweb$\", $\"action$\": $\"installer.5416.install.fail$\", $\"installerRunID$\": $\"$var71$\"}"
+  CallInstDLL "$PLUGINSDIR\INetC.dll" "post"
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_1275 label_1275 ; If: $var45 <= 0
+    StrCpy $V2 ",$\"installFail$\""
+  ; Else
+label_1275:
+    StrCpy $V2 "$\"installFail$\""
+  ; EndIf
+label_1276:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+label_1283:
+FunctionEnd
+
+Function func_1284
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\INetC.dll"
+  SetDetailsPrint lastused
+  Push "$TEMP\utweb_install.log"
+  Push "http://i-4101.b-5416.utweb.bench.utorrent.com/e?i=4101"
+  Push "/SILENT"
+  Push "{$\"ostype$\": $\"windows$\", $\"osv$\": $\"$var69$\", $\"v$\": $\"1.3.0.5416$\", $\"l$\": $\"$var70$\", $\"cl$\": $\"uTorrent Web$\",$\"eventName$\": $\"utweb$\", $\"action$\": $\"installer.5416.error.errorRunUninstaller$\", $\"installerRunID$\": $\"$var71$\"}"
+  CallInstDLL "$PLUGINSDIR\INetC.dll" "post"
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_1300 label_1300 ; If: $var45 <= 0
+    StrCpy $V2 ",$\"errorRunUninstaller$\""
+  ; Else
+label_1300:
+    StrCpy $V2 "$\"errorRunUninstaller$\""
+  ; EndIf
+label_1301:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+  Call :label_653
+  Pop $R0
+  Push $R0
+  Push "/OLDVERSION"
+  Call :label_691
+  Pop $V1
+  IfErrors label_1316 ; If: not Errors
+    StrCpy $V1 $V1 "" 1
+  ; EndIf
+label_1316:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\INetC.dll"
+  SetDetailsPrint lastused
+  Push "$TEMP\utweb_install.log"
+  Push "http://i-4101.b-5416.utweb.bench.utorrent.com/e?i=4101"
+  Push "/SILENT"
+  Push "{$\"ostype$\": $\"windows$\", $\"osv$\": $\"$var69$\", $\"v$\": $\"1.3.0.5416$\", $\"oldv$\": $\"$V1$\", $\"l$\": $\"$var70$\", $\"cl$\": $\"uTorrent Web$\",$\"eventName$\": $\"utweb$\", $\"action$\": $\"status.5416.errorEncountered$\", $\"status$\": [$var44], $\"installerRunID$\": $\"$var71$\"}"
+  CallInstDLL "$PLUGINSDIR\INetC.dll" "post"
+  RMDir /r "$LOCALAPPDATA\utweb_install_temp"
+  ExecWait "$\"$INSTDIR\Uninstall.exe$\" /uninstall"
+  RMDir /r $INSTDIR
+  Abort
+FunctionEnd
+
+Section "Install" ; Section_0
+  ; AddSize 28216
+  Call :label_653
+  Pop $R0
+  Push $R0
+  Push "/OLDVERSION"
+  Call :label_691
+  Pop $V0
+  IfErrors label_1375
+  DetailPrint "In update mode. Will wait for existing process to exit if running."
+label_1337:
+  Push "utweb.exe"
+  Call func_77
+  Pop $V0
+  DetailPrint "Found utweb.exe. Waiting for it to exit"
+  Sleep 500
+label_1342:
+  IntCmp $V0 0 label_1345 label_1337 label_1337
+  Goto label_1342
+  Goto label_1345
+label_1345:
+  DetailPrint "Waiting for mutex(p) to release."
+label_1346:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::OpenMutex(i 0x100000, b 0, t $\"Local\utweb4823DF041B09$\") i .R0"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::CloseHandle(i $R0)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Sleep 500
+label_1357:
+  IntCmp $R0 2 label_1360 label_1360 label_1346
+  Goto label_1357
+  Goto label_1360
+label_1360:
+  DetailPrint "Waiting for mutex(d) to release."
+label_1361:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::OpenMutex(i 0x100000, b 0, t $\"Local\utweb4823DF041B0D$\") i .R0"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::CloseHandle(i $R0)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Sleep 500
+label_1372:
+  IntCmp $R0 2 label_1375 label_1375 label_1361
+  Goto label_1372
+  Goto label_1375
+label_1375:
+  Push $V0
+  Push $V1
+  Push $V2
+  DetailPrint 4294967233
+  FindWindow $V0 "utweb4823DF041B09"
+  IntCmp $V0 0 label_1382
+  Goto label_1384
+label_1382:
+  FindWindow $V0 "utweb4823DF041B0D"
+  IntCmp $V0 0 label_1484
+label_1384:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "user32.dll::GetWindowThreadProcessId(i r0, *i .r1) i .r2"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32.dll::OpenProcess(i 0x00100001, i 0, i r1) i .r2"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  SendMessage $V0 0x0010 0 0 /TIMEOUT=2000
+  DetailPrint 4294967232
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_1404 label_1404
+  StrCpy $V2 ",$\"procWaitExit$\""
+  Goto label_1405
+label_1404:
+  StrCpy $V2 "$\"procWaitExit$\""
+label_1405:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32.dll::WaitForSingleObject(i r2, i 10000) i .r1"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  IntCmp $V1 0 label_1463
+  DetailPrint 4294967231
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_1427 label_1427
+  StrCpy $V2 ",$\"procWaitExitFailed$\""
+  Goto label_1428
+label_1427:
+  StrCpy $V2 "$\"procWaitExitFailed$\""
+label_1428:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+  MessageBox MB_YESNOCANCEL|MB_ICONEXCLAMATION 4294967230 /SDIDYES IDYES label_1442 IDNO label_1463
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32.dll::CloseHandle(i r2) i .r1"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Quit
+label_1442:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32.dll::TerminateProcess(i r2, i 0) i .r1"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_1455 label_1455
+  StrCpy $V2 ",$\"procWaitExitTerminated$\""
+  Goto label_1456
+label_1455:
+  StrCpy $V2 "$\"procWaitExitTerminated$\""
+label_1456:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+label_1463:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32.dll::CloseHandle(i r2) i .r1"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_1476 label_1476
+  StrCpy $V2 ",$\"procWaitExitOK$\""
+  Goto label_1477
+label_1476:
+  StrCpy $V2 "$\"procWaitExitOK$\""
+label_1477:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+label_1484:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\FindProcDLL.dll"
+  SetDetailsPrint lastused
+  Push -1
+  Push "utweb.exe"
+  CallInstDLL "$PLUGINSDIR\FindProcDLL.dll" "WaitProcEnd"
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_1498 label_1498
+  StrCpy $V2 ",$\"procWaitExitDone$\""
+  Goto label_1499
+label_1498:
+  StrCpy $V2 "$\"procWaitExitDone$\""
+label_1499:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+  Pop $V2
+  Pop $V1
+  Pop $V0
+  DetailPrint 4294967229
+  SetOutPath "$INSTDIR\webui"
+  SetOverwrite on
+  File "version.txt"
+  IfErrors 0 label_1515
+  DetailPrint "Failed to extract webui directory"
+  Call func_1284
+label_1515:
+  SetOutPath "$INSTDIR\localization"
+  File "de.lang"
+  File "es-la.lang"
+  File "fr.lang"
+  File "it.lang"
+  File "ja.lang"
+  File "ko.lang"
+  File "nl.lang"
+  File "pl.lang"
+  File "pt-br.lang"
+  File "pt.lang"
+  File "ru.lang"
+  File "tr.lang"
+  File "zh-cn.lang"
+  File "zh-tw.lang"
+  IfErrors 0 label_1533
+  DetailPrint "Failed to extract localization directory"
+  Call func_1284
+label_1533:
+  SetOutPath $INSTDIR
+  File "avcodec-58.dll"
+  File "avfilter-7.dll"
+  File "avformat-58.dll"
+  File "avutil-56.dll"
+  File "libcrypto-1_1.dll"
+  File "libssl-1_1.dll"
+  File "swresample-3.dll"
+  File "swscale-5.dll"
+  File "utweb.exe"
+  File "webui.zip"
+  IfErrors 0 label_1547
+  DetailPrint "Failed to extract program files"
+  Call func_1284
+label_1547:
+  SetOutPath "$TEMP\ut_web_redist"
+  File "vcredist_x86.exe"
+  IfErrors 0 label_1552
+  DetailPrint "Failed to extract runtime installer"
+  Call func_1284
+label_1552:
+  SetOutPath $INSTDIR
+  File "main.ico"
+  File "uninstall.ico"
+  CreateShortCut "$DESKTOP\uTorrent Web.lnk" "$INSTDIR\utweb.exe" "" "$INSTDIR\main.ico"
+  IfErrors 0 label_1559
+  DetailPrint "Failed to extra/create application icon .lnk"
+  Call func_1284
+label_1559:
+  CreateShortCut "$SMPROGRAMS\uTorrent Web.lnk" "$INSTDIR\utweb.exe" "" "$INSTDIR\main.ico"
+  IfErrors 0 label_1563
+  DetailPrint "Failed to create start menu shortcut"
+  Call func_1284
+label_1563:
+  File "Uninstall.exe"
+  IfErrors 0 label_1583
+  DetailPrint 4294967228
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_1574 label_1574
+  StrCpy $V2 ",$\"errorExtractUninstaller$\""
+  Goto label_1575
+label_1574:
+  StrCpy $V2 "$\"errorExtractUninstaller$\""
+label_1575:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+  Call func_1284
+label_1583:
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\utweb" "UninstallString" "$\"$INSTDIR\Uninstall.exe$\""
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\utweb" "QuietUninstallString" "$\"$INSTDIR\Uninstall.exe$\" /S"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\utweb" "DisplayIcon" "$INSTDIR\uninstall.ico"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\utweb" "DisplayName" "uTorrent Web"
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\utweb" "Publisher" "Rainberry, Inc."
+  WriteRegStr HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\utweb" "DisplayVersion" "1.3.0"
+  WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\utweb" "NoModify" 0x00000001
+  WriteRegDWORD HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\utweb" "NoRepair" 0x00000001
+  IfErrors 0 label_1610
+  DetailPrint 4294967227
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_1601 label_1601
+  StrCpy $V2 ",$\"errorSetRegAssoc$\""
+  Goto label_1602
+label_1601:
+  StrCpy $V2 "$\"errorSetRegAssoc$\""
+label_1602:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+  Call func_1284
+label_1610:
+  Call Initialize_____Plugins
+  SetOverwrite off
+  File "$PLUGINSDIR\nsisFirewall.dll"
+  SetDetailsPrint lastused
+  Push "uTorrent Web"
+  Push "$INSTDIR\utweb.exe"
+  CallInstDLL "$PLUGINSDIR\nsisFirewall.dll" "AddAuthorizedApplication"
+  Pop $V0
+  IfErrors 0 label_1636
+  DetailPrint 4294967226
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_1627 label_1627
+  StrCpy $V2 ",$\"errorSetFirewall$\""
+  Goto label_1628
+label_1627:
+  StrCpy $V2 "$\"errorSetFirewall$\""
+label_1628:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+  ClearErrors
+label_1636:
+  Call func_0
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\INetC.dll"
+  SetDetailsPrint lastused
+  Push "$TEMP\utweb_install.log"
+  Push "http://i-4101.b-5416.utweb.bench.utorrent.com/e?i=4101"
+  Push "/SILENT"
+  Push "{$\"ostype$\": $\"windows$\", $\"osv$\": $\"$var69$\", $\"v$\": $\"1.3.0.5416$\", $\"l$\": $\"$var70$\", $\"cl$\": $\"uTorrent Web$\",$\"eventName$\": $\"utweb$\", $\"action$\": $\"installer.5416.install.success$\", $\"installerRunID$\": $\"$var71$\"}"
+  CallInstDLL "$PLUGINSDIR\INetC.dll" "post"
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_1653 label_1653
+  StrCpy $V2 ",$\"installSuccess$\""
+  Goto label_1654
+label_1653:
+  StrCpy $V2 "$\"installSuccess$\""
+label_1654:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+  SetOutPath "$LOCALAPPDATA\utweb_install_temp"
+  IfFileExists "$LOCALAPPDATA\utweb_install_temp\play_installer.exe" 0 label_1714
+  ExecWait "$\"$LOCALAPPDATA\utweb_install_temp\play_installer.exe$\" -q /SRC AUTOMATIC_BTWEB /FROI /BUNDLED /USP /FORCEINSTALL 0010010000000010" $V0
+  StrCmp $V0 0 label_1690
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\INetC.dll"
+  SetDetailsPrint lastused
+  Push "$TEMP\utweb_install.log"
+  Push "http://i-4101.b-5416.utweb.bench.utorrent.com/e?i=4101"
+  Push "/SILENT"
+  Push "{$\"ostype$\": $\"windows$\", $\"osv$\": $\"$var69$\", $\"v$\": $\"1.3.0.5416$\", $\"l$\": $\"$var70$\", $\"cl$\": $\"uTorrent Web$\",$\"eventName$\": $\"utweb$\", $\"action$\": $\"installer.5416.install_play.error$\", $\"installerRunID$\": $\"$var71$\"}"
+  CallInstDLL "$PLUGINSDIR\INetC.dll" "post"
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_1681 label_1681
+  StrCpy $V2 ",$\"installPlayError$\""
+  Goto label_1682
+label_1681:
+  StrCpy $V2 "$\"installPlayError$\""
+label_1682:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+  Goto label_1714
+label_1690:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\INetC.dll"
+  SetDetailsPrint lastused
+  Push "$TEMP\utweb_install.log"
+  Push "http://i-4101.b-5416.utweb.bench.utorrent.com/e?i=4101"
+  Push "/SILENT"
+  Push "{$\"ostype$\": $\"windows$\", $\"osv$\": $\"$var69$\", $\"v$\": $\"1.3.0.5416$\", $\"l$\": $\"$var70$\", $\"cl$\": $\"uTorrent Web$\",$\"eventName$\": $\"utweb$\", $\"action$\": $\"installer.5416.install_play.success$\", $\"installerRunID$\": $\"$var71$\"}"
+  CallInstDLL "$PLUGINSDIR\INetC.dll" "post"
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrCpy $V1 $var44
+  IntCmp $var45 0 label_1706 label_1706
+  StrCpy $V2 ",$\"installPlaySuccess$\""
+  Goto label_1707
+label_1706:
+  StrCpy $V2 "$\"installPlaySuccess$\""
+label_1707:
+  StrCpy $V1 "$V1$V2"
+  StrCpy $var44 $V1
+  IntOp $var45 $var45 + 1
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+label_1714:
+  SetOutPath $INSTDIR
+  RMDir /r "$LOCALAPPDATA\utweb_install_temp"
+SectionEnd
+
+; Function Initialize_____Plugins
+;   SetDetailsPrint none
+;   StrCmp $PLUGINSDIR "" 0 label_1727 ; If: $PLUGINSDIR == ""
+;     Push $V0
+;     SetErrors
+;     GetTempFileName $V0
+;     Delete $V0
+;     CreateDirectory $V0 ; CreateRestrictedDirectory
+;     IfErrors label_1728
+;     StrCpy $PLUGINSDIR $V0
+;     Pop $V0
+;   ; EndIf
+; label_1727:
+;   Return
+; label_1728:
+;   MessageBox MB_OK|MB_ICONSTOP "Error! Can't initialize plug-ins directory. Please try again later." /SDIDOK
+;   Quit
+; FunctionEnd
+
