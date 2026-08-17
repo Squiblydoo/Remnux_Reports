@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>ChilledWindows</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWPF>True</UseWPF>
+    <TargetFramework>net40</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="kyo-tux-aeon-system-windows-20-1-.ico" />
+    <None Remove="image1.jpg" />
+    <None Remove="mainwindow.baml" />
+    <None Remove="ja.png" />
+    <EmbeddedResource Include="kyo-tux-aeon-system-windows-20-1-.ico" LogicalName="kyo-tux-aeon-system-windows%20(1).ico" />
+    <EmbeddedResource Include="image1.jpg" LogicalName="image1.jpg" />
+    <EmbeddedResource Include="mainwindow.baml" LogicalName="mainwindow.baml" />
+    <EmbeddedResource Include="ja.png" LogicalName="ja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="WindowsBase">
+      <HintPath>../../../../../usr/lib/dotnet/shared/Microsoft.NETCore.App/8.0.22/WindowsBase.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
