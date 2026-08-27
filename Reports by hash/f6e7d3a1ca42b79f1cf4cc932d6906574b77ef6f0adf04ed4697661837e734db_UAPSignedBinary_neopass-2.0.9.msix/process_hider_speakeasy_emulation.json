@@ -1,0 +1,71 @@
+{
+  "network": [],
+  "files": [],
+  "registry": [],
+  "mutexes": [],
+  "processes": [],
+  "memory": [],
+  "strings": [],
+  "misc": [
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-synch-l1-2-0",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "InitializeCriticalSectionEx",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-fibers-l1-1-1",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsAlloc",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsSetValue",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-fibers-l1-1-2",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsGetValue2",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "api-ms-win-core-localization-l1-2-1",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "LCMapStringEx",
+      "resolved": true
+    },
+    {
+      "api": "KERNEL32.LoadLibraryExW",
+      "module": "kernel32",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "AreFileApisANSI",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "napi_create_function",
+      "resolved": true
+    }
+  ]
+}
