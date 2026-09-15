@@ -1,0 +1,3523 @@
+{
+  "Header": {
+    "AppName": "NightScreenShot",
+    "AppVersionedName": "NightScreenShot 2.2.1",
+    "AppId": "{8F3A1C2E-5B7D-4E9A-9C1F-2A6B8D4E7F10}",
+    "AppCopyright": "",
+    "AppPublisher": "NightScreenShot inc.",
+    "AppPublisherUrl": "https://www.NightScreenShot.com/",
+    "AppSupportPhone": "",
+    "AppSupportUrl": "https://www.NightScreenShot.com/",
+    "AppUpdatesUrl": "https://www.NightScreenShot.com/",
+    "AppVersion": "2.2.1",
+    "DefaultDirName": "C:\\Program Files\\NightScreenShot",
+    "DefaultGroupName": "NightScreenShot",
+    "BaseFilename": "",
+    "UninstallFilesDir": "{app}",
+    "UninstallName": "NightScreenShot 2.2.1",
+    "UninstallIcon": "{app}\\NightScreenShot.exe",
+    "AppMutex": "",
+    "DefaultUsername": "{sysuserinfoname}",
+    "DefaultOrganisation": "{sysuserinfoorg}",
+    "DefaultSerial": "",
+    "AppReadmeFile": "",
+    "AppContact": "",
+    "AppComment": "",
+    "AppModifyPath": "",
+    "CreateUninstallRegistryKey": "yes",
+    "Uninstallable": "yes",
+    "CloseApplicationsFilter": "*.exe,*.dll,*.chm",
+    "SetupMutex": "",
+    "ChangesEnvironment": "no",
+    "ChangesAssociations": "no",
+    "ArchitecturesAllowed32": [
+      120,
+      0,
+      54,
+      0,
+      52,
+      0,
+      99,
+      0,
+      111,
+      0,
+      109,
+      0,
+      112,
+      0,
+      97,
+      0,
+      116,
+      0,
+      105,
+      0,
+      98,
+      0,
+      108,
+      0,
+      101,
+      0
+    ],
+    "ArchitecturesAllowed64": [
+      120,
+      0,
+      54,
+      0,
+      52,
+      0,
+      99,
+      0,
+      111,
+      0,
+      109,
+      0,
+      112,
+      0,
+      97,
+      0,
+      116,
+      0,
+      105,
+      0,
+      98,
+      0,
+      108,
+      0,
+      101,
+      0
+    ],
+    "CloseApplicationsFilterExcludes": [],
+    "SevenZipLibraryName": [],
+    "UsePreviousAppDir": [
+      110,
+      0,
+      111,
+      0
+    ],
+    "UsePreviousGroup": [
+      121,
+      0,
+      101,
+      0,
+      115,
+      0
+    ],
+    "UsePreviousSetupType": [
+      121,
+      0,
+      101,
+      0,
+      115,
+      0
+    ],
+    "UsePreviousTasks": [
+      121,
+      0,
+      101,
+      0,
+      115,
+      0
+    ],
+    "UsePreviousUserInfo": [
+      121,
+      0,
+      101,
+      0,
+      115,
+      0
+    ],
+    "InfoHead": "",
+    "InfoTail": "",
+    "Charset": 0,
+    "LanguageCount": 1,
+    "MessageCount": 12,
+    "PermissionCount": 0,
+    "TypeCount": 0,
+    "ComponentCount": 0,
+    "TaskCount": 0,
+    "DirectoryCount": 0,
+    "ISSigCount": 0,
+    "FileCount": 33,
+    "DataEntryCount": 32,
+    "IconCount": 2,
+    "IniEntryCount": 0,
+    "RegistryCount": 1,
+    "DeleteCount": 0,
+    "UninstallDeleteCount": 0,
+    "RunCount": 4,
+    "UninstallRunCount": 4,
+    "WindowsVersion": {
+      "Min": {
+        "OS": "0.0.0000",
+        "NT": "6.1.0000",
+        "ServicePackMinor": 0,
+        "ServicePackMajor": 1
+      },
+      "Max": {
+        "OS": "0.0.0000",
+        "NT": "0.0.0000",
+        "ServicePackMinor": 0,
+        "ServicePackMajor": 0
+      }
+    },
+    "BackColor1": 0,
+    "BackColor2": 0,
+    "WizardStyle": null,
+    "WizardResizePercentX": 120,
+    "WizardResizePercentY": 120,
+    "WizardDarkStyle": "Light",
+    "StoredAlphaFormat": "AlphaIgnored",
+    "LargeImageBackColor": 16380904,
+    "SmallImageBackColor": 536870911,
+    "WizardBackColor": 536870911,
+    "LargeImageBackColorDynamicDark": 0,
+    "SmallImageBackColorDynamicDark": 0,
+    "WizardBackColorDynamicDark": 536870911,
+    "WizardImageOpacity": 255,
+    "WizardBackImageOpacity": 255,
+    "WizardLightControlStyling": "All",
+    "Encryption": {
+      "Scope": "NoEncryption",
+      "PasswordType": "XChaCha20",
+      "PasswordSeed": {
+        "KDFSalt": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "KDFIterations": 220000,
+        "BaseNonce": {
+          "RandomXorChunkStart": 0,
+          "RandomXorFirstSlice": 0,
+          "RemainignBytes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "RemainingWords": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "Derivation": {
+        "KDFSalt": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "KDFIterations": 220000,
+        "BaseNonce": {
+          "RandomXorChunkStart": 0,
+          "RandomXorFirstSlice": 0,
+          "RemainignBytes": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "RemainingWords": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "PasswordTest": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "ExtraDiskSpace": 0,
+    "SlicesPerDisk": 1,
+    "InstallMode": "Normal",
+    "UninstallLogMode": "Append",
+    "SetupStyle": "Modern",
+    "DirExistsWarning": "Auto",
+    "Flags": [
+      "DisableStartupPrompt",
+      "Uninstallable",
+      "CreateAppDir",
+      "UpdateUninstallLogAppName",
+      "AlwaysShowComponentsList",
+      "FlatComponentsList",
+      "ShowComponentSizes",
+      "DisableReadyPage",
+      "AllowUNCPath",
+      "RestartIfNeededByRun",
+      "AllowCancelDuringInstall",
+      "WizardImageStretch",
+      "AppendDefaultDirName",
+      "AppendDefaultGroupName",
+      "UsePreviousLanguage",
+      "DisableWelcomePage",
+      "CloseApplications",
+      "RestartApplications",
+      "AllowNetworkDrive",
+      "UsePreviousPrivileges",
+      "UninstallLogging",
+      "WizardBorderStyled",
+      "WizardKeepAspectRatio"
+    ],
+    "PrivilegesRequired": "Admin",
+    "PrivilegesRequiredOverrideAllowed": [],
+    "ShowLanguageDialog": "Auto",
+    "LanguageDetection": "UI",
+    "CompressionMethod": "LZMA2",
+    "ArchitecturesAllowed": [],
+    "ArchitecturesInstalled64": [],
+    "DisableDirPage": "Yes",
+    "DisableProgramGroupPage": "Yes",
+    "UninstallDisplaySize": 0
+  },
+  "Languages": [
+    {
+      "Name": "english",
+      "DialogFont": "Segoe UI",
+      "TitleFont": null,
+      "WelcomeFont": "Segoe UI",
+      "CopyrightFont": null,
+      "LicenseText": "",
+      "InfoBefore": "",
+      "InfoAfter": "",
+      "LanguageId": {
+        "Value": 1033,
+        "Name": "English (United States)"
+      },
+      "Codepage": "utf-16le",
+      "LanguageName": "English",
+      "DialogFontSize": 9,
+      "TitleFontSize": null,
+      "DialogFontBaseScaleHeight": 15,
+      "DialogFontBaseScaleWidth": 7,
+      "WelcomeFontSize": 14,
+      "CopyrightFontSize": null,
+      "RightToLeft": 0
+    }
+  ],
+  "Codec": "utf-16le",
+  "Messages": [
+    {
+      "EncodedName": "NameAndVersion",
+      "Value": "%1 version %2"
+    },
+    {
+      "EncodedName": "AdditionalIcons",
+      "Value": "Additional shortcuts:"
+    },
+    {
+      "EncodedName": "CreateDesktopIcon",
+      "Value": "Create a &desktop shortcut"
+    },
+    {
+      "EncodedName": "CreateQuickLaunchIcon",
+      "Value": "Create a &Quick Launch shortcut"
+    },
+    {
+      "EncodedName": "ProgramOnTheWeb",
+      "Value": "%1 on the Web"
+    },
+    {
+      "EncodedName": "UninstallProgram",
+      "Value": "Uninstall %1"
+    },
+    {
+      "EncodedName": "LaunchProgram",
+      "Value": "Launch %1"
+    },
+    {
+      "EncodedName": "AssocFileExtension",
+      "Value": "&Associate %1 with the %2 file extension"
+    },
+    {
+      "EncodedName": "AssocingFileExtension",
+      "Value": "Associating %1 with the %2 file extension..."
+    },
+    {
+      "EncodedName": "AutoStartProgramGroupDescription",
+      "Value": "Startup:"
+    },
+    {
+      "EncodedName": "AutoStartProgram",
+      "Value": "Automatically start %1"
+    },
+    {
+      "EncodedName": "AddonHostProgramNotFound",
+      "Value": "%1 could not be located in the folder you selected.\r\n\r\nDo you want to continue anyway?"
+    }
+  ],
+  "Permissions": [],
+  "Types": [],
+  "Components": [],
+  "Tasks": [],
+  "Directories": [],
+  "ISSignatures": [],
+  "Files": [
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 4294967295,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "OverwriteSameVersion"
+      ],
+      "Permissions": 65535,
+      "Type": "UninstExe"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\NightScreenShot.exe",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 0,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libarchive-13.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 1,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libb2-1.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 2,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libbz2-1.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 3,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libcrypto-3-x64.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 4,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libdeflate.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 5,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libexpat-1.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 6,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libgcc_s_seh-1.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 7,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libgif-7.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 8,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libiconv-2.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 9,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libjbig-0.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 10,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libjpeg-8.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 11,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libleptonica-6.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 12,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libLerc.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 13,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\liblz4.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 14,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\liblzma-5.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 15,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libopenjp2-7.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 16,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libpng16-16.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 17,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libsharpyuv-0.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 18,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libstdc++-6.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 19,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libtesseract-5.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 20,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libtiff-6.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 21,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libwebp-7.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 22,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libwebpmux-3.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 23,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libwinpthread-1.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 24,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\libzstd.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 25,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\tesseract.exe",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 26,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\zlib1.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 27,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\tessdata\\eng.traineddata",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 28,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "{app}\\ocr\\tessdata\\heb.traineddata",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 29,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "IgnoreVersion",
+        "CreateAllSubDirs"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "C:\\ProgramData\\NightScreenShot\\NSSUpdater.exe",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 30,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "NeverUninstall",
+        "IgnoreVersion"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    },
+    {
+      "UncompressedSize": null,
+      "Source": "",
+      "Destination": "C:\\ProgramData\\NightScreenShot\\libwinpthread-1.dll",
+      "InstallFontName": "",
+      "StrongAssemblyName": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "Excludes": "",
+      "DownloadISSigSource": "",
+      "DownloadUserName": "",
+      "DownloadPassword": "",
+      "ExtractArchivePassword": "",
+      "Verification": {
+        "ISSigAllowedKeys": "",
+        "Hash": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "Type": "Nothing"
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Location": 31,
+      "Attributes": 0,
+      "ExternalSize": 0,
+      "Flags": [
+        "NeverUninstall",
+        "IgnoreVersion"
+      ],
+      "Permissions": 65535,
+      "Type": "UserFile"
+    }
+  ],
+  "Icons": [
+    {
+      "Name": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\NightScreenShot",
+      "FileName": "{app}\\NightScreenShot.exe",
+      "Parameters": "",
+      "WorkingDir": "",
+      "IconFile": "",
+      "Comment": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "AppUserModelId": "",
+      "AppUserModelToastActivatorCLSID": "00000000-0000-0000-0000-000000000000",
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "IconIndex": 0,
+      "ShowCommand": 1,
+      "CloseOnExit": "NoSetting",
+      "HotKey": 0,
+      "Flags": []
+    },
+    {
+      "Name": "C:\\ProgramData\\Microsoft\\Windows\\Desktop\\NightScreenShot",
+      "FileName": "{app}\\NightScreenShot.exe",
+      "Parameters": "",
+      "WorkingDir": "",
+      "IconFile": "",
+      "Comment": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "AppUserModelId": "",
+      "AppUserModelToastActivatorCLSID": "00000000-0000-0000-0000-000000000000",
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "IconIndex": 0,
+      "ShowCommand": 1,
+      "CloseOnExit": "NoSetting",
+      "HotKey": 0,
+      "Flags": []
+    }
+  ],
+  "IniEntries": [],
+  "RegistryEntries": [
+    {
+      "Key": "Software\\Microsoft\\Windows\\CurrentVersion\\Run",
+      "Name": "NightScreenShot",
+      "Value": [
+        34,
+        0,
+        123,
+        0,
+        97,
+        0,
+        112,
+        0,
+        112,
+        0,
+        125,
+        0,
+        92,
+        0,
+        78,
+        0,
+        105,
+        0,
+        103,
+        0,
+        104,
+        0,
+        116,
+        0,
+        83,
+        0,
+        99,
+        0,
+        114,
+        0,
+        101,
+        0,
+        101,
+        0,
+        110,
+        0,
+        83,
+        0,
+        104,
+        0,
+        111,
+        0,
+        116,
+        0,
+        46,
+        0,
+        101,
+        0,
+        120,
+        0,
+        101,
+        0,
+        34,
+        0
+      ],
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "Hive": 2,
+      "Permissions": 65535,
+      "Type": "String",
+      "Flags": [
+        "UninsDeleteValue"
+      ]
+    }
+  ],
+  "DeleteEntries": [],
+  "UninstallDeleteEntries": [],
+  "RunEntries": [
+    {
+      "Name": "schtasks.exe",
+      "Parameters": "/Delete /TN \"NSSUpdater\" /F",
+      "WorkingDir": "",
+      "RunOnceId": "",
+      "StatusMessage": "",
+      "Verb": "",
+      "Description": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "ShowCommand": 0,
+      "Wait": "UntilTerminated",
+      "Flags": []
+    },
+    {
+      "Name": "powershell.exe",
+      "Parameters": "-NonInteractive -NoProfile -WindowStyle Hidden -Command \"Register-ScheduledTask -TaskName 'NSSUpdater' -Action (New-ScheduledTaskAction -Execute 'C:\\ProgramData\\NightScreenShot\\NSSUpdater.exe') -Trigger (New-ScheduledTaskTrigger -AtLogOn) -RunLevel Highest -Force\"",
+      "WorkingDir": "",
+      "RunOnceId": "",
+      "StatusMessage": "",
+      "Verb": "",
+      "Description": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "ShowCommand": 0,
+      "Wait": "UntilTerminated",
+      "Flags": []
+    },
+    {
+      "Name": "{app}\\NightScreenShot.exe",
+      "Parameters": "",
+      "WorkingDir": "",
+      "RunOnceId": "",
+      "StatusMessage": "",
+      "Verb": "",
+      "Description": "Launch NightScreenShot",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "ShowCommand": 1,
+      "Wait": "NoWait",
+      "Flags": [
+        "PostInstall",
+        "SkipIfSilent",
+        "RunAsOriginalUser"
+      ]
+    },
+    {
+      "Name": "C:\\ProgramData\\NightScreenShot\\NSSUpdater.exe",
+      "Parameters": "",
+      "WorkingDir": "",
+      "RunOnceId": "",
+      "StatusMessage": "",
+      "Verb": "",
+      "Description": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "ShowCommand": 0,
+      "Wait": "NoWait",
+      "Flags": []
+    }
+  ],
+  "UninstallRunEntries": [
+    {
+      "Name": "C:\\Windows\\System32\\cmd.exe",
+      "Parameters": "/C taskkill /IM NightScreenShot.exe /F",
+      "WorkingDir": "",
+      "RunOnceId": "KillApp",
+      "StatusMessage": "",
+      "Verb": "",
+      "Description": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "ShowCommand": 0,
+      "Wait": "UntilTerminated",
+      "Flags": []
+    },
+    {
+      "Name": "C:\\Windows\\System32\\cmd.exe",
+      "Parameters": "/C taskkill /IM NSSUpdater.exe /F",
+      "WorkingDir": "",
+      "RunOnceId": "KillUpdater",
+      "StatusMessage": "",
+      "Verb": "",
+      "Description": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "ShowCommand": 0,
+      "Wait": "UntilTerminated",
+      "Flags": []
+    },
+    {
+      "Name": "schtasks.exe",
+      "Parameters": "/Delete /TN \"NSSUpdater\" /F",
+      "WorkingDir": "",
+      "RunOnceId": "DeleteTask",
+      "StatusMessage": "",
+      "Verb": "",
+      "Description": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "ShowCommand": 0,
+      "Wait": "UntilTerminated",
+      "Flags": []
+    },
+    {
+      "Name": "reg.exe",
+      "Parameters": "delete \"HKCU\\Software\\NightScreenShot\" /v \"Launched\" /f",
+      "WorkingDir": "",
+      "RunOnceId": "ResetLaunched",
+      "StatusMessage": "",
+      "Verb": "",
+      "Description": "",
+      "Condition": {
+        "Components": "",
+        "Tasks": "",
+        "Languages": "",
+        "Check": "",
+        "AfterInstall": "",
+        "BeforeInstall": ""
+      },
+      "WindowsVersion": {
+        "Min": {
+          "OS": "0.0.0000",
+          "NT": "6.1.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 1
+        },
+        "Max": {
+          "OS": "0.0.0000",
+          "NT": "0.0.0000",
+          "ServicePackMinor": 0,
+          "ServicePackMajor": 0
+        }
+      },
+      "ShowCommand": 0,
+      "Wait": "UntilTerminated",
+      "Flags": []
+    }
+  ]
+}

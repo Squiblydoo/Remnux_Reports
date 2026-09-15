@@ -1,0 +1,191 @@
+external class TUninstallProgressForm;
+external class TNewRadioButton;
+external class TNewButton;
+
+external class TWizardForm
+  function __pascal LicenseAcceptedRadio(): TNewRadioButton
+  function __pascal NextButton(): TNewButton
+end;
+
+external class TRadioButton
+  property Checked: Boolean
+end;
+
+external class TControl
+  property Enabled: Boolean
+end;
+
+external class TButton
+  property Caption: String
+end;
+
+typedef AnyMethod = ProcPtr()
+typedef Boolean = U08
+typedef Cardinal = U32
+typedef Integer = S32
+typedef String = UnicodeString
+typedef TExecWait = U08
+typedef TSetupMessageID = U16
+
+global WIZARDFORM: TWizardForm
+global UNINSTALLPROGRESSFORM: TUninstallProgressForm
+
+external function Exec(Filename: String, Params: String, WorkingDir: String, ShowCmd: Integer, Wait: TExecWait, *ResultCode: Integer): Boolean
+external function RegQueryDWordValue(RootKey: Integer, SubKeyName: String, ValueName: String, *ResultDWord: Cardinal): Boolean
+external function RegQueryStringValue(RootKey: Integer, SubKeyName: String, ValueName: String, *ResultStr: String): Boolean
+external function RegWriteDWordValue(RootKey: Integer, SubKeyName: String, ValueName: String, Data: Cardinal): Boolean
+external function SetupMessage(ID: TSetupMessageID): String
+
+procedure !MAIN()
+begin
+  0x000   0  Ret
+end;
+
+procedure CurPageChanged(PageID: Integer)
+begin
+  0x000   0  PushType      Boolean
+  0x005   1  Compare       LocalVar1 := Argument1 == 2
+  0x01A   1  SetFlag       !LocalVar1
+  0x021   1  Pop
+  0x022   0  JumpFlag      JumpDestination01
+  0x027   0  PushType      Boolean
+  0x02C   1  Assign        LocalVar1 := 1
+  0x038   1  PushType      TNewRadioButton
+  0x03D   2  PushType      TWizardForm
+  0x042   3  Assign        LocalVar3 := GlobalVar0
+  0x04D   3  PushVar       LocalVar2
+  0x053   4  Call          TWizardForm.LicenseAcceptedRadio
+  0x058   4  Pop
+  0x059   3  Pop
+  0x05A   2  Call          TRadioButton.Checked
+  0x05F   2  Pop
+  0x060   1  Pop
+  0x061   0  PushType      Boolean
+  0x066   1  Assign        LocalVar1 := 1
+  0x072   1  PushType      TNewButton
+  0x077   2  PushType      TWizardForm
+  0x07C   3  Assign        LocalVar3 := GlobalVar0
+  0x087   3  PushVar       LocalVar2
+  0x08D   4  Call          TWizardForm.NextButton
+  0x092   4  Pop
+  0x093   3  Pop
+  0x094   2  Call          TControl.Enabled
+  0x099   2  Pop
+  0x09A   1  Pop
+  0x09B   0  PushType      String
+  0x0A0   1  PushType      TSetupMessageID
+  0x0A5   2  Assign        LocalVar2 := 23
+  0x0B2   2  PushVar       LocalVar1
+  0x0B8   3  Call          SetupMessage
+  0x0BD   3  Pop
+  0x0BE   2  Pop
+  0x0BF   1  PushType      TNewButton
+  0x0C4   2  PushType      TWizardForm
+  0x0C9   3  Assign        LocalVar3 := GlobalVar0
+  0x0D4   3  PushVar       LocalVar2
+  0x0DA   4  Call          TWizardForm.NextButton
+  0x0DF   4  Pop
+  0x0E0   3  Pop
+  0x0E1   2  Call          TButton.Caption
+  0x0E6   2  Pop
+  0x0E7   1  Pop
+JumpDestination01:
+  0x0E8   0  Ret
+end;
+
+function PrepareToInstall(*NeedsRestart: Boolean): String
+begin
+  0x000   0  PushType      String
+  0x005   1  PushType      Integer
+  0x00A   2  PushType      U32
+  0x00F   3  PushType      Boolean
+  0x014   4  Assign        ReturnValue := ''
+  0x023   4  PushType      Pointer
+  0x028   5  SetPtr        LocalVar5 := LocalVar3
+  0x033   5  PushType      String
+  0x038   6  Assign        LocalVar6 := 'Launched'
+  0x057   6  PushType      String
+  0x05C   7  Assign        LocalVar7 := 'Software\\NightScreenShot'
+  0x09B   7  PushType      Integer
+  0x0A0   8  Assign        LocalVar8 := -2147483647
+  0x0AF   8  PushVar       LocalVar4
+  0x0B5   9  Call          RegQueryDWordValue
+  0x0BA   9  Pop
+  0x0BB   8  Pop
+  0x0BC   7  Pop
+  0x0BD   6  Pop
+  0x0BE   5  Pop
+  0x0BF   4  JumpFalse     JumpDestination01, LocalVar4
+  0x0C9   4  PushType      Boolean
+  0x0CE   5  Compare       LocalVar5 := LocalVar3 == 1
+  0x0E3   5  Calculate     LocalVar4 &= LocalVar5
+  0x0EF   5  Pop
+JumpDestination01:
+  0x0F0   4  PushType      Boolean
+  0x0F5   5  PushType      Pointer
+  0x0FA   6  SetPtr        LocalVar6 := LocalVar1
+  0x105   6  PushType      String
+  0x10A   7  Assign        LocalVar7 := 'UninstallString'
+  0x137   7  PushType      String
+  0x13C   8  Assign        LocalVar8 := 'SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\{8F3A1C2E-5B7D-4E9A-9C1F-2A6B8D4E7F10}_is1'
+  0x207   8  PushType      Integer
+  0x20C   9  Assign        LocalVar9 := -2113929214
+  0x21B   9  PushVar       LocalVar5
+  0x221  10  Call          RegQueryStringValue
+  0x226  10  Pop
+  0x227   9  Pop
+  0x228   8  Pop
+  0x229   7  Pop
+  0x22A   6  Pop
+  0x22B   5  SetFlag       !LocalVar5
+  0x232   5  Pop
+  0x233   4  JumpFlag      JumpDestination02
+  0x238   4  PushType      Boolean
+  0x23D   5  PushType      Pointer
+  0x242   6  SetPtr        LocalVar6 := LocalVar2
+  0x24D   6  PushType      TExecWait
+  0x252   7  Assign        LocalVar7 := 1
+  0x25E   7  PushType      Integer
+  0x263   8  Assign        LocalVar8 := 0
+  0x272   8  PushType      String
+  0x277   9  Assign        LocalVar9 := ''
+  0x286   9  PushType      String
+  0x28B  10  Assign        LocalVar10 := '/VERYSILENT /SUPPRESSMSGBOXES'
+  0x2D4  10  PushType      String
+  0x2D9  11  Assign        LocalVar11 := LocalVar1
+  0x2E4  11  PushVar       LocalVar5
+  0x2EA  12  Call          Exec
+  0x2EF  12  Pop
+  0x2F0  11  Pop
+  0x2F1  10  Pop
+  0x2F2   9  Pop
+  0x2F3   8  Pop
+  0x2F4   7  Pop
+  0x2F5   6  Pop
+  0x2F6   5  Pop
+JumpDestination02:
+  0x2F7   4  PushType      Boolean
+  0x2FC   5  Assign        LocalVar5 := LocalVar4
+  0x307   5  SetFlag       !LocalVar5
+  0x30E   5  Pop
+  0x30F   4  JumpFlag      JumpDestination03
+  0x314   4  PushType      Boolean
+  0x319   5  PushType      U32
+  0x31E   6  Assign        LocalVar6 := 1
+  0x32D   6  PushType      String
+  0x332   7  Assign        LocalVar7 := 'Launched'
+  0x351   7  PushType      String
+  0x356   8  Assign        LocalVar8 := 'Software\\NightScreenShot'
+  0x395   8  PushType      Integer
+  0x39A   9  Assign        LocalVar9 := -2147483647
+  0x3A9   9  PushVar       LocalVar5
+  0x3AF  10  Call          RegWriteDWordValue
+  0x3B4  10  Pop
+  0x3B5   9  Pop
+  0x3B6   8  Pop
+  0x3B7   7  Pop
+  0x3B8   6  Pop
+  0x3B9   5  Pop
+JumpDestination03:
+  0x3BA   4  Ret
+end;
