@@ -1,0 +1,36 @@
+{
+  "network": [],
+  "files": [],
+  "registry": [],
+  "mutexes": [],
+  "processes": [],
+  "memory": [],
+  "strings": [],
+  "misc": [
+    {
+      "api": "kernel32.LoadLibraryExW",
+      "module": "api-ms-win-core-synch-l1-2-0",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "InitializeCriticalSectionEx",
+      "resolved": true
+    },
+    {
+      "api": "kernel32.LoadLibraryExW",
+      "module": "api-ms-win-core-fibers-l1-1-1",
+      "handle": "0x77000000"
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsAlloc",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "FlsSetValue",
+      "resolved": true
+    }
+  ]
+}

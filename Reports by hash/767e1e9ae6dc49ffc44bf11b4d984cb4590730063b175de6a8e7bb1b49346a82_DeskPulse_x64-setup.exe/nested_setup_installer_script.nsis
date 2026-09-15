@@ -1,0 +1,4634 @@
+; NSIS script (UTF-8) NSIS-3 Unicode log
+; Install
+
+Unicode true
+SetCompressor zlib
+
+; ------------------------------------------------------------------------
+; HEADER SIZE: 204704
+; START HEADER SIZE: 300
+; MAX STRING LENGTH: 8192
+; STRING CHARS: 61120
+
+OutFile [NSIS].exe
+!include WinMessages.nsh
+
+ShowInstDetails nevershow
+
+
+; ------------------------------------------------------------------------
+; LANG TABLES: 26
+; LANG STRINGS: 87
+
+Name "DeskPulse"
+BrandingText "DeskPulse 2.0.0"
+
+; LANG: 1066
+LangString LSTR_0 1066 "DeskPulse 2.0.0"
+LangString LSTR_1 1066 "Cài đặt 肂"
+LangString LSTR_2 1066 "DeskPulse"
+LangString LSTR_3 1066 "Dung lượng hiện có: "
+LangString LSTR_4 1066 "Dung lượng yêu cầu: "
+LangString LSTR_5 1066 "Không thể ghi: "
+LangString LSTR_6 1066 "Sao chép bị thất bại"
+LangString LSTR_7 1066 "Sao chép vào "
+LangString LSTR_8 1066 "Không thể tìm thấy biểu tượng: "
+LangString LSTR_9 1066 "Không thể nạp: "
+LangString LSTR_10 1066 "Tạo thư mục: "
+LangString LSTR_11 1066 "Tạo lối tắt: "
+LangString LSTR_13 1066 "Xóa tập tin: "
+LangString LSTR_14 1066 "Xóa khi khởi động lại: "
+LangString LSTR_15 1066 "Lỗi khi tạo lối tắt: "
+LangString LSTR_17 1066 "Lỗi khi giải nén dữ liệu! Có thể trình cài đặt đã bị hỏng?"
+LangString LSTR_20 1066 "Thực thi: "
+LangString LSTR_21 1066 "Trích xuất: "
+LangString LSTR_22 1066 "Trích xuất: lôi khi ghi vào tập tin "
+LangString LSTR_23 1066 "Trình cài đặt bị hỏng: mã tác vụ bất hợp lệ"
+LangString LSTR_24 1066 "Không có OLE cho: "
+LangString LSTR_25 1066 "Thư mục đầu ra: "
+LangString LSTR_26 1066 "Xóa thư mục: "
+LangString LSTR_27 1066 "Đổi tên khi khởi động lại: "
+LangString LSTR_28 1066 "Đổi tên: "
+LangString LSTR_29 1066 "Đã bỏ qua: "
+LangString LSTR_30 1066 "Sao chép Chi tiết vào Clipboard"
+LangString LSTR_32 1066 "B"
+LangString LSTR_33 1066 " K"
+LangString LSTR_34 1066 " M"
+LangString LSTR_35 1066 " G"
+LangString LSTR_36 1066 "Lỗi khi mở tập tin để ghi: $\r$\n$\r$\n$V0$\r$\n$\r$\nNhấn “Hủy bỏ” để ngừng việc cài đặt,$\r$\n“Thử lại” để thử lần nữa, hoặc$\r$\n“Bỏ qua” để bỏ qua tập tin này."
+LangString LSTR_37 1066 "Choose Installation Options"
+LangString LSTR_38 1066 "Who should this application be installed for?"
+LangString LSTR_39 1066 "Please select whether you wish to make this software available to all users or just yourself"
+LangString LSTR_40 1066 "Anyone who uses this computer (&all users)"
+LangString LSTR_41 1066 "Only for &me"
+LangString LSTR_42 1066 "You need to login with an account that is a member of the admin group to continue..."
+LangString LSTR_43 1066 "There is already a per-user installation."
+LangString LSTR_44 1066 "Will reinstall/upgrade."
+LangString LSTR_45 1066 "Fresh install for current user only."
+LangString LSTR_46 1066 "There is already a per-machine installation."
+LangString LSTR_47 1066 "Fresh install for all users. (will prompt for admin credentials)"
+LangString LSTR_48 1066 "Chọn thư mục cài đặt"
+LangString LSTR_49 1066 "Chọn thư mục để cài đặt 胖."
+LangString LSTR_50 1066 "Cài đặt"
+LangString LSTR_51 1066 "Vui lòng đợi trong khi 胖 đang được cài đặt."
+LangString LSTR_52 1066 "Cài đặt hoàn tất"
+LangString LSTR_53 1066 "Việc cài đặt đã hoàn tất thành công."
+LangString LSTR_54 1066 "Cài đặt bị hủy"
+LangString LSTR_55 1066 "Việc cài đặt không hoàn tất thành công."
+LangString LSTR_56 1066 "&Hoàn thành"
+LangString LSTR_57 1066 0
+LangString LSTR_58 1066 "Hoàn tất Cài đặt 胖"
+LangString LSTR_59 1066 "MS Shell Dlg"
+LangString LSTR_60 1066 "Máy tính của bạn phải được khởi động lại để hoàn tất việc cài đặt 胖. Bạn có muốn khởi động lại ngay không?"
+LangString LSTR_61 1066 "Khởi động lại ngay"
+LangString LSTR_62 1066 "Tôi muốn khởi động lại sau"
+LangString LSTR_63 1066 "胖 đã được cài đặt vào máy tính của bạn.$\r$\n$\r$\nNhấn “Hoàn thành” để đóng Trình trợ lí."
+LangString LSTR_64 1066 "&Chạy 胖"
+LangString LSTR_65 1066 8
+LangString LSTR_66 1066 "Windows 7 and above is required"
+LangString LSTR_67 1066 "64-bit Windows is required"
+LangString LSTR_68 1066 "Failed to uninstall old application files. Please try running the installer again."
+LangString LSTR_69 1066 "DeskPulse không thể đóng $\r$\nVui lòng đóng nó theo cách thủ công và nhấp vào Thử lại để tiếp tục."
+LangString LSTR_70 1066 "DeskPulse is running.$\r$\nClick OK to close it.$\r$\nIf it doesn't close, try closing it manually."
+LangString LSTR_71 1066 "Tùy biến"
+LangString LSTR_72 1066 "Hủy bỏ"
+LangString LSTR_73 1066 "< &Lùi"
+LangString LSTR_74 1066 "&Tiến >"
+LangString LSTR_75 1066 "Nhấn Tiến để tiếp tục."
+LangString LSTR_76 1066 "Trình trợ lí sẽ cài đặt 胖 vào thư mục sau. Để cài đặt vào một thư mục khác, hãy nhấn Duyệt để chọn thư mục. $CLICK"
+LangString LSTR_77 1066 "Thư mục đích"
+LangString LSTR_78 1066 "Du&yệt..."
+LangString LSTR_79 1066 "Chọn thư mục để cài đặt 胖:"
+LangString LSTR_80 1066 "&Cài đặt"
+LangString LSTR_81 1066 "Nhấn “Cài đặt” để bắt đầu việc cài đặt."
+LangString LSTR_82 1066 "&Hiện chi tiết"
+LangString LSTR_83 1066 "Hoàn thành"
+LangString LSTR_84 1066 " "
+LangString LSTR_85 1066 "Đón&g"
+LangString LSTR_86 1066 "DeskPulse"
+
+
+; LANG: 1054
+LangString LSTR_0 1054 "DeskPulse 2.0.0"
+LangString LSTR_1 1054 "肂 ติดตั้ง"
+LangString LSTR_2 1054 "DeskPulse"
+LangString LSTR_3 1054 "มีพื้นที่เหลือ: "
+LangString LSTR_4 1054 "ต้องการพื้นที่: "
+LangString LSTR_5 1054 "ไม่สามารถเขียน: "
+LangString LSTR_6 1054 "คัดลอกผิดพลาด"
+LangString LSTR_7 1054 "คัดลอกไปยัง "
+LangString LSTR_8 1054 "ไม่สามารถหาสัญลักษณ์ได้: "
+LangString LSTR_9 1054 "ไม่สามารถโหลดได้: "
+LangString LSTR_10 1054 "สร้างแฟ้ม: "
+LangString LSTR_11 1054 "สร้างชอร์ตคัท: "
+LangString LSTR_13 1054 "ลบไฟล์: "
+LangString LSTR_14 1054 "ลบตอนรีบูท: "
+LangString LSTR_15 1054 "มีปัญหาสร้างไฟล์ชอร์ตคัท: "
+LangString LSTR_17 1054 "มีปัญหาในการคลายข้อมูล! เกิดข้อผิดพลาดจากตัวติดตั้ง?"
+LangString LSTR_20 1054 "รันไฟล์: "
+LangString LSTR_21 1054 "แตกไฟล์: "
+LangString LSTR_22 1054 "แตกไฟล์: เกิดปัญหาในการเขียนไฟล์"
+LangString LSTR_23 1054 "ตัวติดตั้งมีปัญหา: รหัส opcode ผิดพลาด"
+LangString LSTR_24 1054 "ไม่มี OLE สำหรับ: "
+LangString LSTR_25 1054 "แฟ้มทีติดตั้ง: "
+LangString LSTR_26 1054 "ลบแฟ้ม: "
+LangString LSTR_27 1054 "เปลี่ยนชื่อตอนรีบูท: "
+LangString LSTR_28 1054 "เปลี่ยนชื่อ: "
+LangString LSTR_29 1054 "ข้าม: "
+LangString LSTR_30 1054 "คัดลอกรายละเอียดลงคลิปบอร์ด"
+LangString LSTR_32 1054 "B"
+LangString LSTR_33 1054 " K"
+LangString LSTR_34 1054 " M"
+LangString LSTR_35 1054 " G"
+LangString LSTR_36 1054 "ไม่สามารถเปิดไฟล์สำหรับเขียนได้: $\r$\n$\r$\n$V0$\r$\n$\r$\nกด ยกเลิก เพื่อหยุดการติดตั้ง,$\r$\nลองอีกครั้ง เพื่อลองอีกครั้ง, หรือ$\r$\nเพิกเฉย เพื่อข้ามไฟล์นี้."
+LangString LSTR_37 1054 "Choose Installation Options"
+LangString LSTR_38 1054 "Who should this application be installed for?"
+LangString LSTR_39 1054 "Please select whether you wish to make this software available to all users or just yourself"
+LangString LSTR_40 1054 "Anyone who uses this computer (&all users)"
+LangString LSTR_41 1054 "Only for &me"
+LangString LSTR_42 1054 "You need to login with an account that is a member of the admin group to continue..."
+LangString LSTR_43 1054 "There is already a per-user installation."
+LangString LSTR_44 1054 "Will reinstall/upgrade."
+LangString LSTR_45 1054 "Fresh install for current user only."
+LangString LSTR_46 1054 "There is already a per-machine installation."
+LangString LSTR_47 1054 "Fresh install for all users. (will prompt for admin credentials)"
+LangString LSTR_48 1054 "เลือกที่ที่ต้องการติดตั้ง"
+LangString LSTR_49 1054 "เลือกแผ้มที่ต้องการติดตั้ง 胖."
+LangString LSTR_50 1054 "กำลังติดตั้ง"
+LangString LSTR_51 1054 "โปรดรอในขณะที่ 胖 กำลังถูกติดตั้ง"
+LangString LSTR_52 1054 "การติดตั้งเสร็จสิ้น"
+LangString LSTR_53 1054 "การติดตั้งเสร็จสมบูรณ์"
+LangString LSTR_54 1054 "การติดตั้งถูกยกเลิก"
+LangString LSTR_55 1054 "การติดตั้งไม่เสร็จสมบูรณ์"
+LangString LSTR_56 1054 "&เสร็จสิ้น"
+LangString LSTR_57 1054 0
+LangString LSTR_58 1054 "การติดตั้งอัติโนมัติของ  胖 กำลังเสร็จสิ้น"
+LangString LSTR_59 1054 "MS Shell Dlg"
+LangString LSTR_60 1054 "เครื่องคอมพิวเตอร์ของคุณจำเป็นต้องรีสตารท์เพื่อการติดตั้งของ 胖 จะเรียบร้อย, คุณต้องการจะ รีบูท เดี๋ยวนี้ไหม?"
+LangString LSTR_61 1054 "รีบูท เดี๋ยวนี้"
+LangString LSTR_62 1054 "ฉันต้องการ รีบูทด้วยตนเอง ทีหลัง"
+LangString LSTR_63 1054 "胖 ได้ถูกติดตั้งลงในเครื่องคอมพิวเตอร์ของคุณแล้ว$\r$\n$\r$\nกด เสร็จสิ้นเพื่อปิดตัวติดตั้งอัติโนมัติ"
+LangString LSTR_64 1054 "&รัน 胖"
+LangString LSTR_65 1054 8
+LangString LSTR_66 1054 "Windows 7 and above is required"
+LangString LSTR_67 1054 "64-bit Windows is required"
+LangString LSTR_68 1054 "Failed to uninstall old application files. Please try running the installer again."
+LangString LSTR_69 1054 "DeskPulse cannot be closed. $\r$\nPlease close it manually and click Retry to continue."
+LangString LSTR_70 1054 "DeskPulse is running.$\r$\nClick OK to close it.$\r$\nIf it doesn't close, try closing it manually."
+LangString LSTR_71 1054 "กำหนดเอง"
+LangString LSTR_72 1054 "ยกเลิก"
+LangString LSTR_73 1054 "< &กลับไป"
+LangString LSTR_74 1054 "&ต่อไป >"
+LangString LSTR_75 1054 "กด ต่อไป เพื่อเริ่มระบบอัติโนมัติ"
+LangString LSTR_76 1054 "ตัวติดตั้งจะทำการติดตั้ง 胖 ลงในแฟ้มดังต่อไปนี้, ถ้าต้องการติดตั้งลงในแฟ้มอื่น, กด เรียกดูและเลือกแฟ้มอื่น $CLICK"
+LangString LSTR_77 1054 "แฟ้มที่ต้องการติดตั้ง"
+LangString LSTR_78 1054 "เ&รียกดู..."
+LangString LSTR_79 1054 "เลือกแฟ้มที่ต้องการติดตั้ง 胖 ใน:"
+LangString LSTR_80 1054 "&ติดตั้ง"
+LangString LSTR_81 1054 "กด  ติดตั้ง เพื่อทำการติดตั้ง"
+LangString LSTR_82 1054 "&รายละเอียด"
+LangString LSTR_83 1054 "เสร็จสิ้นแล้ว"
+LangString LSTR_84 1054 " "
+LangString LSTR_85 1054 "&ปิด"
+LangString LSTR_86 1054 "DeskPulse"
+
+
+; LANG: 1025
+LangString LSTR_0 1025 "DeskPulse 2.0.0"
+LangString LSTR_1 1025 "تنصيب 肂"
+LangString LSTR_2 1025 "DeskPulse"
+LangString LSTR_3 1025 "المساحة المتوفرة: "
+LangString LSTR_4 1025 "المساحة المطلوبة: "
+LangString LSTR_5 1025 "لا يستطيع الكتابة: "
+LangString LSTR_6 1025 "فشل النسخ"
+LangString LSTR_7 1025 "نسخ إلى"
+LangString LSTR_8 1025 "لم يتمكن من إيجاد الرمز :"
+LangString LSTR_9 1025 "لم يتمكن من تحميل :"
+LangString LSTR_10 1025 "إنشاء مجلد"
+LangString LSTR_11 1025 "إنشاء إختصار: "
+LangString LSTR_13 1025 "حذف ملف: "
+LangString LSTR_14 1025 "حذف بعد إعادة التشغيل: "
+LangString LSTR_15 1025 "خلل أثناء إنشاء إختصار: "
+LangString LSTR_17 1025 "خلل أثناء فتح البيانات المضغوطة! منصب تالف؟"
+LangString LSTR_20 1025 "تنفيذ: "
+LangString LSTR_21 1025 "إستخراج: "
+LangString LSTR_22 1025 "إستخراج: خلل أثناء الكتابة إلى ملف "
+LangString LSTR_23 1025 "المنصّب تالف: شفرة غير صالحة"
+LangString LSTR_24 1025 "لا توجد OLE لـِ: "
+LangString LSTR_25 1025 "مجلد الإخراج: "
+LangString LSTR_26 1025 "إزالة مجلد: "
+LangString LSTR_27 1025 "إعادة تسمية بعد إعادة التشغيل: "
+LangString LSTR_28 1025 "إعادة تسمية: "
+LangString LSTR_29 1025 "تخطى: "
+LangString LSTR_30 1025 "نسخ التفاصيل إلى الذاكرة"
+LangString LSTR_32 1025 "بايت"
+LangString LSTR_33 1025 " كيلو"
+LangString LSTR_34 1025 " ميغا"
+LangString LSTR_35 1025 " جيغا"
+LangString LSTR_36 1025 "حدث خلل أثناء فتح ملف للكتابة: $\r$\n$\t\$\"$V0\$\"$\r$\nإضغط إلغاء لإلغاء التنصيب،$\r$\nمحاولة لإعادة محاولة كتابة الملف،$\r$\n تجاهل لتخطي الملف"
+LangString LSTR_37 1025 "Choose Installation Options"
+LangString LSTR_38 1025 "Who should this application be installed for?"
+LangString LSTR_39 1025 "Please select whether you wish to make this software available to all users or just yourself"
+LangString LSTR_40 1025 "Anyone who uses this computer (&all users)"
+LangString LSTR_41 1025 "Only for &me"
+LangString LSTR_42 1025 "You need to login with an account that is a member of the admin group to continue..."
+LangString LSTR_43 1025 "There is already a per-user installation."
+LangString LSTR_44 1025 "Will reinstall/upgrade."
+LangString LSTR_45 1025 "Fresh install for current user only."
+LangString LSTR_46 1025 "There is already a per-machine installation."
+LangString LSTR_47 1025 "Fresh install for all users. (will prompt for admin credentials)"
+LangString LSTR_48 1025 "إختر موقع التنصيب"
+LangString LSTR_49 1025 "إختر المجلد المراد تنصيب 胖 فيه."
+LangString LSTR_50 1025 "تنصيب"
+LangString LSTR_51 1025 "الرجاء الإنتظار أثناء تنصيب 胖."
+LangString LSTR_52 1025 "إنتهى التنصيب"
+LangString LSTR_53 1025 "إنتهت عملية التنصيب بنجاح."
+LangString LSTR_54 1025 "إلغاء التنصيب"
+LangString LSTR_55 1025 "لم ينتهي التنصيب بنجاح."
+LangString LSTR_56 1025 "&إنهاء"
+LangString LSTR_57 1025 1
+LangString LSTR_58 1025 "إنهاء مرشد إعداد 胖"
+LangString LSTR_59 1025 "MS Shell Dlg"
+LangString LSTR_60 1025 "يجب إعادة تشغيل الجهاز لإنهاء تنصيب 胖. هل تريد إعادة التشغيل الآن؟"
+LangString LSTR_61 1025 "أعد التشغيل الآن"
+LangString LSTR_62 1025 "أرغب في إعادة تشغيل الجهاز في وقت لاحق"
+LangString LSTR_63 1025 "لقد تم تنصيب 胖 على الجهاز$\r$\n$\r$\nإضغط إنهاء لإغلاق مرشد الإعداد."
+LangString LSTR_64 1025 "&شغل 胖"
+LangString LSTR_65 1025 8
+LangString LSTR_66 1025 "Windows 7 and above is required"
+LangString LSTR_67 1025 "64-bit Windows is required"
+LangString LSTR_68 1025 "‫لقد فشل إلغاء التثبيت ملفات التطبيق. يُرجى محاولة تشغيل أداة التثبيت مرة أخرى."
+LangString LSTR_69 1025 "‫لم يتمكن من إغلاق DeskPulse $\r$\nيُرجى إغلاقه يدويا ثم الضغط مرة أخرى على إعادة المحاولة للاستمرار.‏"
+LangString LSTR_70 1025 "‫إن DeskPulse يعمل حاليا.$\r$\n‫يُرجى الضغط على « موافق » لغلقه.$\r$\n‫إذا لم يُغلَق، يُرجى محاولة إغلاقه يدويا."
+LangString LSTR_71 1025 "إختياري"
+LangString LSTR_72 1025 "إلغاء"
+LangString LSTR_73 1025 "< ال&سابق"
+LangString LSTR_74 1025 "ال&تالي >"
+LangString LSTR_75 1025 "إضغط على التالي للمتابعة."
+LangString LSTR_76 1025 "سيتم تنصيب 胖 في المجلد التالي. للتنصيب في مجلد آخر، إضغط عرض وإختر مجلد آخر. $CLICK"
+LangString LSTR_77 1025 "مجلد الهدف"
+LangString LSTR_78 1025 "&عرض..."
+LangString LSTR_79 1025 "إختر المجلد لتنصيب 胖 فيه:"
+LangString LSTR_80 1025 "&تنصيب"
+LangString LSTR_81 1025 "إضغط على تنصيب لتشغيل التنصيب."
+LangString LSTR_82 1025 "إ&ظهار التفاصيل"
+LangString LSTR_83 1025 "إنتهى"
+LangString LSTR_84 1025 " "
+LangString LSTR_85 1025 "إ&غلاق"
+LangString LSTR_86 1025 "DeskPulse"
+
+
+; LANG: 1058
+LangString LSTR_0 1058 "DeskPulse 2.0.0"
+LangString LSTR_1 1058 "肂 Встановлення"
+LangString LSTR_2 1058 "DeskPulse"
+LangString LSTR_3 1058 "Доступно місця: "
+LangString LSTR_4 1058 "Необхідно місця: "
+LangString LSTR_5 1058 "Неможливо записати: "
+LangString LSTR_6 1058 "Не вдалося копіювати"
+LangString LSTR_7 1058 "Копіювання в "
+LangString LSTR_8 1058 "Неможливо знайти символ: "
+LangString LSTR_9 1058 "Неможливо завантажити: "
+LangString LSTR_10 1058 "Створення теки: "
+LangString LSTR_11 1058 "Створення ярлика: "
+LangString LSTR_13 1058 "Видалення файлу: "
+LangString LSTR_14 1058 "Видалення після перезавантаження: "
+LangString LSTR_15 1058 "Помилка створення ярлика: "
+LangString LSTR_17 1058 "Неможливо витягнути дані. Можливо пошкоджений дистрибутив."
+LangString LSTR_20 1058 "Виконання: "
+LangString LSTR_21 1058 "Витягнення: "
+LangString LSTR_22 1058 "Витягнення: помилка запису файла"
+LangString LSTR_23 1058 "Дистрибутив пошкоджений: помилковий код відповіді"
+LangString LSTR_24 1058 "Немає OLE для: "
+LangString LSTR_25 1058 "Тека призначення: "
+LangString LSTR_26 1058 "Видалення теки: "
+LangString LSTR_27 1058 "Переіменування після перезаванаження: "
+LangString LSTR_28 1058 "Перейменування: "
+LangString LSTR_29 1058 "Пропущено: "
+LangString LSTR_30 1058 "Копіювати деталі у буфер обміну"
+LangString LSTR_32 1058 "б"
+LangString LSTR_33 1058 " К"
+LangString LSTR_34 1058 " М"
+LangString LSTR_35 1058 " Г"
+LangString LSTR_36 1058 "Неможливо відкрити файл для запису: $\r$\n$\t$\"$V0$\"$\r$\nНатисніть Перервати для того, щоб перервати встановлення,$\r$\nПовторити для того, щоб повторити спробу запису у файл, чи$\r$\nІгнорувати для того, щоб пропустити цю дію"
+LangString LSTR_37 1058 "Choose Installation Options"
+LangString LSTR_38 1058 "Who should this application be installed for?"
+LangString LSTR_39 1058 "Please select whether you wish to make this software available to all users or just yourself"
+LangString LSTR_40 1058 "Anyone who uses this computer (&all users)"
+LangString LSTR_41 1058 "Only for &me"
+LangString LSTR_42 1058 "You need to login with an account that is a member of the admin group to continue..."
+LangString LSTR_43 1058 "There is already a per-user installation."
+LangString LSTR_44 1058 "Will reinstall/upgrade."
+LangString LSTR_45 1058 "Fresh install for current user only."
+LangString LSTR_46 1058 "There is already a per-machine installation."
+LangString LSTR_47 1058 "Fresh install for all users. (will prompt for admin credentials)"
+LangString LSTR_48 1058 "Оберіть теку встановлення"
+LangString LSTR_49 1058 "Оберіть теку для встановлення 胖."
+LangString LSTR_50 1058 "Копіювання файлів"
+LangString LSTR_51 1058 "Зачекайте, доки програма встановлення скопіює всі необхідні файли 胖."
+LangString LSTR_52 1058 "Встановлення завершено"
+LangString LSTR_53 1058 "Встановлення успішно завершено."
+LangString LSTR_54 1058 "Встановлення перервана"
+LangString LSTR_55 1058 "Встановлення не було успішно завершено."
+LangString LSTR_56 1058 "&Кінець"
+LangString LSTR_57 1058 0
+LangString LSTR_58 1058 "Завершення майстра встановлення 胖"
+LangString LSTR_59 1058 "MS Shell Dlg"
+LangString LSTR_60 1058 "Для того, щоб завершити встановлення 胖 Ваш комп'ютер повинен перезавантажитися. Зробити це зараз?"
+LangString LSTR_61 1058 "Перезавантажитися зараз"
+LangString LSTR_62 1058 "Я хочу перезавантажитися власноруч пізніше"
+LangString LSTR_63 1058 "胖 встановлено на ваш комп'ютер.$\r$\n$\r$\nНатисніть Кінець для виходу."
+LangString LSTR_64 1058 "&Запустити 胖"
+LangString LSTR_65 1058 8
+LangString LSTR_66 1058 "Windows 7 and above is required"
+LangString LSTR_67 1058 "64-bit Windows is required"
+LangString LSTR_68 1058 "Не вдалось видалити старі файли застосунку. Будь ласка, спробуйте запустити встановлювач знов."
+LangString LSTR_69 1058 "Неможливо закрити DeskPulse. $\r$\nЗакрийте його вручну та натисніть Повторити, щоб продовжити."
+LangString LSTR_70 1058 "DeskPulse запущено.$\r$\nКлацніть ОК для завершення.$\r$\nЯкщо завершення не вдалось — спробуйте вручну."
+LangString LSTR_71 1058 "По вибору"
+LangString LSTR_72 1058 "Скасувати"
+LangString LSTR_73 1058 "< &Назад"
+LangString LSTR_74 1058 "&Далі >"
+LangString LSTR_75 1058 "Натисніть Далі щоб продовжити"
+LangString LSTR_76 1058 "Программа встановить 胖 у вказану теку. Для того, щоб встановити программу в іншу теку, натисніть Огляд і вкажіть потрібну теку. $CLICK"
+LangString LSTR_77 1058 "Каталог призначення"
+LangString LSTR_78 1058 "О&гляд..."
+LangString LSTR_79 1058 "Виберіть теку для встановлення 胖:"
+LangString LSTR_80 1058 "&Встановити"
+LangString LSTR_81 1058 "Натисніть Встановити для початку процессу встановлення"
+LangString LSTR_82 1058 "Подробиці"
+LangString LSTR_83 1058 "Завершено"
+LangString LSTR_84 1058 " "
+LangString LSTR_85 1058 "&Закрити"
+LangString LSTR_86 1058 "DeskPulse"
+
+
+; LANG: 2070
+LangString LSTR_0 2070 "DeskPulse 2.0.0"
+LangString LSTR_1 2070 "Instalação de 肂"
+LangString LSTR_2 2070 "DeskPulse"
+LangString LSTR_3 2070 "Espaço disponível: "
+LangString LSTR_4 2070 "Espaço necessário: "
+LangString LSTR_5 2070 "Não foi possível escrever: "
+LangString LSTR_6 2070 "Falha ao copiar"
+LangString LSTR_7 2070 "Copiar para "
+LangString LSTR_8 2070 "Símbolo não encontrado: "
+LangString LSTR_9 2070 "Não foi possível carregar: "
+LangString LSTR_10 2070 "Criando diretório: "
+LangString LSTR_11 2070 "Criando atalho: "
+LangString LSTR_13 2070 "Apagando ficheiro: "
+LangString LSTR_14 2070 "Apagar ao reiniciar: "
+LangString LSTR_15 2070 "Erro ao criar atalho: "
+LangString LSTR_17 2070 "Erro ao descomprimir dados! Instalador corrompido?"
+LangString LSTR_20 2070 "Executando: "
+LangString LSTR_21 2070 "Extraindo: "
+LangString LSTR_22 2070 "Extraindo: erro ao escrever ficheiro "
+LangString LSTR_23 2070 "Instalador corrompido: código de operação inválido"
+LangString LSTR_24 2070 "Sem OLE para: "
+LangString LSTR_25 2070 "Pasta de destino: "
+LangString LSTR_26 2070 "Removendo pasta: "
+LangString LSTR_27 2070 "Renomear ao reiniciar: "
+LangString LSTR_28 2070 "Renomeando: "
+LangString LSTR_29 2070 "Ignorado: "
+LangString LSTR_30 2070 "Copiar detalhes para a Área de Transfêrencia"
+LangString LSTR_32 2070 "B"
+LangString LSTR_33 2070 " K"
+LangString LSTR_34 2070 " M"
+LangString LSTR_35 2070 " G"
+LangString LSTR_36 2070 "Erro ao abrir ficheiro para escrita: $\r$\n$\t$\"$V0$\"$\r$\nClique em Abortar para abortar a instalação,$\r$\nRepetir para tentar novamente a escrita do ficheiro, ou$\r$\nIgnorar para ignorar este ficheiro."
+LangString LSTR_37 2070 "Choose Installation Options"
+LangString LSTR_38 2070 "Who should this application be installed for?"
+LangString LSTR_39 2070 "Please select whether you wish to make this software available to all users or just yourself"
+LangString LSTR_40 2070 "Anyone who uses this computer (&all users)"
+LangString LSTR_41 2070 "Only for &me"
+LangString LSTR_42 2070 "You need to login with an account that is a member of the admin group to continue..."
+LangString LSTR_43 2070 "There is already a per-user installation."
+LangString LSTR_44 2070 "Will reinstall/upgrade."
+LangString LSTR_45 2070 "Fresh install for current user only."
+LangString LSTR_46 2070 "There is already a per-machine installation."
+LangString LSTR_47 2070 "Fresh install for all users. (will prompt for admin credentials)"
+LangString LSTR_48 2070 "Escolha do Local da Instalação"
+LangString LSTR_49 2070 "Escolha a pasta na qual deseja instalar o 胖."
+LangString LSTR_50 2070 "Instalando"
+LangString LSTR_51 2070 "Por favor, aguarde enquanto o 胖 está sendo instalado."
+LangString LSTR_52 2070 "Instalação Completa"
+LangString LSTR_53 2070 "A instalação foi concluída com sucesso."
+LangString LSTR_54 2070 "Instalação Abortada"
+LangString LSTR_55 2070 "A instalação não foi concluída com sucesso."
+LangString LSTR_56 2070 "&Terminar"
+LangString LSTR_57 2070 0
+LangString LSTR_58 2070 "Concluindo o Assistente de Instalação do 胖"
+LangString LSTR_59 2070 "MS Shell Dlg"
+LangString LSTR_60 2070 "O seu computador deve ser reiniciado para concluír a instalação do 胖. Deseja reiniciar agora?"
+LangString LSTR_61 2070 "Reiniciar Agora"
+LangString LSTR_62 2070 "Eu quero reiniciar manualmente depois"
+LangString LSTR_63 2070 "胖 foi instalado no seu computador.$\r$\n$\r$\nClique em Terminar para fechar este assistente."
+LangString LSTR_64 2070 "&Executar 胖"
+LangString LSTR_65 2070 8
+LangString LSTR_66 2070 "Windows 7 and above is required"
+LangString LSTR_67 2070 "64-bit Windows is required"
+LangString LSTR_68 2070 "Falha ao desinstalar os ficheiros da aplicação antiga. Por favor, experimente correr novamente o instalador."
+LangString LSTR_69 2070 "Não é possível fechar o DeskPulse. $\r$\nPor favor, feche-o manualmente e clique em ´Tentar novamente' para continuar."
+LangString LSTR_70 2070 "DeskPulse está a correr.$\r$\nClique em OK para o encerrar.$\r$\nSe não encerrar, tente encerrá-lo manualmente."
+LangString LSTR_71 2070 "Personalizado"
+LangString LSTR_72 2070 "Cancelar"
+LangString LSTR_73 2070 "< &Anterior"
+LangString LSTR_74 2070 "&Seguinte >"
+LangString LSTR_75 2070 "Clique em 'Seguinte' para continuar."
+LangString LSTR_76 2070 "O 胖 será instalado na seguinte pasta. Para instalar numa pasta diferente, clique em 'Procurar...' e escolha outra pasta. $CLICK"
+LangString LSTR_77 2070 "Pasta de Destino"
+LangString LSTR_78 2070 "&Procurar..."
+LangString LSTR_79 2070 "Escolha uma pasta para instalar o 胖:"
+LangString LSTR_80 2070 "&Instalar"
+LangString LSTR_81 2070 "Clique em 'Instalar' para iniciar a instalação."
+LangString LSTR_82 2070 "Ver &Detalhes"
+LangString LSTR_83 2070 "Concluído"
+LangString LSTR_84 2070 " "
+LangString LSTR_85 2070 "&Fechar"
+LangString LSTR_86 2070 "DeskPulse"
+
+
+; LANG: 1044
+LangString LSTR_0 1044 "DeskPulse 2.0.0"
+LangString LSTR_1 1044 "肂 installasjon"
+LangString LSTR_2 1044 "DeskPulse"
+LangString LSTR_3 1044 "Ledig plass: "
+LangString LSTR_4 1044 "Nødvendig plass: "
+LangString LSTR_5 1044 "Kan ikke skrive: "
+LangString LSTR_6 1044 "Kopiering mislyktes"
+LangString LSTR_7 1044 "Kopier til "
+LangString LSTR_8 1044 "Kunne ikke finne symbol: "
+LangString LSTR_9 1044 "Kunne ikke laste: "
+LangString LSTR_10 1044 "Lag mappe: "
+LangString LSTR_11 1044 "Lag snarvei: "
+LangString LSTR_13 1044 "Slett fil: "
+LangString LSTR_14 1044 "Slett ved omstart: "
+LangString LSTR_15 1044 "Feil under opprettelse av snarvei: "
+LangString LSTR_17 1044 "Feil under utpakking av data! Installasjonsprogrammet kan være skadet."
+LangString LSTR_20 1044 "Kjøre: "
+LangString LSTR_21 1044 "Pakk ut: "
+LangString LSTR_22 1044 "Pakk ut: Feil under skriving til fil "
+LangString LSTR_23 1044 "Installasjonsprogrammet er skadet: ukjent kode"
+LangString LSTR_24 1044 "Ingen OLE for: "
+LangString LSTR_25 1044 "Ut-mappe: "
+LangString LSTR_26 1044 "Fjern mappe: "
+LangString LSTR_27 1044 "Gi nytt navn ved omstart: "
+LangString LSTR_28 1044 "Gi nytt navn: "
+LangString LSTR_29 1044 "Hoppet over: "
+LangString LSTR_30 1044 "Kopier detaljer til utklippstavlen"
+LangString LSTR_32 1044 "B"
+LangString LSTR_33 1044 " K"
+LangString LSTR_34 1044 " M"
+LangString LSTR_35 1044 " G"
+LangString LSTR_36 1044 "Feil under åpning av fil for skriving: $\r$\n$\t\$\"$V0\$\"$\r$\nTrykk Avbryt for å avbryte installasjonen,$\r$\nPrøv igjen for å prøve igjen, eller$\r$\nIgnorer for å hoppe over denne filen"
+LangString LSTR_37 1044 "Choose Installation Options"
+LangString LSTR_38 1044 "Who should this application be installed for?"
+LangString LSTR_39 1044 "Please select whether you wish to make this software available to all users or just yourself"
+LangString LSTR_40 1044 "Anyone who uses this computer (&all users)"
+LangString LSTR_41 1044 "Only for &me"
+LangString LSTR_42 1044 "You need to login with an account that is a member of the admin group to continue..."
+LangString LSTR_43 1044 "There is already a per-user installation."
+LangString LSTR_44 1044 "Will reinstall/upgrade."
+LangString LSTR_45 1044 "Fresh install for current user only."
+LangString LSTR_46 1044 "There is already a per-machine installation."
+LangString LSTR_47 1044 "Fresh install for all users. (will prompt for admin credentials)"
+LangString LSTR_48 1044 "Velg installasjonsmappe"
+LangString LSTR_49 1044 "Velg hvilken mappe du vil installere 胖 i."
+LangString LSTR_50 1044 "Installasjonen pågår"
+LangString LSTR_51 1044 "Vennligst vent mens 胖 blir installert."
+LangString LSTR_52 1044 "Installasjonen er ferdig"
+LangString LSTR_53 1044 "Installasjonen ble fullført uten feil."
+LangString LSTR_54 1044 "Installasjonen er avbrutt"
+LangString LSTR_55 1044 "Installasjonen ble ikke fullført riktig."
+LangString LSTR_56 1044 "&Ferdig"
+LangString LSTR_57 1044 0
+LangString LSTR_58 1044 "Avslutter 胖 installasjonsveiviser"
+LangString LSTR_59 1044 "MS Shell Dlg"
+LangString LSTR_60 1044 "Du må starte datamaskinen på nytt for å fullføre installasjonen av 胖. Vil du starte datamaskinen på nytt nå?"
+LangString LSTR_61 1044 "Ja. Start datamaskinen på nytt nå"
+LangString LSTR_62 1044 "Nei. Jeg vil starte datamaskinen på nytt senere"
+LangString LSTR_63 1044 "胖 er klart til bruk på din datamskin.$\r$\n$\r$\nTrykk Ferdig for å avslutte installasjonsprogrammet."
+LangString LSTR_64 1044 "&Kjør 胖"
+LangString LSTR_65 1044 8
+LangString LSTR_66 1044 "Windows 7 and above is required"
+LangString LSTR_67 1044 "64-bit Windows is required"
+LangString LSTR_68 1044 "Failed to uninstall old application files. Please try running the installer again."
+LangString LSTR_69 1044 "DeskPulse cannot be closed. $\r$\nPlease close it manually and click Retry to continue."
+LangString LSTR_70 1044 "DeskPulse is running.$\r$\nClick OK to close it.$\r$\nIf it doesn't close, try closing it manually."
+LangString LSTR_71 1044 "Egendefinert"
+LangString LSTR_72 1044 "Avbryt"
+LangString LSTR_73 1044 "< &Tilbake"
+LangString LSTR_74 1044 "&Neste >"
+LangString LSTR_75 1044 "Trykk Neste for å fortsette."
+LangString LSTR_76 1044 "肂 vil bli installert i følgende mappe. For å velge en annen mappe, trykk Bla gjennom. $CLICK"
+LangString LSTR_77 1044 "Målmappe"
+LangString LSTR_78 1044 "Bla &gjennom..."
+LangString LSTR_79 1044 "Velg mappe du vil installere 肂 i:"
+LangString LSTR_80 1044 "&Installer"
+LangString LSTR_81 1044 "Trykk Installer for å starte installasjonen."
+LangString LSTR_82 1044 "Vis &detaljer"
+LangString LSTR_83 1044 "Ferdig"
+LangString LSTR_84 1044 " "
+LangString LSTR_85 1044 "&Lukk"
+LangString LSTR_86 1044 "DeskPulse"
+
+
+; LANG: 1042
+LangString LSTR_0 1042 "DeskPulse 2.0.0"
+LangString LSTR_1 1042 "肂 설치"
+LangString LSTR_2 1042 "DeskPulse"
+LangString LSTR_3 1042 "남은 디스크 공간: "
+LangString LSTR_4 1042 "필요한 디스크 공간: "
+LangString LSTR_5 1042 "기록할 수 없음: "
+LangString LSTR_6 1042 "복사 실패"
+LangString LSTR_7 1042 "파일 복사 "
+LangString LSTR_8 1042 "심볼을 찾을 수 없음: "
+LangString LSTR_9 1042 "불러올 수 없음: "
+LangString LSTR_10 1042 "폴더 생성: "
+LangString LSTR_11 1042 "바로 가기 생성: "
+LangString LSTR_13 1042 "파일 삭제: "
+LangString LSTR_14 1042 "재부팅시 삭제: "
+LangString LSTR_15 1042 "바로 가기 생성 오류: "
+LangString LSTR_17 1042 "압축 해제중 오류 발생! 설치 파일이 손상되었습니다."
+LangString LSTR_20 1042 "실행: "
+LangString LSTR_21 1042 "압축 해제: "
+LangString LSTR_22 1042 "압축 해제: 파일을 기록하는 도중 오류 발생 "
+LangString LSTR_23 1042 "인스톨러 손상됨: 잘못된 실행코드"
+LangString LSTR_24 1042 "OLE 정보 없음: "
+LangString LSTR_25 1042 "대상 폴더: "
+LangString LSTR_26 1042 "폴더 삭제: "
+LangString LSTR_27 1042 "재부팅시 이름 변경: "
+LangString LSTR_28 1042 "이름 변경: "
+LangString LSTR_29 1042 "건너뜀: "
+LangString LSTR_30 1042 "자세한 내용을 클립보드로 복사"
+LangString LSTR_32 1042 "B"
+LangString LSTR_33 1042 " K"
+LangString LSTR_34 1042 " M"
+LangString LSTR_35 1042 " G"
+LangString LSTR_36 1042 "다음 파일을 열 수 없습니다.: $\r$\n$\t$\"$V0$\"$\r$\n'중단'을 눌러 설치를 종료하거나,$\r'다시 시도'를 눌러 다시 시도해 보거나,$\r'무시'를 눌러 이 파일을 건너 뛰세요."
+LangString LSTR_37 1042 "설치 옵션 선택"
+LangString LSTR_38 1042 "이 프로그램의 사용자는 누구인가요?"
+LangString LSTR_39 1042 "이 프로그램을 모든 사용자가 사용할 수 있도록 할 것인지 아니면 자신만 사용할 수 있도록 할 것인지 선택하십시오."
+LangString LSTR_40 1042 "이 컴퓨터를 사용하는 모든 사람(&모든 사용자)"
+LangString LSTR_41 1042 "전용"
+LangString LSTR_42 1042 "계속하려면 관리자 그룹의 구성원인 계정으로 로그인해야 합니다..."
+LangString LSTR_43 1042 "이미 사용자별 설치가 있습니다."
+LangString LSTR_44 1042 "재설치/업그레이드합니다."
+LangString LSTR_45 1042 "현재 사용자만 새로 설치합니다."
+LangString LSTR_46 1042 "이미 머신별로 설치되어 있습니다."
+LangString LSTR_47 1042 "모든 사용자를 위해 새로 설치. (관리자 자격 증명을 묻는 메시지가 표시됨)"
+LangString LSTR_48 1042 "설치 위치 선택"
+LangString LSTR_49 1042 "胖(을)를 설치할 폴더를 선택해 주세요."
+LangString LSTR_50 1042 "설치중"
+LangString LSTR_51 1042 "胖(을)를 설치하는 동안 잠시 기다려 주세요."
+LangString LSTR_52 1042 "설치 완료"
+LangString LSTR_53 1042 "설치가 성공적으로 완료되었습니다."
+LangString LSTR_54 1042 "설치 취소"
+LangString LSTR_55 1042 "프로그램 설치가 취소되었습니다."
+LangString LSTR_56 1042 "마침"
+LangString LSTR_57 1042 0
+LangString LSTR_58 1042 "胖 설치 완료"
+LangString LSTR_59 1042 "굴림"
+LangString LSTR_60 1042 "胖의 설치를 완료하기 위해서는 시스템을 다시 시작해야 합니다. 지금 재부팅 하시겠습니까?"
+LangString LSTR_61 1042 "지금 재부팅 하겠습니다."
+LangString LSTR_62 1042 "나중에 재부팅 하겠습니다."
+LangString LSTR_63 1042 "胖의 설치가 완료되었습니다.$\r$\n$\r$\n설치 프로그램을 마치려면 '마침' 버튼을 눌러 주세요."
+LangString LSTR_64 1042 "胖 실행하기(&R)"
+LangString LSTR_65 1042 9
+LangString LSTR_66 1042 "Windows 7 이상이 필요합니다"
+LangString LSTR_67 1042 "64 비트 버전의 Windows가 필요합니다"
+LangString LSTR_68 1042 "Failed to uninstall old application files. Please try running the installer again."
+LangString LSTR_69 1042 "DeskPulse cannot be closed. $\r$\nPlease close it manually and click Retry to continue."
+LangString LSTR_70 1042 "DeskPulse이(가) 실행 중입니다. $\r$\nOK을 클릭하면 종료됩니다."
+LangString LSTR_71 1042 "사용자 정의"
+LangString LSTR_72 1042 "취소"
+LangString LSTR_73 1042 "< 뒤로"
+LangString LSTR_74 1042 "다음 >"
+LangString LSTR_75 1042 "계속하시려면 '다음' 버튼을 눌러 주세요."
+LangString LSTR_76 1042 "胖(을)를 다음 폴더에 설치할 예정입니다. $\r$\n다른 폴더에 설치하고 싶으시면 '찾아보기' 버튼을 눌러서 다른 폴더를 선택해 주세요. $CLICK"
+LangString LSTR_77 1042 "설치 폴더"
+LangString LSTR_78 1042 "찾아보기..."
+LangString LSTR_79 1042 "胖(을)를 다음 폴더에 설치합니다:"
+LangString LSTR_80 1042 "설치"
+LangString LSTR_81 1042 "설치를 시작하시려면 '설치' 버튼을 눌러 주세요."
+LangString LSTR_82 1042 "자세히 보기"
+LangString LSTR_83 1042 "완료"
+LangString LSTR_84 1042 " "
+LangString LSTR_85 1042 "닫음"
+LangString LSTR_86 1042 "DeskPulse"
+
+
+; LANG: 1041
+LangString LSTR_0 1041 "DeskPulse 2.0.0"
+LangString LSTR_1 1041 "肂 セットアップ"
+LangString LSTR_2 1041 "DeskPulse"
+LangString LSTR_3 1041 "利用可能なディスクスペース： "
+LangString LSTR_4 1041 "必要なディスクスペース： "
+LangString LSTR_5 1041 "作成できません："
+LangString LSTR_6 1041 "コピーは失敗しました"
+LangString LSTR_7 1041 "コピーします"
+LangString LSTR_8 1041 "シンボルを見つけることができません："
+LangString LSTR_9 1041 "ロードすることができません："
+LangString LSTR_10 1041 "フォルダの作成："
+LangString LSTR_11 1041 "ショートカットの作成："
+LangString LSTR_13 1041 "ファイルの削除："
+LangString LSTR_14 1041 "リブート時に削除："
+LangString LSTR_15 1041 "ショートカットの作成エラー："
+LangString LSTR_17 1041 "データの抽出エラー$\r$\n$\r$\nインストーラが破損しています。"
+LangString LSTR_20 1041 "実行："
+LangString LSTR_21 1041 "抽出："
+LangString LSTR_22 1041 "抽出：ファイル作成エラー"
+LangString LSTR_23 1041 "インストールの不正：無効なopcode"
+LangString LSTR_24 1041 "OLEがありません："
+LangString LSTR_25 1041 "出力先フォルダ："
+LangString LSTR_26 1041 "フォルダの削除："
+LangString LSTR_27 1041 "リブート時に名前の変更："
+LangString LSTR_28 1041 "名前の変更："
+LangString LSTR_29 1041 "スキップ："
+LangString LSTR_30 1041 "クリップボードへ詳細をコピー"
+LangString LSTR_32 1041 "B"
+LangString LSTR_33 1041 " K"
+LangString LSTR_34 1041 " M"
+LangString LSTR_35 1041 " G"
+LangString LSTR_36 1041 "初期ファイルの作成エラー：$\r$\n$\t$\"$V0$\"$\r$\nインストールを中止するには中止を,$\r$\n再びこのファイルの作成を試みるには再試行を, また$\r$\nこのファイルをスキップして続けるには無視を押してください"
+LangString LSTR_37 1041 "インストールオプションの選択"
+LangString LSTR_38 1041 "どのユーザーにインストールしますか？"
+LangString LSTR_39 1041 "このソフトウェアをすべてのユーザーが使用できるようにするか、現在のユーザーのみ使用するかを選択してください"
+LangString LSTR_40 1041 "このコンピューターを使用しているすべてのユーザー用にインストールする"
+LangString LSTR_41 1041 "現在のユーザーのみにインストールする"
+LangString LSTR_42 1041 "続行するには、管理者権限アカウントでログインする必要があります..."
+LangString LSTR_43 1041 "すでに現在のユーザーにインストールされています。"
+LangString LSTR_44 1041 "再インストール/アップグレードします。"
+LangString LSTR_45 1041 "現在のユーザーのみ新規インストール"
+LangString LSTR_46 1041 "既にすべてのユーザー用にインストールされています。"
+LangString LSTR_47 1041 "すべてのユーザーに新規インストール（管理者権限が必要）"
+LangString LSTR_48 1041 "インストール先を選んでください。"
+LangString LSTR_49 1041 "胖をインストールするフォルダを選んでください。"
+LangString LSTR_50 1041 "インストール"
+LangString LSTR_51 1041 "胖をインストールしています。しばらくお待ちください。"
+LangString LSTR_52 1041 "インストールの完了"
+LangString LSTR_53 1041 "インストールに成功しました。"
+LangString LSTR_54 1041 "インストールの中止"
+LangString LSTR_55 1041 "セットアップは正常に完了されませんでした。"
+LangString LSTR_56 1041 "完了(&F)"
+LangString LSTR_57 1041 0
+LangString LSTR_58 1041 "胖 セットアップ ウィザードは完了しました。"
+LangString LSTR_59 1041 "ＭＳ Ｐゴシック"
+LangString LSTR_60 1041 "胖 のインストールを完了するには、このコンピュータを再起動する必要があります。今すぐ再起動しますか？"
+LangString LSTR_61 1041 "今すぐ再起動する"
+LangString LSTR_62 1041 "後で手動で再起動する"
+LangString LSTR_63 1041 "胖は、このコンピュータにインストールされました。$\r$\n$\r$\nウィザードを閉じるには [完了] を押してください。"
+LangString LSTR_64 1041 "胖を実行(&R)"
+LangString LSTR_65 1041 9
+LangString LSTR_66 1041 "Windows 7 以降が必要です"
+LangString LSTR_67 1041 "64 ビット バージョンの Windows が必要です"
+LangString LSTR_68 1041 "古いアプリケーションファイルのアンインストールに失敗しました。もう一度インストーラーを実行してみてください。"
+LangString LSTR_69 1041 "DeskPulseが終了できません。$\r$\n手動で閉じて、『再試行』をクリックしてください。"
+LangString LSTR_70 1041 "DeskPulse が起動しています。$\r$\nOKをクリックして、閉じてください。$\r$\n閉じない場合は、手動で閉じてください。"
+LangString LSTR_71 1041 "カスタム"
+LangString LSTR_72 1041 "キャンセル"
+LangString LSTR_73 1041 "< 戻る(&B)"
+LangString LSTR_74 1041 "次へ(&N) >"
+LangString LSTR_75 1041 "続けるには [次へ] をクリックして下さい。"
+LangString LSTR_76 1041 "胖を以下のフォルダにインストールします。異なったフォルダにインストールするには、[参照] を押して、別のフォルダを選択してください。 $CLICK"
+LangString LSTR_77 1041 "インストール先 フォルダ"
+LangString LSTR_78 1041 "参照(&R)..."
+LangString LSTR_79 1041 "胖をインストールするフォルダを選択してください："
+LangString LSTR_80 1041 "インストール"
+LangString LSTR_81 1041 "インストールを始めるには [インストール] をクリックして下さい。"
+LangString LSTR_82 1041 "詳細を表示(&D)"
+LangString LSTR_83 1041 "完了"
+LangString LSTR_84 1041 " "
+LangString LSTR_85 1041 "閉じる(&C)"
+LangString LSTR_86 1041 "DeskPulse"
+
+
+; LANG: 1030
+LangString LSTR_0 1030 "DeskPulse 2.0.0"
+LangString LSTR_1 1030 "肂 Installation"
+LangString LSTR_2 1030 "DeskPulse"
+LangString LSTR_3 1030 "Ledig plads: "
+LangString LSTR_4 1030 "Nødvendig plads: "
+LangString LSTR_5 1030 "Kan ikke skrive: "
+LangString LSTR_6 1030 "Kopiering mislykkedes"
+LangString LSTR_7 1030 "Kopier til "
+LangString LSTR_8 1030 "Kunne ikke finde symbol: "
+LangString LSTR_9 1030 "Kunne ikke indlæse: "
+LangString LSTR_10 1030 "Opret mappe: "
+LangString LSTR_11 1030 "Opret genvej: "
+LangString LSTR_13 1030 "Slet fil: "
+LangString LSTR_14 1030 "Slet ved genstart: "
+LangString LSTR_15 1030 "Fejl ved oprettelse af genvej: "
+LangString LSTR_17 1030 "Fejl ved udpakning af data! Beskadiget installationsguide?"
+LangString LSTR_20 1030 "Kør: "
+LangString LSTR_21 1030 "Udpak: "
+LangString LSTR_22 1030 "Udpak: fejl ved skrivning til fil "
+LangString LSTR_23 1030 "Beskadiget installationsguide: ugyldig opcode"
+LangString LSTR_24 1030 "Ingen OLE for: "
+LangString LSTR_25 1030 "Outputmappe: "
+LangString LSTR_26 1030 "Slet mappe: "
+LangString LSTR_27 1030 "Omdøb ved genstart: "
+LangString LSTR_28 1030 "Omdøb: "
+LangString LSTR_29 1030 "Sprunget over: "
+LangString LSTR_30 1030 "Kopier detaljer til udklipsholderen"
+LangString LSTR_32 1030 "B"
+LangString LSTR_33 1030 " K"
+LangString LSTR_34 1030 " M"
+LangString LSTR_35 1030 " G"
+LangString LSTR_36 1030 "Fejl ved skrivning af fil til skrivning: $\r$\n$\r$\n$V0$\r$\n$\r$\nTryk på Annuller for at stoppe installationen,$\r$\nPrøv igen for at prøve igen, eller$\r$\nIgnorer for at springe over denne fil."
+LangString LSTR_37 1030 "Vælg Installeringsmuligheder"
+LangString LSTR_38 1030 "Hvem skal denne applikation installeres til?"
+LangString LSTR_39 1030 "Vælg, om du vil gøre denne software tilgængelig for andre brugere, eller kun for dig selv"
+LangString LSTR_40 1030 "Enhver, der bruger denne computer (alle brugere)"
+LangString LSTR_41 1030 "Kun til mig"
+LangString LSTR_42 1030 "Du skal logge ind med en konto, der er medlem af administrationsgruppen for at kunne fortsætte..."
+LangString LSTR_43 1030 "Der er allerede en pr. bruger installation."
+LangString LSTR_44 1030 "Reinstallerer/opgraderer."
+LangString LSTR_45 1030 "Ny installering kun til nuværende bruger."
+LangString LSTR_46 1030 "Der er allerede en pr. maskine installation."
+LangString LSTR_47 1030 "Ny installering til alle brugere. (Vil medføre administrations-legitimationsoplysninger)"
+LangString LSTR_48 1030 "Vælg installationsmappe"
+LangString LSTR_49 1030 "Vælg den mappe hvori du vil installere 胖."
+LangString LSTR_50 1030 "Installerer"
+LangString LSTR_51 1030 "Vent venligst mens 胖 bliver installeret."
+LangString LSTR_52 1030 "Installation gennemført"
+LangString LSTR_53 1030 "Installationsguiden blev gennemført."
+LangString LSTR_54 1030 "Installation afbrudt"
+LangString LSTR_55 1030 "Installationsguiden blev ikke gennemført."
+LangString LSTR_56 1030 "&Afslut"
+LangString LSTR_57 1030 0
+LangString LSTR_58 1030 "Gennemfører 胖 installationsguiden"
+LangString LSTR_59 1030 "MS Shell Dlg"
+LangString LSTR_60 1030 "Din computer skal genstartes for at gennemføre installationen af 胖. Vil du genstarte nu?"
+LangString LSTR_61 1030 "Genstart nu"
+LangString LSTR_62 1030 "Jeg genstarter selv på et senere tidspunkt"
+LangString LSTR_63 1030 "胖 er blevet installeret på din computer.$\r$\n$\r$\nTryk på Afslut for at lukke installationsguiden."
+LangString LSTR_64 1030 "&Kør 胖"
+LangString LSTR_65 1030 8
+LangString LSTR_66 1030 "Windows 7 og højere er nødvendig"
+LangString LSTR_67 1030 "64-bit Windows er påkrævet"
+LangString LSTR_68 1030 "Det lykkedes ikke at afinstallere gamle applikationsfiler. Prøv venligst at køre installationsprogrammet igen."
+LangString LSTR_69 1030 "DeskPulse kan ikke afsluttes $\r$\nLuk den manuelt og klik Prøv igen for at fortsætte"
+LangString LSTR_70 1030 "DeskPulse kører.$\r$\nKlik OK for at lukke den.$\r$\nHvis den ikke lukker, kan du prøve at lukke den manuelt."
+LangString LSTR_71 1030 "Brugerdefineret"
+LangString LSTR_72 1030 "Annuller"
+LangString LSTR_73 1030 "< &Tilbage"
+LangString LSTR_74 1030 "&Næste >"
+LangString LSTR_75 1030 "Tryk på Næste for at fortsætte."
+LangString LSTR_76 1030 "Installationsguiden vil installere 胖 i følgende mappe. For at installere i en anden mappe, tryk på Gennemse og vælg en anden mappe. $CLICK"
+LangString LSTR_77 1030 "Destinationsmappe"
+LangString LSTR_78 1030 "G&ennemse..."
+LangString LSTR_79 1030 "Vælg den mappe hvori 胖 skal installeres:"
+LangString LSTR_80 1030 "&Installer"
+LangString LSTR_81 1030 "Tryk på Installer for at starte installationen."
+LangString LSTR_82 1030 "Vis &detaljer"
+LangString LSTR_83 1030 "Gennemført"
+LangString LSTR_84 1030 " "
+LangString LSTR_85 1030 "&Luk"
+LangString LSTR_86 1030 "DeskPulse"
+
+
+; LANG: 3082
+LangString LSTR_0 3082 "DeskPulse 2.0.0"
+LangString LSTR_1 3082 "Instalación de 肂"
+LangString LSTR_2 3082 "DeskPulse"
+LangString LSTR_3 3082 "Espacio disponible:"
+LangString LSTR_4 3082 "Espacio requerido:"
+LangString LSTR_5 3082 "No pudo escribirse: "
+LangString LSTR_6 3082 "Copia fallida"
+LangString LSTR_7 3082 "Copiar a "
+LangString LSTR_8 3082 "No se encontró simbolo: "
+LangString LSTR_9 3082 "No pudo cargarse: "
+LangString LSTR_10 3082 "Creando carpeta: "
+LangString LSTR_11 3082 "Creando acceso directo: "
+LangString LSTR_13 3082 "Borrar archivo: "
+LangString LSTR_14 3082 "Borrar al reinicio: "
+LangString LSTR_15 3082 "Error creando acceso directo: "
+LangString LSTR_17 3082 "¡Error descomprimiendo datos! ¿Instalador corrupto?"
+LangString LSTR_20 3082 "Ejecutando: "
+LangString LSTR_21 3082 "Extrayendo: "
+LangString LSTR_22 3082 "Extrayendo: error escribiendo al archivo "
+LangString LSTR_23 3082 "Instalador corrupto: código de operación no válido"
+LangString LSTR_24 3082 "Sin OLE para: "
+LangString LSTR_25 3082 "Carpeta de salida: "
+LangString LSTR_26 3082 "Eliminar carpeta: "
+LangString LSTR_27 3082 "Renombrar al reinicio: "
+LangString LSTR_28 3082 "Renombrar: "
+LangString LSTR_29 3082 "Omitido: "
+LangString LSTR_30 3082 "Copiar Detalles al Portapapeles"
+LangString LSTR_32 3082 "B"
+LangString LSTR_33 3082 " K"
+LangString LSTR_34 3082 " M"
+LangString LSTR_35 3082 " G"
+LangString LSTR_36 3082 "Error abriendo archivo para escribir: $\r$\n$\r$\n$V0$\r$\n$\r$\nPresione Abortar para detener la instalación,$\r$\nReintentar para probar otra vez, o$\r$\nOmitir para ignorar este archivo."
+LangString LSTR_37 3082 "Elegir opciones de instalación"
+LangString LSTR_38 3082 "¿Para quién se instalará esta aplicación?"
+LangString LSTR_39 3082 "Elige si deseas que este software esté disponible para todos los usuarios o solo para ti."
+LangString LSTR_40 3082 "Cualquiera que utilice este ordenador (todos los usuarios)"
+LangString LSTR_41 3082 "Solo para mí."
+LangString LSTR_42 3082 "Para continuar, tienes que iniciar sesión con una cuenta que pertenezca al grupo de administradores..."
+LangString LSTR_43 3082 "Ya hay una instalación por usuario."
+LangString LSTR_44 3082 "Se reinstalará/actualizará."
+LangString LSTR_45 3082 "Instalación nueva solo para el usuario actual."
+LangString LSTR_46 3082 "Ya hay una instalación por máquina."
+LangString LSTR_47 3082 "Instalación nueva para todos los usuarios (se pedirán los credenciales del administrador)"
+LangString LSTR_48 3082 "Elegir lugar de instalación"
+LangString LSTR_49 3082 "Elija la carpeta para instalar 胖."
+LangString LSTR_50 3082 "Instalando"
+LangString LSTR_51 3082 "Por favor espere mientras 胖 se instala."
+LangString LSTR_52 3082 "Instalación Finalizada"
+LangString LSTR_53 3082 "La instalación se ha finalizado correctamente."
+LangString LSTR_54 3082 "Instalación Abortada"
+LangString LSTR_55 3082 "La instalación no se terminó correctamente."
+LangString LSTR_56 3082 "&Terminar"
+LangString LSTR_57 3082 0
+LangString LSTR_58 3082 "Finalizando el Asistente de Instalación de 胖"
+LangString LSTR_59 3082 "MS Shell Dlg"
+LangString LSTR_60 3082 "Su sistema debe ser reiniciado para poder finalizar la instalación de 胖. ¿Desea reiniciar ahora?"
+LangString LSTR_61 3082 "Reiniciar ahora"
+LangString LSTR_62 3082 "Deseo reiniciar manualmente más tarde"
+LangString LSTR_63 3082 "胖 ha sido instalado en su sistema.$\r$\n$\r$\nPresione Terminar para cerrar este asistente."
+LangString LSTR_64 3082 "&Ejecutar 胖"
+LangString LSTR_65 3082 8
+LangString LSTR_66 3082 "Se necesita Windows 7 o una versión superior."
+LangString LSTR_67 3082 "Windows de 64 bits es requerido"
+LangString LSTR_68 3082 "Fallo al desinstalar archivos antiguos de la aplicación. Inténtalo de nuevo más tarde."
+LangString LSTR_69 3082 "No se puede cerrar DeskPulse. $\r$\nPor favor cierra la aplicación manualmente y haz clic en reintentar para continuar."
+LangString LSTR_70 3082 "DeskPulse está activa.$\r$\nHaz clic en Aceptar para cerrarla.$\r$\nSi no se cierra, inténtalo manualmente."
+LangString LSTR_71 3082 "Personalizada"
+LangString LSTR_72 3082 "Cancelar"
+LangString LSTR_73 3082 "< &Atrás"
+LangString LSTR_74 3082 "&Siguiente >"
+LangString LSTR_75 3082 "Presione Siguiente para continuar."
+LangString LSTR_76 3082 "El programa de instalación instalará 胖 en la siguiente carpeta. Para instalar en una carpeta diferente, presione Examinar y seleccione otra carpeta. $CLICK"
+LangString LSTR_77 3082 "Carpeta de Destino"
+LangString LSTR_78 3082 "&Examinar..."
+LangString LSTR_79 3082 "Seleccione la carpeta en la que instalará 胖:"
+LangString LSTR_80 3082 "&Instalar"
+LangString LSTR_81 3082 "Presione Instalar para iniciar la instalación."
+LangString LSTR_82 3082 "Mostrar &detalles"
+LangString LSTR_83 3082 "Finalizado"
+LangString LSTR_84 3082 " "
+LangString LSTR_85 3082 "&Cerrar"
+LangString LSTR_86 3082 "DeskPulse"
+
+
+; LANG: 1035
+LangString LSTR_0 1035 "DeskPulse 2.0.0"
+LangString LSTR_1 1035 "肂 -ohjelman asennus"
+LangString LSTR_2 1035 "DeskPulse"
+LangString LSTR_3 1035 "Tilaa vapaana: "
+LangString LSTR_4 1035 "Tarvittava tila: "
+LangString LSTR_5 1035 "Ei voi kirjoittaa: "
+LangString LSTR_6 1035 "Kopiointi epäonnistui"
+LangString LSTR_7 1035 "Kopioidaan kohteeseen "
+LangString LSTR_8 1035 "Symbolia ei löytynyt: "
+LangString LSTR_9 1035 "Ei voitu ladata: "
+LangString LSTR_10 1035 "Luo kansio: "
+LangString LSTR_11 1035 "Luo pikakuvake: "
+LangString LSTR_13 1035 "Poista: "
+LangString LSTR_14 1035 "Poista käynnistyksen yhteydessä: "
+LangString LSTR_15 1035 "Virhe luotaessa pikakuvaketta: "
+LangString LSTR_17 1035 "Pakettia ei voitu purkaa. Korruptoitunut asennusohjelma?"
+LangString LSTR_20 1035 "Suorita: "
+LangString LSTR_21 1035 "Pura: "
+LangString LSTR_22 1035 "Pura: tiedostoon ei voitu kirjoittaa "
+LangString LSTR_23 1035 "Asennuspaketti on vioittunut: virheellinen opcode"
+LangString LSTR_24 1035 "Ei OLEa: "
+LangString LSTR_25 1035 "Kansio: "
+LangString LSTR_26 1035 "Poista kansio: "
+LangString LSTR_27 1035 "Muuta nimi uudelleenkäynnistyksen yhteydessä: "
+LangString LSTR_28 1035 "Muuta nimi: "
+LangString LSTR_29 1035 "Ohitettiin: "
+LangString LSTR_30 1035 "Kopioi tiedot leikepöydälle"
+LangString LSTR_32 1035 "t"
+LangString LSTR_33 1035 " k"
+LangString LSTR_34 1035 " M"
+LangString LSTR_35 1035 " G"
+LangString LSTR_36 1035 "Tiedostoon ei voitu kirjoittaa: $\r$\n$\t$\"$V0$\"$\r$\nLopeta asennus valitsemalla Hylkää,$\r$\nyritä uudelleen valitsemalla Uudelleen, tai$\r$\nohita tiedosto valitsemalla Ohita"
+LangString LSTR_37 1035 "Valitse asennusvaihtoehdot"
+LangString LSTR_38 1035 "Kenen käyttöön tämä sovellus pitäisi asentaa?"
+LangString LSTR_39 1035 "Valitse, haluatko tämän ohjelmiston kaikkien käyttäjien vai pelkästään itsesi käyttöön"
+LangString LSTR_40 1035 "Kaikille, jotka käyttävät tätä tietokonetta (kaikki käyttäjät)"
+LangString LSTR_41 1035 "Vain minulle"
+LangString LSTR_42 1035 "Jatkaaksesi sinun on kirjauduttava käyttäjätilillä, joka on ylläpitäjäryhmän jäsen..."
+LangString LSTR_43 1035 "Tämä on jo käyttäjäkohtainen asennus."
+LangString LSTR_44 1035 "Asennetaan uudelleen/päivitetään."
+LangString LSTR_45 1035 "Uusi asennus vain nykyiselle käyttäjälle."
+LangString LSTR_46 1035 "Tämä on jo tietokonekohtainen asennus."
+LangString LSTR_47 1035 "Uusi asennus kaikille käyttäjille (pyytää ylläpitäjän käyttäjätunnuksia)"
+LangString LSTR_48 1035 "Valitse asennuskansio"
+LangString LSTR_49 1035 "Valitse kansio, johon haluat asentaa 胖 -ohjelman."
+LangString LSTR_50 1035 "Asennetaan"
+LangString LSTR_51 1035 "Odota... 胖 asennetaan..."
+LangString LSTR_52 1035 "Asennus valmis."
+LangString LSTR_53 1035 "Asennus onnistui."
+LangString LSTR_54 1035 "Asennus keskeytyi."
+LangString LSTR_55 1035 "Asennus ei onnistunut."
+LangString LSTR_56 1035 "&Valmis"
+LangString LSTR_57 1035 0
+LangString LSTR_58 1035 "胖 -ohjelman asennus on valmis"
+LangString LSTR_59 1035 "MS Shell Dlg"
+LangString LSTR_60 1035 "胖 -ohjelman asennuksen viimeisteleminen edellyttää tietokoneen uudelleenkäynnistämistä. Haluatko käynnistää tietokoneen uudelleen nyt?"
+LangString LSTR_61 1035 "Käynnistä uudelleen nyt"
+LangString LSTR_62 1035 "Käynnistän uudelleen myöhemmin"
+LangString LSTR_63 1035 "胖 on asennettu tietokoneelle.$\r$\n$\r$\nValitse Valmis sulkeaksesi asennusohjelman."
+LangString LSTR_64 1035 "Käynnistä 胖"
+LangString LSTR_65 1035 8
+LangString LSTR_66 1035 "Windows 7 tai uudempi vaaditaan"
+LangString LSTR_67 1035 "64-bittinen Windows on pakollinen"
+LangString LSTR_68 1035 "Vanhojen sovellustiedostojen poisto epäonnistui. Yritä ajaa asennusohjelma uudelleen."
+LangString LSTR_69 1035 "DeskPulse ei voi sulkea. $\r$\nSulje se itse ja napsauta Yritä uudelleen jatkaaksesi."
+LangString LSTR_70 1035 "DeskPulse on käynnissä.$\r$\nValitse OK sulkeaksesi sen.$\r$\nJos se ei sulkeudu, yritä sulkea se manuaalisesti."
+LangString LSTR_71 1035 "Oma"
+LangString LSTR_72 1035 "Peruuta"
+LangString LSTR_73 1035 "< &Takaisin"
+LangString LSTR_74 1035 "&Seuraava >"
+LangString LSTR_75 1035 "Valitse Seuraava jatkaaksesi."
+LangString LSTR_76 1035 "胖 -ohjelma asennetaan seuraavaan kansioon. Jos haluat asentaa sen johonkin muuhun kansioon, valitse Selaa, ja valitse toinen kansio. $CLICK"
+LangString LSTR_77 1035 "Kohdekansio"
+LangString LSTR_78 1035 "S&elaa..."
+LangString LSTR_79 1035 "Valitse kansio, johon haluat asentaa ohjelman 胖:"
+LangString LSTR_80 1035 "&Asenna"
+LangString LSTR_81 1035 "Valitse Asenna aloittaaksesi asennuksen."
+LangString LSTR_82 1035 "&Näytä tiedot"
+LangString LSTR_83 1035 "Valmis"
+LangString LSTR_84 1035 " "
+LangString LSTR_85 1035 "&Sulje"
+LangString LSTR_86 1035 "DeskPulse"
+
+
+; LANG: 1040
+LangString LSTR_0 1040 "DeskPulse 2.0.0"
+LangString LSTR_1 1040 "Installazione di 肂"
+LangString LSTR_2 1040 "DeskPulse"
+LangString LSTR_3 1040 "Spazio disponibile: "
+LangString LSTR_4 1040 "Spazio richiesto: "
+LangString LSTR_5 1040 "Impossibile scrivere: "
+LangString LSTR_6 1040 "Copia fallita"
+LangString LSTR_7 1040 "Copia in "
+LangString LSTR_8 1040 "Impossibile trovare il simbolo: "
+LangString LSTR_9 1040 "Impossibile caricare: "
+LangString LSTR_10 1040 "Creazione cartella: "
+LangString LSTR_11 1040 "Creazione collegamento: "
+LangString LSTR_13 1040 "Eliminazione file: "
+LangString LSTR_14 1040 "Elimina al riavvio: "
+LangString LSTR_15 1040 "Errore nella creazione del collegamento: "
+LangString LSTR_17 1040 "Errore nella decompressione dei dati! Probabile programma di installazione corrotto."
+LangString LSTR_20 1040 "Esecuzione di: "
+LangString LSTR_21 1040 "Estrazione di: "
+LangString LSTR_22 1040 "Estrazione: errore nella scrittura nel file "
+LangString LSTR_23 1040 "Programma di installazione corrotto: opcode non valido"
+LangString LSTR_24 1040 "Nessuna OLE per: "
+LangString LSTR_25 1040 "Cartella destinazione: "
+LangString LSTR_26 1040 "Rimozione cartella: "
+LangString LSTR_27 1040 "Al riavvio rinomina: "
+LangString LSTR_28 1040 "Rinomina "
+LangString LSTR_29 1040 "Saltato: "
+LangString LSTR_30 1040 "Copia i dettagli negli Appunti"
+LangString LSTR_32 1040 "B"
+LangString LSTR_33 1040 " K"
+LangString LSTR_34 1040 " M"
+LangString LSTR_35 1040 " G"
+LangString LSTR_36 1040 "Errore nell'apertura del file per la scrittura: $\r$\n$\t$\"$V0$\"$\r$\nSeleziona 'Termina' per interrompere l'installazione,$\r$\n'Riprova' per ritentare, oppure$\r$\n'Ignora' per saltare questo file."
+LangString LSTR_37 1040 "Scegli opzioni di installazione"
+LangString LSTR_38 1040 "Per chi dovrebbe essere installata questa applicazione?"
+LangString LSTR_39 1040 "Seleziona se desideri rendere questo software accessibile a tutti gli utenti o solo a te"
+LangString LSTR_40 1040 "Per chiunque usi questo computer (tutti gli utenti)"
+LangString LSTR_41 1040 "Solo per &me"
+LangString LSTR_42 1040 "Devi accedere con un account incluso nel gruppo amministratore per continuare..."
+LangString LSTR_43 1040 "È già presente un'installazione per utente."
+LangString LSTR_44 1040 "Re-installa/aggiorna il programma."
+LangString LSTR_45 1040 "Re-installa solo per l'utente attuale."
+LangString LSTR_46 1040 "È già presente un'installazione per computer."
+LangString LSTR_47 1040 "Re-installa per tutti gli utenti. (Richiede le credenziali di amministratore)"
+LangString LSTR_48 1040 "Selezione cartella installazione"
+LangString LSTR_49 1040 "Seleziona la cartella nella quale installare 胖."
+LangString LSTR_50 1040 "Installazione"
+LangString LSTR_51 1040 "Attendi il completamento dell'installazione di 胖."
+LangString LSTR_52 1040 "Installazione completata"
+LangString LSTR_53 1040 "L'installazione è stata completata correttamente."
+LangString LSTR_54 1040 "Installazione interrotta"
+LangString LSTR_55 1040 "L'installazione non è stata completata correttamente."
+LangString LSTR_56 1040 "&Chiudi"
+LangString LSTR_57 1040 0
+LangString LSTR_58 1040 "Installazione di 胖 completata."
+LangString LSTR_59 1040 "MS Shell Dlg"
+LangString LSTR_60 1040 "Per completare l'installazione di 胖 il computer deve essere riavviato. Vuoi riavviarlo ora?"
+LangString LSTR_61 1040 "Riavvia ora"
+LangString LSTR_62 1040 "Preferisco riavviarlo manualmente più tardi"
+LangString LSTR_63 1040 "胖 è stato installato.$\r$\n$\r$\nScegli 'Chiudi' per chiudere il programma di installazione."
+LangString LSTR_64 1040 "Esegui 胖"
+LangString LSTR_65 1040 8
+LangString LSTR_66 1040 "È necessario disporre del sistema operativo Windows 7 e successivi"
+LangString LSTR_67 1040 "È necessario disporre di un sistema operativo Windows a 64 bit"
+LangString LSTR_68 1040 "Impossibile disinstallare i vecchi file dell'applicazione. Per favore, prova ad eseguire di nuovo il programma di installazione."
+LangString LSTR_69 1040 "DeskPulse non può essere chiuso. $\r$\nPer favore, chiudilo manualmente e clicca su Riprova per continuare."
+LangString LSTR_70 1040 "DeskPulse è in esecuzione.$\r$\nClicca su OK per chiuderla.$\r$\nSe non si chiude, prova a chiuderla manualmente."
+LangString LSTR_71 1040 "Personalizzata"
+LangString LSTR_72 1040 "Annulla"
+LangString LSTR_73 1040 "< &Indietro"
+LangString LSTR_74 1040 "&Avanti >"
+LangString LSTR_75 1040 "Per proseguire, seleziona 'Avanti'."
+LangString LSTR_76 1040 "Questa procedura installerà 胖 in questa cartella.$\r$\nPer installare in una cartella diversa, seleziona 'Sfoglia' e scegli un'altra cartella.$\r$\n$CLICK"
+LangString LSTR_77 1040 "Cartella destinazione"
+LangString LSTR_78 1040 "S&foglia..."
+LangString LSTR_79 1040 "Seleziona la cartella dove installare 胖:"
+LangString LSTR_80 1040 "Ins&talla"
+LangString LSTR_81 1040 "Per avviare l'installazione, seleziona 'Installa'."
+LangString LSTR_82 1040 "Visualizza &dettagli"
+LangString LSTR_83 1040 "Installazione completata"
+LangString LSTR_84 1040 " "
+LangString LSTR_85 1040 "&Fine"
+LangString LSTR_86 1040 "DeskPulse"
+
+
+; LANG: 1043
+LangString LSTR_0 1043 "DeskPulse 2.0.0"
+LangString LSTR_1 1043 "肂-installatie"
+LangString LSTR_2 1043 "DeskPulse"
+LangString LSTR_3 1043 "Beschikbare ruimte: "
+LangString LSTR_4 1043 "Vereiste ruimte: "
+LangString LSTR_5 1043 "Kon niet schrijven: "
+LangString LSTR_6 1043 "Kopiëren mislukt"
+LangString LSTR_7 1043 "Kopiëren naar "
+LangString LSTR_8 1043 "Kon symbool niet vinden: "
+LangString LSTR_9 1043 "Kon niet laden: "
+LangString LSTR_10 1043 "Map maken: "
+LangString LSTR_11 1043 "Snelkoppeling maken: "
+LangString LSTR_13 1043 "Bestand verwijderen: "
+LangString LSTR_14 1043 "Verwijderen na opnieuw opstarten: "
+LangString LSTR_15 1043 "Fout bij maken snelkoppeling: "
+LangString LSTR_17 1043 "Fout bij uitpakken van gegevens! Gegevens beschadigd?"
+LangString LSTR_20 1043 "Uitvoeren: "
+LangString LSTR_21 1043 "Uitpakken: "
+LangString LSTR_22 1043 "Uitpakken: fout bij schrijven naar bestand "
+LangString LSTR_23 1043 "Installatieprogramma beschadigd: ongeldige opcode"
+LangString LSTR_24 1043 "Geen OLE voor: "
+LangString LSTR_25 1043 "Uitvoermap: "
+LangString LSTR_26 1043 "Map verwijderen: "
+LangString LSTR_27 1043 "Hernoemen na opnieuw opstarten: "
+LangString LSTR_28 1043 "Hernoemen: "
+LangString LSTR_29 1043 "Overgeslagen: "
+LangString LSTR_30 1043 "Details kopiëren naar klembord"
+LangString LSTR_32 1043 "B"
+LangString LSTR_33 1043 " K"
+LangString LSTR_34 1043 " M"
+LangString LSTR_35 1043 " G"
+LangString LSTR_36 1043 "Fout bij het schrijven naar bestand: $\r$\n$\r$\n$V0$\r$\n$\r$\nKlik op Afbreken om de installatie te stoppen,$\r$\nOpnieuw om het opnieuw te proberen of$\r$\nNegeren om dit bestand over te slaan."
+LangString LSTR_37 1043 "Kies installatie-opties"
+LangString LSTR_38 1043 "Voor wie moet deze applicatie worden geïnstalleerd?"
+LangString LSTR_39 1043 "Selecteer of je deze software beschikbaar wilt maken voor alle gebruikers of alleen voor jezelf."
+LangString LSTR_40 1043 "Iedereen die deze computer gebruikt (alle gebruikers)"
+LangString LSTR_41 1043 "Alleen voor &mij"
+LangString LSTR_42 1043 "Je dient in te loggen met een account dat lid is van de beheerdersgroep om verder te gaan..."
+LangString LSTR_43 1043 "Er is al een installatie 'per gebruiker'."
+LangString LSTR_44 1043 "Zal opnieuw installeren/upgraden."
+LangString LSTR_45 1043 "Nieuwe installatie alleen voor huidige gebruiker."
+LangString LSTR_46 1043 "Er is al een installatie 'per apparaat'."
+LangString LSTR_47 1043 "Nieuwe installatie voor alle gebruikers. (zal om beheerder-gegevens vragen)"
+LangString LSTR_48 1043 "Installatielocatie kiezen"
+LangString LSTR_49 1043 "Kies de map waarin u 胖 wilt installeren."
+LangString LSTR_50 1043 "Bezig met installeren"
+LangString LSTR_51 1043 "Een ogenblik geduld terwijl 胖 wordt geïnstalleerd."
+LangString LSTR_52 1043 "Installatie voltooid"
+LangString LSTR_53 1043 "De installatie is succesvol voltooid."
+LangString LSTR_54 1043 "Installatie afgebroken"
+LangString LSTR_55 1043 "De installatie is niet voltooid."
+LangString LSTR_56 1043 "&Voltooien"
+LangString LSTR_57 1043 0
+LangString LSTR_58 1043 "Voltooien van de 胖-installatiewizard"
+LangString LSTR_59 1043 "MS Shell Dlg"
+LangString LSTR_60 1043 "Uw systeem moet opnieuw worden opgestart om de installatie van 胖 te voltooien. Wilt u nu herstarten?"
+LangString LSTR_61 1043 "Nu herstarten"
+LangString LSTR_62 1043 "Ik wil later handmatig herstarten"
+LangString LSTR_63 1043 "胖 is geïnstalleerd op uw systeem.$\r$\n$\r$\nKlik op Voltooien om deze wizard te sluiten."
+LangString LSTR_64 1043 "胖 &starten"
+LangString LSTR_65 1043 8
+LangString LSTR_66 1043 "Windows 7 en hoger is vereist"
+LangString LSTR_67 1043 "64-bit Windows is vereist"
+LangString LSTR_68 1043 "Het deïnstalleren van oude applicatiebestanden is mislukt. Voer het installatiebestand opnieuw uit om te proberen dit probleem te verhelpen."
+LangString LSTR_69 1043 "DeskPulse kan niet automatisch worden afgesloten. $\r$\nSluit zelf de DeskPulse app en klik vervolgens op ‘Opnieuw proberen’."
+LangString LSTR_70 1043 "DeskPulse is nog actief.$\r$\nKlik op OK om de applicatie te sluiten.$\r$\nAls de applicatie vervolgens nog niet sluit, probeer dan om de applicatie zelf te sluiten."
+LangString LSTR_71 1043 "Aangepast"
+LangString LSTR_72 1043 "Annuleren"
+LangString LSTR_73 1043 "< V&orige"
+LangString LSTR_74 1043 "&Volgende >"
+LangString LSTR_75 1043 "Klik op Volgende om verder te gaan."
+LangString LSTR_76 1043 "Setup zal 胖 in de volgende map installeren. Klik op Bladeren als u 胖 in een andere map wilt installeren en selecteer deze. $CLICK"
+LangString LSTR_77 1043 "Installatiemap"
+LangString LSTR_78 1043 "&Bladeren..."
+LangString LSTR_79 1043 "Selecteer de map om 胖 in te installeren:"
+LangString LSTR_80 1043 "&Installeren"
+LangString LSTR_81 1043 "Klik op Installeren om de installatie te beginnen."
+LangString LSTR_82 1043 "&Details tonen"
+LangString LSTR_83 1043 "Voltooid"
+LangString LSTR_84 1043 " "
+LangString LSTR_85 1043 "&Afsluiten"
+LangString LSTR_86 1043 "DeskPulse"
+
+
+; LANG: 1045
+LangString LSTR_0 1045 "DeskPulse 2.0.0"
+LangString LSTR_1 1045 "Instalator 肂"
+LangString LSTR_2 1045 "DeskPulse"
+LangString LSTR_3 1045 "Dostępne miejsce: "
+LangString LSTR_4 1045 "Wymagane miejsce: "
+LangString LSTR_5 1045 "Nie można zapisać: "
+LangString LSTR_6 1045 "Błąd kopiowania"
+LangString LSTR_7 1045 "Kopiuj do "
+LangString LSTR_8 1045 "Nie można odnaleźć symbolu: "
+LangString LSTR_9 1045 "Nie można wczytać: "
+LangString LSTR_10 1045 "Utwórz folder: "
+LangString LSTR_11 1045 "Utwórz skrót: "
+LangString LSTR_13 1045 "Usuń plik: "
+LangString LSTR_14 1045 "Usuń przy ponownym uruchomieniu: "
+LangString LSTR_15 1045 "Błąd tworzenia skrótu: "
+LangString LSTR_17 1045 "Błąd wyodrębniania danych! Uszkodzony instalator?"
+LangString LSTR_20 1045 "Uruchom: "
+LangString LSTR_21 1045 "Wyodrębnij: "
+LangString LSTR_22 1045 "Wyodrębnij: błąd zapisu do pliku "
+LangString LSTR_23 1045 "Instalator uszkodzony: nieprawidłowy kod operacji"
+LangString LSTR_24 1045 "Brak OLE dla: "
+LangString LSTR_25 1045 "Folder wyjściowy: "
+LangString LSTR_26 1045 "Usuń folder: "
+LangString LSTR_27 1045 "Zmień nazwę przy ponownym uruchomieniu: "
+LangString LSTR_28 1045 "Zmień nazwę: "
+LangString LSTR_29 1045 "Pominięte: "
+LangString LSTR_30 1045 "Kopiuj szczegóły do schowka"
+LangString LSTR_32 1045 "B"
+LangString LSTR_33 1045 " K"
+LangString LSTR_34 1045 " M"
+LangString LSTR_35 1045 " G"
+LangString LSTR_36 1045 "Błąd otwarcia pliku do zapisu: $\r$\n$\r$\n$V0$\r$\n$\r$\nWybierz 'Anuluj', aby przerwać instalację,$\r$\n'Ponów', aby ponowić zapis do pliku lub$\r$\n'Ignoruj', aby pominąć ten plik."
+LangString LSTR_37 1045 "Wybierz opcje instalacji"
+LangString LSTR_38 1045 "Dla kogo zainstalować tę aplikację?"
+LangString LSTR_39 1045 "Wybierz, czy to oprogramowanie ma być dostępne dla wszystkich użytkowników, czy tylko dla Ciebie"
+LangString LSTR_40 1045 "Każdy korzystający z tego komputera (wszyscy użytkownicy)"
+LangString LSTR_41 1045 "Tylko dla &mnie"
+LangString LSTR_42 1045 "Musisz się zalogować za pomocą konta będącego członkiem grupy administratora, by kontynuować..."
+LangString LSTR_43 1045 "Instalacja dla użytkownika już istnieje."
+LangString LSTR_44 1045 "Nastąpi ponowna instalacja/aktualizacja."
+LangString LSTR_45 1045 "Nowa instalacja wyłącznie dla obecnego użytkownika."
+LangString LSTR_46 1045 "Instalacja dla urządzenia już istnieje."
+LangString LSTR_47 1045 "Nowa instalacja dla wszystkich użytkowników (potrzebne będą dane administratora)."
+LangString LSTR_48 1045 "Wybierz lokalizację dla instalacji"
+LangString LSTR_49 1045 "Wybierz folder, w którym chcesz zainstalować 胖."
+LangString LSTR_50 1045 "Instalacja"
+LangString LSTR_51 1045 "Proszę czekać, trwa instalacja 胖."
+LangString LSTR_52 1045 "Zakończono instalację"
+LangString LSTR_53 1045 "Instalacja zakończona pomyślnie."
+LangString LSTR_54 1045 "Instalacja przerwana"
+LangString LSTR_55 1045 "Instalacja nie została zakończona pomyślnie."
+LangString LSTR_56 1045 "&Zakończ"
+LangString LSTR_57 1045 0
+LangString LSTR_58 1045 "Kończenie pracy kreatora instalacji 胖"
+LangString LSTR_59 1045 "MS Shell Dlg"
+LangString LSTR_60 1045 "Twój komputer musi zostać ponownie uruchomiony, aby zakończyć instalację 胖. Czy chcesz teraz ponownie uruchomić komputer?"
+LangString LSTR_61 1045 "Uruchom ponownie teraz"
+LangString LSTR_62 1045 "Sam uruchomię ponownie komputer później"
+LangString LSTR_63 1045 "胖 został pomyślnie zainstalowany na Twoim komputerze.$\r$\n$\r$\nKliknij przycisk 'Zakończ', aby zakończyć działanie instalatora."
+LangString LSTR_64 1045 "&Uruchom 胖"
+LangString LSTR_65 1045 8
+LangString LSTR_66 1045 "Windows 7 lub nowszy jest wymagany"
+LangString LSTR_67 1045 "Windows 64-bitowy jest wymagany"
+LangString LSTR_68 1045 "Nie udało się usunąć plików starej wersji aplikacji. Spróbuj ponownie uruchomić instalator."
+LangString LSTR_69 1045 "Nie można zamknąć DeskPulse. $\r$\nZamknij aplikację i kliknij Ponów, aby kontynuować."
+LangString LSTR_70 1045 "Aplikacja DeskPulse jest uruchomiona.$\r$\nKliknij OK, aby ją zamknąć.$\r$\nJeśli nie zostanie zamknięta, spróbuj zamknąć ją ręcznie."
+LangString LSTR_71 1045 "Użytkownika"
+LangString LSTR_72 1045 "Anuluj"
+LangString LSTR_73 1045 "< &Wstecz"
+LangString LSTR_74 1045 "&Dalej >"
+LangString LSTR_75 1045 "Kliknij przycisk 'Dalej', aby kontynuować."
+LangString LSTR_76 1045 "Instalator zainstaluje 胖 w podanym poniżej folderze docelowym (możesz także kliknąć przycisk 'Przeglądaj...' i wybrać inny folder). $CLICK"
+LangString LSTR_77 1045 "Folder docelowy"
+LangString LSTR_78 1045 "&Przeglądaj..."
+LangString LSTR_79 1045 "Wybierz folder instalacyjny 胖:"
+LangString LSTR_80 1045 "&Zainstaluj"
+LangString LSTR_81 1045 "Kliknij przycisk 'Zainstaluj', aby rozpocząć instalację."
+LangString LSTR_82 1045 "Pokaż &szczegóły"
+LangString LSTR_83 1045 "Zakończono"
+LangString LSTR_84 1045 " "
+LangString LSTR_85 1045 "&Zamknij"
+LangString LSTR_86 1045 "DeskPulse"
+
+
+; LANG: 1053
+LangString LSTR_0 1053 "DeskPulse 2.0.0"
+LangString LSTR_1 1053 "肂 Installation"
+LangString LSTR_2 1053 "DeskPulse"
+LangString LSTR_3 1053 "Utrymme tillgängligt: "
+LangString LSTR_4 1053 "Utrymme som behövs: "
+LangString LSTR_5 1053 "Kan inte skriva: "
+LangString LSTR_6 1053 "Kopiering misslyckades"
+LangString LSTR_7 1053 "Kopiera till "
+LangString LSTR_8 1053 "Kunde inte hitta symbol: "
+LangString LSTR_9 1053 "Kunde inte ladda: "
+LangString LSTR_10 1053 "Skapa katalog: "
+LangString LSTR_11 1053 "Skapa genväg: "
+LangString LSTR_13 1053 "Radera fil: "
+LangString LSTR_14 1053 "Radera vid omstart: "
+LangString LSTR_15 1053 "Fel vid skapande av genväg: "
+LangString LSTR_17 1053 "Fel vid uppackning av data! Skadat installationspaket?"
+LangString LSTR_20 1053 "Kör: "
+LangString LSTR_21 1053 "Extrahera: "
+LangString LSTR_22 1053 "Extrahera: fel vid skrivning till fil "
+LangString LSTR_23 1053 "Installationspaket skadat: ogiltig opcode"
+LangString LSTR_24 1053 "Ingen OLE för: "
+LangString LSTR_25 1053 "Målkatalog: "
+LangString LSTR_26 1053 "Ta bort katalog: "
+LangString LSTR_27 1053 "Döp om vid omstart: "
+LangString LSTR_28 1053 "Döp om: "
+LangString LSTR_29 1053 "Ignorerad: "
+LangString LSTR_30 1053 "Kopiera detaljinformation till klippbordet"
+LangString LSTR_32 1053 "B"
+LangString LSTR_33 1053 " K"
+LangString LSTR_34 1053 " M"
+LangString LSTR_35 1053 " G"
+LangString LSTR_36 1053 "Fel vid Öppning av fil för skrivning: $\r$\n$\t$\"$V0$\"$\r$\nKlicka på avbryt för att avbryta installationen,$\r$\nförsök igen för att försöka skriva till filen igen, eller$\r$\nIgnorera för att skippa denna fil"
+LangString LSTR_37 1053 "Välj alternativ för installation"
+LangString LSTR_38 1053 "Vem ska den här applikationen installeras för?"
+LangString LSTR_39 1053 "Välj om du vill göra den här mjukvaran tillgänglig för alla användare eller bara för dig"
+LangString LSTR_40 1053 "Alla som använder den här datorn (alla användare)"
+LangString LSTR_41 1053 "Endast för &mig"
+LangString LSTR_42 1053 "Du måste logga in med ett konto som är medlem i admingruppen för att fortsätta..."
+LangString LSTR_43 1053 "Det finns redan en ”per användare”-installation."
+LangString LSTR_44 1053 "Kommer att ominstallera/uppgradera."
+LangString LSTR_45 1053 "Ny installation endast för den aktuella användaren."
+LangString LSTR_46 1053 "Det finns redan en ”per dator”-installation."
+LangString LSTR_47 1053 "Ny installation för alla användare. (kommer att begära adminbehörighet)"
+LangString LSTR_48 1053 "Välj installationsväg"
+LangString LSTR_49 1053 "Välj katalog att installera 胖 i."
+LangString LSTR_50 1053 "Installerar"
+LangString LSTR_51 1053 "Var vänlig vänta medan 胖 installeras."
+LangString LSTR_52 1053 "Installationen är klar"
+LangString LSTR_53 1053 "Guiden avslutades korrekt."
+LangString LSTR_54 1053 "Installationen avbröts"
+LangString LSTR_55 1053 "Guiden genomfördes inte korrekt."
+LangString LSTR_56 1053 "&Slutför"
+LangString LSTR_57 1053 0
+LangString LSTR_58 1053 "Avslutar installationsguiden för 胖."
+LangString LSTR_59 1053 "MS Shell Dlg"
+LangString LSTR_60 1053 "Din dator måste startas om för att fullborda installationen av 胖. Vill du starta om nu?"
+LangString LSTR_61 1053 "Starta om nu"
+LangString LSTR_62 1053 "Jag vill starta om själv senare"
+LangString LSTR_63 1053 "胖 har installerats på din dator.$\r$\n$\r$\nKlicka på Slutför för att avsluta guiden."
+LangString LSTR_64 1053 "&Kör 胖"
+LangString LSTR_65 1053 8
+LangString LSTR_66 1053 "Windows 7 eller högre krävs"
+LangString LSTR_67 1053 "64-bitars Windows krävs"
+LangString LSTR_68 1053 "Det gick inte att avinstallera gamla programfiler. Försök att köra installationsprogrammet igen."
+LangString LSTR_69 1053 "DeskPulse går inte att stängas. $\r$\nVänligen stäng det manuellt och klicka på Försök igen för att fortsätta."
+LangString LSTR_70 1053 "DeskPulse är igång.$\r$\nKlicka på OK för att stänga det.$\r$\nOm det inte stängs, försök att stänga det manuellt."
+LangString LSTR_71 1053 "Valfri"
+LangString LSTR_72 1053 "Avbryt"
+LangString LSTR_73 1053 "< &Tillbaka"
+LangString LSTR_74 1053 "&Nästa >"
+LangString LSTR_75 1053 "Klicka på Nästa för att fortsätta."
+LangString LSTR_76 1053 "Guiden kommer att installera 胖 i följande katalog. För att installera i en annan katalog, klicka Bläddra och välj en alternativ katalog. $CLICK"
+LangString LSTR_77 1053 "Målkatalog"
+LangString LSTR_78 1053 "B&läddra..."
+LangString LSTR_79 1053 "Välj katalog att installera 胖 i:"
+LangString LSTR_80 1053 "&Installera"
+LangString LSTR_81 1053 "Klicka på Installera för att starta installationen."
+LangString LSTR_82 1053 "Visa &detaljer"
+LangString LSTR_83 1053 "Slutförd"
+LangString LSTR_84 1053 " "
+LangString LSTR_85 1053 "&Stäng"
+LangString LSTR_86 1053 "DeskPulse"
+
+
+; LANG: 1055
+LangString LSTR_0 1055 "DeskPulse 2.0.0"
+LangString LSTR_1 1055 "肂 Kurulumu"
+LangString LSTR_2 1055 "DeskPulse"
+LangString LSTR_3 1055 "Kullanılabilir boş alan: "
+LangString LSTR_4 1055 "Gereken boş alan: "
+LangString LSTR_5 1055 "Yazılamadı: "
+LangString LSTR_6 1055 "Kopyalama başarısız oldu"
+LangString LSTR_7 1055 "Kayıt: "
+LangString LSTR_8 1055 "Simge bulunamadı: "
+LangString LSTR_9 1055 "Yüklenemedi: "
+LangString LSTR_10 1055 "Dizin oluştur: "
+LangString LSTR_11 1055 "Kısayol oluştur: "
+LangString LSTR_13 1055 "Dosya sil: "
+LangString LSTR_14 1055 "Açılışta sil: "
+LangString LSTR_15 1055 "Kısayol oluşturulurken hata meydana geldi: "
+LangString LSTR_17 1055 "Veriyi açarken hata meydana geldi! Acaba kurulum uygulaması mı bozuk?"
+LangString LSTR_20 1055 "Çalıştır: "
+LangString LSTR_21 1055 "Aç: "
+LangString LSTR_22 1055 "Açma: Dosyaya yazarken hata meydana geldi "
+LangString LSTR_23 1055 "Kurulum bozuk: Geçersiz kod"
+LangString LSTR_24 1055 "OLE yok: "
+LangString LSTR_25 1055 "Çıktı dizini: "
+LangString LSTR_26 1055 "Dizini sil: "
+LangString LSTR_27 1055 "Açılışta adını değiştir: "
+LangString LSTR_28 1055 "Ad değiştir: "
+LangString LSTR_29 1055 "Atlandı: "
+LangString LSTR_30 1055 "Ayrıntıları panoya kopyala"
+LangString LSTR_32 1055 "B"
+LangString LSTR_33 1055 " K"
+LangString LSTR_34 1055 " M"
+LangString LSTR_35 1055 " G"
+LangString LSTR_36 1055 "Dosya yazmak için açılırken hata meydana geldi: $\r$\n$\r$\n$V0$\r$\n$\r$\nKurulumu durdurmak için Dur düğmesine,$\r$\nyeniden denemek için Yeniden Dene düğmesine,$\r$\nbu dosyayı atlamak için Yoksay düğmesine basın."
+LangString LSTR_37 1055 "Yükleme Ayarlarını Seçin"
+LangString LSTR_38 1055 "Bu Uygulama Kimler için Kurulsun?"
+LangString LSTR_39 1055 "Lütfen bu yazılımı tüm kullanıcılar için mi yoksa sadece kendiniz mi kullanmak istediğinizi seçin"
+LangString LSTR_40 1055 "Bu bilgisayarı kullanan herkes (ve tüm kullanıcılar)"
+LangString LSTR_41 1055 "Sadece benim için"
+LangString LSTR_42 1055 "Devam etmek için yönetici grubunun üyesi olan bir hesapla giriş yapmanız gerekiyor.."
+LangString LSTR_43 1055 "Her kullanıcı için zaten bir kurulum var."
+LangString LSTR_44 1055 "Yeniden yükleme/yükseltme"
+LangString LSTR_45 1055 "Sadece mevcut kullanıcı için yeni yükleme."
+LangString LSTR_46 1055 "Zaten makine başına bir kurulum var."
+LangString LSTR_47 1055 "Tüm kullanıcılar için yeni yükleme. (yönetici kimlik bilgilerini soracaktır)"
+LangString LSTR_48 1055 "Hedef dizini seçimi"
+LangString LSTR_49 1055 "胖 programını kurmak istediğiniz dizini şeçiniz."
+LangString LSTR_50 1055 "Kuruluyor"
+LangString LSTR_51 1055 "Lütfen 胖 kurulurken bekleyiniz."
+LangString LSTR_52 1055 "Kurulum Tamamlandı"
+LangString LSTR_53 1055 "Kurulum başarıyla tamamlandı."
+LangString LSTR_54 1055 "Kurulum İptal Edildi"
+LangString LSTR_55 1055 "Kurulum tam olarak tamamlanmadı."
+LangString LSTR_56 1055 "&Bitir"
+LangString LSTR_57 1055 0
+LangString LSTR_58 1055 "胖 Kurulum sihirbazı tamamlanıyor."
+LangString LSTR_59 1055 "MS Shell Dlg"
+LangString LSTR_60 1055 "胖 kurulumunun tamamlanması için bilgisayarınızı yeniden başlatmanız gerekiyor.Bilgisayarınızı yeniden başlatmak istiyor musunuz?"
+LangString LSTR_61 1055 "Yeniden başlat"
+LangString LSTR_62 1055 "Bilgisayarımı daha sonra başlatacağım."
+LangString LSTR_63 1055 "胖  bilgisayariniza yüklendi.$\r$\n$\r$\nLütfen 'Bitir'e basarak kurulumu sonlandırın."
+LangString LSTR_64 1055 "胖 programını çalıştır"
+LangString LSTR_65 1055 8
+LangString LSTR_66 1055 "Windows 7 ve üstü gereklidir"
+LangString LSTR_67 1055 "64 bit Windows gerekli"
+LangString LSTR_68 1055 "Failed to uninstall old application files. Please try running the installer again."
+LangString LSTR_69 1055 "DeskPulse kapatılamaz. $\r$\nLütfen elle kapatın ve devam etmek için Tekrar'a tıklayın"
+LangString LSTR_70 1055 "DeskPulse çalışıyor.$\r$\nKapatmak için Tamam'ı tıklayın."
+LangString LSTR_71 1055 "Özel"
+LangString LSTR_72 1055 "Vazgeç"
+LangString LSTR_73 1055 "< &Geri"
+LangString LSTR_74 1055 "İ&leri >"
+LangString LSTR_75 1055 "Devam etmek için İleri düğmesine basın."
+LangString LSTR_76 1055 "胖 aşağıdaki dizinde kurulacak. Farklı bir dizinde kurmak için Gözat düğmesine basıp başka bir dizin seçin. $CLICK"
+LangString LSTR_77 1055 "Hedef Dizin"
+LangString LSTR_78 1055 "&Gözat..."
+LangString LSTR_79 1055 "胖 uygulamasının kurulacağı dizini seçin:"
+LangString LSTR_80 1055 "&Kur"
+LangString LSTR_81 1055 "Kurulumu başlatmak için Kur düğmesine basın."
+LangString LSTR_82 1055 "&Ayrıntıları göster"
+LangString LSTR_83 1055 "Tamamlandı"
+LangString LSTR_84 1055 " "
+LangString LSTR_85 1055 "&Kapat"
+LangString LSTR_86 1055 "DeskPulse"
+
+
+; LANG: 1028
+LangString LSTR_0 1028 "DeskPulse 2.0.0"
+LangString LSTR_1 1028 "肂 安裝"
+LangString LSTR_2 1028 "DeskPulse"
+LangString LSTR_3 1028 "可用空間: "
+LangString LSTR_4 1028 "所需空間: "
+LangString LSTR_5 1028 "無法寫入: "
+LangString LSTR_6 1028 "複製失敗 "
+LangString LSTR_7 1028 "複製到: "
+LangString LSTR_8 1028 "無法找到符號: "
+LangString LSTR_9 1028 "無法載入: "
+LangString LSTR_10 1028 "$\"建立資料夾: $\" "
+LangString LSTR_11 1028 "建立捷徑: "
+LangString LSTR_13 1028 "刪除檔案: "
+LangString LSTR_14 1028 "重新開機後刪除: "
+LangString LSTR_15 1028 "建立捷徑時發生錯誤: "
+LangString LSTR_17 1028 "解壓縮資料發生錯誤！安裝程式是否已損壞？"
+LangString LSTR_20 1028 "執行: "
+LangString LSTR_21 1028 "抽取: "
+LangString LSTR_22 1028 "抽取: 無法寫入檔案 "
+LangString LSTR_23 1028 "安裝程式損毀: 無效的作業代碼 "
+LangString LSTR_24 1028 "沒有 OLE 用於: "
+LangString LSTR_25 1028 "輸出資料夾: "
+LangString LSTR_26 1028 "移除資料夾: "
+LangString LSTR_27 1028 "重新開機後重新命名: "
+LangString LSTR_28 1028 "重新命名: "
+LangString LSTR_29 1028 "已略過: "
+LangString LSTR_30 1028 "複製細節到剪貼簿 "
+LangString LSTR_32 1028 "B"
+LangString LSTR_33 1028 " K"
+LangString LSTR_34 1028 " M"
+LangString LSTR_35 1028 " G"
+LangString LSTR_36 1028 "無法開啟要寫入的檔案: $\r$\n$\t$\"$V0$\"$\r$\n按「中止」停止安裝，$\r$\n「重試」重新嘗試寫入檔案，或$\r$\n「忽略」略過此檔案。"
+LangString LSTR_37 1028 "安裝選項"
+LangString LSTR_38 1028 "需要為哪位使用者安裝該應用程式？"
+LangString LSTR_39 1028 "請選擇為目前使用者還是所有使用者安裝該軟體"
+LangString LSTR_40 1028 "為使用這台電腦的任何人安裝 (所有使用者)"
+LangString LSTR_41 1028 "僅為我安裝"
+LangString LSTR_42 1028 "您需要以具系統管理員身分的帳號登入才能繼續..."
+LangString LSTR_43 1028 "已經為目前使用者安裝過該軟體"
+LangString LSTR_44 1028 "即將重新安裝/升級"
+LangString LSTR_45 1028 "僅為目前使用者進行全新安裝"
+LangString LSTR_46 1028 "已經為所有使用者安裝過該軟體"
+LangString LSTR_47 1028 "為所有使用者進行全新安裝 (需要系統管理員權限)"
+LangString LSTR_48 1028 "選取安裝位置"
+LangString LSTR_49 1028 "選取 胖 要安裝的資料夾。"
+LangString LSTR_50 1028 "安裝"
+LangString LSTR_51 1028 "胖 正在安裝，請稍候。"
+LangString LSTR_52 1028 "完成安裝"
+LangString LSTR_53 1028 "安裝已完成。"
+LangString LSTR_54 1028 "已中止安裝"
+LangString LSTR_55 1028 "安裝並未完成。"
+LangString LSTR_56 1028 "完成(&F)"
+LangString LSTR_57 1028 0
+LangString LSTR_58 1028 "即將完成安裝 胖"
+LangString LSTR_59 1028 "新細明體"
+LangString LSTR_60 1028 "電腦需要重新開機，才能完成安裝 胖 。要馬上重新開機嗎？"
+LangString LSTR_61 1028 "是，馬上重新開機(&Y)"
+LangString LSTR_62 1028 "否，我稍後再自行重新開機(&N)"
+LangString LSTR_63 1028 "已在電腦安裝 胖 。$\r$\n按 [完成(F)] 關閉安裝程式。"
+LangString LSTR_64 1028 "執行 胖(&R)"
+LangString LSTR_65 1028 9
+LangString LSTR_66 1028 "需要 Windows 7 或更新的系統"
+LangString LSTR_67 1028 "需要 64 位元 Windows 系統"
+LangString LSTR_68 1028 "無法俺安裝舊的應用程式檔案。 請嘗試再次執行安裝程式。"
+LangString LSTR_69 1028 "DeskPulse 無法關閉。$\r$\n請手動關閉它，然後按一下重試以繼續。"
+LangString LSTR_70 1028 "DeskPulse 正在執行。$\r$\n點擊 OK 關閉。$\r$\n如果無法關閉，試著手動關閉。"
+LangString LSTR_71 1028 "自訂"
+LangString LSTR_72 1028 "取消"
+LangString LSTR_73 1028 "< 上一步(&B)"
+LangString LSTR_74 1028 "下一步(&N) >"
+LangString LSTR_75 1028 "按「下一步(N)」繼續。"
+LangString LSTR_76 1028 "安裝程式會將 胖 安裝在以下資料夾。要安裝到不同的資料夾，按「瀏覽(B)...」並選擇其他資料夾。 $CLICK"
+LangString LSTR_77 1028 "目標資料夾"
+LangString LSTR_78 1028 "瀏覽(&R)..."
+LangString LSTR_79 1028 "選取要安裝 胖 的資料夾: "
+LangString LSTR_80 1028 "安裝(&I)"
+LangString LSTR_81 1028 "按「安裝(I)」開始安裝。"
+LangString LSTR_82 1028 "顯示細節(&D)"
+LangString LSTR_83 1028 "已完成"
+LangString LSTR_84 1028 " "
+LangString LSTR_85 1028 "關閉(&C)"
+LangString LSTR_86 1028 "DeskPulse"
+
+
+; LANG: 2052
+LangString LSTR_0 2052 "DeskPulse 2.0.0"
+LangString LSTR_1 2052 "肂 安装"
+LangString LSTR_2 2052 "DeskPulse"
+LangString LSTR_3 2052 "可用空间: "
+LangString LSTR_4 2052 "所需空间: "
+LangString LSTR_5 2052 "无法写入: "
+LangString LSTR_6 2052 "复制失败 "
+LangString LSTR_7 2052 "复制到: "
+LangString LSTR_8 2052 "无法找到符号: "
+LangString LSTR_9 2052 "无法加载: "
+LangString LSTR_10 2052 "$\"创建文件夹: $\" "
+LangString LSTR_11 2052 "创建快捷方式: "
+LangString LSTR_13 2052 "删除文件: "
+LangString LSTR_14 2052 "重新启动后删除: "
+LangString LSTR_15 2052 "正在创建快捷方式时发生错误: "
+LangString LSTR_17 2052 "正在解压缩数据发生错误！已损坏的安装程序？"
+LangString LSTR_20 2052 "运行: "
+LangString LSTR_21 2052 "抽取: "
+LangString LSTR_22 2052 "抽取: 无法写入文件 "
+LangString LSTR_23 2052 "安装损毁: 无效的操作代码 "
+LangString LSTR_24 2052 "没有 OLE 用于: "
+LangString LSTR_25 2052 "输出目录: "
+LangString LSTR_26 2052 "移除目录: "
+LangString LSTR_27 2052 "重新启动后重命名: "
+LangString LSTR_28 2052 "重命名: "
+LangString LSTR_29 2052 "已跳过: "
+LangString LSTR_30 2052 "复制细节到剪贴板 "
+LangString LSTR_32 2052 "B"
+LangString LSTR_33 2052 " K"
+LangString LSTR_34 2052 " M"
+LangString LSTR_35 2052 " G"
+LangString LSTR_36 2052 "不能打开要写入的文件: $\r$\n$\t$\"$V0$\"$\r$\n单击 [Abort] 停止安装，$\r$\n [Retry] 重新尝试写入文件，或$\r$\n [Ignore] 忽略这个文件。"
+LangString LSTR_37 2052 "安装选项"
+LangString LSTR_38 2052 "为哪位用户安装该应用？"
+LangString LSTR_39 2052 "请选择为当前用户还是所有用户安装该软件"
+LangString LSTR_40 2052 "为使用这台电脑的任何人安装 (所有用户)"
+LangString LSTR_41 2052 "仅为我安装"
+LangString LSTR_42 2052 "您需要用属于管理员群组的用户账户登录来继续..."
+LangString LSTR_43 2052 "已经存在一个安装到当前用户的安装."
+LangString LSTR_44 2052 "即将重新安装/升级."
+LangString LSTR_45 2052 "仅为当前用户进行全新安装."
+LangString LSTR_46 2052 "已经存在一个安装到所有用户的安装."
+LangString LSTR_47 2052 "为所有用户进行全新安装. (需要管理员资格)"
+LangString LSTR_48 2052 "选定安装位置"
+LangString LSTR_49 2052 "选定 胖 要安装的文件夹。"
+LangString LSTR_50 2052 "正在安装"
+LangString LSTR_51 2052 "胖 正在安装，请等候。"
+LangString LSTR_52 2052 "安装完成"
+LangString LSTR_53 2052 "安装程序已成功地运行完成。"
+LangString LSTR_54 2052 "安装己中止"
+LangString LSTR_55 2052 "安装程序并未成功地运行完成。"
+LangString LSTR_56 2052 "完成(&F)"
+LangString LSTR_57 2052 0
+LangString LSTR_58 2052 "正在完成 胖 安装向导"
+LangString LSTR_59 2052 "宋体"
+LangString LSTR_60 2052 "你的系统需要重新启动，以便完成 胖 的安装。现在要重新启动吗？"
+LangString LSTR_61 2052 "是，现在重新启动(&Y)"
+LangString LSTR_62 2052 "否，我稍后再自行重新启动(&N)"
+LangString LSTR_63 2052 "胖 已安装在你的系统。$\r$\n单击 [完成(F)] 关闭此向导。"
+LangString LSTR_64 2052 "运行 胖(&R)"
+LangString LSTR_65 2052 9
+LangString LSTR_66 2052 "需要 Windows 7 或以上系统"
+LangString LSTR_67 2052 "需要 64 位 Windows 系统"
+LangString LSTR_68 2052 "Failed to uninstall old application files. Please try running the installer again."
+LangString LSTR_69 2052 "DeskPulse 无法关闭。$\r$\n请手动关闭它，然后单击重试以继续。"
+LangString LSTR_70 2052 "DeskPulse 正在运行.$\r$\n点击“确定”关闭."
+LangString LSTR_71 2052 "自定义"
+LangString LSTR_72 2052 "取消(&C)"
+LangString LSTR_73 2052 "< 上一步(&P)"
+LangString LSTR_74 2052 "下一步(&N) >"
+LangString LSTR_75 2052 "单击 [下一步(N)] 继续。"
+LangString LSTR_76 2052 "Setup 将安装 胖 在下列文件夹。要安装到不同文件夹，单击 [浏览(B)...] 并选择其他的文件夹。 $CLICK"
+LangString LSTR_77 2052 "目标文件夹"
+LangString LSTR_78 2052 "浏览(&B)..."
+LangString LSTR_79 2052 "选择要安装 胖 的文件夹位置: "
+LangString LSTR_80 2052 "安装(&I)"
+LangString LSTR_81 2052 "单击 [安装(I)] 开始安装进程。"
+LangString LSTR_82 2052 "显示细节(&D)"
+LangString LSTR_83 2052 "已完成"
+LangString LSTR_84 2052 " "
+LangString LSTR_85 2052 "关闭(&L)"
+LangString LSTR_86 2052 "DeskPulse"
+
+
+; LANG: 1046
+LangString LSTR_0 1046 "DeskPulse 2.0.0"
+LangString LSTR_1 1046 "Instalação do 肂"
+LangString LSTR_2 1046 "DeskPulse"
+LangString LSTR_3 1046 "Espaço disponível: "
+LangString LSTR_4 1046 "Espaço necessário: "
+LangString LSTR_5 1046 "Não foi possível gravar: "
+LangString LSTR_6 1046 "Falha ao copiar"
+LangString LSTR_7 1046 "Copiar para "
+LangString LSTR_8 1046 "Não foi possível localizar o símbolo: "
+LangString LSTR_9 1046 "Não foi possível carregar: "
+LangString LSTR_10 1046 "Criar pasta: "
+LangString LSTR_11 1046 "Criar atalho: "
+LangString LSTR_13 1046 "Excluir o arquivo: "
+LangString LSTR_14 1046 "Excluir ao reiniciar: "
+LangString LSTR_15 1046 "Erro ao criar atalho: "
+LangString LSTR_17 1046 "Erro ao descomprimir os dados! Instalador corrompido?"
+LangString LSTR_20 1046 "Executar: "
+LangString LSTR_21 1046 "Extrair: "
+LangString LSTR_22 1046 "Extrair: erro ao gravar o arquivo "
+LangString LSTR_23 1046 "Instalador corrompido: opcode inválido"
+LangString LSTR_24 1046 "Sem OLE para: "
+LangString LSTR_25 1046 "Pasta de saída: "
+LangString LSTR_26 1046 "Excluir a pasta: "
+LangString LSTR_27 1046 "Renomear ao reiniciar: "
+LangString LSTR_28 1046 "Renomear: "
+LangString LSTR_29 1046 "Ignorado: "
+LangString LSTR_30 1046 "Copiar os Detalhes para a Área de Transferência"
+LangString LSTR_32 1046 "B"
+LangString LSTR_33 1046 " K"
+LangString LSTR_34 1046 " M"
+LangString LSTR_35 1046 " G"
+LangString LSTR_36 1046 "Erro ao abrir o arquivo para gravação: $\r$\n$\r$\n$V0$\r$\n$\r$\nClique em Abortar para parar a instalação,$\r$\nRepetir para tentar de novo, ou$\r$\nIgnorar para pular este arquivo."
+LangString LSTR_37 1046 "Escolha uma opção de instalação"
+LangString LSTR_38 1046 "Para quem esta aplicação deve ser instalada?"
+LangString LSTR_39 1046 "Por favor, selecione se este software deve estar disponível apenas para você ou para todos usuários"
+LangString LSTR_40 1046 "Para todos que usam esta máquina (&todos os usuários)"
+LangString LSTR_41 1046 "Apenas para &mim"
+LangString LSTR_42 1046 "Você precisa realizar o login com uma conta que é membro do grupo de administração para continuar..."
+LangString LSTR_43 1046 "Já existe uma instalação por usuário."
+LangString LSTR_44 1046 "Irá reinstalar/atualizar."
+LangString LSTR_45 1046 "Instalação limpa somente para o usuário atual."
+LangString LSTR_46 1046 "Já existe uma instalação por máquina."
+LangString LSTR_47 1046 "Instalação limpa para todos os usuários. (irá solicitar credenciais de administrador)"
+LangString LSTR_48 1046 "Escolha o Local da Instalação"
+LangString LSTR_49 1046 "Escolha a pasta na qual instalar o 胖."
+LangString LSTR_50 1046 "Instalando"
+LangString LSTR_51 1046 "Por favor espere enquanto o 胖 está sendo instalado."
+LangString LSTR_52 1046 "Instalação Completa"
+LangString LSTR_53 1046 "A instalação foi completada com sucesso."
+LangString LSTR_54 1046 "Instalação Abortada"
+LangString LSTR_55 1046 "A instalação não foi completada com sucesso."
+LangString LSTR_56 1046 "&Concluir"
+LangString LSTR_57 1046 0
+LangString LSTR_58 1046 "Completando a instalação do 胖"
+LangString LSTR_59 1046 "MS Shell Dlg"
+LangString LSTR_60 1046 "Seu computador deve ser reiniciado para completar a instalação do 胖. Você quer reiniciar agora?"
+LangString LSTR_61 1046 "Reiniciar agora"
+LangString LSTR_62 1046 "Eu quero reiniciar manualmente depois"
+LangString LSTR_63 1046 "O 胖 foi instalado no seu computador.$\r$\n$\r$\nClique em Concluir para fechar o instalador."
+LangString LSTR_64 1046 "&Executar o 胖"
+LangString LSTR_65 1046 8
+LangString LSTR_66 1046 "Requer Windows 7 ou superior"
+LangString LSTR_67 1046 "Requer Windows 64 bits"
+LangString LSTR_68 1046 "Falha ao desinstalar os arquivos do aplicativo antigo. Por favor, tente iniciar o instalador novamente."
+LangString LSTR_69 1046 "Não é possível fechar o DeskPulse. $\r$\nFeche a janela do DeskPulse e clique em Repetir para continuar."
+LangString LSTR_70 1046 "DeskPulse está funcionando.$\r$\nClique no OK para fechar.$\r$\nSe não fechar, tente fechá-lo manualmente."
+LangString LSTR_71 1046 "Personalizado"
+LangString LSTR_72 1046 "Cancelar"
+LangString LSTR_73 1046 "< &Voltar"
+LangString LSTR_74 1046 "&Próximo >"
+LangString LSTR_75 1046 "Clique em Próximo para continuar."
+LangString LSTR_76 1046 "O 胖 será instalado na pasta a seguir. Para instalar em uma pasta diferente, clique em Procurar e selecione outra pasta. $CLICK"
+LangString LSTR_77 1046 "Pasta de Destino"
+LangString LSTR_78 1046 "P&rocurar..."
+LangString LSTR_79 1046 "Selecione a pasta para instalar o 胖:"
+LangString LSTR_80 1046 "&Instalar"
+LangString LSTR_81 1046 "Clique em Instalar para iniciar a instalação."
+LangString LSTR_82 1046 "Mostrar &detalhes"
+LangString LSTR_83 1046 "Completado"
+LangString LSTR_84 1046 " "
+LangString LSTR_85 1046 "&Fechar"
+LangString LSTR_86 1046 "DeskPulse"
+
+
+; LANG: 1038
+LangString LSTR_0 1038 "DeskPulse 2.0.0"
+LangString LSTR_1 1038 "肂 Telepítő"
+LangString LSTR_2 1038 "DeskPulse"
+LangString LSTR_3 1038 "Szabad terület: "
+LangString LSTR_4 1038 "Helyigény: "
+LangString LSTR_5 1038 "Nem írható: "
+LangString LSTR_6 1038 "A másolás megszakadt"
+LangString LSTR_7 1038 "Másolás ide: "
+LangString LSTR_8 1038 "A következő szimbólum nem található: "
+LangString LSTR_9 1038 "Nem tölthető be: "
+LangString LSTR_10 1038 "Mappa létrehozás: "
+LangString LSTR_11 1038 "Parancsikon létrehozása: "
+LangString LSTR_13 1038 "Törölt fájl: "
+LangString LSTR_14 1038 "Rendszerindításkor törlendő: "
+LangString LSTR_15 1038 "Hiba a parancsikon létrehozásakor: "
+LangString LSTR_17 1038 "Hiba az adatok kibontásakor! Megsérült a Telepítő?"
+LangString LSTR_20 1038 "Végrehajtás: "
+LangString LSTR_21 1038 "Kibontás: "
+LangString LSTR_22 1038 "Kibontás: Hiba a fájl írásakor "
+LangString LSTR_23 1038 "Sérült a telepítő: hibás utasítás"
+LangString LSTR_24 1038 "Nincs OLE: "
+LangString LSTR_25 1038 "Kimeneti mappa: "
+LangString LSTR_26 1038 "Mappa eltávolítása: "
+LangString LSTR_27 1038 "Átnevezés rendszerindításkor: "
+LangString LSTR_28 1038 "Átnevezés: "
+LangString LSTR_29 1038 "Kihagyott: "
+LangString LSTR_30 1038 "Adatok vágólapra másolása"
+LangString LSTR_32 1038 "B"
+LangString LSTR_33 1038 " K"
+LangString LSTR_34 1038 " M"
+LangString LSTR_35 1038 " G"
+LangString LSTR_36 1038 "Hiba történt a fájl írásra történő megnyitásakor: $\r$\n$\t$\"$V0$\"$\r$\nA Mégse gomb megnyomásával megszakíthatja a telepítést,$\r$\naz Ismét gombbal megismételheti a fájl írását,$\r$\na Kihagyás gombbal kihagyhatja ezt a fájlt."
+LangString LSTR_37 1038 "Telepítési opciók kiválasztása"
+LangString LSTR_38 1038 "Kinek legyen ez az alkalmazás telepítve?"
+LangString LSTR_39 1038 "Válaszd ki, hogy a szoftver elérhető legyen-e minden felhasználó számára, vagy csak neked"
+LangString LSTR_40 1038 "Bárki számára, aki ezt a számítógépet használja (minden felhasználó)"
+LangString LSTR_41 1038 "Csak az én számomra"
+LangString LSTR_42 1038 "A folytatáshoz adminisztrátori jogokkal rendelkező fiókkal kell bejelentkezned..."
+LangString LSTR_43 1038 "Már van egy felhasználónkénti telepítés."
+LangString LSTR_44 1038 "Újratelepít/frissít."
+LangString LSTR_45 1038 "Új telepítés csak a jelenlegi felhasználó számára."
+LangString LSTR_46 1038 "Már van egy számítógépenkénti telepítés."
+LangString LSTR_47 1038 "Új telepítés minden felhasználó számára. (Az adminisztrátor hitelesítő adataira lesz szükség.)"
+LangString LSTR_48 1038 "Telepítési hely kiválasztása"
+LangString LSTR_49 1038 "Válassza ki a(z) 胖 telepítésének mappáját."
+LangString LSTR_50 1038 "Telepítési folyamat"
+LangString LSTR_51 1038 "Kis türelmet a(z) 胖 telepítéséig."
+LangString LSTR_52 1038 "Telepítés befejeződött"
+LangString LSTR_53 1038 "A telepítés sikeresen befejeződött."
+LangString LSTR_54 1038 "A telepítés megszakadt"
+LangString LSTR_55 1038 "A telepítés sikertelen volt."
+LangString LSTR_56 1038 "&Befejezés"
+LangString LSTR_57 1038 0
+LangString LSTR_58 1038 "A(z) 胖 telepítése megtörtént."
+LangString LSTR_59 1038 "MS Shell Dlg"
+LangString LSTR_60 1038 "A(z) 胖 telepítésének befejezéséhez újra kell indítani a rendszert. Most akarja újraindítani?"
+LangString LSTR_61 1038 "Most indítom újra"
+LangString LSTR_62 1038 "Később fogom újraindítani"
+LangString LSTR_63 1038 "A(z) 胖 telepítése megtörtént.$\r$\n$\r$\nA Befejezés gomb megnyomásával zárja be a varázslót."
+LangString LSTR_64 1038 "胖 futtatása"
+LangString LSTR_65 1038 8
+LangString LSTR_66 1038 "Windows 7 vagy újabb szükséges"
+LangString LSTR_67 1038 "64-bit Windows szükséges"
+LangString LSTR_68 1038 "A régi alkalmazás állományait nem sikerült törölni. Kérlek futtasd a telepítőt újra!"
+LangString LSTR_69 1038 "Nem sikerült bezárni a DeskPulset. $\r$\nZárd be kézzel, majd kattints az Újra gombra a folytatáshoz!"
+LangString LSTR_70 1038 "A DeskPulse alkalmazás fut.$\r$\nKattints az OK gombra a bezárásához.$\r$\nHa így sem áll le, zárd be manuálisan."
+LangString LSTR_71 1038 "Egyéni"
+LangString LSTR_72 1038 "&Mégse"
+LangString LSTR_73 1038 "< &Vissza"
+LangString LSTR_74 1038 "&Tovább >"
+LangString LSTR_75 1038 "Kattintson a Tovább-ra a folytatáshoz."
+LangString LSTR_76 1038 "A 胖 a következő mappába kerül. Másik mappa választásához kattintson a Tallózás gombra. $CLICK"
+LangString LSTR_77 1038 "Telepítés helye"
+LangString LSTR_78 1038 "&Tallózás..."
+LangString LSTR_79 1038 "A(z) 胖 telepítési helyének kiválasztása:"
+LangString LSTR_80 1038 "&Telepítés"
+LangString LSTR_81 1038 "Kattintson a Telepítésre a telepítéshez."
+LangString LSTR_82 1038 "&Részletek"
+LangString LSTR_83 1038 "Kész"
+LangString LSTR_84 1038 " "
+LangString LSTR_85 1038 "&Bezárás"
+LangString LSTR_86 1038 "DeskPulse"
+
+
+; LANG: 1036
+LangString LSTR_0 1036 "DeskPulse 2.0.0"
+LangString LSTR_1 1036 "Installation de 肂"
+LangString LSTR_2 1036 "DeskPulse"
+LangString LSTR_3 1036 "Espace disponible : "
+LangString LSTR_4 1036 "Espace requis : "
+LangString LSTR_5 1036 "Impossible d'écrire : "
+LangString LSTR_6 1036 "Échec de la copie"
+LangString LSTR_7 1036 "Copier vers "
+LangString LSTR_8 1036 "Impossible de trouver un symbole : "
+LangString LSTR_9 1036 "Impossible de charger : "
+LangString LSTR_10 1036 "Création du dossier : "
+LangString LSTR_11 1036 "Création du raccourci : "
+LangString LSTR_13 1036 "Suppression : "
+LangString LSTR_14 1036 "Suppression au redémarrage : "
+LangString LSTR_15 1036 "Erreur lors de la création du raccourci : "
+LangString LSTR_17 1036 "Erreur lors de la décompression des données ! Installation corrompue ?"
+LangString LSTR_20 1036 "Exécution : "
+LangString LSTR_21 1036 "Extraction : "
+LangString LSTR_22 1036 "Extraction : erreur d'écriture du fichier "
+LangString LSTR_23 1036 "Installation corrompue : opcode incorrect"
+LangString LSTR_24 1036 "Pas de OLE pour : "
+LangString LSTR_25 1036 "Destination : "
+LangString LSTR_26 1036 "Suppression du dossier : "
+LangString LSTR_27 1036 "Renommer au redémarrage : "
+LangString LSTR_28 1036 "Renommer : "
+LangString LSTR_29 1036 "Passé : "
+LangString LSTR_30 1036 "Copier les Détails dans le Presse-papier"
+LangString LSTR_32 1036 "o"
+LangString LSTR_33 1036 " K"
+LangString LSTR_34 1036 " M"
+LangString LSTR_35 1036 " G"
+LangString LSTR_36 1036 "Erreur lors de l'ouverture du fichier en écriture : $\r$\n$\t$\"$V0$\"$\r$\nAppuyez sur Abandonner pour annuler l'installation,$\r$\nRéessayer pour réessayer l'écriture du fichier, ou$\r$\nIgnorer pour passer ce fichier"
+LangString LSTR_37 1036 "Choisis les options d'installation"
+LangString LSTR_38 1036 "Pour qui cette application doit-elle être installée ?"
+LangString LSTR_39 1036 "Choisis pour qui ce logiciel doit être accessible : pour tous les utilisateurs ou juste pour toi ?"
+LangString LSTR_40 1036 "Pour tous ceux qui utilisent cet ordinateur (tous les utilisateurs)"
+LangString LSTR_41 1036 "Juste pour moi"
+LangString LSTR_42 1036 "Tu dois te connecter avec un compte ayant des droits d'administrateur pour continuer..."
+LangString LSTR_43 1036 "Il y a déjà une installation par utilisateur."
+LangString LSTR_44 1036 "Va réinstaller/mettre à jour."
+LangString LSTR_45 1036 "Nouvelle installation uniquement pour l'utilisateur actuel."
+LangString LSTR_46 1036 "Il y a déjà une installation par machine."
+LangString LSTR_47 1036 "Nouvelle installation pour tous les utilisateurs. (demandera les identifiants administrateur)"
+LangString LSTR_48 1036 "Choisissez le dossier d'installation"
+LangString LSTR_49 1036 "Choisissez le dossier dans lequel installer 胖."
+LangString LSTR_50 1036 "Installation en cours"
+LangString LSTR_51 1036 "Veuillez patienter pendant l'installation de 胖."
+LangString LSTR_52 1036 "Installation terminée"
+LangString LSTR_53 1036 "L'installation s'est terminée avec succès."
+LangString LSTR_54 1036 "Installation interrompue"
+LangString LSTR_55 1036 "L'installation n'a pas été terminée."
+LangString LSTR_56 1036 "&Fermer"
+LangString LSTR_57 1036 0
+LangString LSTR_58 1036 "Fin de l'installation de 胖"
+LangString LSTR_59 1036 "MS Shell Dlg"
+LangString LSTR_60 1036 "Votre ordinateur doit être redémarré afin de compléter l'installation de 胖. Souhaitez-vous redémarrer maintenant ?"
+LangString LSTR_61 1036 "Redémarrer maintenant"
+LangString LSTR_62 1036 "Je souhaite redémarrer moi-même plus tard"
+LangString LSTR_63 1036 "胖 a été installé sur votre ordinateur.$\r$\n$\r$\nCliquez sur Fermer pour quitter le programme d'installation."
+LangString LSTR_64 1036 "Lancer 胖"
+LangString LSTR_65 1036 8
+LangString LSTR_66 1036 "Windows 7 (ou une version ultérieure) est requis"
+LangString LSTR_67 1036 "Windows 64 bits est requis"
+LangString LSTR_68 1036 "Échec de désinstallation des anciens fichiers d'application . Veuillez réessayer d’exécuter l'installeur."
+LangString LSTR_69 1036 "DeskPulse ne peut pas être fermé. $\r$\nVeuillez la fermer manuellement et cliquez sur Réessayer pour continuer."
+LangString LSTR_70 1036 "DeskPulse est en cours d’utilisation. $\r$\nCliquez sur «OK» pour fermer ce programme."
+LangString LSTR_71 1036 "Personnalisée"
+LangString LSTR_72 1036 "Annuler"
+LangString LSTR_73 1036 "< &Précédent"
+LangString LSTR_74 1036 "&Suivant >"
+LangString LSTR_75 1036 "Cliquez sur Suivant pour continuer."
+LangString LSTR_76 1036 "Ceci installera 胖 dans le dossier suivant. Pour installer dans un autre dossier, cliquez sur Parcourir et choisissez un autre dossier. $CLICK"
+LangString LSTR_77 1036 "Dossier d'installation"
+LangString LSTR_78 1036 "P&arcourir..."
+LangString LSTR_79 1036 "Sélectionnez le dossier d'installation pour 胖 :"
+LangString LSTR_80 1036 "&Installer"
+LangString LSTR_81 1036 "Cliquez sur Installer pour démarrer l'installation."
+LangString LSTR_82 1036 "P&lus d'infos"
+LangString LSTR_83 1036 "Terminé"
+LangString LSTR_84 1036 " "
+LangString LSTR_85 1036 "&Fermer"
+LangString LSTR_86 1036 "DeskPulse"
+
+
+; LANG: 1029
+LangString LSTR_0 1029 "DeskPulse 2.0.0"
+LangString LSTR_1 1029 "Instalace 肂"
+LangString LSTR_2 1029 "DeskPulse"
+LangString LSTR_3 1029 "Volné místo: "
+LangString LSTR_4 1029 "Požadované místo: "
+LangString LSTR_5 1029 "Nelze zapsat: "
+LangString LSTR_6 1029 "Kopírování se nezdařilo."
+LangString LSTR_7 1029 "Kopírování do "
+LangString LSTR_8 1029 "Nelze najít symbol: "
+LangString LSTR_9 1029 "Nelze načíst: "
+LangString LSTR_10 1029 "Vytváření složky: "
+LangString LSTR_11 1029 "Vytváření zástupce: "
+LangString LSTR_13 1029 "Odstraňování souboru: "
+LangString LSTR_14 1029 "Odstranit při restartování: "
+LangString LSTR_15 1029 "Při vytváření zástupce došlo k chybě: "
+LangString LSTR_17 1029 "Při dekompresi dat došlo k chybě. Byl poškozen instalační program?"
+LangString LSTR_20 1029 "Spouštění: "
+LangString LSTR_21 1029 "Extrahování: "
+LangString LSTR_22 1029 "Extrakce: Při zápisu souboru došlo k chybě "
+LangString LSTR_23 1029 "Instalační program byl poškozen: neplatný operační kód."
+LangString LSTR_24 1029 "Nedostupné OLE pro: "
+LangString LSTR_25 1029 "Výstupní složka: "
+LangString LSTR_26 1029 "Odstraňování složky: "
+LangString LSTR_27 1029 "Přejmenovat při restartování: "
+LangString LSTR_28 1029 "Přejmenováno: "
+LangString LSTR_29 1029 "Přeskočeno: "
+LangString LSTR_30 1029 "Zkopírovat podrobnosti do schránky"
+LangString LSTR_32 1029 "B"
+LangString LSTR_33 1029 " K"
+LangString LSTR_34 1029 " M"
+LangString LSTR_35 1029 " G"
+LangString LSTR_36 1029 "Soubor nelze otevřít pro zápis: $\r$\n$\t$\"$V0$\"$\r$\nKlikněte na tlačítko Přerušit k ukončení instalace,$\r$\nnebo na tlačítko Opakovat k zopakování akce, nebo$\r$\n na tlačítko Ignorovat k přeskočení souboru."
+LangString LSTR_37 1029 "Vyberte možnosti instalace"
+LangString LSTR_38 1029 "Pro koho se má tato aplikace instalovat?"
+LangString LSTR_39 1029 "Prosím vyberte, zda se má tento software instalovat jen pro Vás, nebo pro všechny uživatele"
+LangString LSTR_40 1029 "Pro každého, kdo používá tento počítač (všichni uživatelé)"
+LangString LSTR_41 1029 "Pouze pro &mě"
+LangString LSTR_42 1029 "Pro pokračování se musíte přihlásit účtem, který patří do skupiny administrátorů..."
+LangString LSTR_43 1029 "Již existuje instalace pro uživatele."
+LangString LSTR_44 1029 "Bude přeinstalováno/aktualizováno."
+LangString LSTR_45 1029 "Nová instalace pro aktuálního uživatele."
+LangString LSTR_46 1029 "Již existuje instalace pro tento počítač."
+LangString LSTR_47 1029 "Nová instalace pro všechny uživatele. (Bude vyžadovat přihlášení administrátora)"
+LangString LSTR_48 1029 "Volba umístění instalace"
+LangString LSTR_49 1029 "Výběr instalační složky programu 胖."
+LangString LSTR_50 1029 "Instalace"
+LangString LSTR_51 1029 "Počkejte prosím na dokončení instalace programu 胖."
+LangString LSTR_52 1029 "Instalace dokončena"
+LangString LSTR_53 1029 "Instalace byla úspěšně dokončena."
+LangString LSTR_54 1029 "Instalace přerušena"
+LangString LSTR_55 1029 "Instalace nebyla úspěšně dokončena."
+LangString LSTR_56 1029 "&Dokončit"
+LangString LSTR_57 1029 0
+LangString LSTR_58 1029 "Dokončení instalace programu 胖"
+LangString LSTR_59 1029 "MS Shell Dlg"
+LangString LSTR_60 1029 "K dokončení instalace programu 胖 je nutné restartovat počítač. Chcete jej restartovat nyní?"
+LangString LSTR_61 1029 "Restartovat nyní"
+LangString LSTR_62 1029 "Restartovat později ručně"
+LangString LSTR_63 1029 "Program 胖 byl nainstalován do počítače.$\r$\n$\r$\nKliknutím na tlačítko Dokončit ukončíte tohoto průvodce."
+LangString LSTR_64 1029 "&Spustit program 胖"
+LangString LSTR_65 1029 8
+LangString LSTR_66 1029 "Jsou podporovány pouze Windows 7 a vyšší"
+LangString LSTR_67 1029 "Potřebujete 64-bit Windows"
+LangString LSTR_68 1029 "Nepodařilo se odinstalovat staré soubory aplikace. Zkuste prosím instalátor spustit znovu."
+LangString LSTR_69 1029 "Aplikaci DeskPulse se nepodařilo zavřít. $\r$\nZavřete ji ručně a poté klikněte na Opakovat pro pokračování."
+LangString LSTR_70 1029 "DeskPulse běží.$\r$\nPotvrďte zavření stisknutím OK.$\r$\nPokud se aplikace nezavře sama, zavřete ji ručně."
+LangString LSTR_71 1029 "Vlastní"
+LangString LSTR_72 1029 "Storno"
+LangString LSTR_73 1029 "< &Zpět"
+LangString LSTR_74 1029 "&Další >"
+LangString LSTR_75 1029 "Pokračujte kliknutím na tlačítko Další."
+LangString LSTR_76 1029 "Instalační program nainstaluje program 胖 do následující složky. Chcete-li instalovat do jiné složky, klikněte na tlačítko Procházet a vyberte jinou složku. $CLICK"
+LangString LSTR_77 1029 "Cílová složka"
+LangString LSTR_78 1029 "P&rocházet..."
+LangString LSTR_79 1029 "Výběr instalační složky programu 胖."
+LangString LSTR_80 1029 "&Instalovat"
+LangString LSTR_81 1029 "Instalaci spustíte kliknutím na tlačítko Instalovat."
+LangString LSTR_82 1029 "&Podrobnosti"
+LangString LSTR_83 1029 "Dokončeno"
+LangString LSTR_84 1029 " "
+LangString LSTR_85 1029 "&Zavřít"
+LangString LSTR_86 1029 "DeskPulse"
+
+
+; LANG: 1051
+LangString LSTR_0 1051 "DeskPulse 2.0.0"
+LangString LSTR_1 1051 "Inštalácia programu 肂"
+LangString LSTR_2 1051 "DeskPulse"
+LangString LSTR_3 1051 "Voľné miesto na disku: "
+LangString LSTR_4 1051 "Potrebné miesto na disku: "
+LangString LSTR_5 1051 "Nemožno zapísať súbor: "
+LangString LSTR_6 1051 "Kopírovanie zlyhalo."
+LangString LSTR_7 1051 "Kopírovať do "
+LangString LSTR_8 1051 "Nemožno nájsť symbol: "
+LangString LSTR_9 1051 "Nemožno načítať: "
+LangString LSTR_10 1051 "Vytvorený priečinok: "
+LangString LSTR_11 1051 "Vytvorený odkaz: "
+LangString LSTR_13 1051 "Vymazaný súbor: "
+LangString LSTR_14 1051 "Vymazať po reštartovaní systému: "
+LangString LSTR_15 1051 "Chyba pri vytváraní odkazu: "
+LangString LSTR_17 1051 "Chyba pri dekomprimovaní dát! Inštalátor je pravdepodobne poškodený..."
+LangString LSTR_20 1051 "Spustiť: "
+LangString LSTR_21 1051 "Extrahuje sa: "
+LangString LSTR_22 1051 "Chyba pri zápise do súboru "
+LangString LSTR_23 1051 "Inštalátor je pravdepodobne poškodený, pretože obsahuje neplatný operačný kód."
+LangString LSTR_24 1051 "Žiadny zápis OLE pre: "
+LangString LSTR_25 1051 "Výstupný priečinok: "
+LangString LSTR_26 1051 "Odstrániť priečinok: "
+LangString LSTR_27 1051 "Premenovať po reštartovaní systému: "
+LangString LSTR_28 1051 "Premenovať: "
+LangString LSTR_29 1051 "Vynechané: "
+LangString LSTR_30 1051 "Skopírovať podrobnosti do schránky"
+LangString LSTR_32 1051 "B"
+LangString LSTR_33 1051 " K"
+LangString LSTR_34 1051 " M"
+LangString LSTR_35 1051 " G"
+LangString LSTR_36 1051 "Chyba pri otváraní súboru na zápis: $\r$\n$\r$\n$V0$\r$\n$\r$\n. Ak chcete inštaláciu ukončiť, kliknite na tlačidlo Ukončiť,$\r\ ak chcete zápis súboru zopakovať, kliknite na tlačidlo Opakovať alebo kliknite na tlačidlo $\r$\nIgnorovať, ak chcete inštaláciu tohto súboru vynechať."
+LangString LSTR_37 1051 "Vyberte možnosti inštalácie"
+LangString LSTR_38 1051 "Pre koho sa ma táto aplikacia inštalovať?"
+LangString LSTR_39 1051 "Prosím vyberte či sa ma tento softvér inštalovať len pre Vás alebo pre všetkých uživateľov"
+LangString LSTR_40 1051 "Pre každého kto použiva tento počitač (všetci uživatelia)"
+LangString LSTR_41 1051 "Iba pre mňa"
+LangString LSTR_42 1051 "Pre pokračovanie sa musíte zalogovať s účtom ktorý patrí do skupiny adminstrátorov..."
+LangString LSTR_43 1051 "There is already a per-user installation."
+LangString LSTR_44 1051 "Will reinstall/upgrade."
+LangString LSTR_45 1051 "Fresh install for current user only."
+LangString LSTR_46 1051 "There is already a per-machine installation."
+LangString LSTR_47 1051 "Nová inštalácia pre všetkých uživateľov. (Bude potrebovať prihlásenie administrátora)"
+LangString LSTR_48 1051 "Voľba umiestnenia programu"
+LangString LSTR_49 1051 "Vyberte si priečinok, do ktorého chcete nainštalovať program 胖."
+LangString LSTR_50 1051 "Inštalácia"
+LangString LSTR_51 1051 "Počkajte prosím, kým prebehne inštalácia programu 胖."
+LangString LSTR_52 1051 "Ukončenie inštalácie"
+LangString LSTR_53 1051 "Inštalácia bola dokončená úspešne."
+LangString LSTR_54 1051 "Prerušenie inštalácie"
+LangString LSTR_55 1051 "Inštaláciu sa nepodarilo dokončiť."
+LangString LSTR_56 1051 "&Dokončiť"
+LangString LSTR_57 1051 0
+LangString LSTR_58 1051 "Dokončenie inštalácie programu 胖"
+LangString LSTR_59 1051 "MS Shell Dlg"
+LangString LSTR_60 1051 "Pre úplné dokončenie inštalácie programu 胖 je potrebné reštartovať váš počítač. Chcete ho reštartovať ihneď?"
+LangString LSTR_61 1051 "Reštartovať teraz"
+LangString LSTR_62 1051 "Reštartovať neskôr (manuálne)"
+LangString LSTR_63 1051 "Program 胖 bol nainštalovaný do vášho počítača.$\r$\nKliknite na tlačidlo Dokončiť a tento sprievodca sa ukončí."
+LangString LSTR_64 1051 "&Spustiť program 胖"
+LangString LSTR_65 1051 8
+LangString LSTR_66 1051 "Iba Windows 7 a vyššie je podporovaný"
+LangString LSTR_67 1051 "Potrebujete 64-bit Windows"
+LangString LSTR_68 1051 "Nepodarilo sa odinštalovať staré súbory aplikácie. Skúste znova spustiť inštalačný program."
+LangString LSTR_69 1051 "DeskPulse nie je možné zatvoriť. $\r$\nZatvorte ho ručne a pokračujte kliknutím na položku Opakovať."
+LangString LSTR_70 1051 "DeskPulse beží.$\r$\nKliknutím na tlačidlo OK ho zatvoríte.$\r$\nAk sa nezavrie, skúste ho zatvoriť ručne."
+LangString LSTR_71 1051 "Voliteľná"
+LangString LSTR_72 1051 "Zrušiť"
+LangString LSTR_73 1051 "< &Späť"
+LangString LSTR_74 1051 "Ď&alej >"
+LangString LSTR_75 1051 "V inštalácii pokračujte kliknutím na tlačidlo Ďalej."
+LangString LSTR_76 1051 "胖 bude nainštalovaný do nasledujúceho priečinka. Inštalovať do iného priečinka môžete po kliknutí na tlačidlo Prehľadávať a vybraní iného priečinka. $CLICK"
+LangString LSTR_77 1051 "Cieľový priečinok"
+LangString LSTR_78 1051 "&Prehľadávať..."
+LangString LSTR_79 1051 "Zvoľte priečinok, do ktorého sa nainštaluje program 胖:"
+LangString LSTR_80 1051 "&Nainštalovať"
+LangString LSTR_81 1051 "Pre spustenie inštalácie kliknite na tlačidlo Nainštalovať."
+LangString LSTR_82 1051 "&Podrobnosti"
+LangString LSTR_83 1051 "Hotovo"
+LangString LSTR_84 1051 " "
+LangString LSTR_85 1051 "&Zatvoriť"
+LangString LSTR_86 1051 "DeskPulse"
+
+
+; LANG: 1049
+LangString LSTR_0 1049 "DeskPulse 2.0.0"
+LangString LSTR_1 1049 "Установка 肂"
+LangString LSTR_2 1049 "DeskPulse"
+LangString LSTR_3 1049 "Доступно на диске: "
+LangString LSTR_4 1049 "Требуется на диске: "
+LangString LSTR_5 1049 "Невозможно записать: "
+LangString LSTR_6 1049 "Ошибка при копировании"
+LangString LSTR_7 1049 "Копирование в "
+LangString LSTR_8 1049 "Невозможно найти символ: "
+LangString LSTR_9 1049 "Невозможно загрузить: "
+LangString LSTR_10 1049 "Создание папки: "
+LangString LSTR_11 1049 "Создание ярлыка: "
+LangString LSTR_13 1049 "Удаление файла: "
+LangString LSTR_14 1049 "Удаление при перезагрузке ПК: "
+LangString LSTR_15 1049 "Ошибка создания ярлыка: "
+LangString LSTR_17 1049 "Ошибка распаковки данных! Возможно, повреждён дистрибутив."
+LangString LSTR_20 1049 "Выполнение: "
+LangString LSTR_21 1049 "Извлечение: "
+LangString LSTR_22 1049 "Извлечение: ошибка записи файла "
+LangString LSTR_23 1049 "Дистрибутив поврежден: недопустимый код"
+LangString LSTR_24 1049 "Нет OLE для: "
+LangString LSTR_25 1049 "Папка установки: "
+LangString LSTR_26 1049 "Удаление папки: "
+LangString LSTR_27 1049 "Переименование при перезагрузке ПК: "
+LangString LSTR_28 1049 "Переименование: "
+LangString LSTR_29 1049 "Пропуск: "
+LangString LSTR_30 1049 "Копировать сведения в буфер обмена"
+LangString LSTR_32 1049 "байт"
+LangString LSTR_33 1049 " К"
+LangString LSTR_34 1049 " М"
+LangString LSTR_35 1049 " Г"
+LangString LSTR_36 1049 "Невозможно открыть файл для записи: $\r$\n$\t$\"$V0$\"$\r$\n$\"Прервать$\": остановить установку;$\r$\n$\"Повтор$\": повторить попытку;$\r$\n$\"Пропуск$\": пропустить это действие."
+LangString LSTR_37 1049 "Выберите опции установки"
+LangString LSTR_38 1049 "Для кого следует установить это приложение?"
+LangString LSTR_39 1049 "Выбери, хочешь ли ты сделать эту программу доступной для всех пользователей или только для себя"
+LangString LSTR_40 1049 "Для &всех пользователей данного компьютера"
+LangString LSTR_41 1049 "Только для &меня"
+LangString LSTR_42 1049 "Чтобы продолжить, тебе нужно войти в учетную запись, которая входит в группу администраторов..."
+LangString LSTR_43 1049 "Уже есть установленная программа для отдельного пользователя."
+LangString LSTR_44 1049 "Приложение будет переустановлено/обновлено."
+LangString LSTR_45 1049 "Новая установка только для текущего пользователя."
+LangString LSTR_46 1049 "Уже есть установленная программа для всего компьютера."
+LangString LSTR_47 1049 "Новая установка для всех пользователей. (потребуются права администратора)"
+LangString LSTR_48 1049 "Выбор папки установки"
+LangString LSTR_49 1049 "Выберите папку для установки 胖."
+LangString LSTR_50 1049 "Копирование файлов"
+LangString LSTR_51 1049 "Подождите, идет копирование файлов 胖..."
+LangString LSTR_52 1049 "Установка завершена"
+LangString LSTR_53 1049 "Установка успешно завершена."
+LangString LSTR_54 1049 "Установка прервана"
+LangString LSTR_55 1049 "Установка не завершена."
+LangString LSTR_56 1049 "&Готово"
+LangString LSTR_57 1049 0
+LangString LSTR_58 1049 "Завершение работы мастера установки 胖"
+LangString LSTR_59 1049 "MS Shell Dlg"
+LangString LSTR_60 1049 "Для завершения установки 胖 необходимо перезагрузить компьютер. Хотите сделать это сейчас?"
+LangString LSTR_61 1049 "Да, перезагрузить ПК сейчас"
+LangString LSTR_62 1049 "Нет, я перезагружу ПК позже"
+LangString LSTR_63 1049 "Установка 胖 выполнена.$\r$\n$\r$\nНажмите кнопку $\"Готово$\" для выхода из программы установки."
+LangString LSTR_64 1049 "&Запустить 胖"
+LangString LSTR_65 1049 8
+LangString LSTR_66 1049 "Требуется Windows 7 и выше"
+LangString LSTR_67 1049 "Требуется Windows 64-bit"
+LangString LSTR_68 1049 "Не удалось удалить старые файлы приложения. Пожалуйста, попробуйте запустить установщик заново."
+LangString LSTR_69 1049 "Не удалось закрыть DeskPulse. $\r$\nПожалуйста, закройте DeskPulse вручную и нажмите «Повторить», чтобы продолжить."
+LangString LSTR_70 1049 "Приложение DeskPulse запущено.$\r$\nНажмите «OK», чтобы закрыть его.$\r$\nЕсли оно не закрывается, попробуйте закрыть его вручную."
+LangString LSTR_71 1049 "По выбору"
+LangString LSTR_72 1049 "Отмена"
+LangString LSTR_73 1049 "< &Назад"
+LangString LSTR_74 1049 "&Далее >"
+LangString LSTR_75 1049 "Нажмите кнопку $\"Далее$\" для продолжения."
+LangString LSTR_76 1049 "Программа установит 胖 в указанную папку. Чтобы установить приложение в другую папку, нажмите кнопку $\"Обзор$\" и укажите ее. $CLICK"
+LangString LSTR_77 1049 "Папка установки"
+LangString LSTR_78 1049 "О&бзор ..."
+LangString LSTR_79 1049 "Укажите папку для установки 胖:"
+LangString LSTR_80 1049 "&Установить"
+LangString LSTR_81 1049 "Нажмите кнопку $\"Установить$\", чтобы установить программу."
+LangString LSTR_82 1049 "&Детали..."
+LangString LSTR_83 1049 "Готово"
+LangString LSTR_84 1049 " "
+LangString LSTR_85 1049 "&Закрыть"
+LangString LSTR_86 1049 "DeskPulse"
+
+
+; LANG: 1031
+LangString LSTR_0 1031 "DeskPulse 2.0.0"
+LangString LSTR_1 1031 "Installation von 肂"
+LangString LSTR_2 1031 "DeskPulse"
+LangString LSTR_3 1031 "Verfügbarer Speicher: "
+LangString LSTR_4 1031 "Benötigter Speicher: "
+LangString LSTR_5 1031 "Fehler beim Schreiben: "
+LangString LSTR_6 1031 "Kopieren fehlgeschlagen"
+LangString LSTR_7 1031 "Wird kopiert nach "
+LangString LSTR_8 1031 "Symbol ist nicht vorhanden: "
+LangString LSTR_9 1031 "Fehler beim Laden von "
+LangString LSTR_10 1031 "Verzeichnis wird erstellt: "
+LangString LSTR_11 1031 "Verknüpfung wird erstellt: "
+LangString LSTR_13 1031 "Datei wird gelöscht: "
+LangString LSTR_14 1031 "Datei wird nach Neustart gelöscht: "
+LangString LSTR_15 1031 "Fehler beim Erstellen der Verknüpfung: "
+LangString LSTR_17 1031 "Fehler beim Entpacken. Ist das Installations-Programm beschädigt?"
+LangString LSTR_20 1031 "Wird gestartet: "
+LangString LSTR_21 1031 "Wird entpackt: "
+LangString LSTR_22 1031 "Entpacken: Fehler beim Schreiben der Datei "
+LangString LSTR_23 1031 "Beschädigtes Installations-Programm: ungültiger Befehlscode"
+LangString LSTR_24 1031 "Kein OLE für: "
+LangString LSTR_25 1031 "Zielverzeichnis: "
+LangString LSTR_26 1031 "Verzeichnis wird entfernt: "
+LangString LSTR_27 1031 "Umbenennen nach Neustart: "
+LangString LSTR_28 1031 "Umbenennen: "
+LangString LSTR_29 1031 "Übersprungen: "
+LangString LSTR_30 1031 "Details in die Zwischenablage kopieren"
+LangString LSTR_32 1031 "B"
+LangString LSTR_33 1031 " K"
+LangString LSTR_34 1031 " M"
+LangString LSTR_35 1031 " G"
+LangString LSTR_36 1031 "Fehler beim Überschreiben der Datei: $\r$\n$\t$\"$V0$\"$\r$\nKlicken Sie auf Abbrechen, um abzubrechen,$\r$\nauf Wiederholen, um den Schreibvorgang erneut zu versuchen,$\r$\noder auf Ignorieren, um diese Datei zu überspringen."
+LangString LSTR_37 1031 "Installationsoption wählen"
+LangString LSTR_38 1031 "Für wen soll diese Anwendung installiert werden?"
+LangString LSTR_39 1031 "Bitte wählen Sie, ob Sie die Anwendung nur für sich oder für alle Benutzer installieren möchten."
+LangString LSTR_40 1031 "Für alle Benutzer dieses Computers (&alle Benutzer)"
+LangString LSTR_41 1031 "Nur für &mich"
+LangString LSTR_42 1031 "Um die Installation fortzusetzen müssen Sie sich mit einem Administrator-Account anmelden..."
+LangString LSTR_43 1031 "Es existiert bereits eine Installation für den ausgewählten Benutzer."
+LangString LSTR_44 1031 "Die Anwendung wird aktualisiert."
+LangString LSTR_45 1031 "Neuinstallation nur für den aktuellen Benutzer durchführen."
+LangString LSTR_46 1031 "Es existiert bereits eine Installation für diesen Computer."
+LangString LSTR_47 1031 "Neuinstallation für alle Benutzer durchführen. (Administratorrechte benötigt)"
+LangString LSTR_48 1031 "Zielverzeichnis auswählen"
+LangString LSTR_49 1031 "Wählen Sie das Verzeichnis aus, in das 胖 installiert werden soll."
+LangString LSTR_50 1031 "Wird installiert ..."
+LangString LSTR_51 1031 "Bitte warten Sie, während 胖 installiert wird."
+LangString LSTR_52 1031 "Die Installation ist vollständig"
+LangString LSTR_53 1031 "Die Installation wurde erfolgreich abgeschlossen."
+LangString LSTR_54 1031 "Abbruch der Installation"
+LangString LSTR_55 1031 "Die Installation wurde nicht vollständig abgeschlossen."
+LangString LSTR_56 1031 "&Fertigstellen"
+LangString LSTR_57 1031 0
+LangString LSTR_58 1031 "Die Installation von 胖 wird abgeschlossen"
+LangString LSTR_59 1031 "MS Shell Dlg"
+LangString LSTR_60 1031 "Windows muss neu gestartet werden, um die Installation von 胖 zu vervollständigen. Möchten Sie Windows jetzt neu starten?"
+LangString LSTR_61 1031 "Jetzt neu starten"
+LangString LSTR_62 1031 "Windows später selbst neu starten"
+LangString LSTR_63 1031 "胖 wurde auf Ihrem Computer installiert.$\r$\n$\r$\nKlicken Sie auf Fertigstellen, um den Installations-Assistenten zu schließen."
+LangString LSTR_64 1031 "胖 ausführen"
+LangString LSTR_65 1031 8
+LangString LSTR_66 1031 "Windows 7 oder höher wird vorausgesetzt"
+LangString LSTR_67 1031 "64-Bit-Windows wird vorausgesetzt"
+LangString LSTR_68 1031 "Die alten Anwendungsdateien konnten nicht deinstalliert werden. Bitte versuche, das Installationsprogramm erneut auszuführen."
+LangString LSTR_69 1031 "DeskPulse kann nicht geschlossen werden. $\r$\nSchließ es bitte manuell und klicke auf »Wiederholen«, um fortzufahren."
+LangString LSTR_70 1031 "DeskPulse wird gerade ausgeführt.$\r$\nKlicke auf »OK«, um es zu schließen.$\r$\nFalls es sich nicht schließen lässt, versuche es manuell zu schließen."
+LangString LSTR_71 1031 "Benutzerdefiniert"
+LangString LSTR_72 1031 "Abbrechen"
+LangString LSTR_73 1031 "< &Zurück"
+LangString LSTR_74 1031 "&Weiter >"
+LangString LSTR_75 1031 "Klicken Sie auf Weiter, um fortzufahren."
+LangString LSTR_76 1031 "胖 wird in das unten angegebene Verzeichnis installiert. Falls Sie in ein anderes Verzeichnis installieren möchten, klicken Sie auf Durchsuchen und wählen Sie ein anderes Verzeichnis aus. $CLICK"
+LangString LSTR_77 1031 "Zielverzeichnis"
+LangString LSTR_78 1031 "&Durchsuchen ..."
+LangString LSTR_79 1031 "Wählen Sie das Verzeichnis aus, in das Sie 胖 installieren möchten:"
+LangString LSTR_80 1031 "&Installieren"
+LangString LSTR_81 1031 "Klicken Sie auf Installieren, um die Installation zu starten."
+LangString LSTR_82 1031 "&Details anzeigen"
+LangString LSTR_83 1031 "Fertig"
+LangString LSTR_84 1031 " "
+LangString LSTR_85 1031 "&Beenden"
+LangString LSTR_86 1031 "DeskPulse"
+
+
+; LANG: 1033
+LangString LSTR_0 1033 "DeskPulse 2.0.0"
+LangString LSTR_1 1033 "肂 Setup"
+LangString LSTR_2 1033 "DeskPulse"
+LangString LSTR_3 1033 "Space available: "
+LangString LSTR_4 1033 "Space required: "
+LangString LSTR_5 1033 "Can't write: "
+LangString LSTR_6 1033 "Copy failed"
+LangString LSTR_7 1033 "Copy to "
+LangString LSTR_8 1033 "Could not find symbol: "
+LangString LSTR_9 1033 "Could not load: "
+LangString LSTR_10 1033 "Create folder: "
+LangString LSTR_11 1033 "Create shortcut: "
+LangString LSTR_13 1033 "Delete file: "
+LangString LSTR_14 1033 "Delete on reboot: "
+LangString LSTR_15 1033 "Error creating shortcut: "
+LangString LSTR_17 1033 "Error decompressing data! Corrupted installer?"
+LangString LSTR_20 1033 "Execute: "
+LangString LSTR_21 1033 "Extract: "
+LangString LSTR_22 1033 "Extract: error writing to file "
+LangString LSTR_23 1033 "Installer corrupted: invalid opcode"
+LangString LSTR_24 1033 "No OLE for: "
+LangString LSTR_25 1033 "Output folder: "
+LangString LSTR_26 1033 "Remove folder: "
+LangString LSTR_27 1033 "Rename on reboot: "
+LangString LSTR_28 1033 "Rename: "
+LangString LSTR_29 1033 "Skipped: "
+LangString LSTR_30 1033 "Copy Details To Clipboard"
+LangString LSTR_32 1033 "B"
+LangString LSTR_33 1033 " K"
+LangString LSTR_34 1033 " M"
+LangString LSTR_35 1033 " G"
+LangString LSTR_36 1033 "Error opening file for writing: $\r$\n$\r$\n$V0$\r$\n$\r$\nClick Abort to stop the installation,$\r$\nRetry to try again, or$\r$\nIgnore to skip this file."
+LangString LSTR_37 1033 "Choose Installation Options"
+LangString LSTR_38 1033 "Who should this application be installed for?"
+LangString LSTR_39 1033 "Please select whether you wish to make this software available to all users or just yourself"
+LangString LSTR_40 1033 "Anyone who uses this computer (&all users)"
+LangString LSTR_41 1033 "Only for &me"
+LangString LSTR_42 1033 "You need to login with an account that is a member of the admin group to continue..."
+LangString LSTR_43 1033 "There is already a per-user installation."
+LangString LSTR_44 1033 "Will reinstall/upgrade."
+LangString LSTR_45 1033 "Fresh install for current user only."
+LangString LSTR_46 1033 "There is already a per-machine installation."
+LangString LSTR_47 1033 "Fresh install for all users. (will prompt for admin credentials)"
+LangString LSTR_48 1033 "Choose Install Location"
+LangString LSTR_49 1033 "Choose the folder in which to install 胖."
+LangString LSTR_50 1033 "Installing"
+LangString LSTR_51 1033 "Please wait while 胖 is being installed."
+LangString LSTR_52 1033 "Installation Complete"
+LangString LSTR_53 1033 "Setup was completed successfully."
+LangString LSTR_54 1033 "Installation Aborted"
+LangString LSTR_55 1033 "Setup was not completed successfully."
+LangString LSTR_56 1033 "&Finish"
+LangString LSTR_57 1033 0
+LangString LSTR_58 1033 "Completing 胖 Setup"
+LangString LSTR_59 1033 "MS Shell Dlg"
+LangString LSTR_60 1033 "Your computer must be restarted in order to complete the installation of 胖. Do you want to reboot now?"
+LangString LSTR_61 1033 "Reboot now"
+LangString LSTR_62 1033 "I want to manually reboot later"
+LangString LSTR_63 1033 "胖 has been installed on your computer.$\r$\n$\r$\nClick Finish to close Setup."
+LangString LSTR_64 1033 "&Run 胖"
+LangString LSTR_65 1033 8
+LangString LSTR_66 1033 "Windows 7 and above is required"
+LangString LSTR_67 1033 "64-bit Windows is required"
+LangString LSTR_68 1033 "Failed to uninstall old application files. Please try running the installer again."
+LangString LSTR_69 1033 "DeskPulse cannot be closed. $\r$\nPlease close it manually and click Retry to continue."
+LangString LSTR_70 1033 "DeskPulse is running.$\r$\nClick OK to close it.$\r$\nIf it doesn't close, try closing it manually."
+LangString LSTR_71 1033 "Custom"
+LangString LSTR_72 1033 "Cancel"
+LangString LSTR_73 1033 "< &Back"
+LangString LSTR_74 1033 "&Next >"
+LangString LSTR_75 1033 "Click Next to continue."
+LangString LSTR_76 1033 "Setup will install 胖 in the following folder. To install in a different folder, click Browse and select another folder. $CLICK"
+LangString LSTR_77 1033 "Destination Folder"
+LangString LSTR_78 1033 "B&rowse..."
+LangString LSTR_79 1033 "Select the folder to install 胖 in:"
+LangString LSTR_80 1033 "&Install"
+LangString LSTR_81 1033 "Click Install to start the installation."
+LangString LSTR_82 1033 "Show &details"
+LangString LSTR_83 1033 "Completed"
+LangString LSTR_84 1033 " "
+LangString LSTR_85 1033 "&Close"
+LangString LSTR_86 1033 "DeskPulse"
+
+
+InstType ""
+; wininit = "$WINDIR\wininit.ini"
+
+
+; ------------------------------------------------------------------------
+; PAGES: 5
+
+; Page 0
+Page custom func_120 func_424 /ENABLECANCEL
+
+; Page 1
+Page directory func_613 func_617 func_625 /ENABLECANCEL
+  DirText "" "" "" ""
+  DirVar $CMDLINE
+
+; Page 2
+Page instfiles func_633 func_637 func_643
+  CompletedText ""
+  DetailsButtonText ""
+
+; ; Page 3
+; Page COMPLETED
+
+; Page 4
+Page custom func_695 func_917
+
+
+; ------------------------------------------------------------------------
+Function func_0
+  Push $R3
+  Exch
+  Pop $R3
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  Push $V4
+  Push $V5
+  Push $R0
+  Push $R1
+  Push $R9
+  Push $R8
+  StrCpy $V0 ""
+  StrCpy $V1 ""
+  StrCpy $V2 ""
+  StrCpy $V3 ""
+  StrCpy $V4 ""
+  StrCpy $V5 ""
+  IntCmp $R3 0 0 label_30 label_30 ; If: $R3 != 0
+    Call Initialize_____Plugins
+    SetOverwrite off
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "kernel32::GetCurrentProcess() i.R0"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "Kernel32::GetProcessId(i R0) i.R3"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  ; EndIf
+label_30:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "Kernel32::CreateToolhelp32Snapshot(i 2,i R3) i.R0"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  IntCmp $R0 -1 label_92 ; If: $R0 = -1
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push 1024
+    CallInstDLL "$PLUGINSDIR\System.dll" "Alloc"
+    Pop $R9
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "*$R9(i 556)"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "Kernel32::Process32FirstW(i R0, i $R9) i.R1"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    StrCmp $R1 0 label_92
+    ; Do
+label_53:
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "*$R9(i,i,i.R1)"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+      IntCmp $R1 $R3 label_65
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "Kernel32::Process32NextW(i R0, i $R9) i.R1"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    IntCmp $R1 0 0 label_53 label_53 ; LoopWhile: $R1 = 0
+label_65:
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "*$R9(i,i,i.r0,i,i,i.r1,i.r2,i.r3,i,&w256.r4)"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push $R9
+    CallInstDLL "$PLUGINSDIR\System.dll" "Free"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "Kernel32::CloseToolhelp32Snapshot(i R0)"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "Kernel32::OpenProcess(i 1040, i 0, i r0)i .R0"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    StrCmp $R0 0 label_92
+    IntOp $R8 0 + 256
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "psapi::GetModuleFileNameExW(i R0,i 0,t .r5, *i $R8)i .R1"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  ; EndIf
+label_92:
+  Pop $R8
+  Pop $R9
+  Pop $R1
+  Pop $R0
+  Push $V5
+  Exch
+  Pop $V5
+  Exch
+  Push $V4
+  Exch
+  Pop $V4
+  Exch 2
+  Push $V3
+  Exch
+  Pop $V3
+  Exch 3
+  Push $V2
+  Exch
+  Pop $V2
+  Exch 4
+  Pop $V1
+  Exch 4
+  Push $V0
+  Exch
+  Pop $V0
+  Exch 5
+  Pop $R3
+FunctionEnd
+
+Function func_120    ; Page 0, Pre
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\UAC.dll"
+  SetDetailsPrint lastused
+  Push "3s"
+  CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+  Pop $var67
+  StrCmp $var67 0 label_175 ; If: $var67 != 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\UAC.dll"
+    SetDetailsPrint lastused
+    Push "2s"
+    CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+    Pop $var67
+    StrCmp $var67 0 label_175
+    StrCpy $var50 "all"
+    SetShellVarContext all
+    ReadRegStr $var54 HKLM "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "InstallLocation"
+    StrCmp $var54 "" label_140 ; If: $var54 != ""
+      StrCpy $INSTDIR $var54
+    ; Else
+label_140:
+      StrCpy $V0 "$REG0(倀爀漀最爀愀洀䘀椀氀攀猀䐀椀爀)"
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "kernel32::GetCurrentProcess()p.s"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "kernel32::IsWow64Process2(ps,*i0s,*i)"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+      Push "|"
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "kernel32::IsWow64Process(p-1,*i0s)"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      CallInstDLL "$PLUGINSDIR\System.dll" "Int64Op"
+      Pop $var67
+      StrCmp $var67 0 label_164 ; If: $var67 != 0
+        StrCpy $V0 "$REG64(倀爀漀最爀愀洀䘀椀氀攀猀䐀椀爀)"
+      ; EndIf
+label_164:
+      StrCpy $INSTDIR "$V0\DeskPulse"
+    ; EndIf
+label_165:
+    Push "D"
+    Push ""
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\StdUtils.dll"
+    SetDetailsPrint lastused
+    CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "GetParameter"
+    Pop $R0
+    StrCmp $R0 "" label_174 ; If: $R0 != ""
+      StrCpy $INSTDIR $R0
+    ; EndIf
+label_174:
+    Abort
+  ; EndIf
+label_175:
+  StrCpy $var60 0
+  StrCpy $var61 0
+  StrCmp $var60 1 0 label_179 ; If: $var60 == 1
+  ; Else
+label_179:
+    Push "allusers"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\StdUtils.dll"
+    SetDetailsPrint lastused
+    CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "TestParameter"
+    Pop $R9
+    StrCmp $R9 "true" 0 label_243
+  ; EndIf
+label_186:
+  StrCpy $var52 1
+  StrCpy $var51 0
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\UAC.dll"
+  SetDetailsPrint lastused
+  Push "2s"
+  CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+  Pop $var67
+  StrCmp $var67 0 0 label_202 ; If: $var67 == 0
+    ShowWindow $HWNDPARENT 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\UAC.dll"
+    SetDetailsPrint lastused
+    Push 0
+    CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+    Quit
+  ; EndIf
+label_202:
+  StrCpy $var50 "all"
+  SetShellVarContext all
+  ReadRegStr $var54 HKLM "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "InstallLocation"
+  StrCmp $var54 "" label_208 ; If: $var54 != ""
+    StrCpy $INSTDIR $var54
+  ; Else
+label_208:
+    StrCpy $V0 "$REG0(倀爀漀最爀愀洀䘀椀氀攀猀䐀椀爀)"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "kernel32::GetCurrentProcess()p.s"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "kernel32::IsWow64Process2(ps,*i0s,*i)"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Push "|"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "kernel32::IsWow64Process(p-1,*i0s)"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    CallInstDLL "$PLUGINSDIR\System.dll" "Int64Op"
+    Pop $var67
+    StrCmp $var67 0 label_232 ; If: $var67 != 0
+      StrCpy $V0 "$REG64(倀爀漀最爀愀洀䘀椀氀攀猀䐀椀爀)"
+    ; EndIf
+label_232:
+    StrCpy $INSTDIR "$V0\DeskPulse"
+  ; EndIf
+label_233:
+  Push "D"
+  Push ""
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "GetParameter"
+  Pop $R0
+  StrCmp $R0 "" label_242 ; If: $R0 != ""
+    StrCpy $INSTDIR $R0
+  ; EndIf
+label_242:
+  Abort
+label_243:
+  StrCmp $var61 1 0 label_245 ; If: $var61 == 1
+  ; Else
+label_245:
+    Push "currentuser"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\StdUtils.dll"
+    SetDetailsPrint lastused
+    CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "TestParameter"
+    Pop $R9
+    StrCmp $R9 "true" 0 label_299
+  ; EndIf
+label_252:
+  StrCpy $var52 0
+  StrCpy $var51 1
+  StrCpy $var50 "CurrentUser"
+  SetShellVarContext current
+  ReadRegStr $var53 HKCU "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "InstallLocation"
+  StrCmp $var53 "" label_260 ; If: $var53 != ""
+    StrCpy $INSTDIR $var53
+  ; Else
+label_260:
+    StrCpy $V0 "$LOCALAPPDATA\Programs"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "S"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Store"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "SHELL32::SHGetKnownFolderPath(g $\"{5CD7AEE2-2219-4A67-B85D-6C9CE15660CB}$\", i 0x00008000, p 0, *p .r2)i.r1"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    StrCmp $V1 0 0 label_283 ; If: $V1 == 0
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "*$V2(&w8192 .s)"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+      StrCpy $V0 $V1
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "OLE32::CoTaskMemFree(p r2)"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    ; EndIf
+label_283:
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "L"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Store"
+    StrCpy $INSTDIR "$V0\DeskPulse"
+  ; EndIf
+label_289:
+  Push "D"
+  Push ""
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "GetParameter"
+  Pop $R0
+  StrCmp $R0 "" label_298 ; If: $R0 != ""
+    StrCpy $INSTDIR $R0
+  ; EndIf
+label_298:
+  Abort
+label_299:
+  SendMessage $var38 0x000C 0 "STR:"
+  SendMessage $var40 0x000C 0 "STR:"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push 1018
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "Create"
+  Pop $var62
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push 4294967256
+  Push "20u"
+  Push "300u"
+  Push "0u"
+  Push "0u"
+  Push 0x00000020
+  Push "0x40000000|0x10000000|0x04000000|0x00000100"
+  Push "STATIC"
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+  StrCpy $V8 4294967255
+  StrCpy $V9 4294967254
+  Pop $var63
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push $V8
+  Push "20u"
+  Push "280u"
+  Push "30u"
+  Push "10u"
+  Push 0
+  Push "0x40000000|0x10000000|0x04000000|0x00010000|0x00000000|0x00000C00|0x00000009|0x00002000"
+  Push "BUTTON"
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+  Pop $var64
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\UAC.dll"
+  SetDetailsPrint lastused
+  Push "2s"
+  CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+  Pop $var67
+  StrCmp $var67 0 0 label_344 ; If: $var67 == 0
+    StrCpy $var58 1
+  ; Else
+label_344:
+    StrCpy $var58 1
+  ; EndIf
+label_345:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "advapi32::GetUserName(t.r0,*i8192)i"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push "$V9 ($V0)"
+  Push "20u"
+  Push "280u"
+  Push "50u"
+  Push "10u"
+  Push 0
+  Push "0x40000000|0x10000000|0x04000000|0x00010000|0x00000000|0x00000C00|0x00000009|0x00002000"
+  Push "BUTTON"
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+  Pop $var65
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push 1
+  Push $var64
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "SetUserData"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push 0
+  Push $var65
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "SetUserData"
+  StrCmp $var58 1 0 label_400 ; If: $var58 == 1
+    Push $V0
+    Push $V1
+    StrCpy $V1 $var65
+    StrCpy $V0 549
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push $V0
+    Push $V1
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "OnClick"
+    Pop $V1
+    Pop $V0
+    Push $V0
+    Push $V1
+    StrCpy $V1 $var64
+    StrCpy $V0 549
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push $V0
+    Push $V1
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "OnClick"
+    Pop $V1
+    Pop $V0
+  ; EndIf
+label_400:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push ""
+  Push "50u"
+  Push "280u"
+  Push "110u"
+  Push "0u"
+  Push 0x00000020
+  Push "0x40000000|0x10000000|0x04000000|0x00000100"
+  Push "STATIC"
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+  Pop $var59
+  StrCmp $var50 "all" 0 label_417 ; If: $var50 == "all"
+    SendMessage $var64 0x00F1 1 0
+    SendMessage $var64 0x00F5 0 0
+  ; Else
+label_417:
+    SendMessage $var65 0x00F1 1 0
+    SendMessage $var65 0x00F5 0 0
+  ; EndIf
+label_419:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "Show"
+FunctionEnd
+
+Function func_424    ; Page 0, Leave
+  SendMessage $var64 0x00F0 0 0 $var66
+  IntCmp $var66 1 0 label_503 label_503 ; If: $var66 != 1
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\UAC.dll"
+    SetDetailsPrint lastused
+    Push "2s"
+    CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+    Pop $var67
+    StrCmp $var67 0 0 label_462 ; If: $var67 == 0
+      ShowWindow $HWNDPARENT 0
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\UAC.dll"
+      SetDetailsPrint lastused
+      Push 0
+      CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+      Goto label_453
+      ; Do
+label_440:
+        IntCmp $V1 1 0 label_442 label_442
+        Quit
+label_442:
+        IntCmp $V1 3 0 label_444 label_444
+        Goto label_445
+label_444:
+        IntCmp $V2 0x666666 0 label_446 label_446
+label_445:
+        MessageBox MB_OK|MB_ICONSTOP|MB_SETFOREGROUND|MB_TOPMOST 4294967253
+label_446:
+        Goto label_457
+label_447:
+        Goto label_457
+label_448:
+        MessageBox MB_OK|MB_ICONSTOP|MB_SETFOREGROUND|MB_TOPMOST "Logon service not running, aborting!"
+        Goto label_457
+label_450:
+        MessageBox MB_OK|MB_ICONSTOP|MB_SETFOREGROUND|MB_TOPMOST "Unable to elevate, error $V0"
+        Goto label_457
+label_453:
+      StrCmp $V0 0 label_440 ; LoopWhile: $V0 == 0
+      StrCmp $V0 1223 label_447
+      StrCmp $V0 1062 label_448
+      Goto label_450
+label_457:
+      ShowWindow $HWNDPARENT 5
+      ShowWindow $HWNDPARENT 5
+      BringToFront
+      Abort
+    ; Else
+label_462:
+      StrCpy $var50 "all"
+      SetShellVarContext all
+      ReadRegStr $var54 HKLM "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "InstallLocation"
+      StrCmp $var54 "" label_468 ; If: $var54 != ""
+        StrCpy $INSTDIR $var54
+      ; Else
+label_468:
+        StrCpy $V0 "$REG0(倀爀漀最爀愀洀䘀椀氀攀猀䐀椀爀)"
+        Call Initialize_____Plugins
+        File "$PLUGINSDIR\System.dll"
+        SetDetailsPrint lastused
+        Push "kernel32::GetCurrentProcess()p.s"
+        CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+        Call Initialize_____Plugins
+        File "$PLUGINSDIR\System.dll"
+        SetDetailsPrint lastused
+        Push "kernel32::IsWow64Process2(ps,*i0s,*i)"
+        CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+        Push "|"
+        Call Initialize_____Plugins
+        File "$PLUGINSDIR\System.dll"
+        SetDetailsPrint lastused
+        Push "kernel32::IsWow64Process(p-1,*i0s)"
+        CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+        Call Initialize_____Plugins
+        File "$PLUGINSDIR\System.dll"
+        SetDetailsPrint lastused
+        CallInstDLL "$PLUGINSDIR\System.dll" "Int64Op"
+        Pop $var67
+        StrCmp $var67 0 label_492 ; If: $var67 != 0
+          StrCpy $V0 "$REG64(倀爀漀最爀愀洀䘀椀氀攀猀䐀椀爀)"
+        ; EndIf
+label_492:
+        StrCpy $INSTDIR "$V0\DeskPulse"
+      ; EndIf
+label_493:
+      Push "D"
+      Push ""
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\StdUtils.dll"
+      SetDetailsPrint lastused
+      CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "GetParameter"
+      Pop $R0
+      StrCmp $R0 "" label_502
+      StrCpy $INSTDIR $R0
+    ; EndIf
+label_502:
+  ; Else
+label_503:
+    StrCpy $var50 "CurrentUser"
+    SetShellVarContext current
+    ReadRegStr $var53 HKCU "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "InstallLocation"
+    StrCmp $var53 "" label_509 ; If: $var53 != ""
+      StrCpy $INSTDIR $var53
+    ; Else
+label_509:
+      StrCpy $V0 "$LOCALAPPDATA\Programs"
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "S"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Store"
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "SHELL32::SHGetKnownFolderPath(g $\"{5CD7AEE2-2219-4A67-B85D-6C9CE15660CB}$\", i 0x00008000, p 0, *p .r2)i.r1"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+      StrCmp $V1 0 0 label_532 ; If: $V1 == 0
+        Call Initialize_____Plugins
+        File "$PLUGINSDIR\System.dll"
+        SetDetailsPrint lastused
+        Push "*$V2(&w8192 .s)"
+        CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+        StrCpy $V0 $V1
+        Call Initialize_____Plugins
+        File "$PLUGINSDIR\System.dll"
+        SetDetailsPrint lastused
+        Push "OLE32::CoTaskMemFree(p r2)"
+        CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+      ; EndIf
+label_532:
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "L"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Store"
+      StrCpy $INSTDIR "$V0\DeskPulse"
+    ; EndIf
+label_538:
+    Push "D"
+    Push ""
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\StdUtils.dll"
+    SetDetailsPrint lastused
+    CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "GetParameter"
+    Pop $R0
+    StrCmp $R0 "" label_547
+    StrCpy $INSTDIR $R0
+  ; EndIf
+label_547:
+  Return
+  StrCmp $V1 0 0 label_564 ; If: $V1 == 0
+    StrCmp $var51 1 0 label_561 ; If: $var51 == 1
+      StrCpy $V7 "肫($var53)$\r$\n肬"
+    ; Else
+label_561:
+      StrCpy $V7 4294967250
+    ; EndIf
+label_562:
+    SendMessage $V0 0x160C 0 0
+  ; Else
+label_564:
+    StrCmp $var52 1 0 label_567 ; If: $var52 == 1
+      StrCpy $V7 "肮($var54)$\r$\n肬"
+    ; Else
+label_567:
+      StrCpy $V7 4294967248
+    ; EndIf
+label_568:
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\UAC.dll"
+    SetDetailsPrint lastused
+    Push "2s"
+    CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+    Pop $var67
+    StrCmp $var67 0 0 label_578 ; If: $var67 == 0
+      StrCpy $V7 $V7
+      SendMessage $V0 0x160C 0 1
+      Goto label_579
+    ; EndIf
+label_578:
+    SendMessage $V0 0x160C 0 0
+  ; EndIf
+label_579:
+  SendMessage $var59 0x000C 0 "STR:$V7"
+FunctionEnd
+
+Function func_581
+  Push $var69
+  Exch
+  Pop $var69
+  Exch
+  Push $var68
+  Exch
+  Pop $var68
+  StrCpy $var74 ""
+  StrCpy $var70 -1
+  StrLen $var71 $var69
+  StrLen $var73 $var68
+label_592:
+  IntOp $var70 $var70 + 1
+  StrCpy $var72 $var68 $var71 $var70
+  StrCmp $var72 $var69 label_597 ; While: $var72 != $var69
+    StrCmp $var70 $var73 label_599
+  ; EndWhile
+label_597:
+  StrCpy $var74 $var69
+  Goto label_599
+label_599:
+  Pop $var69
+  Push $var74
+  Exch
+  Pop $var74
+FunctionEnd
+
+Function func_604
+  Push "updated"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "TestParameter"
+  Pop $R9
+  StrCmp $R9 "true" 0 label_612
+  Abort
+label_612:
+FunctionEnd
+
+Function func_613    ; Page 1, Pre
+  Call func_604
+  SendMessage $var38 0x000C 0 "STR:"
+  SendMessage $var40 0x000C 0 "STR:"
+FunctionEnd
+
+Function func_617    ; Page 1, Show
+  FindWindow $var75 "#32770" "" $HWNDPARENT
+  GetDlgItem $var76 $var75 1006
+  GetDlgItem $var77 $var75 1020
+  GetDlgItem $var78 $var75 1019
+  GetDlgItem $var79 $var75 1001
+  GetDlgItem $var80 $var75 1023
+  GetDlgItem $var81 $var75 1024
+FunctionEnd
+
+Function func_625    ; Page 1, Leave
+  Return
+label_632:
+FunctionEnd
+
+Function func_633    ; Page 2, Pre
+  Call func_626
+  SendMessage $var38 0x000C 0 "STR:"
+  SendMessage $var40 0x000C 0 "STR:"
+FunctionEnd
+
+Function func_637    ; Page 2, Show
+  FindWindow $var82 "#32770" "" $HWNDPARENT
+  GetDlgItem $var83 $var82 1006
+  GetDlgItem $var84 $var82 1004
+  GetDlgItem $var85 $var82 1027
+  GetDlgItem $var86 $var82 1016
+FunctionEnd
+
+Function func_643    ; Page 2, Leave
+  IfAbort label_647 ; If: not Abort
+    SendMessage $var38 0x000C 0 "STR:"
+    SendMessage $var40 0x000C 0 "STR:"
+  ; Else
+label_647:
+    SendMessage $var38 0x000C 0 "STR:"
+    SendMessage $var40 0x000C 0 "STR:"
+  ; EndIf
+label_649:
+  IfAbort label_650
+label_650:
+FunctionEnd
+
+Function func_651
+  Push "updated"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "TestParameter"
+  Pop $R9
+  StrCmp $R9 "true" 0 label_660 ; If: $R9 == "true"
+    StrCpy $V1 "--updated"
+  ; Else
+label_660:
+    StrCpy $V1 ""
+  ; EndIf
+label_661:
+  Push $var57
+  Push "open"
+  Push $V1
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "ExecShellAsUser"
+  Pop $V0
+FunctionEnd
+
+Function func_670
+  Call Initialize_____Plugins
+  SetDetailsPrint lastused
+  SetOverwrite on
+  File "$PLUGINSDIR\modern-wizard.bmp"
+  SetAutoClose true
+FunctionEnd
+
+Function func_675
+  LockWindow on
+  ShowWindow $var44 0
+  ShowWindow $var43 0
+  ShowWindow $var38 0
+  ShowWindow $var40 0
+  ShowWindow $var42 0
+  ShowWindow $var45 0
+  ShowWindow $var46 1
+  LockWindow off
+FunctionEnd
+
+Function func_685
+  LockWindow on
+  ShowWindow $var44 1
+  ShowWindow $var43 1
+  ShowWindow $var38 1
+  ShowWindow $var40 1
+  ShowWindow $var42 1
+  ShowWindow $var45 1
+  ShowWindow $var46 0
+  LockWindow off
+FunctionEnd
+
+Function func_695    ; Page 4, Pre
+  SendMessage $var47 0x000C 0 "STR:"
+  Call Initialize_____Plugins
+  SetOverwrite off
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push 1044
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "Create"
+  Pop $var87
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push 4294967238
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "SetRTL"
+  SetCtlColors $var87 "" 0xFFFFFF
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  Push ""
+  Push "193u"
+  Push "109u"
+  Push "0u"
+  Push "0u"
+  Push 0
+  Push "0x40000000|0x10000000|0x04000000|0x0000000E|0x00000100"
+  Push "STATIC"
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+  Pop $var88
+  Push $V0
+  Push $R0
+  Push "$PLUGINSDIR\modern-wizard.bmp"
+  StrCpy $R0 $var88
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "user32::GetClientRect(pR0,@r0)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "*$V0(i,i,i.r0,i.s)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Exch
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "user32::LoadImage(p0, ts, i0, ir0, is, i0x0010) p.r0"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  SendMessage $R0 0x0172 0 $V0
+  Pop $R0
+  Push $V0
+  Exch
+  Pop $V0
+  Pop $var89
+  IfRebootFlag 0 label_813 ; If: RebootFlag
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967237
+    Push "28u"
+    Push "195u"
+    Push "10u"
+    Push "120u"
+    Push 0x00000020
+    Push "0x40000000|0x10000000|0x04000000|0x00000100"
+    Push "STATIC"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var90
+    SetCtlColors $var90 0x000000 0xFFFFFF
+    CreateFont $var91 4294967236 12 700
+    SendMessage $var90 0x0030 $var91 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967235
+    Push "40u"
+    Push "195u"
+    Push "45u"
+    Push "120u"
+    Push 0x00000020
+    Push "0x40000000|0x10000000|0x04000000|0x00000100"
+    Push "STATIC"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var92
+    SetCtlColors $var92 0x000000 0xFFFFFF
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967234
+    Push "10u"
+    Push "195u"
+    Push "90u"
+    Push "120u"
+    Push 0
+    Push "0x40000000|0x10000000|0x04000000|0x00010000|0x00000000|0x00000C00|0x00000009|0x00002000"
+    Push "BUTTON"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var95
+    SetCtlColors $var95 0x000000 0xFFFFFF
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967233
+    Push "10u"
+    Push "195u"
+    Push "115u"
+    Push "120u"
+    Push 0
+    Push "0x40000000|0x10000000|0x04000000|0x00010000|0x00000000|0x00000C00|0x00000009|0x00002000"
+    Push "BUTTON"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var96
+    SetCtlColors $var96 0x000000 0xFFFFFF
+    SendMessage $var95 0x00F1 1 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "user32::SetFocus(p$var95)"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  ; Else
+label_813:
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967237
+    Push "28u"
+    Push "195u"
+    Push "10u"
+    Push "120u"
+    Push 0x00000020
+    Push "0x40000000|0x10000000|0x04000000|0x00000100"
+    Push "STATIC"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var90
+    SetCtlColors $var90 0x000000 0xFFFFFF
+    CreateFont $var91 4294967236 12 700
+    SendMessage $var90 0x0030 $var91 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967232
+    Push "40u"
+    Push "195u"
+    Push "45u"
+    Push "120u"
+    Push 0x00000020
+    Push "0x40000000|0x10000000|0x04000000|0x00000100"
+    Push "STATIC"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var92
+    SetCtlColors $var92 0x000000 0xFFFFFF
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\nsDialogs.dll"
+    SetDetailsPrint lastused
+    Push 4294967231
+    Push "10u"
+    Push "195u"
+    Push "90u"
+    Push "120u"
+    Push 0
+    Push "0x40000000|0x10000000|0x04000000|0x00010000|0x00000000|0x00000C00|0x00000003|0x00002000"
+    Push "BUTTON"
+    CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "CreateControl"
+    Pop $var94
+    SetCtlColors $var94 0x000000 0xFFFFFF
+    SendMessage $var94 0x00F1 1 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "user32::SetFocus(p$var94)"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  ; EndIf
+label_863:
+  Push $V1
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "*(i12,i0,p)p.r1"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "USER32::SystemParametersInfo(i0x42,i12,pr1,i0)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "*$V1(i,i.s)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Pop $var67
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push $V1
+  CallInstDLL "$PLUGINSDIR\System.dll" "Free"
+  Pop $V1
+  IntOp $var67 $var67 & 0x01
+  IntCmp $var67 0 label_903 ; If: $var67 = 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "UXTHEME::SetWindowTheme(p$var95,w$\" $\",w$\" $\")"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "UXTHEME::SetWindowTheme(p$var96,w$\" $\",w$\" $\")"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "UXTHEME::SetWindowTheme(p$var94,w$\" $\",w$\" $\")"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  ; EndIf
+label_903:
+  Call func_675
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsDialogs.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\nsDialogs.dll" "Show"
+  Call func_685
+  IntCmp $var89 0 label_916
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push $var89
+  Push "gdi32::DeleteObject(ps)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+label_916:
+FunctionEnd
+
+Function func_917    ; Page 4, Leave
+  IfRebootFlag 0 label_924 ; If: RebootFlag
+    SendMessage $var95 0x00F0 0 0 $var93
+    IntCmp $var93 1 0 label_923 label_923 ; If: $var93 != 1
+      Reboot
+      Quit
+      Goto label_924
+    ; EndIf
+label_923:
+    Return
+  ; EndIf
+label_924:
+  SendMessage $var94 0x00F0 0 0 $var93
+  IntCmp $var93 1 0 label_927 label_927
+  Call func_651
+label_927:
+FunctionEnd
+
+Function .onGUIInit
+  GetDlgItem $var38 $HWNDPARENT 1037
+  CreateFont $var39 4294967236 4294967230 700
+  SendMessage $var38 0x0030 $var39 0
+  GetDlgItem $var40 $HWNDPARENT 1038
+  SetCtlColors $var38 0x000000 0xFFFFFF
+  SetCtlColors $var40 0x000000 0xFFFFFF
+  GetDlgItem $var41 $HWNDPARENT 1034
+  SetCtlColors $var41 "" 0xFFFFFF
+  GetDlgItem $var42 $HWNDPARENT 1039
+  SetCtlColors $var42 "" 0xFFFFFF
+  GetDlgItem $var44 $HWNDPARENT 1028
+  SetCtlColors $var44 /BRANDING ""
+  GetDlgItem $var43 $HWNDPARENT 1256
+  SetCtlColors $var43 /BRANDING ""
+  SendMessage $var43 0x000C 0 "STR:肀 "
+  GetDlgItem $var45 $HWNDPARENT 1035
+  GetDlgItem $var46 $HWNDPARENT 1045
+  GetDlgItem $var47 $HWNDPARENT 1
+  GetDlgItem $var48 $HWNDPARENT 2
+  GetDlgItem $var49 $HWNDPARENT 3
+  Call func_670
+FunctionEnd
+
+Function .onUserAbort
+  Return
+label_955:
+  StrCmp $var97 "" label_957 ; If: $var97 != ""
+    Return
+  ; EndIf
+label_957:
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  Push $R0
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "*(&i284)p.r0"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "*$V0(i 284)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::GetVersionEx(pr0)i.r3"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  IntCmp $V3 0 0 label_988 label_988 ; If: $V3 != 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "*$V0(i 276)"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "kernel32::GetVersionEx(pr0)i.r3"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  ; EndIf
+label_988:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "*$V0(i.s,i.r1,i.r2,i.r3,i.s,&t128.s,&i2.s,&i2,&i2,&i1.s,&i1)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push $V0
+  CallInstDLL "$PLUGINSDIR\System.dll" "Free"
+  IntOp $V3 $V3 & 0xFFFF
+  Pop $R0
+  Pop $V0
+  IntCmp $V0 2 0 label_1004 label_1004 ; If: $V0 != 2
+    IntOp $var98 $var98 | 0x80000000
+    IntOp $var97 $var97 | 0x80000000
+  ; EndIf
+label_1004:
+  IntCmp $R0 284 0 label_1014 label_1014 ; If: $R0 != 284
+    Pop $V0
+    Exch
+    Pop $V0
+    IntCmp $V0 1 label_1012 ; If: $V0 = 1
+      IntOp $var98 $var98 | 0x40000000
+      IntCmp $V0 2 0 label_1012 label_1012
+      IntOp $var98 $var98 | 0x20000000
+    ; EndIf
+label_1012:
+    Pop $V0
+  ; Else
+label_1014:
+    Pop $V0
+    Pop $R0
+    Pop $R0
+    StrCpy $R0 $V0 13
+    StrCmp $R0 "Service Pack " 0 label_1021 ; If: $R0 == "Service Pack "
+      StrCpy $V0 $V0 "" 13
+      Goto label_1022
+    ; EndIf
+label_1021:
+    StrCpy $V0 0
+  ; EndIf
+label_1022:
+  IntOp $V0 $V0 << 16
+  IntOp $var98 $var98 | $V0
+  IntOp $V0 $var98 & 0x40000000
+  IntCmp $V0 0 0 label_1029 label_1029 ; If: $V0 != 0
+    IntCmp $V1 5 0 label_1029 label_1029
+    IntCmp $V2 2 0 label_1029 label_1029
+    StrCpy $V2 1
+  ; EndIf
+label_1029:
+  IntCmp $V0 0 label_1032 ; If: $V0 = 0
+    IntCmp 6 $V1 0 0 label_1032
+    IntOp $var97 $var97 | 0x00000001
+  ; EndIf
+label_1032:
+  IntOp $V1 $V1 << 24
+  IntOp $var97 $var97 | $V1
+  IntOp $V0 $V2 << 16
+  IntOp $var97 $var97 | $V0
+  IntOp $var98 $var98 | $V3
+  Pop $R0
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V0
+  Return
+label_1043:
+  IntCmp $var97 0x85000000 0 label_1045 label_1045 ; If: $var97 != 0x85000000
+  ; Else
+label_1045:
+    Call :label_955
+    IntCmp $var97 0x045a0000 0 label_1048 label_1048
+  ; EndIf
+label_1047:
+  Goto label_1050
+label_1048:
+  Call :label_955
+  IntCmp $var97 0x85010000 0 label_1051 label_1051 ; If: $var97 != 0x85010000
+label_1050:
+  ; Else
+label_1051:
+    Call :label_955
+    IntCmp $var97 0x86000000 0 label_1055 label_1055
+  ; EndIf
+label_1053:
+  MessageBox MB_OK 4294967229
+  Quit
+label_1055:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::GetCurrentProcess()p.s"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::IsWow64Process2(ps,*i0s,*i)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Push "|"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::IsWow64Process(p-1,*i0s)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\System.dll" "Int64Op"
+  Pop $var67
+  StrCmp $var67 0 label_1079 ; If: $var67 != 0
+    SetRegView 64
+  ; Else
+label_1079:
+    MessageBox MB_OK|MB_ICONEXCLAMATION 4294967228
+    Quit
+  ; EndIf
+label_1081:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\UAC.dll"
+  SetDetailsPrint lastused
+  Push "3s"
+  CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+  Pop $var67
+  StrCmp $var67 0 0 label_1115 ; If: $var67 == 0
+    ShowWindow $HWNDPARENT 5
+    BringToFront
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "kernel32::CreateMutex(p0, i1, t$\"6792201d-4f97-56a6-8ce3-c24e741cac66$\")?e"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    Pop $V0
+    IntCmpU $V0 183 0 label_1115 label_1115
+    StrLen $V0 4294967294
+    IntOp $V0 $V0 + 1
+    StrCpy $V1 ""
+    ; Do
+label_1100:
+      FindWindow $V1 "#32770" "" "" $V1
+      StrCmp 0 $V1 label_1114
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "user32::GetWindowText(pr1, t.r2, ir0)"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    StrCmp $V2 4294967294 0 label_1100 ; LoopUntil: $V2 != 4294967294
+    SendMessage $V1 0x112 0xF120 0 /TIMEOUT=2000
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "user32::SetForegroundWindow(pr1)"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+label_1114:
+    Abort
+  ; EndIf
+label_1115:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\UAC.dll"
+  SetDetailsPrint lastused
+  Push "3s"
+  CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+  Pop $var67
+  StrCmp $var67 0 label_1131 ; If: $var67 != 0
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\UAC.dll"
+    SetDetailsPrint lastused
+    Push "2s"
+    CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+    Pop $var67
+    StrCmp $var67 0 0 label_1131
+    SetErrorLevel 0x666666
+    Quit
+  ; EndIf
+label_1131:
+  StrCpy $var52 0
+  StrCpy $var51 0
+  ReadRegStr $var54 HKLM "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "InstallLocation"
+  StrCmp $var54 "" label_1136 ; If: $var54 != ""
+    StrCpy $var52 1
+  ; EndIf
+label_1136:
+  ReadRegStr $var53 HKCU "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "InstallLocation"
+  StrCmp $var53 "" label_1139 ; If: $var53 != ""
+    StrCpy $var51 1
+  ; EndIf
+label_1139:
+  Call :label_1141
+  Goto label_1174
+label_1141:
+  StrCmp $CMDLINE "" 0 label_1144 ; If: $CMDLINE == ""
+    Push ""
+    Return
+  ; EndIf
+label_1144:
+  Push $V0
+  Push $V1
+  Push $V2
+  Push $V3
+  StrLen $V1 $CMDLINE
+  StrCpy $V2 2
+  StrCpy $V3 $CMDLINE 1
+  StrCmp $V3 "$\"" label_1153
+  StrCpy $V3 " "
+  ; Do
+label_1153:
+    IntCmp $V2 $V1 label_1157 0 label_1157
+    StrCpy $V0 $CMDLINE 1 $V2
+    IntOp $V2 $V2 + 1
+  StrCmp $V3 $V0 0 label_1153 ; LoopUntil: $V3 != $V0
+label_1157:
+  IntCmp $V2 $V1 label_1162 0 label_1162 ; While: $V2 >= $V1
+    StrCpy $V0 $CMDLINE 1 $V2
+    StrCmp $V0 " " 0 label_1162
+    IntOp $V2 $V2 + 1
+  ; EndWhile
+label_1162:
+  StrCpy $V0 $CMDLINE "" $V2
+label_1163:
+  StrCpy $V1 $V0 1 -1
+  StrCmp $V1 " " 0 label_1167 ; While: $V1 == " "
+    StrCpy $V0 $V0 -1
+  ; EndWhile
+label_1167:
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Push $V0
+  Exch
+  Pop $V0
+  Return
+label_1174:
+  Pop $R0
+  Push $R0
+  Push "/allusers"
+  Call :label_1179
+  Goto label_1268
+label_1179:
+  Push $V1
+  Exch
+  Pop $V1
+  Exch
+  Push $V0
+  Exch
+  Pop $V0
+  Exch
+  Push $V2
+  Push $V3
+  Push $V4
+  Push $V5
+  Push $V6
+  Push $V7
+  ClearErrors
+  StrCpy $V2 $V1 "" 1
+  StrCpy $V1 $V1 1
+  StrLen $V3 $V2
+  StrCpy $V7 0
+label_1198:
+  StrCpy $V4 -1
+  StrCpy $V6 ""
+label_1200:
+  IntOp $V4 $V4 + 1
+  StrCpy $V5 $V0 1 $V4
+  StrCmp "$V5$V7" 0 label_1255 ; While: "$V5$V7" != 0
+    StrCmp $V5 "" label_1242
+    StrCmp $V5 "$\"" 0 label_1211
+    StrCmp $V6 "" 0 label_1208
+    StrCpy $V6 "$\""
+    Goto label_1200
+label_1208:
+    StrCmp $V6 "$\"" 0 label_1211
+    StrCpy $V6 ""
+    Goto label_1200
+label_1211:
+    StrCmp $V5 "'" 0 label_1218
+    StrCmp $V6 "" 0 label_1215
+    StrCpy $V6 "'"
+    Goto label_1200
+label_1215:
+    StrCmp $V6 "'" 0 label_1218
+    StrCpy $V6 ""
+    Goto label_1200
+label_1218:
+    StrCmp $V5 "`" 0 label_1225
+    StrCmp $V6 "" 0 label_1222
+    StrCpy $V6 "`"
+    Goto label_1200
+label_1222:
+    StrCmp $V6 "`" 0 label_1225
+    StrCpy $V6 ""
+    Goto label_1200
+label_1225:
+    StrCmp $V6 "$\"" label_1200
+    StrCmp $V6 "'" label_1200
+    StrCmp $V6 "`" label_1200
+    StrCmp $V5 $V1 0 label_1200
+    StrCmp $V7 0 label_1230 label_1242
+label_1230:
+    IntOp $V4 $V4 + 1
+    StrCpy $V5 $V0 $V3 $V4
+    StrCmp $V5 "" label_1255
+    StrCmp $V5 $V2 0 label_1200
+    IntOp $V4 $V4 + $V3
+    StrCpy $V0 $V0 "" $V4
+label_1236:
+    StrCpy $V4 $V0 1
+    StrCmp $V4 " " 0 label_1240 ; While: $V4 == " "
+      StrCpy $V0 $V0 "" 1
+    ; EndWhile
+label_1240:
+    StrCpy $V7 1
+  ; EndWhile
+label_1242:
+  StrCpy $V0 $V0 $V4
+label_1243:
+  StrCpy $V4 $V0 1 -1
+  StrCmp $V4 " " 0 label_1247 ; While: $V4 == " "
+    StrCpy $V0 $V0 -1
+  ; EndWhile
+label_1247:
+  StrCpy $V3 $V0 1
+  StrCpy $V4 $V0 1 -1
+  StrCmp $V3 $V4 0 label_1257 ; If: $V3 == $V4
+    StrCmp $V3 "$\"" label_1253
+    StrCmp $V3 "'" label_1253
+    StrCmp $V3 "`" 0 label_1257
+label_1253:
+    StrCpy $V0 $V0 -1 1
+    Goto label_1257
+label_1255:
+    SetErrors
+    StrCpy $V0 ""
+  ; EndIf
+label_1257:
+  Pop $V7
+  Pop $V6
+  Pop $V5
+  Pop $V4
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Push $V0
+  Exch
+  Pop $V0
+  Return
+label_1268:
+  Pop $R1
+  IfErrors label_1272 ; If: not Errors
+    StrCpy $var52 1
+    StrCpy $var51 0
+  ; EndIf
+label_1272:
+  Push $R0
+  Push "/currentuser"
+  Call :label_1179
+  Pop $R1
+  IfErrors label_1279 ; If: not Errors
+    StrCpy $var52 0
+    StrCpy $var51 1
+  ; EndIf
+label_1279:
+  StrCmp $var51 1 0 label_1326 ; If: $var51 == 1
+    StrCmp $var52 0 0 label_1326
+    StrCpy $var50 "CurrentUser"
+    SetShellVarContext current
+    ReadRegStr $var53 HKCU "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "InstallLocation"
+    StrCmp $var53 "" label_1287 ; If: $var53 != ""
+      StrCpy $INSTDIR $var53
+    ; Else
+label_1287:
+      StrCpy $V0 "$LOCALAPPDATA\Programs"
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "S"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Store"
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "SHELL32::SHGetKnownFolderPath(g $\"{5CD7AEE2-2219-4A67-B85D-6C9CE15660CB}$\", i 0x00008000, p 0, *p .r2)i.r1"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+      StrCmp $V1 0 0 label_1310 ; If: $V1 == 0
+        Call Initialize_____Plugins
+        File "$PLUGINSDIR\System.dll"
+        SetDetailsPrint lastused
+        Push "*$V2(&w8192 .s)"
+        CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+        StrCpy $V0 $V1
+        Call Initialize_____Plugins
+        File "$PLUGINSDIR\System.dll"
+        SetDetailsPrint lastused
+        Push "OLE32::CoTaskMemFree(p r2)"
+        CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+      ; EndIf
+label_1310:
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "L"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Store"
+      StrCpy $INSTDIR "$V0\DeskPulse"
+    ; EndIf
+label_1316:
+    Push "D"
+    Push ""
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\StdUtils.dll"
+    SetDetailsPrint lastused
+    CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "GetParameter"
+    Pop $R0
+    StrCmp $R0 "" label_1325 ; If: $R0 != ""
+      StrCpy $INSTDIR $R0
+    ; EndIf
+label_1325:
+    Goto label_1413
+  ; EndIf
+label_1326:
+  StrCmp $var51 0 0 label_1369 ; If: $var51 == 0
+    StrCmp $var52 1 0 label_1369
+    StrCpy $var50 "all"
+    SetShellVarContext all
+    ReadRegStr $var54 HKLM "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "InstallLocation"
+    StrCmp $var54 "" label_1334 ; If: $var54 != ""
+      StrCpy $INSTDIR $var54
+    ; Else
+label_1334:
+      StrCpy $V0 "$REG0(倀爀漀最爀愀洀䘀椀氀攀猀䐀椀爀)"
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "kernel32::GetCurrentProcess()p.s"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "kernel32::IsWow64Process2(ps,*i0s,*i)"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+      Push "|"
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "kernel32::IsWow64Process(p-1,*i0s)"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      CallInstDLL "$PLUGINSDIR\System.dll" "Int64Op"
+      Pop $var67
+      StrCmp $var67 0 label_1358 ; If: $var67 != 0
+        StrCpy $V0 "$REG64(倀爀漀最爀愀洀䘀椀氀攀猀䐀椀爀)"
+      ; EndIf
+label_1358:
+      StrCpy $INSTDIR "$V0\DeskPulse"
+    ; EndIf
+label_1359:
+    Push "D"
+    Push ""
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\StdUtils.dll"
+    SetDetailsPrint lastused
+    CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "GetParameter"
+    Pop $R0
+    StrCmp $R0 "" label_1368 ; If: $R0 != ""
+      StrCpy $INSTDIR $R0
+    ; EndIf
+label_1368:
+    Goto label_1413
+  ; EndIf
+label_1369:
+  StrCpy $var50 "CurrentUser"
+  SetShellVarContext current
+  ReadRegStr $var53 HKCU "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "InstallLocation"
+  StrCmp $var53 "" label_1375 ; If: $var53 != ""
+    StrCpy $INSTDIR $var53
+  ; Else
+label_1375:
+    StrCpy $V0 "$LOCALAPPDATA\Programs"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "S"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Store"
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "SHELL32::SHGetKnownFolderPath(g $\"{5CD7AEE2-2219-4A67-B85D-6C9CE15660CB}$\", i 0x00008000, p 0, *p .r2)i.r1"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    StrCmp $V1 0 0 label_1398 ; If: $V1 == 0
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "*$V2(&w8192 .s)"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+      StrCpy $V0 $V1
+      Call Initialize_____Plugins
+      File "$PLUGINSDIR\System.dll"
+      SetDetailsPrint lastused
+      Push "OLE32::CoTaskMemFree(p r2)"
+      CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+    ; EndIf
+label_1398:
+    Call Initialize_____Plugins
+    File "$PLUGINSDIR\System.dll"
+    SetDetailsPrint lastused
+    Push "L"
+    CallInstDLL "$PLUGINSDIR\System.dll" "Store"
+    StrCpy $INSTDIR "$V0\DeskPulse"
+  ; EndIf
+label_1404:
+  Push "D"
+  Push ""
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "GetParameter"
+  Pop $R0
+  StrCmp $R0 "" label_1413
+  StrCpy $INSTDIR $R0
+label_1413:
+FunctionEnd
+
+Function func_1414
+  Push $R0
+  Exch
+  Pop $R0
+  Push $R1
+  Push $R2
+  Push $R3
+  StrCpy $R2 -1
+  ; Do
+label_1421:
+    IntOp $R2 $R2 + 1
+    StrCpy $R3 $R0 1 $R2
+    StrCmp $R3 "" 0 label_1426
+    StrCpy $R0 ""
+    Goto label_1437
+label_1426:
+  StrCmp $R3 "$\"" 0 label_1421 ; LoopUntil: $R3 != "$\""
+  IntOp $R2 $R2 + 1
+  StrCpy $R0 $R0 "" $R2
+  StrCpy $R2 0
+  ; Do
+label_1430:
+    IntOp $R2 $R2 + 1
+    StrCpy $R3 $R0 1 $R2
+    StrCmp $R3 "" 0 label_1435
+    StrCpy $R0 ""
+    Goto label_1437
+label_1435:
+  StrCmp $R3 "$\"" 0 label_1430 ; LoopUntil: $R3 != "$\""
+  StrCpy $R0 $R0 $R2
+label_1437:
+  Pop $R3
+  Pop $R2
+  Pop $R1
+  Push $R0
+  Exch
+  Pop $R0
+FunctionEnd
+
+Function func_1444
+  Push $R0
+  Exch
+  Pop $R0
+  Push $R1
+  Push $R2
+  Push $R3
+  StrCpy $R1 0
+  StrLen $R2 $R0
+label_1452:
+  IntOp $R1 $R1 + 1
+  IntCmp $R1 $R2 label_1457 0 label_1457 ; While: $R1 >= $R2
+    StrCpy $R3 $R0 1 "-$R1"
+    StrCmp $R3 "\" label_1457
+  ; EndWhile
+label_1457:
+  StrCpy $R0 $R0 "-$R1"
+  Pop $R3
+  Pop $R2
+  Pop $R1
+  Push $R0
+  Exch
+  Pop $R0
+FunctionEnd
+
+Function func_1465
+  Push $var100
+  Exch
+  Pop $var100
+  StrCmp $var100 "SHELL_CONTEXT" 0 label_1470 ; If: $var100 == "SHELL_CONTEXT"
+  ; Else
+label_1470:
+    StrCmp $var100 "HKEY_CURRENT_USER" 0 label_1471
+  ; EndIf
+label_1471:
+  IfErrors 0 label_1474 ; If: Errors
+    DetailPrint "Uninstall was not successful. Not able to launch uninstaller!"
+    Return
+  ; EndIf
+label_1474:
+  StrCmp $R0 0 label_1479
+  MessageBox MB_OK|MB_ICONEXCLAMATION "胄: $R0"
+  DetailPrint "Uninstall was not successful. Uninstaller error code: $R0."
+  SetErrorLevel 2
+  Quit
+label_1479:
+FunctionEnd
+
+Function func_1480
+  ClearErrors
+  Push $var105
+  Exch
+  Pop $var105
+  Push 0
+  Pop $R0
+  StrCmp $var105 "SHELL_CONTEXT" 0 label_1489 ; If: $var105 == "SHELL_CONTEXT"
+    ReadRegStr $var104 SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\6792201d-4f97-56a6-8ce3-c24e741cac66" "UninstallString"
+  ; Else
+label_1489:
+    StrCmp $var105 "HKEY_CURRENT_USER" 0 label_1492 ; If: $var105 == "HKEY_CURRENT_USER"
+      ReadRegStr $var104 HKCU "Software\Microsoft\Windows\CurrentVersion\Uninstall\6792201d-4f97-56a6-8ce3-c24e741cac66" "UninstallString"
+      Goto label_1496
+    ; EndIf
+label_1492:
+    StrCmp $var105 "HKEY_LOCAL_MACHINE" 0 label_1495 ; If: $var105 == "HKEY_LOCAL_MACHINE"
+      ReadRegStr $var104 HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\6792201d-4f97-56a6-8ce3-c24e741cac66" "UninstallString"
+      Goto label_1496
+    ; EndIf
+label_1495:
+    MessageBox MB_OK "Unsupported $var105"
+  ; EndIf
+label_1496:
+  StrCmp $var104 "" 0 label_1500 ; If: $var104 == ""
+    StrCmp $var104 "" 0 label_1500
+    ClearErrors
+    Return
+  ; EndIf
+label_1500:
+  Push $var104
+  Call func_1414
+  Pop $var101
+  StrCmp $var105 "SHELL_CONTEXT" 0 label_1506 ; If: $var105 == "SHELL_CONTEXT"
+    ReadRegStr $var103 SHCTX "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "InstallLocation"
+  ; Else
+label_1506:
+    StrCmp $var105 "HKEY_CURRENT_USER" 0 label_1509 ; If: $var105 == "HKEY_CURRENT_USER"
+      ReadRegStr $var103 HKCU "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "InstallLocation"
+      Goto label_1513
+    ; EndIf
+label_1509:
+    StrCmp $var105 "HKEY_LOCAL_MACHINE" 0 label_1512 ; If: $var105 == "HKEY_LOCAL_MACHINE"
+      ReadRegStr $var103 HKLM "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "InstallLocation"
+      Goto label_1513
+    ; EndIf
+label_1512:
+    MessageBox MB_OK "Unsupported $var105"
+  ; EndIf
+label_1513:
+  StrCmp $var103 "" 0 label_1518 ; If: $var103 == ""
+    StrCmp $var101 "" label_1518
+    Push $var101
+    Call func_1444
+    Pop $var103
+  ; EndIf
+label_1518:
+  StrCmp $var103 "" 0 label_1522 ; If: $var103 == ""
+    StrCmp $var101 "" 0 label_1522
+    ClearErrors
+    Return
+  ; EndIf
+label_1522:
+  StrCmp $var50 "CurrentUser" 0 label_1524 ; If: $var50 == "CurrentUser"
+  ; Else
+label_1524:
+    StrCmp $var105 "HKEY_CURRENT_USER" 0 label_1527
+  ; EndIf
+label_1525:
+  StrCpy $V0 "/currentuser"
+  Goto label_1528
+label_1527:
+  StrCpy $V0 "/allusers"
+label_1528:
+  StrCpy $var99 "true"
+  Push "updated"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "TestParameter"
+  Pop $R9
+  StrCmp $R9 "true" label_1537 ; If: $R9 != "true"
+    StrCpy $var99 "false"
+  ; EndIf
+label_1537:
+  StrCmp $var99 "true" 0 label_1551 ; If: $var99 == "true"
+    StrCmp $var105 "SHELL_CONTEXT" 0 label_1541 ; If: $var105 == "SHELL_CONTEXT"
+      ReadRegStr $R5 SHCTX "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "KeepShortcuts"
+    ; Else
+label_1541:
+      StrCmp $var105 "HKEY_CURRENT_USER" 0 label_1544 ; If: $var105 == "HKEY_CURRENT_USER"
+        ReadRegStr $R5 HKCU "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "KeepShortcuts"
+        Goto label_1548
+      ; EndIf
+label_1544:
+      StrCmp $var105 "HKEY_LOCAL_MACHINE" 0 label_1547 ; If: $var105 == "HKEY_LOCAL_MACHINE"
+        ReadRegStr $R5 HKLM "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "KeepShortcuts"
+        Goto label_1548
+      ; EndIf
+label_1547:
+      MessageBox MB_OK "Unsupported $var105"
+    ; EndIf
+label_1548:
+    StrCmp $R5 "true" 0 label_1551
+    IfFileExists $var56 0 label_1551
+    StrCpy $V0 "$V0 --keep-shortcuts"
+  ; EndIf
+label_1551:
+  Push "delete-app-data"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "TestParameter"
+  Pop $R9
+  StrCmp $R9 "true" 0 label_1560 ; If: $R9 == "true"
+    StrCpy $V0 "$V0 --delete-app-data"
+  ; Else
+label_1560:
+    StrCpy $V0 "$V0 --updated"
+  ; EndIf
+label_1561:
+  StrCpy $var102 "$PLUGINSDIR\old-uninstaller.exe"
+  Push $var102
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "GetParentPath"
+  Pop $R5
+  CreateDirectory $R5
+  ClearErrors
+  CopyFiles /SILENT $var101 $var102    ; "肇$var102"
+  StrCpy $R5 0
+label_1572:
+  IntOp $R5 $R5 + 1
+  IntCmp $R5 5 label_1576 label_1576 ; If: $R5 <= 5
+    MessageBox MB_RETRYCANCEL|MB_ICONEXCLAMATION 4294967226 /SDIDCANCEL IDRETRY label_1576
+    Return
+  ; EndIf
+label_1576:
+  ExecWait "$\"$var102$\" /S /KEEP_APP_DATA $V0 _?=$var103" $R0
+  IfErrors label_1578 label_1580
+label_1578:
+  ExecWait "$\"$var101$\" /S /KEEP_APP_DATA $V0 _?=$var103" $R0
+  IfErrors label_1584 ; While: not Errors
+label_1580:
+    StrCmp $R0 0 0 label_1582
+    Return
+label_1582:
+    Sleep 1000
+  ; EndWhile
+label_1584:
+  SetErrors
+FunctionEnd
+
+Section "install" ; Section_0
+  ; AddSize 75689
+  StrCmp $var52 1 0 label_1652
+  IfSilent 0 label_1652
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\UAC.dll"
+  SetDetailsPrint lastused
+  Push "2s"
+  CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+  Pop $var67
+  StrCmp $var67 0 0 label_1612
+  ShowWindow $HWNDPARENT 0
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\UAC.dll"
+  SetDetailsPrint lastused
+  Push 0
+  CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+  Goto label_1607
+label_1602:
+  Goto label_1610
+label_1603:
+  Goto label_1610
+label_1604:
+  MessageBox MB_OK|MB_ICONSTOP|MB_SETFOREGROUND|MB_TOPMOST "Unable to elevate, error $V0"
+  Goto label_1610
+  Goto label_1610
+label_1607:
+  StrCmp $V0 0 label_1602
+  StrCmp $V0 1223 label_1603
+  Goto label_1604
+label_1610:
+  Quit
+  Goto label_1652
+label_1612:
+  StrCpy $var50 "all"
+  SetShellVarContext all
+  ReadRegStr $var54 HKLM "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "InstallLocation"
+  StrCmp $var54 "" label_1618
+  StrCpy $INSTDIR $var54
+  Goto label_1643
+label_1618:
+  StrCpy $V0 "$REG0(倀爀漀最爀愀洀䘀椀氀攀猀䐀椀爀)"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::GetCurrentProcess()p.s"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::IsWow64Process2(ps,*i0s,*i)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Push "|"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::IsWow64Process(p-1,*i0s)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\System.dll" "Int64Op"
+  Pop $var67
+  StrCmp $var67 0 label_1642
+  StrCpy $V0 "$REG64(倀爀漀最爀愀洀䘀椀氀攀猀䐀椀爀)"
+label_1642:
+  StrCpy $INSTDIR "$V0\DeskPulse"
+label_1643:
+  Push "D"
+  Push ""
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "GetParameter"
+  Pop $R0
+  StrCmp $R0 "" label_1652
+  StrCpy $INSTDIR $R0
+label_1652:
+  Call Initialize_____Plugins
+  SetDetailsPrint lastused
+  IfSilent label_1656
+  SetDetailsPrint none
+label_1656:
+  StrCpy $var56 "$INSTDIR\DeskPulse.exe"
+  ReadRegStr $var36 SHCTX "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "ShortcutName"
+  StrCmp $var36 "" 0 label_1660
+  StrCpy $var36 "DeskPulse"
+label_1660:
+  StrCpy $var35 "$DESKTOP\$var36.lnk"
+  StrCpy $var34 "$DESKTOP\DeskPulse.lnk"
+  ReadRegStr $var37 SHCTX "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "MenuDirectory"
+  StrCmp $var37 "" 0 label_1666
+  StrCpy $var33 "$SMPROGRAMS\$var36.lnk"
+  Goto label_1667
+label_1666:
+  StrCpy $var33 "$SMPROGRAMS\$var37\$var36.lnk"
+label_1667:
+  StrCpy $var32 "$SMPROGRAMS\DeskPulse.lnk"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\UAC.dll"
+  SetDetailsPrint lastused
+  Push "3s"
+  CallInstDLL "$PLUGINSDIR\UAC.dll" "_"
+  Pop $var67
+  StrCmp $var67 0 0 label_1749
+  Push 0
+  Call func_0
+  Pop $V3
+  Pop $V2
+  Pop $V1
+  Pop $V4
+  Pop $var55
+  StrCmp $V3 "DeskPulse.exe" label_1749
+  Push "updated"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "TestParameter"
+  Pop $R9
+  StrCmp $R9 "true" 0 label_1691
+  Sleep 300
+label_1691:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsExec.dll"
+  SetDetailsPrint lastused
+  Push "%SYSTEMROOT%\System32\cmd.exe /c tasklist /FI $\"USERNAME eq %USERNAME%$\" /FI $\"IMAGENAME eq DeskPulse.exe$\" /FO csv | %SYSTEMROOT%\System32\find.exe $\"DeskPulse.exe$\""
+  CallInstDLL "$PLUGINSDIR\nsExec.dll" "Exec"
+  Pop $R0
+  StrCmp $R0 0 0 label_1749
+  Push "updated"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "TestParameter"
+  Pop $R9
+  StrCmp $R9 "true" 0 label_1707
+  Sleep 1000
+  Goto label_1709
+label_1707:
+  MessageBox MB_OKCANCEL|MB_ICONEXCLAMATION 4294967225 /SDIDOK IDOK label_1709
+  Quit
+label_1709:
+  DetailPrint "Closing running $\"DeskPulse$\"..."
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsExec.dll"
+  SetDetailsPrint lastused
+  Push "%SYSTEMROOT%\System32\cmd.exe /c taskkill /im $\"DeskPulse.exe$\" /fi $\"PID ne $var55$\" /fi $\"USERNAME eq %USERNAME%$\""
+  CallInstDLL "$PLUGINSDIR\nsExec.dll" "Exec"
+  Sleep 300
+  StrCpy $R1 0
+label_1717:
+  IntOp $R1 $R1 + 1
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsExec.dll"
+  SetDetailsPrint lastused
+  Push "%SYSTEMROOT%\System32\cmd.exe /c tasklist /FI $\"USERNAME eq %USERNAME%$\" /FI $\"IMAGENAME eq DeskPulse.exe$\" /FO csv | %SYSTEMROOT%\System32\find.exe $\"DeskPulse.exe$\""
+  CallInstDLL "$PLUGINSDIR\nsExec.dll" "Exec"
+  Pop $R0
+  StrCmp $R0 0 0 label_1743
+  Sleep 1000
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsExec.dll"
+  SetDetailsPrint lastused
+  Push "%SYSTEMROOT%\System32\cmd.exe /c taskkill /f /im $\"DeskPulse.exe$\" /fi $\"PID ne $var55$\" /fi $\"USERNAME eq %USERNAME%$\""
+  CallInstDLL "$PLUGINSDIR\nsExec.dll" "Exec"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsExec.dll"
+  SetDetailsPrint lastused
+  Push "%SYSTEMROOT%\System32\cmd.exe /c tasklist /FI $\"USERNAME eq %USERNAME%$\" /FI $\"IMAGENAME eq DeskPulse.exe$\" /FO csv | %SYSTEMROOT%\System32\find.exe $\"DeskPulse.exe$\""
+  CallInstDLL "$PLUGINSDIR\nsExec.dll" "Exec"
+  Pop $R0
+  StrCmp $R0 0 0 label_1741
+  DetailPrint "Waiting for $\"DeskPulse$\" to close."
+  Sleep 2000
+  Goto label_1742
+label_1741:
+  Goto label_1749
+label_1742:
+  Goto label_1744
+label_1743:
+  Goto label_1749
+label_1744:
+  IntCmp $R1 1 label_1748 label_1748
+  MessageBox MB_RETRYCANCEL|MB_ICONEXCLAMATION 4294967226 /SDIDCANCEL IDRETRY label_1717
+  Quit
+  Goto label_1749
+label_1748:
+  Goto label_1717
+label_1749:
+  StrCpy $var106 "false"
+  StrCpy $var99 "true"
+  Push "updated"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "TestParameter"
+  Pop $R9
+  StrCmp $R9 "true" label_1759
+  StrCpy $var99 "false"
+label_1759:
+  StrCmp $var99 "true" 0 label_1764
+  ReadRegStr $R1 SHCTX "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "KeepShortcuts"
+  StrCmp $R1 "true" 0 label_1764
+  IfFileExists $var56 0 label_1764
+  StrCpy $var106 "true"
+label_1764:
+  Push "SHELL_CONTEXT"
+  Call func_1480
+  Push "SHELL_CONTEXT"
+  Call func_1465
+  StrCmp $var50 "all" 0 label_1773
+  Push "HKEY_CURRENT_USER"
+  Call func_1480
+  Push "HKEY_CURRENT_USER"
+  Call func_1465
+label_1773:
+  SetOutPath $INSTDIR
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::GetCurrentProcess()p.s"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::IsWow64Process2(ps,*i0s,*i)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Push "|"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::IsWow64Process(p-1,*i0s)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\System.dll" "Int64Op"
+  Pop $var67
+  StrCmp $var67 0 label_1797
+  Goto label_1816
+label_1797:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::GetCurrentProcess()p.s"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "kernel32::IsWow64Process2(ps,*i,*i0s)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Pop $var67
+  IntCmp $var67 0 0 label_1815 label_1815
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "*0x7FFE002E(&i2.s)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+  Pop $var67
+label_1815:
+  IntCmp $var67 43620 0 label_1817 label_1817
+label_1816:
+  StrCpy $var107 64
+label_1817:
+  StrCmp $var107 "ARM64" 0 label_1819
+  Goto label_1822
+label_1819:
+  StrCmp $var107 64 0 label_1822
+  SetOverwrite on
+  File "$PLUGINSDIR\app-64.7z"
+  Goto label_1822
+label_1822:
+  Push $OUTDIR
+  CreateDirectory "$PLUGINSDIR\7z-out"
+  ClearErrors
+  SetOutPath "$PLUGINSDIR\7z-out"
+  Call Initialize_____Plugins
+  SetOverwrite off
+  File "$PLUGINSDIR\nsis7z.dll"
+  SetDetailsPrint lastused
+  Push "$PLUGINSDIR\app-$var107.7z"
+  CallInstDLL "$PLUGINSDIR\nsis7z.dll" "Extract"
+  Pop $R0
+  SetOutPath $R0
+  StrCpy $R1 0
+label_1834:
+  IntOp $R1 $R1 + 1
+  CopyFiles /SILENT "$PLUGINSDIR\7z-out\*" $OUTDIR    ; "肇$OUTDIR"
+  IfErrors 0 label_1852
+  DetailPrint "Can't modify $\"DeskPulse$\"'s files."
+  IntCmp $R1 5 label_1841 0 label_1841
+  Goto label_1850
+  Goto label_1842
+label_1841:
+  MessageBox MB_RETRYCANCEL|MB_ICONEXCLAMATION 4294967226 /SDIDRETRY IDCANCEL label_1849
+label_1842:
+  RMDir /r "$PLUGINSDIR\7z-out"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\nsis7z.dll"
+  SetDetailsPrint lastused
+  Push "$PLUGINSDIR\app-$var107.7z"
+  CallInstDLL "$PLUGINSDIR\nsis7z.dll" "Extract"
+  Goto label_1852
+label_1849:
+  Quit
+label_1850:
+  Sleep 1000
+  Goto label_1834
+label_1852:
+  StrCmp $var107 "ARM64" 0 label_1854
+  Goto label_1856
+label_1854:
+  StrCmp $var107 64 0 label_1856
+  Goto label_1856
+label_1856:
+  StrCmp $var50 "all" 0 label_1858
+  SetShellVarContext current
+label_1858:
+  Push "$LOCALAPPDATA\deskpulse-updater\installer.exe"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "GetParentPath"
+  Pop $R5
+  CreateDirectory $R5
+  ClearErrors
+  CopyFiles /SILENT $EXEPATH "$LOCALAPPDATA\deskpulse-updater\installer.exe"    ; "肇$LOCALAPPDATA\deskpulse-updater\installer.exe"
+  StrCmp $var50 "all" 0 label_1869
+  SetShellVarContext all
+label_1869:
+  SetOverwrite on
+  File "Uninstall DeskPulse.exe"
+  WriteRegStr SHCTX "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "InstallLocation" $INSTDIR
+  WriteRegStr SHCTX "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "KeepShortcuts" "true"
+  WriteRegStr SHCTX "Software\6792201d-4f97-56a6-8ce3-c24e741cac66" "ShortcutName" "DeskPulse"
+  StrCmp $var50 "all" 0 label_1877
+  StrCpy $V0 "/allusers"
+  StrCpy $V1 ""
+  Goto label_1879
+label_1877:
+  StrCpy $V0 "/currentuser"
+  StrCpy $V1 ""
+label_1879:
+  WriteRegStr SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\6792201d-4f97-56a6-8ce3-c24e741cac66" "DisplayName" "DeskPulse 2.0.0$V1"
+  StrCpy $V2 "$INSTDIR\Uninstall DeskPulse.exe"
+  WriteRegStr SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\6792201d-4f97-56a6-8ce3-c24e741cac66" "UninstallString" "$\"$V2$\" $V0"
+  WriteRegStr SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\6792201d-4f97-56a6-8ce3-c24e741cac66" "QuietUninstallString" "$\"$V2$\" $V0 /S"
+  WriteRegStr SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\6792201d-4f97-56a6-8ce3-c24e741cac66" "DisplayVersion" "2.0.0"
+  WriteRegStr SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\6792201d-4f97-56a6-8ce3-c24e741cac66" "DisplayIcon" "$var56,0"
+  WriteRegStr SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\6792201d-4f97-56a6-8ce3-c24e741cac66" "Publisher" "DeskPulse"
+  WriteRegDWORD SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\6792201d-4f97-56a6-8ce3-c24e741cac66" "NoModify" 1
+  WriteRegDWORD SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\6792201d-4f97-56a6-8ce3-c24e741cac66" "NoRepair" 1
+  IntFmt $V0 "0x%08X" 262533
+  WriteRegDWORD SHCTX "Software\Microsoft\Windows\CurrentVersion\Uninstall\6792201d-4f97-56a6-8ce3-c24e741cac66" "EstimatedSize" $V0
+  StrCmp $var106 "false" 0 label_1902
+  StrCmp $var37 "" label_1893
+  RMDir "$SMPROGRAMS\$var37"
+label_1893:
+  CreateShortCut $var32 $var56 "" $var56 "" "" "" "Open-Source Crypto Price Widget for Windows 11"
+  ClearErrors
+  Call Initialize_____Plugins
+  SetOverwrite off
+  File "$PLUGINSDIR\WinShell.dll"
+  SetDetailsPrint lastused
+  Push "io.deskpulse.app"
+  Push $var32
+  CallInstDLL "$PLUGINSDIR\WinShell.dll" "SetLnkAUMI"
+  Goto label_1918
+label_1902:
+  StrCmp $var33 $var32 label_1918
+  IfFileExists $var33 0 label_1918
+  Rename $var33 $var32 ;  "$var33->$var32"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\WinShell.dll"
+  SetDetailsPrint lastused
+  Push $var33
+  CallInstDLL "$PLUGINSDIR\WinShell.dll" "UninstShortcut"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\WinShell.dll"
+  SetDetailsPrint lastused
+  Push "io.deskpulse.app"
+  Push $var32
+  CallInstDLL "$PLUGINSDIR\WinShell.dll" "SetLnkAUMI"
+  StrCmp $var37 "" label_1918
+  RMDir "$SMPROGRAMS\$var37"
+label_1918:
+  Push "no-desktop-shortcut"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "TestParameter"
+  Pop $R9
+  StrCmp $R9 "true" label_1954
+  StrCmp $var106 "false" 0 label_1935
+  CreateShortCut $var34 $var56 "" $var56 "" "" "" "Open-Source Crypto Price Widget for Windows 11"
+  ClearErrors
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\WinShell.dll"
+  SetDetailsPrint lastused
+  Push "io.deskpulse.app"
+  Push $var34
+  CallInstDLL "$PLUGINSDIR\WinShell.dll" "SetLnkAUMI"
+  Goto label_1949
+label_1935:
+  StrCmp $var35 $var34 label_1949
+  IfFileExists $var35 0 label_1949
+  Rename $var35 $var34 ;  "$var35->$var34"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\WinShell.dll"
+  SetDetailsPrint lastused
+  Push $var35
+  CallInstDLL "$PLUGINSDIR\WinShell.dll" "UninstShortcut"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\WinShell.dll"
+  SetDetailsPrint lastused
+  Push "io.deskpulse.app"
+  Push $var34
+  CallInstDLL "$PLUGINSDIR\WinShell.dll" "SetLnkAUMI"
+label_1949:
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\System.dll"
+  SetDetailsPrint lastused
+  Push "Shell32::SHChangeNotify(i 0x8000000, i 0, i 0, i 0)"
+  CallInstDLL "$PLUGINSDIR\System.dll" "Call"
+label_1954:
+  IfFileExists $var32 0 label_1957
+  StrCpy $var57 $var32
+  Goto label_1958
+label_1957:
+  StrCpy $var57 "$INSTDIR\DeskPulse.exe"
+label_1958:
+  Push "force-run"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "TestParameter"
+  Pop $R9
+  StrCmp $R9 "true" 0 label_1985
+  IfSilent 0 label_1985
+  ShowWindow $HWNDPARENT 0
+  Push "updated"
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "TestParameter"
+  Pop $R9
+  StrCmp $R9 "true" 0 label_1976
+  StrCpy $var108 "--updated"
+  Goto label_1977
+label_1976:
+  StrCpy $var108 ""
+label_1977:
+  Push $var57
+  Push "open"
+  Push $var108
+  Call Initialize_____Plugins
+  File "$PLUGINSDIR\StdUtils.dll"
+  SetDetailsPrint lastused
+  CallInstDLL "$PLUGINSDIR\StdUtils.dll" /NOUNLOAD "ExecShellAsUser"
+  Pop $V0
+label_1985:
+SectionEnd
+
+Function func_1986
+  SectionSetSize 0 262534
+FunctionEnd
+
+; Function Initialize_____Plugins
+;   SetDetailsPrint none
+;   StrCmp $PLUGINSDIR "" 0 label_1998 ; If: $PLUGINSDIR == ""
+;     Push $V0
+;     SetErrors
+;     GetTempFileName $V0
+;     Delete $V0
+;     CreateDirectory $V0 ; CreateRestrictedDirectory
+;     IfErrors label_1999
+;     StrCpy $PLUGINSDIR $V0
+;     Pop $V0
+;   ; EndIf
+; label_1998:
+;   Return
+; label_1999:
+;   MessageBox MB_OK|MB_ICONSTOP "Error! Can't initialize plug-ins directory. Please try again later." /SDIDOK
+;   Quit
+; FunctionEnd
+
