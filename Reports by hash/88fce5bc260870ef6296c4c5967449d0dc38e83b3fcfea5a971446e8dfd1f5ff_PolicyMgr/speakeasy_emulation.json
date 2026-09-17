@@ -1,0 +1,41 @@
+{
+  "network": [],
+  "files": [],
+  "registry": [],
+  "mutexes": [],
+  "processes": [],
+  "memory": [],
+  "strings": [],
+  "misc": [
+    {
+      "api": "GetProcAddress",
+      "name": "DialogBoxIndirectParamW",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "LogonUserW",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "NetUserEnum",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "NetWkstaGetInfo",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "NetApiBufferFree",
+      "resolved": true
+    },
+    {
+      "api": "GetProcAddress",
+      "name": "GetAdaptersAddresses",
+      "resolved": true
+    }
+  ]
+}
